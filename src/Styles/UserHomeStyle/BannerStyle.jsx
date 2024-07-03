@@ -22,6 +22,7 @@ export const Title = styled.h1`
     font-weight: 700;
     color: #000;
     padding-top: 120px;
+    text-align: left;
 `
 
 
@@ -31,12 +32,13 @@ export const Subtitle = styled.p`
     color: #666;
     margin-top: 20px;
     line-height: 1.5;
+    text-align: left;
 `
 
 
 export const ContactButton = styled(Link)`
     display: inline-flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     padding: 10px 20px;
     margin-top: 30px;
