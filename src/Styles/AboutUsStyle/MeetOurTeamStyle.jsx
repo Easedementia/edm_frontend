@@ -7,6 +7,7 @@ export const OuterContainer = styled.div`
   padding: 3rem 3rem;
   border-radius: 25px;
   margin-bottom: 150px;
+  margin-top: 150px;
 `;
 
 

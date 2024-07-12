@@ -41,7 +41,8 @@ export const ContactButton = styled(Link)`
     align-items: flex-start;
     justify-content: center;
     padding: 10px 20px;
-    margin-top: 30px;
+    margin-right: 24.5rem;
+    margin-top: 25px;
     background-color: #5517A8;
     color: white;
     border: none;
