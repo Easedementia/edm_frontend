@@ -2,11 +2,14 @@ import { PageWrapper, LeftSide, RightSide, InfoSection, Title, Subtitle, Descrip
 import user_icon from '../assets/images/user_icon.svg';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-// import { jwtDecode } from 'jwt-decode'
+import { jwtDecode } from 'jwt-decode'
 import { useDispatch } from 'react-redux'
 import { setAccessToken, setUser } from '../Redux/UserSlice'
 import { baseURL } from '../api/api'
 import { useState } from 'react';
+import { toast } from 'react-toastify';
+import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
+import Cookies from 'js-cookie';
 
 
 export const UserLoginPage = () => {
@@ -33,6 +36,8 @@ export const UserLoginPage = () => {
 
     const handleLogin = (event) => {
         event.preventDefault();
+        console.log("Email:", email);
+        console.log("Password:", password)
 
         if (email.trim() === '' || password.trim() === '') {
             if (email.trim() === '') {
@@ -48,10 +53,25 @@ export const UserLoginPage = () => {
             }, {withCredentials: true})
             .then((response) => {
                 console.log('RESPONSE DATA:', response.data)
+                
+                const accessToken = response.data.data.access;
+                const refreshToken = response.data.data.refresh;
+
                 localStorage.setItem('accessToken', response.data.access);
                 localStorage.setItem('refreshToken', response.data.refresh);
-                dispatch(setAccessToken({accessToken:response.data.access, refreshToken:response.data.refresh}));
-                dispatch(setUser(response.data.user));
+
+                Cookies.set('accessToken', accessToken, { expires: 7 });
+                Cookies.set('refreshToken', refreshToken, { expires: 7 });
+
+
+                dispatch(setAccessToken({
+                    accessToken: accessToken,
+                    refreshToken: refreshToken,
+                }));
+                dispatch(setUser({
+                    user: response.data.user
+                }));
+                toast.success('Login Successful');
                 navigator('/');
             })
             .catch((error) => {
@@ -66,6 +86,7 @@ export const UserLoginPage = () => {
     };
 
   return (
+    <>
     <PageWrapper>
         <LeftSide>
             <InfoSection>
@@ -104,5 +125,61 @@ export const UserLoginPage = () => {
             </FormWrapper>
         </RightSide>
     </PageWrapper>
+    <GoogleOAuthProvider clientId="983196844931-f4h8h0ckn48vrmn01adl89k0csqmrrv1.apps.googleusercontent.com">
+            <GoogleLogin
+                onSuccess={credentialResponse => {
+                    const decoded = jwtDecode(credentialResponse.credential);
+                    console.log(decoded);
+                    const fullName = decoded.name;
+                    const spaceIndex = fullName.indexOf(' ');
+                    
+                    let firstName, lastName;
+                    
+                    if (spaceIndex !== -1) {
+                    firstName = fullName.substring(0, spaceIndex);
+                    lastName = fullName.substring(spaceIndex + 1);
+                    } else {
+                    firstName = fullName;
+                    lastName = ''; 
+                    }
+
+                    axios
+    .post(`${baseURL}/user-google-auth/`, {
+        email: decoded.email,
+        first_name: firstName,
+        last_name: lastName,
+    }, { withCredentials: true })
+    .then((response) => {
+        localStorage.setItem('accessToken', response.data.access);
+        localStorage.setItem('refreshToken', response.data.refresh);
+        console.log("response.data", response.data);
+        console.log(response.data);
+        dispatch(setAccessToken(response.data.data));
+        dispatch(setUser(response.data.user));
+        
+
+        // Redirect to the desired page after successful login
+        toast.success('Login Successful');
+        navigator('/');
+    })
+    .catch((error) => {
+        if (error.response && error.response.status === 401) {
+        // Unauthorized: Invalid credentials
+        setEmailError('Invalid email or password');
+        setPasswordError('Invalid email or password');
+        } else {
+        // Other errors
+        console.error('Login error:', error);
+        }
+    });
+                }}
+                onError={() => {
+                    console.log('Login Failed');
+                }}
+                />
+        </GoogleOAuthProvider>
+    </>
+    
+    
   )
 }

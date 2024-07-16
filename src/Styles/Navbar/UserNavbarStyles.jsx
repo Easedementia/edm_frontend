@@ -102,8 +102,11 @@ export const UserIconContainer = styled.div`
 `;
 
 export const UserIcon = styled.img`
-  height: 24px;
-  width: 24px;
+  height: 75px;
+  width: 75px;
+  margin-right: 65px;
+  margin-left: 0;
+  cursor: pointer;
 
   @media (max-width: 480px) {
         height: 20px;

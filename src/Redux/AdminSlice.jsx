@@ -16,7 +16,6 @@ const adminSlice = createSlice({
       state.adminRefreshToken = action.payload.refreshToken;
       localStorage.setItem('accessToken', action.payload.accessToken);
       localStorage.setItem('refreshToken', action.payload.refreshToken);
-
     },
     setAdminUser(state, action) {
       state.adminUser = action.payload.user;
