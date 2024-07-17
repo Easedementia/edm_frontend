@@ -9,6 +9,7 @@ import { UserLoginPage } from './Pages/UserLoginPage'
 import ServicesPage from './Pages/ServicesPage'
 import AdminLoginPage from './Pages/AdminLoginPage';
 import AdminDashboard from './Pages/AdminDashboard';
+import ContactUsPage from './Pages/ContactUsPage';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path='/login' element={<UserLoginPage/>} />
           <Route path='/about' element={<AboutUsPage/>} />
           <Route path='/services' element={<ServicesPage/>} />
+          <Route path='/contact' element={<ContactUsPage/>} />
 
           <Route path='/admin-login' element={<AdminLoginPage/>} />
           <Route path='/admin-dashboard' element={<AdminDashboard/>} />
