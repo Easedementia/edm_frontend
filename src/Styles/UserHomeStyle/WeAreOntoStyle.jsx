@@ -13,6 +13,7 @@ export const WeAreOntoWrapper = styled.div`
         font-size: 36px;
         color: #000;
         margin-bottom: 40px;
+        font-weight: 700;
     }
 `;
 
@@ -47,6 +48,7 @@ export const CardTitle = styled.h3`
     font-size: 20px;
     color: #000;
     margin-bottom: 15px;
+    font-weight: 600;
 `;
 
 

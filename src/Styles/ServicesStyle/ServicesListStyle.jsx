@@ -26,6 +26,7 @@ export const MainHeading = styled.h1`
   color: black;
   margin: 0.5rem 0;
   text-align: left;
+  font-weight: 700;
 `;
 
 export const Description = styled.p`

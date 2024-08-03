@@ -1,8 +1,8 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 
-
-export const ServicesContainer = styled.div`
+export const ConsultingContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,4 +52,31 @@ export const StyledImage = styled.img`
     height: auto;
 `;
 
+
+
+export const ContactButton = styled(Link)`
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px 20px;
+    margin-right: 24.5rem;
+    margin-top: 25px;
+    background-color: #5517A8;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10.5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover{
+        background-color: #50186C;
+    }
+`
+
+
+export const Arrow = styled.span`
+    margin-left: 10px;
+`
 

@@ -10,11 +10,17 @@ import ServicesPage from './Pages/ServicesPage'
 import AdminLoginPage from './Pages/AdminLoginPage';
 import AdminDashboard from './Pages/AdminDashboard';
 import ContactUsPage from './Pages/ContactUsPage';
+import DoctorConsulting from './Pages/DoctorConsulting';
+import AdminUserList from './Pages/AdminUserList';
+import AdminServicesPage from './Pages/AdminServicesPage';
+import AdminDoctorConsulting from './Pages/AdminDoctorConsulting';
+import AddDoctor from './Components/AdminSide/AddDoctor';
+import EditDoctor from './Components/AdminSide/EditDoctor';
+import AddTimeslot from './Components/AdminSide/AddTimeslot';
+import DoctorDetails from './Components/DoctorDetails/DoctorDetails';
 
 
 function App() {
-  
-
   return (
     <div>
     <ToastContainer
@@ -37,9 +43,17 @@ function App() {
           <Route path='/about' element={<AboutUsPage/>} />
           <Route path='/services' element={<ServicesPage/>} />
           <Route path='/contact' element={<ContactUsPage/>} />
+          <Route path='/doctor-consulting' element={<DoctorConsulting/>} />
+          <Route path='/doctor-consulting/doctor-details/:id' element={<DoctorDetails/>} />
 
           <Route path='/admin-login' element={<AdminLoginPage/>} />
           <Route path='/admin-dashboard' element={<AdminDashboard/>} />
+          <Route path='/admin-dashboard/user-list' element={<AdminUserList/>} />
+          <Route path='/admin-dashboard/admin-services' element={<AdminServicesPage/>} />
+          <Route path='/admin-dashboard/doctor-consulting' element={<AdminDoctorConsulting/>} />
+          <Route path='/admin-dashboard/add-doctor' element={<AddDoctor/>} />
+          <Route path='/admin-dashboard/edit-doctor/:id' element={<EditDoctor/>} />
+          <Route path='/admin-dashboard/add-timeslot' element={<AddTimeslot/>} />
         </Routes>
       </Router>
     </div>

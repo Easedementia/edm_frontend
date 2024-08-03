@@ -38,6 +38,7 @@ export const NewsletterContainer = styled.div`
 
 export const NewsletterText = styled.p`
   margin-bottom: 10px;
+  color: #000;
 `;
 
 export const EmailInput = styled.input`
@@ -70,6 +71,7 @@ export const RightContainer = styled.div`
 export const ContactDetails = styled.div`
   margin-bottom: 20px;
   text-align: left;
+  color: #000;
 `;
 
 export const ContactItem = styled.p`

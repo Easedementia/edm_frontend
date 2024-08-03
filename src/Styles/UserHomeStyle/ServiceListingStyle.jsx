@@ -16,6 +16,7 @@ export const ServiceListingWrapper = styled.div`
         font-size: 36px;
         color: #000;
         margin-bottom: 40px;
+        font-weight: 700;
     }
 `;
 

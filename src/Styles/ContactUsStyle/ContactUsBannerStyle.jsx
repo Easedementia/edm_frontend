@@ -8,6 +8,7 @@ export const PageWrapper = styled.div`
     min-height: 80vh;
     background-color: #f9f9f9;
     margin-top: 80px;
+    font-family: 'Poppins', sans-serif;
 `;
 
 
@@ -42,6 +43,8 @@ export const Title = styled.h1`
     margin-bottom: 1rem;
     padding-bottom: 10px;
     color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
 `;
 
 
@@ -96,7 +99,7 @@ export const FormWrapper = styled.div`
     padding: 2rem;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    background-color: #f8f8f8;
+    background-color: #f6eefc;
     max-width: 400px;
     width: 80%;
     height: 50%;
@@ -105,7 +108,7 @@ export const FormWrapper = styled.div`
 
 
 export const FormTitle = styled.h2`
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
     margin-top: 1px;
     display: flex;
@@ -146,6 +149,24 @@ export const Input = styled.input`
     border: 1px solid #ddd;
     border-radius: 10px;
     font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+
+    &:focus{
+        border-color: #5517A8;
+        outline: none;
+    }
+`;
+
+
+export const TextArea = styled.textarea`
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 13px;
+    height: 150px;
+    resize: vertical;
+    font-family: 'Poppins', sans-serif;
 
     &:focus{
         border-color: #5517A8;
@@ -176,3 +197,9 @@ export const FormButton = styled.button`
 `;
 
 
+
+export const ErrorMessage = styled.p`
+    color: red;
+    font-size: 12px;
+    margin: -10px 0 10px 0;
+`;
