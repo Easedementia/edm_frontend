@@ -50,7 +50,7 @@ const DoctorsList = () => {
                 </ImageWrapper>
                 <DoctorInfo>
                   <Name>{doctor.doctor_name}</Name>
-                  <Specialized>Specialized in {doctor.specialization}</Specialized>
+                  <Specialized>{doctor.specialization}</Specialized>
                   <DetailsRow>
                     <Rating>
                       {doctor.rating} <StarIcon />

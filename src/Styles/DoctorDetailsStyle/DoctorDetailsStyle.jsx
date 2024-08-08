@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Button} from 'react-bootstrap'
 
 export const Container = styled.div`
   background: #f9f9f9;
@@ -117,12 +118,12 @@ export const Hours = styled.div`
 `;
 
 export const TimeSlot = styled.div`
-  background: ${({ active }) => (active ? '#e0e0e0' : '#f0f0f0')};
+  background: ${({ selected, available }) => (selected ? 'green' : available ? '#f0f0f0' : '#e0e0e0')};
+  color: ${({ selected, available }) => (selected ? 'white' : available ? 'green' : 'gray')};
   padding: 10px 20px;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: ${({ available }) => (available ? 'pointer' : 'not-allowed')};
   user-select: none;
-  color: ${({ available }) => (available ? 'green' : 'gray')};
   margin-top: 8px;
 `;
 
@@ -154,5 +155,22 @@ export const TodayDate = styled.div`
     color: inherit;
     padding: 0;
     font-weight: 600;
+  }
+`;
+
+
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+`;
+
+
+export const BookButton = styled(Button)`
+  background-color: #5517A8;
+  border: none;
+  &:hover{
+    background-color: #451285;
   }
 `;

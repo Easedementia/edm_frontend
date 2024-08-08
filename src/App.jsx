@@ -18,6 +18,10 @@ import AddDoctor from './Components/AdminSide/AddDoctor';
 import EditDoctor from './Components/AdminSide/EditDoctor';
 import AddTimeslot from './Components/AdminSide/AddTimeslot';
 import DoctorDetails from './Components/DoctorDetails/DoctorDetails';
+import BookingConfirmation from './Components/DoctorDetails/BookingConfirmation';
+import BookingSuccessMessage from './Components/DoctorDetails/BookingSuccessMessage';
+
+
 
 
 function App() {
@@ -45,6 +49,8 @@ function App() {
           <Route path='/contact' element={<ContactUsPage/>} />
           <Route path='/doctor-consulting' element={<DoctorConsulting/>} />
           <Route path='/doctor-consulting/doctor-details/:id' element={<DoctorDetails/>} />
+          <Route path='/doctor-consulting/booking-confirmation/' element={<BookingConfirmation/>} />
+          <Route path='/success' element={<BookingSuccessMessage/>} />
 
           <Route path='/admin-login' element={<AdminLoginPage/>} />
           <Route path='/admin-dashboard' element={<AdminDashboard/>} />

@@ -19,9 +19,7 @@ export const store = configureStore({
   reducer: {
     user: persistReducer(userPersistConfig, userReducer),
     admin: persistReducer(adminPersistConfig, adminReducer),
-    // Other reducers if necessary
   },
-  // Other configurations if needed
 });
 
 // export default store;

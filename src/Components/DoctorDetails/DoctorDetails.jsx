@@ -1,25 +1,36 @@
-import { Container, Header, ProfileImage, DoctorInfo, Specialization, Rating, IconGroup, Icon, Details, DetailsText, WorkingHours, WorkingHoursHeader, Hours, TimeSlot, TodayDate } from '../../Styles/DoctorDetailsStyle/DoctorDetailsStyle'
+import { Container, Header, ProfileImage, DoctorInfo, Specialization, Rating, IconGroup, Icon, Details, DetailsText, WorkingHours, WorkingHoursHeader, Hours, TimeSlot, TodayDate, ButtonContainer, BookButton } from '../../Styles/DoctorDetailsStyle/DoctorDetailsStyle'
 import UserNavbar from '../Navbar/UserNavbar'
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useState, useEffect } from 'react';
 import Footer from '../Footer/Footer';
 import { FaCommentDots, FaPhoneAlt, FaVideo } from 'react-icons/fa';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { baseURL } from '../../api/api';
 import axios from 'axios';
 import moment from 'moment';
+import { useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 
 
 
 
 const DoctorDetails = () => {
+  const user = useSelector((state) => state.user.user)
+  const navigate = useNavigate();
   const {id} = useParams();
   const [doctor, setDoctor] = useState(null);
   const [timeSlots, setTimeSlots] = useState([]);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [filteredTimeSlots, setFilteredTimeSlots] = useState([]);
+  const [selectedSlot, setSelectedSlot] = useState(null);
   const today = new Date();
+  const userID = user.user.id;
+  const user_name = user.user.fullname;
+  const user_email = user.user.email;
+
+ 
+
 
 
     useEffect(() => {
@@ -45,16 +56,79 @@ const DoctorDetails = () => {
 
 
     useEffect(() => {
-      const dayOfWeek = moment(selectedDate).format('dddd'); // Get day of the week (e.g., Monday)
+      const dayOfWeek = moment(selectedDate).format('dddd'); 
       const filteredSlots = timeSlots.filter(slot => slot.day === dayOfWeek);
       setFilteredTimeSlots(filteredSlots);
     }, [selectedDate, timeSlots]);
+
+
+    const handleSlotClick = (slot) => {
+      if (slot.is_booked) return;
+      if (selectedSlot === slot.id) {
+        setSelectedSlot(null);
+      } else {
+        setSelectedSlot(slot.id);
+      }
+    };
     
 
 
     if (!doctor) {
       return <div>Loading...</div>;
     }
+
+
+    const handleBookAppointment = () => {
+      if (!selectedSlot) {
+        toast.warning("Please select a time slot before booking!");
+        return; 
+      }
+
+      if (!selectedDate) {
+        toast.warning("Please select a date before booking!");
+        return
+      }
+
+
+      const appointmentData = {
+        user: userID,
+        user_name: user_name,
+        user_email: user_email,
+        doctor: doctor.id,
+        doctor_name: doctor.doctor_name,
+        consulting_fee: doctor.consulting_fee,
+        date: moment(selectedDate).format('YYYY-MM-DD'),
+        time_slot: selectedSlot,
+        is_booked: true,
+      };
+
+
+      axios.post(`${baseURL}/create-appointment/`, appointmentData)
+      .then(response => {
+        const { appointment_id, details } = response.data;
+        navigate('/doctor-consulting/booking-confirmation/', {
+          state: {
+            appointmentId: appointment_id,
+            username: user.fullname,
+            email: user.email,
+            phone: user.mobile,
+            doctor_id: doctor.id,
+            doctorName: doctor.doctor_name,
+            consultingFee: doctor.consulting_fee,
+            selectedDate: moment(selectedDate).format('MMMM D, YYYY'),
+            selectedSlot: filteredTimeSlots.find(slot => slot.id === selectedSlot),
+            ...details
+          }
+        });
+      })
+      .catch(error => {
+        console.error("There was an error booking the appointment!", error);
+        toast.error("Failed to book the appointment. Please try again.");
+      });
+  };
+
+
+    
 
     
   return (
@@ -66,7 +140,7 @@ const DoctorDetails = () => {
         <DoctorInfo>
           <h2>{doctor.doctor_name}</h2>
           <Specialization>{doctor.specialization}</Specialization>
-          <Rating>4.9 <span>⭐</span> {doctor.schedule}</Rating>
+          <Rating>4.9⭐<span>{doctor.schedule}</span> </Rating>
         </DoctorInfo>
         <IconGroup>
           <Icon><FaCommentDots /></Icon>
@@ -94,7 +168,7 @@ const DoctorDetails = () => {
         <Hours>
             {filteredTimeSlots.length > 0 ? (
               filteredTimeSlots.map(slot => (
-                <TimeSlot key={slot.id} available={!slot.is_booked}>
+                <TimeSlot key={slot.id} available={!slot.is_booked} selected={selectedSlot === slot.id} onClick={()=>handleSlotClick(slot)} >
                   {moment(slot.start_time, 'HH:mm:ss').format('h:mm A')}
                 </TimeSlot>
               ))
@@ -102,6 +176,9 @@ const DoctorDetails = () => {
               <div style={{ textAlign: 'center', width: '100%', marginTop:'30px' }}>No time slots available for the selected date.</div>
             )}
           </Hours>
+          <ButtonContainer>
+            <BookButton onClick={handleBookAppointment}>Book an Appointment</BookButton>
+          </ButtonContainer>
       </WorkingHours>
     </Container>
     <Footer/>
