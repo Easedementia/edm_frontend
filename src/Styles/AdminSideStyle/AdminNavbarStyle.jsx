@@ -73,7 +73,7 @@ export const NavItem = styled.a`
     text-decoration: none;
     color: black;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     cursor: pointer;
     &:hover{
         color: purple;

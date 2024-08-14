@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const AddServiceContainer = styled.div`
-  margin-top: 120px;
+  margin-top: 20px;
   text-align: center;
 `;
 

@@ -15,6 +15,7 @@ const UserNavbar = () => {
             <NavItems>
                 <NavItem as={Link} to="/about">About Us</NavItem>
                 <NavItem as={Link} to="/services">Services</NavItem>
+                <NavItem as={Link} to="/doctor-consulting">Doctor Consulting</NavItem>
                 <NavItem as={Link} to="/assessment">Assessment</NavItem>
                 <NavItem as={Link} to="/contact">Contact Us</NavItem>
                 

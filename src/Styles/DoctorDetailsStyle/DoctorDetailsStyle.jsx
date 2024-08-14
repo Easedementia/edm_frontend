@@ -129,34 +129,60 @@ export const TimeSlot = styled.div`
 
 
 export const TodayDate = styled.div`
-  color: #000;
   display: flex;
   align-items: center;
-  span {
-    margin-left: 0;
-  }
+  color: #000;
 
-  input {
-    border: none;
-    background: none;
-    font-size: 16px;
+  .react-datepicker-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     cursor: pointer;
   }
 
-  .react-datepicker-wrapper {
+  .react-datepicker-wrapper:hover {
+    border-color: #451285;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .calendar-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    background-image: url('/src/assets/images/calendar_icon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .react-datepicker__input-container {
     display: flex;
     align-items: center;
   }
 
   .react-datepicker__input-container input {
-    width: 120px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 125px;
     font-family: 'Poppins';
     font-size: inherit;
     color: inherit;
     padding: 0;
     font-weight: 600;
+    outline: none;
+  }
+
+
+  .react-datepicker__input-container input:focus {
+    box-shadow: none;
   }
 `;
+
 
 
 
@@ -173,4 +199,10 @@ export const BookButton = styled(Button)`
   &:hover{
     background-color: #451285;
   }
+  
+  &:disabled {
+    background-color: #8a8a8a;
+    cursor: not-allowed;
+  }
+
 `;

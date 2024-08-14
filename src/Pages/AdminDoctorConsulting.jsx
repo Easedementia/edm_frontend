@@ -9,7 +9,9 @@ import { baseURL } from "../api/api";
 
 const AdminDoctorConsulting = () => {
     const [doctors, setDoctors] = useState([]);
-    console.log("DOCTORS:", doctors)
+    console.log("DOCTORS:", doctors);
+    const [timeSlots, setTimeSlots] = useState([]);
+    console.log("TIME SLOTS:", timeSlots);
 
     const navigator = useNavigate();
 
@@ -27,8 +29,22 @@ const AdminDoctorConsulting = () => {
             }
         };
 
+
+        const fetchTimeSlots = async () => {
+          try {
+              const response = await axios.get(`${baseURL}/admin-side/timeslots-list/`);
+              setTimeSlots(response.data);
+          } catch (error) {
+              console.log('There was an error fetching the time slots!', error);
+          }
+      };
+
         fetchDoctors();
+        fetchTimeSlots();
     }, []);
+
+
+
 
 
   return (
@@ -81,13 +97,43 @@ const AdminDoctorConsulting = () => {
             </tr>
           )}
         </MDBTableBody>
-      </MDBTable>
+      </MDBTable>   
     <Link to='/admin-dashboard/add-doctor' >
         <Button variant="primary">Add Doctor</Button>{' '}
     </Link>
 
 
     <h1 style={{marginTop:'100px', color:'black', fontFamily:'Poppins'}} >Time Slots</h1>
+    <MDBTable align='middle' style={{ marginTop: '30px' }}>
+      <MDBTableHead>
+          <tr>
+              <th scope='col'>Doctor Name</th>
+              <th scope='col'>Day</th>
+              <th scope='col'>Start Time</th>
+              <th scope='col'>End Time</th>
+              <th scope='col'>Is Booked</th>
+          </tr>
+      </MDBTableHead>
+      <MDBTableBody>
+          {Array.isArray(timeSlots) && timeSlots.length > 0 ? (
+              timeSlots.map((slot) => (
+                  <tr key={slot.id}>
+                      <td>{slot.doctor_name}</td>
+                      <td>{slot.day}</td>
+                      <td>{new Date(`1970-01-01T${slot.start_time}Z`).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}</td>
+                      <td>{new Date(`1970-01-01T${slot.end_time}Z`).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}</td>
+                      <td style={{ color: slot.is_booked ? 'red' : 'green' }}>
+                          {slot.is_booked ? 'Booked' : 'Available'}
+                      </td>
+                  </tr>
+              ))
+          ) : (
+              <tr>
+                  <td colSpan="5">No time slots available</td>
+              </tr>
+          )}
+      </MDBTableBody>
+  </MDBTable>
     <Link to='/admin-dashboard/add-timeslot' >
         <Button variant="primary">Add Timeslots</Button>{' '}
     </Link>

@@ -17,9 +17,10 @@ const AdminNavbar = () => {
                 <NavItem as={Link} to="/admin-dashboard/admin-services">Services</NavItem>
                 <NavItem as={Link} to="/admin-dashboard/doctor-consulting">Doctor Consulting</NavItem>
                 <NavItem as={Link} to="/admin-assessment">Assessment</NavItem>
+                <NavItem as={Link} to="/admin-dashboard/appointment-details">Appointments</NavItem>
                 <UserIcon src={user_icon} alt="User Icon" />
             </NavItems>
-        </NavbarContainer>
+        </NavbarContainer> 
     )
 }
 

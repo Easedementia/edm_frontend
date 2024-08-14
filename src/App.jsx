@@ -20,6 +20,7 @@ import AddTimeslot from './Components/AdminSide/AddTimeslot';
 import DoctorDetails from './Components/DoctorDetails/DoctorDetails';
 import BookingConfirmation from './Components/DoctorDetails/BookingConfirmation';
 import BookingSuccessMessage from './Components/DoctorDetails/BookingSuccessMessage';
+import AdminAppointmentDetails from './Pages/AdminAppointmentDetails';
 
 
 
@@ -60,6 +61,7 @@ function App() {
           <Route path='/admin-dashboard/add-doctor' element={<AddDoctor/>} />
           <Route path='/admin-dashboard/edit-doctor/:id' element={<EditDoctor/>} />
           <Route path='/admin-dashboard/add-timeslot' element={<AddTimeslot/>} />
+          <Route path='/admin-dashboard/appointment-details' element={<AdminAppointmentDetails/>} />
         </Routes>
       </Router>
     </div>

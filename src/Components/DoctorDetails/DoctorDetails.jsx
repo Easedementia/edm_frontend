@@ -99,7 +99,7 @@ const DoctorDetails = () => {
         consulting_fee: doctor.consulting_fee,
         date: moment(selectedDate).format('YYYY-MM-DD'),
         time_slot: selectedSlot,
-        is_booked: true,
+        is_booked: false,
       };
 
 
@@ -156,13 +156,14 @@ const DoctorDetails = () => {
       <WorkingHoursHeader>
           <h3>Working Hours</h3>
           <TodayDate>
+            <div className='calendar-icon' />
             <DatePicker
               selected={selectedDate}
               onChange={(date) => setSelectedDate(date)}
               dateFormat="MMMM d, yyyy"
               minDate={today}
+              onKeyDown={(e) => e.preventDefault()}
             />
-            {/* <span>➡️</span> */}
           </TodayDate>
         </WorkingHoursHeader>
         <Hours>
@@ -177,7 +178,7 @@ const DoctorDetails = () => {
             )}
           </Hours>
           <ButtonContainer>
-            <BookButton onClick={handleBookAppointment}>Book an Appointment</BookButton>
+            <BookButton onClick={handleBookAppointment} disabled={filteredTimeSlots.length === 0}>Book an Appointment</BookButton>
           </ButtonContainer>
       </WorkingHours>
     </Container>

@@ -1,3 +1,4 @@
+import { useRef } from "react"
 import ConsultingBanner from "../Components/DoctorConsulting/ConsultingBanner"
 import ConsultingOptions from "../Components/DoctorConsulting/ConsultingOptions"
 import DoctorsList from "../Components/DoctorConsulting/DoctorsList"
@@ -7,13 +8,22 @@ import GlobalStyle from "../Styles/GlobalStyles"
 
 
 const DoctorConsulting = () => {
+  const doctorsListRef = useRef(null);
+
+  const ScrollToDoctorsList = () => {
+    doctorsListRef.current?.scrollIntoView({behaviour: 'smooth'});
+  };
+
+
   return (
     <>
     <GlobalStyle/>
     <UserNavbar/>
-    <ConsultingBanner/>
+    <ConsultingBanner ScrollToDoctorsList={ScrollToDoctorsList} />
     <ConsultingOptions/>
-    <DoctorsList/>
+    <div ref={doctorsListRef} >
+      <DoctorsList/>
+    </div>
     <Footer/>
     </>
   )
