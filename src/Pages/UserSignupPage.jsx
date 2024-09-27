@@ -104,7 +104,7 @@ const UserSignupPage = () => {
       }).then((response) => {
         const usermail = response.data.email;
         localStorage.setItem('usermail', usermail)
-        navigator('/login');
+        navigator('/verify-otp');
       }).catch((error) =>{
         if (error.code === 'ERR_BAD_REQUEST') {
           setEmailError(error.response.data.email ? error.response.data.email : '')

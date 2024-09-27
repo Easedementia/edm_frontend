@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import Cookies from 'js-cookie';
 
 const initialState = {
   user: null,
@@ -26,6 +27,10 @@ const UserSlice = createSlice({
       state.accessToken = null;
       state.refreshToken = null;
       state.isAuthenticated = false;
+      localStorage.removeItem('accessToken');
+      localStorage.removeItem('refreshToken');
+      Cookies.remove('accessToken');
+      Cookies.remove('refreshToken');
     },
     
   },

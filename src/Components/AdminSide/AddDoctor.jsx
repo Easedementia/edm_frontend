@@ -25,6 +25,7 @@ const AddDoctor = () => {
     const [details, setDetails] = useState('');
     const [consultingFee, setConsultingFee] = useState('');
     const [profilePicture, setProfilePicture] = useState(null);
+    const [category, setCategory] = useState('doctor');
 
 
     const [doctorNameError, setDoctorNameError] = useState('');
@@ -35,10 +36,19 @@ const AddDoctor = () => {
     const [detailsError, setDetailsError] = useState('');
     const [consultingFeeError, setConsultingFeeError] = useState('');
     const [profilePictureError, setProfilePictureError] = useState(null);
+    const [categoryError, setCategoryError] = useState('');
+
+
 
     const handleFileChange = (e) => {
         setProfilePicture(e.target.files[0]);
     };
+
+
+    const handleCategoryChange = (e) => {
+      setCategory(e.target.value);
+    };
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -51,6 +61,7 @@ const AddDoctor = () => {
         setDetailsError('');
         setConsultingFeeError('');
         setProfilePictureError('');
+        setCategoryError('');
 
         let valid = true
 
@@ -94,6 +105,11 @@ const AddDoctor = () => {
         toast.warning('Profile picture is required!');
         valid = false;
         }
+        if (!category) {
+          setCategoryError('Category is required!');
+          toast.warning('Category is required!');
+          valid = false;
+        }
     
         if (!valid) {
         return;
@@ -107,6 +123,7 @@ const AddDoctor = () => {
           formData.append('schedule', schedule);
           formData.append('details', details);
           formData.append('consulting_fee', consultingFee);
+          formData.append('category', category);
           if (profilePicture) {
             formData.append('profile_picture', profilePicture);
           }
@@ -128,6 +145,7 @@ const AddDoctor = () => {
             setDetails('');
             setConsultingFee('');
             setProfilePicture(null);
+            setCategory('doctor');
 
             navigator('/admin-dashboard/doctor-consulting');
 
@@ -171,6 +189,15 @@ const AddDoctor = () => {
       
 
       <MDBInput wrapperClass='mb-4' id='consulting-fee' label='Consulting fee' value={consultingFee} onChange={(e) => setConsultingFee(e.target.value)} className={consultingFeeError ? 'error' : ''} />
+
+      <div className={`mb-4 ${categoryError ? 'error' : ''}`}>
+          <label htmlFor='category'>Category</label>
+          <select id='category' value={category} onChange={handleCategoryChange} className='form-select'>
+              <option value='doctor'>Doctor</option>
+              <option value='geriatric_counselor'>Geriatric Counselor</option>
+          </select>
+      </div>
+
       
 
       <MDBFile label='Add doctor image' id='formFileMultiple' onChange={handleFileChange} multiple style={{marginBottom:'20px'}} className={profilePictureError ? 'error' : ''} />

@@ -22,3 +22,23 @@ export const StyledTableRow = styled.tr`
     color: ${props => (props.isActive ? 'green' : 'red')};
   }
 `;
+
+
+
+export const ActionButton = styled.button`
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: ${(props) => props.color};
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+`;
+
+
+export const ActiveStatus = styled.span`
+  color: ${(props) => (props.isActive ? 'green' : 'red')};
+  font-weight: ${(props) => (props.isActive ? 'bold' : 'bold')};
+`;

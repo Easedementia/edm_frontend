@@ -43,7 +43,8 @@ export const LogoContainer = styled.div`
 
 
 export const Logo = styled.img`
-    height: 55px;
+    height: 80px;
+    cursor: pointer;
 
     @media (max-width: 480px) {
         height: 45px;
@@ -86,6 +87,7 @@ export const NavItem = styled.a`
 
 
 export const UserIconContainer = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,6 +96,7 @@ export const UserIconContainer = styled.div`
   height: 40px;
   width: 40px;
   overflow: hidden;
+  cursor: pointer;
 
   @media (max-width: 480px) {
         height: 35px;
@@ -104,12 +107,42 @@ export const UserIconContainer = styled.div`
 export const UserIcon = styled.img`
   height: 75px;
   width: 75px;
-  margin-right: 65px;
-  margin-left: 0;
+  margin-right: 5px;
   cursor: pointer;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
 
   @media (max-width: 480px) {
         height: 20px;
         width: 20px;
     }
+`;
+
+export const Dropdown = styled.div`
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 2000;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+`;
+
+export const DropdownItem = styled.a`
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  cursor: pointer;
+  &:hover {
+    background-color: #f5f5f5;
+    color: #5517A8;
+  }
+  &:last-child {
+    border-top: 1px solid #ddd;
+  }
 `;

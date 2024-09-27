@@ -1,36 +1,35 @@
 import styled from "styled-components";
 import { FaStar } from 'react-icons/fa';
 
-
 export const Container = styled.div`
-  overflow: hidden;
   width: 100%;
   padding: 20px 0;
   font-family: 'Poppins', sans-serif;
 `;
 
-export const Slider = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
+export const CategorySection = styled.div`
+  margin-bottom: 40px;
 `;
 
-export const Track = styled.div`
-  display: flex;
-  animation: scroll 20s linear infinite;
+export const SectionTitle = styled.h2`
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #242323;
+  font-weight: 700;
+  margin-top: 50px;
+`;
 
-  @keyframes scroll {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
+
+export const CardsWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;  /* Adjust the gap between cards */
 `;
 
 export const Card = styled.div`
-  min-width: 300px;
-  margin: 80px 50px;
+  flex: 1 1 calc(50% - 20px);  /* Take up 50% of the row minus the gap, ensuring 2 cards per row */
+  max-width: calc(50% - 20px);
+  margin: 10px 0;  /* Adjust margin to fit within the row */
   padding: 20px;
   border-radius: 10px;
   background-color: #fff;
@@ -38,7 +37,14 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    flex: 1 1 100%;  /* For small screens, make cards take full width */
+    max-width: 100%;
+  }
 `;
+
+
 
 export const TopRow = styled.div`
   display: flex;
@@ -65,11 +71,13 @@ export const Name = styled.h3`
   font-weight: bold;
   margin: 0;
   color: #000;
+  text-align: left;
 `;
 
 export const Specialized = styled.p`
   margin: 5px 0;
   color: #000;
+  text-align: left;
 `;
 
 export const DetailsRow = styled.div`

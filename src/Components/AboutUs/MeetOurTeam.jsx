@@ -1,40 +1,40 @@
 import { OuterContainer, InnerContainer, TeamContainer, TeamSubHeading, TeamHeading, TeamGrid, TeamMemberCard, TeamMemberImage, TeamMemberName, TeamMemberRole } from '../../Styles/AboutUsStyle/MeetOurTeamStyle'
-import Roshan from '../../assets/images/Roshan.jpg'
+import testimonial_3 from '../../assets/images/testimonial_3.jpg'
 
 
 const teamMembers = [
     {
-        image: Roshan,
+        image: testimonial_3,
         name: 'Roshan Zacharias',
         role: 'Full Stack Developer'
     },
 
     {
-        image: Roshan,
+        image: testimonial_3,
         name: 'P J Jolly',
         role: 'CEO, Co Founder'
     },
 
     {
-        image: Roshan,
+        image: testimonial_3,
         name: 'Meera Nambiar',
         role: 'CEO at Borcelle'
     },
 
     {
-        image: Roshan,
+        image: testimonial_3,
         name: 'Dr. Jino Joy',
         role: 'Medical Advisor'
     },
 
     {
-        image: Roshan,
+        image: testimonial_3,
         name: 'David John',
         role: 'Founder of Borcelle'
     },
 
     {
-        image: Roshan,
+        image: testimonial_3,
         name: 'Peter Parker',
         role: 'Founder of Borcelle'
     },

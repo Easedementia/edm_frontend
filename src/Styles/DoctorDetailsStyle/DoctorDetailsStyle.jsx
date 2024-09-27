@@ -168,7 +168,7 @@ export const TodayDate = styled.div`
     background: none;
     font-size: 16px;
     cursor: pointer;
-    width: 125px;
+    width: 159px;
     font-family: 'Poppins';
     font-size: inherit;
     color: inherit;

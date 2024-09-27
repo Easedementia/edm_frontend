@@ -49,6 +49,7 @@ const Footer = () => {
         <BottomSection>
             <FooterBottomText>© All Rights Reserved 2024</FooterBottomText>
             <FooterBottomText>Terms & Conditions</FooterBottomText>
+            <a href="https://lordicon.com/">Icons by Lordicon.com</a>
         </BottomSection>
     </FooterContainer>
   )

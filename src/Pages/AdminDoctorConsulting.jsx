@@ -60,8 +60,8 @@ const AdminDoctorConsulting = () => {
             <th scope='col'>Mobile</th>
             <th scope='col'>Specialization</th>
             <th scope='col'>Schedule</th>
-            
             <th scope='col'>Consulting Fee</th>
+            <th scope='col'>Category</th>
             <th scope='col'>Actions</th>
           </tr>
         </MDBTableHead>
@@ -82,8 +82,8 @@ const AdminDoctorConsulting = () => {
                 <td>{doctor.mobile}</td>
                 <td>{doctor.specialization}</td>
                 <td>{doctor.schedule}</td>
-                
                 <td>{doctor.consulting_fee}</td>
+                <td>{doctor.category}</td>
                 <td>
                   <MDBBtn color='link' rounded size='sm' onClick={() => handleEditClick(doctor.id)} >
                     Edit
@@ -120,8 +120,8 @@ const AdminDoctorConsulting = () => {
                   <tr key={slot.id}>
                       <td>{slot.doctor_name}</td>
                       <td>{slot.day}</td>
-                      <td>{new Date(`1970-01-01T${slot.start_time}Z`).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}</td>
-                      <td>{new Date(`1970-01-01T${slot.end_time}Z`).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}</td>
+                      <td>{new Date(`1970-01-01T${slot.start_time}`).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}</td>
+                      <td>{new Date(`1970-01-01T${slot.end_time}`).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}</td>
                       <td style={{ color: slot.is_booked ? 'red' : 'green' }}>
                           {slot.is_booked ? 'Booked' : 'Available'}
                       </td>

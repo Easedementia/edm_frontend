@@ -15,6 +15,7 @@ export const FAQTitle = styled.h2`
     font-size: 2rem;
     margin-bottom: 20px;
     color: #000;
+    font-weight: 700;
 `;
 
 

@@ -39,6 +39,7 @@ export const Title = styled.h1`
     margin-bottom: 1rem;
     padding-bottom: 10px;
     color: #000;
+    font-weight: 700;
 `;
 
 
@@ -75,6 +76,7 @@ export const Button = styled.button`
     cursor: pointer;
     display: flex;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
 
     &:hover{
         background-color: #5753d9;
@@ -108,6 +110,8 @@ export const FormTitle = styled.h2`
     align-items: center;
     text-align: center;
     color: #000;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
 `;
 
 
@@ -115,8 +119,8 @@ export const Icon = styled.img`
     font-size: 1rem;
     margin-right: 0.5rem;
     color: #5517A8;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
 `;
 
 
@@ -140,7 +144,9 @@ export const Input = styled.input`
     margin-bottom: 1rem;
     border: 1px solid #ddd;
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: 15px;
+    height: 45px;
+    font-family: 'Poppins', sans-serif;
 
     &:focus{
         border-color: #5517A8;
@@ -164,6 +170,8 @@ export const FormButton = styled.button`
     border-radius: 25px;
     cursor: pointer;
     width: 100px;
+    height: 50px;
+    font-weight: 600;
 
     &:hover{
         background-color: #5753d9;

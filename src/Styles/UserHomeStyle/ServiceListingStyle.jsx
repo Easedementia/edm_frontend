@@ -47,9 +47,10 @@ export const ServiceIcon = styled.img`
 
 export const ServiceTitle = styled.h3`
     font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    font-size: 16.9px;
     color: #000;
     margin-bottom: 15px;
+    font-weight: 700;
 `;
 
 

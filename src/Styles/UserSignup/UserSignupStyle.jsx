@@ -28,10 +28,12 @@ export const RightSide = styled.div`
 
 
 export const MainTitle = styled.h1`
-  font-size: 3rem;
+  font-size: 2.5rem;
   line-height: 0.5;
   text-align: left;
   color: black;
+  font-weight: 700;
+  margin-bottom: 30px;
 `;
 
 
@@ -98,21 +100,23 @@ export const FormWrapper = styled.div`
 `;
 
 export const FormTitle = styled.h2`
-  font-size: 2rem;
+  font-size: 30px;
   margin-bottom: 0.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5px;
+  margin-top: 0;
   color: #000;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
 `;
 
 export const Icon = styled.img`
   font-size: 1rem;
   margin-right: 0.5rem;
   color: #5517A8;
-  height: 80px;
-  width: 80px;
+  height: 55px;
+  width: 55px;
 `;
 
 
@@ -128,7 +132,7 @@ export const Form = styled.form`
 export const Label = styled.label`
   text-align: left;
   font-size: 0.8rem;
-  font-weight: bold;
+  font-weight: 650;
   color: #000;
   margin-bottom: 0.2rem;
   font-family: 'Poppins', sans-serif;
@@ -138,6 +142,7 @@ export const Input = styled.input`
   padding: 0.5rem;
   margin-bottom: 1rem;
   border: 1px solid #ddd;
+  height: 35px;
   border-radius: 10px;
   font-size: 1rem;
   &:focus {
@@ -152,16 +157,16 @@ export const ButtonContainer = styled.div`
 `;
 
 export const Button = styled.button`
-  padding: 0.75rem;
+  padding: 0.25rem;
   font-size: 1rem;
   background-color: #5517A8;
   color: #fff;
   border: none;
   border-radius: 25px;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   cursor: pointer;
-  width: 180px; 
+  width: 120px; 
   &:hover {
     background-color: #5753d9;
   }
