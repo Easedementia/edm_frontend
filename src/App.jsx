@@ -30,6 +30,9 @@ import AssessmentHomePage from './Pages/AssessmentHomePage';
 import FirstPersonAssessment from './Components/Assessment/FirstPersonAssessment';
 import FirstPersonInstructions from './Components/Assessment/FirstPersonInstructions';
 import FirstPersonClientDetails from './Components/Assessment/FirstPersonClientDetails';
+import FirstPersonUserDetails from './Components/Assessment/FirstPersonUserDetails';
+import FirstPersonAssessmentResults from './Components/Assessment/FirstPersonAssessmentResults';
+import FirstPersonAssessmentNewUser from './Components/Assessment/FirstPersonAssessmentNewUser';
 
 
 
@@ -70,6 +73,9 @@ function App() {
           <Route path='/assessment/first-person-assessment' element={<FirstPersonAssessment/>} />
           <Route path='/assessment/first-person-assessment-instructions' element={<FirstPersonInstructions/>} />
           <Route path='/assessment/first-person-assessment-client-details' element={<FirstPersonClientDetails/>} />
+          <Route path='/assessment/first-person-assessment-user-details' element={<FirstPersonUserDetails/>} />
+          <Route path='/assessment/first-person-assessment-results' element={<FirstPersonAssessmentResults/>} />
+          <Route path='/assessment/first-person-assessment-new-user' element={<FirstPersonAssessmentNewUser/>} />
 
           <Route path='/admin-login' element={<AdminLoginPage/>} />
           <Route path='/admin-dashboard' element={<AdminDashboard/>} />

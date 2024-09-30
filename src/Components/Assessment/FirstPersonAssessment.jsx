@@ -1,11 +1,11 @@
 import UserNavbar from "../Navbar/UserNavbar"
 import { Container, QuestionText, Description, ButtonContainer, OptionButton, NavButtonContainer, NavButton, ResultContainer, ProgressBarWrapper, ProgressBar } from '../../Styles/AssessmentStyle/FirstPersonAssessmentStyle'
 import { useState } from "react";
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import Footer from "../Footer/Footer";
 import axios from "axios";
 import { baseURL } from "../../api/api";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 
@@ -77,9 +77,11 @@ const FirstPersonAssessment = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState(Array(questions.length).fill(null));
 
-  const currentUser = useSelector((state) => state.user.user);
-  const email = currentUser.user.email;
-  const fullname = currentUser.user.fullname;
+  const navigator = useNavigate();
+
+  // const currentUser = useSelector((state) => state.user.user);
+  // const email = currentUser.user.email;
+  // const fullname = currentUser.user.fullname;
 
   const location = useLocation();
   const clientId = location.state?.clientId || "No Client ID";
@@ -99,8 +101,15 @@ const FirstPersonAssessment = () => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
-      setCurrentQuestionIndex(questions.length);
-      handleSendEmail();
+      navigator('/assessment/first-person-assessment-user-details', {
+        state: {
+          clientId: clientId,
+          score: score,
+          interpretation: interpretation,
+        },
+      });
+      // setCurrentQuestionIndex(questions.length);
+      // handleSendEmail();
     }
   };
 
@@ -127,29 +136,30 @@ const FirstPersonAssessment = () => {
     return 'Significant signs of cognitive impairment';
   };
 
+  const score = calculateScore();
+  const interpretation = getInterpretation(score);
 
-  const handleSendEmail = async () => {
-    const score = calculateScore();
-    const interpretation = getInterpretation(score);
+  const scoreResponse = axios.post(`${baseURL}/update-first-person-assessment-score/`, {
+    clientId: clientId,
+    score: score,
+    interpretation: interpretation,
+  });
+  console.log('Score updated successfully:', scoreResponse.data);
 
-    try {
-      const response = await axios.post(`${baseURL}/send-first-person-assessment-email/`, {
-        email: email,
-        fullname: fullname,
-        score: score,
-        interpretation: interpretation
-      });
-      console.log('Email sent successfully:', response.data);
-      
-      const scoreResponse = await axios.post(`${baseURL}/update-assessment-score/`, {
-        clientId: clientId,
-        score: score
-      });
-      console.log('Score updated successfully:', scoreResponse.data);
-    }catch (error) {
-      console.log('Error sending email:', error);
-    }
-  }
+
+  // const handleSendEmail = async () => {
+  //   try {
+  //     const response = await axios.post(`${baseURL}/send-first-person-assessment-email/`, {
+  //       email: email,
+  //       fullname: fullname,
+  //       score: score,
+  //       interpretation: interpretation
+  //     });
+  //     console.log('Email sent successfully:', response.data);
+  //   }catch (error) {
+  //     console.log('Error sending email:', error);
+  //   }
+  // }
 
   return (
     <>
