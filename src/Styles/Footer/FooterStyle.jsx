@@ -105,6 +105,13 @@ export const BottomSection = styled.div`
   align-items: center;
 `;
 
+
+export const FooterWrapper = styled.div`
+    text-align: center;
+    padding: 20px;
+`;
+
+
 export const FooterBottomText = styled.p`
   margin: 0;
 `;

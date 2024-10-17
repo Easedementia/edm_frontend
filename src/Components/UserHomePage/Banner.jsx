@@ -1,5 +1,6 @@
 import { BannerContainer, TextContainer, Title, Subtitle, ContactButton, Arrow, ImageContainer, BannerImage } from '../../Styles/UserHomeStyle/BannerStyle'
 import brain from '../../assets/images/brain.svg'
+
 // import { Link } from 'react-router-dom'
 
 const Banner = () => {

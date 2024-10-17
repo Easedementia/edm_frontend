@@ -3,6 +3,10 @@ import { Container, ResultContainer } from '../../Styles/AssessmentStyle/FirstPe
 import Footer from '../Footer/Footer';
 import UserNavbar from '../Navbar/UserNavbar';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { baseURL } from '../../api/api';
+import axios from 'axios';
 
 
 export const ButtonWrapper = styled.div`
@@ -34,6 +38,10 @@ export const StyledButton = styled.button`
 `;
 
 const FirstPersonAssessmentResults = () => {
+    const user = useSelector((state) => state.user);
+    console.log("***USER***", user)
+    const userID = useSelector((state) => state.user.user.user.id);
+    console.log("userID:", userID);
     const location = useLocation();
     const clientId = location.state?.clientId || "No Client ID";
     console.log("CLIENTID:", clientId);
@@ -47,6 +55,30 @@ const FirstPersonAssessmentResults = () => {
     const handleConsultationClick = () => {
         navigate('/doctor-consulting');
     }
+
+    useEffect(() => {
+      const data = {
+        user: userID,  // Only sending user ID to update the user field
+        clientId: clientId,
+      };
+    
+      const submitUserDetails = async () => {
+        try {
+          const response = await axios.put(`${baseURL}/update-first-person-assessment-score/`, data, {
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          });
+          console.log('User details updated:', response.data);
+        } catch (error) {
+          console.error('Error updating user details:', error.response ? error.response.data : error.message);
+        }
+      };
+    
+      submitUserDetails();
+    }, [clientId, userID]);
+    
+
   return (
     <>
     <UserNavbar/>
@@ -66,4 +98,4 @@ const FirstPersonAssessmentResults = () => {
   );
 };
 
-export default FirstPersonAssessmentResults;  // Make sure to export the component as default
+export default FirstPersonAssessmentResults;  

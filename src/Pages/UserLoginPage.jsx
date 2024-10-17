@@ -1,7 +1,7 @@
 import { PageWrapper, LeftSide, RightSide, InfoSection, Title, Subtitle, Description, Button, ArrowIcon, FormWrapper, FormTitle, Icon, Form, Label, Input, ButtonContainer, FormButton } from '../Styles/UserLogin/UserLoginStyle'
 import user_icon from '../assets/images/user_icon.svg';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode'
 import { useDispatch } from 'react-redux'
 import { setAccessToken, setUser } from '../Redux/UserSlice'
@@ -10,11 +10,21 @@ import { useState } from 'react';
 import { toast } from 'react-toastify';
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import Cookies from 'js-cookie';
+import { Link } from 'react-router-dom';
 
 
 export const UserLoginPage = () => {
     const navigator = useNavigate();
     const dispatch = useDispatch();
+    const location = useLocation();
+    const from = location.state?.from || '/';
+
+
+    const redirectTo = location.state?.redirectTo || '/';  // Default redirect if none specified
+    const name = location.state?.name || '';
+    const score = location.state?.score || 0;
+    const interpretation = location.state?.interpretation || '';
+    const clientId = location.state?.clientId || '';
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -37,7 +47,7 @@ export const UserLoginPage = () => {
     const handleLogin = (event) => {
         event.preventDefault();
         console.log("Email:", email);
-        console.log("Password:", password)
+        console.log("Password:", password);
 
         if (email.trim() === '' || password.trim() === '') {
             if (email.trim() === '') {
@@ -46,23 +56,22 @@ export const UserLoginPage = () => {
             if (password.trim() === '') {
                 setPasswordError('Password is required');
             }
-        } else{
+        } else {
             axios.post(`${baseURL}/login/`, {
                 email: email,
                 password: password,
-            }, {withCredentials: true})
+            }, { withCredentials: true })
             .then((response) => {
-                console.log('RESPONSE DATA:', response.data)
-                
+                console.log('RESPONSE DATA:', response.data);
+
                 const accessToken = response.data.data.access;
                 const refreshToken = response.data.data.refresh;
 
-                localStorage.setItem('accessToken', response.data.access);
-                localStorage.setItem('refreshToken', response.data.refresh);
+                localStorage.setItem('accessToken', accessToken);
+                localStorage.setItem('refreshToken', refreshToken);
 
                 Cookies.set('accessToken', accessToken, { expires: 7 });
                 Cookies.set('refreshToken', refreshToken, { expires: 7 });
-
 
                 dispatch(setAccessToken({
                     accessToken: accessToken,
@@ -71,14 +80,23 @@ export const UserLoginPage = () => {
                 dispatch(setUser({
                     user: response.data.user
                 }));
+
                 toast.success('Login Successful');
-                navigator('/');
+                // navigator(from, { replace: true }); // Redirect to the previous page or home
+
+                if (redirectTo === '/assessment/first-person-assessment-results') {
+                    navigator(redirectTo, { state: { name, email, score, interpretation, clientId }, replace: true });
+                } else if (from === '/doctor-consulting') {
+                    navigator(from, {replace:true});
+                } else {
+                    navigator(redirectTo, { replace: true }); // Default navigation
+                }
             })
             .catch((error) => {
                 if (error.response && error.response.status === 401) {
                     setEmailError('Invalid email!');
                     setPasswordError('Invalid password!');
-                } else{
+                } else {
                     console.error('Login error', error);
                 }
             });
@@ -91,7 +109,9 @@ export const UserLoginPage = () => {
         <LeftSide>
             <InfoSection>
                 <Title>Login</Title>
-                <Subtitle>Not Registered yet? <a href='#'>Sign Up</a></Subtitle>
+                <Subtitle>
+                    Not Registered yet? <Link to="/signup">Sign Up</Link>
+                </Subtitle>
                 <Description>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </Description>

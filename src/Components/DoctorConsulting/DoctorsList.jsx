@@ -5,6 +5,7 @@ import axios from 'axios';
 import { baseURL } from '../../api/api';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const doctorsRating = [
   { rating: 4.8 },
@@ -14,9 +15,11 @@ const doctorsRating = [
 
 
 const DoctorsList = () => {
-  const navigate = useNavigate();
   const [doctors, setDoctors] = useState([]);
   const [geriatricCounselors, setGeriatricCounselors] = useState([]);
+
+  const navigate = useNavigate();
+  const { isAuthenticated } = useSelector(state => state.user);
 
   
   useEffect(() => {
@@ -53,7 +56,11 @@ const DoctorsList = () => {
 
 
   const handleDoctorClick = (id) => {
-    navigate(`/doctor-consulting/doctor-details/${id}`);
+    if (isAuthenticated) {
+      navigate(`/doctor-consulting/doctor-details/${id}`);
+    } else {
+      navigate('/login', {state: {from: '/doctor-consulting'}});
+    }
   };
 
 

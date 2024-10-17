@@ -60,6 +60,8 @@ export const ContactButton = styled(Link)`
 
 export const Arrow = styled.span`
     margin-left: 10px;
+    width: 16px;
+    height: auto;
 `
 
 
@@ -69,8 +71,8 @@ export const ImageContainer = styled.div`
 
 
 export const BannerImage = styled.img`
-    padding-top: 50px;
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
 `
 

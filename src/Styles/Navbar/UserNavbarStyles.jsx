@@ -18,6 +18,7 @@ export const NavbarContainer = styled.nav`
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
+    height: 95px;
 
     @media (max-width: 768px) {
         flex-direction: column;
@@ -27,6 +28,7 @@ export const NavbarContainer = styled.nav`
 
     @media (max-width: 480px) {
         padding: 10px 15px;
+        height: auto;
     }
 `
 
@@ -49,7 +51,23 @@ export const Logo = styled.img`
     @media (max-width: 480px) {
         height: 45px;
     }
-`
+`;
+
+
+export const HamburgerIcon = styled.div`
+    display: none;
+    cursor: pointer;
+    
+    @media (max-width: 768px) {
+        display: block;
+        z-index: 1500; 
+    }
+
+    img {
+        height: 30px;
+        width: 30px;
+    }
+`;
 
 
 export const NavItems = styled.div`
@@ -58,16 +76,32 @@ export const NavItems = styled.div`
     gap: 40px;
 
     @media (max-width: 768px) {
+        display: none; 
+        flex-direction: column;
         width: 100%;
-        justify-content: space-between;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 20px;
+        position: absolute; 
+        top: 100%; 
+        left: 0;
+        background-color: white; 
+        padding: 50px; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+
+        &.active {
+            display: flex;
+        }
     }
 
     @media (max-width: 480px) {
-        flex-direction: column;
-        gap: 20px;
-        align-items: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+        padding: 15px;
     }
-`
+`;
+
+
 
 
 export const NavItem = styled.a`
@@ -78,6 +112,10 @@ export const NavItem = styled.a`
     cursor: pointer;
     &:hover{
         color: #5517A8;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 15px;
     }
 
     @media (max-width: 480px) {
@@ -130,6 +168,17 @@ export const Dropdown = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 10px;
+
+
+  @media (max-width: 768px) {
+    width: 120px;
+    right: -10px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100px;
+    right: -5px;
+  }
 `;
 
 export const DropdownItem = styled.a`
@@ -144,5 +193,16 @@ export const DropdownItem = styled.a`
   }
   &:last-child {
     border-top: 1px solid #ddd;
+  }
+
+
+  @media (max-width: 768px) {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 6px 10px;
+    font-size: 12px;
   }
 `;

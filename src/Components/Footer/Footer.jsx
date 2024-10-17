@@ -1,9 +1,35 @@
-import { FooterContainer, TopSection, LeftContainer, Logo, NewsletterContainer, NewsletterText, EmailInput, SubmitButton, RightContainer, ContactDetails, ContactItem, LinksContainer, LinkItem, BottomSection, FooterBottomText } from '../../Styles/Footer/FooterStyle'
+import { useState } from 'react'
+import { FooterContainer, TopSection, LeftContainer, Logo, NewsletterContainer, NewsletterText, EmailInput, SubmitButton, RightContainer, ContactDetails, ContactItem, LinksContainer, LinkItem, BottomSection, FooterWrapper, FooterBottomText } from '../../Styles/Footer/FooterStyle'
 import easedementia_logo from '../../assets/images/easedementia_logo.png'
 import {Link} from 'react-router-dom'
+import axios from 'axios'
+import { baseURL } from '../../api/api'
+import { toast } from 'react-toastify'
 
 
 const Footer = () => {
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+    };
+
+
+    const handleSubscribe = async () => {
+        try {
+            const response = await axios.post(`${baseURL}/subscribe-newsletter/`, {email});
+            setMessage(response.data.message);
+            if (response.status === 201 || response.status === 200) {
+                setEmail('');
+            }
+            toast.success("Subscribed to the news letter successfully");
+        } catch (error) {
+            setMessage('An error occurred. Please try again.');
+            toast.error('An error occurred. Please try again.');
+        }
+    }
+
   return (
     <FooterContainer>
         <TopSection>
@@ -12,9 +38,10 @@ const Footer = () => {
                 <NewsletterContainer>
                     <NewsletterText>Stay in the loop and sign up for the newsletter:</NewsletterText>
                     <div style={{display:'flex'}} >
-                        <EmailInput type='email' placeholder='Enter your email' />
-                        <SubmitButton>➔</SubmitButton>
+                        <EmailInput type='email' placeholder='Enter your email' value={email} onChange={handleEmailChange} />
+                        <SubmitButton onClick={handleSubscribe}>➔</SubmitButton>
                     </div>
+                    {message && <p>{message}</p>}
                 </NewsletterContainer>
             </LeftContainer>
             <RightContainer>
@@ -48,7 +75,11 @@ const Footer = () => {
         </TopSection>
         <BottomSection>
             <FooterBottomText>© All Rights Reserved 2024</FooterBottomText>
-            <FooterBottomText>Terms & Conditions</FooterBottomText>
+            <FooterWrapper>
+                <Link to="/terms-conditions">
+                    <FooterBottomText>Terms & Conditions</FooterBottomText>
+                </Link>
+            </FooterWrapper>
             <a href="https://lordicon.com/">Icons by Lordicon.com</a>
         </BottomSection>
     </FooterContainer>

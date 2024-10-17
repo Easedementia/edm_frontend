@@ -40,3 +40,77 @@
 .read-the-docs {
   color: #888;
 }
+
+
+
+/* Add this at the end of App.css */
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: white;
+  box-shadow: 0 4px 2px -2px gray;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 95px;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    height: auto;
+  }
+
+  .nav-items {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-items {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+}
+
+
+
+
+main {
+  padding-top: 120px; /* Adjust based on the height of your navbar on larger screens */
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 180px; /* Increase this value for mobile view based on the navbar height */
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding-top: 200px; /* Ensure enough space for the fixed navbar on small screens */
+  }
+}
+

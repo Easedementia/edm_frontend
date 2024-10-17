@@ -33,6 +33,9 @@ import FirstPersonClientDetails from './Components/Assessment/FirstPersonClientD
 import FirstPersonUserDetails from './Components/Assessment/FirstPersonUserDetails';
 import FirstPersonAssessmentResults from './Components/Assessment/FirstPersonAssessmentResults';
 import FirstPersonAssessmentNewUser from './Components/Assessment/FirstPersonAssessmentNewUser';
+import DoctorSignupPage from './Pages/DoctorSignupPage';
+import TermsConditions from './Components/Footer/TermsConditions';
+import PrivacyPolicy from './Components/Footer/PrivacyPolicy';
 
 
 
@@ -76,6 +79,8 @@ function App() {
           <Route path='/assessment/first-person-assessment-user-details' element={<FirstPersonUserDetails/>} />
           <Route path='/assessment/first-person-assessment-results' element={<FirstPersonAssessmentResults/>} />
           <Route path='/assessment/first-person-assessment-new-user' element={<FirstPersonAssessmentNewUser/>} />
+          <Route path='/terms-conditions' element={<TermsConditions/>} />
+          <Route path='/privacy-policy' element={<PrivacyPolicy/>} />
 
           <Route path='/admin-login' element={<AdminLoginPage/>} />
           <Route path='/admin-dashboard' element={<AdminDashboard/>} />
@@ -86,6 +91,8 @@ function App() {
           <Route path='/admin-dashboard/edit-doctor/:id' element={<EditDoctor/>} />
           <Route path='/admin-dashboard/add-timeslot' element={<AddTimeslot/>} />
           <Route path='/admin-dashboard/appointment-details' element={<AdminAppointmentDetails/>} />
+
+          <Route path='/doctor-signup' element={<DoctorSignupPage/>} />
         </Routes>
       </Router>
     </div>

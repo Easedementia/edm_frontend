@@ -162,7 +162,7 @@ export const TableData = styled.td`
   padding: 12px;
   font-size: 14px;
   white-space: nowrap;
-  text-align: left;
+  text-align: center;
   color: #000;
   font-family: 'Poppins', sans-serif;
 `;

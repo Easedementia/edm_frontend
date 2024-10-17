@@ -8,9 +8,9 @@ export const Container = styled.div`
 `;
 
 export const FormWrapper = styled.div`
-  background: #fff;
+  background: #f9f9f9;
   padding: 40px;
-  border-radius: 8px;
+  border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 400px;
   max-width: 100%;
@@ -21,7 +21,9 @@ export const FormTitle = styled.h2`
   align-items: center;
   font-size: 24px;
   margin-bottom: 24px;
-  font-weight: 600;
+  font-weight: 700;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
 `;
 
 export const Icon = styled.img`
@@ -38,7 +40,9 @@ export const Form = styled.form`
 export const Label = styled.label`
   margin-bottom: 8px;
   font-size: 14px;
-  color: #333;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 25px;
 `;
 
 export const Input = styled.input`

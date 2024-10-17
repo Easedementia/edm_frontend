@@ -27,7 +27,7 @@ const FirstPersonUserDetails = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         let valid = true;
-
+    
         // Validate name input
         if (name.trim() === '') {
             setNameError('Name is required');
@@ -35,7 +35,7 @@ const FirstPersonUserDetails = () => {
         } else {
             setNameError('');
         }
-
+    
         // Validate email format
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(email)) {
@@ -44,7 +44,7 @@ const FirstPersonUserDetails = () => {
         } else {
             setEmailError('');
         }
-
+    
         if (valid) {
             setLoading(true);  // Show loader
             setTimeout(async () => {
@@ -54,19 +54,31 @@ const FirstPersonUserDetails = () => {
                         user_name: name,
                         user_email: email
                     });
-
+    
                     // Check if the email already exists
                     const emailCheckResponse = await axios.post(`${baseURL}/check-user-email/`, {
                         email: email
                     });
-
+    
                     setLoading(false);  // Hide loader after 3 seconds
-
-                    // Navigate to the appropriate page based on email existence
+    
+                    // Navigate based on email existence
                     if (emailCheckResponse.data.exists) {
-                        navigate('/assessment/first-person-assessment-results', { state: { name, email, score, interpretation } });
+                        // Navigate to the login page, passing the necessary state
+                        navigate('/login', { 
+                            state: { 
+                                name, 
+                                email, 
+                                score, 
+                                interpretation,
+                                clientId,
+                                redirectTo: '/assessment/first-person-assessment-results' // URL to redirect to after login
+                            }
+                        });
                     } else {
-                        navigate('/assessment/first-person-assessment-new-user', { state: { name, email, score, interpretation } });
+                        navigate('/assessment/first-person-assessment-new-user', { 
+                            state: { name, email, score, interpretation, clientId } 
+                        });
                     }
                 } catch (error) {
                     setLoading(false); 
@@ -75,6 +87,7 @@ const FirstPersonUserDetails = () => {
             }, 3000); 
         }
     };
+    
 
   return (
     <>
