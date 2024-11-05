@@ -1,28 +1,31 @@
 import { ValuesContainer, Heading, SingleCardContainer, ValuesContent, ValuesIcon, ValuesHeading, ValuesDescription } from '../../Styles/AboutUsStyle/OurValuesStyle'
-import dementia_bro from '../../assets/images/dementia_bro.png'
+import compassion from '../../assets/images/compassion.svg'
+import progress from '../../assets/images/progress.svg'
+import accountability from '../../assets/images/accountability.svg'
+import integrity from '../../assets/images/integrity.svg'
 
 
 const valuesData = [
     {
-        icon: dementia_bro,
+        icon: compassion,
         heading: 'Compassion',
         description: 'At Easedementia, empathy is our guiding principle, ensuring dignity and respect for all our clients.'
     },
 
     {
-        icon: dementia_bro,
+        icon: progress,
         heading: 'Progress',
         description: 'We constantly innovate to enhance dementia care, always seeking new ways to improve lives.'
     },
 
     {
-        icon: dementia_bro,
+        icon: accountability,
         heading: 'Accountability',
         description: 'Our team delivers compassionate, reliable care, treating every individual as cherished.'
     },
 
     {
-        icon: dementia_bro,
+        icon: integrity,
         heading:'Integrity',
         description: 'We prioritize honesty and transparency, always acting in the best interests of our clients.'
     }

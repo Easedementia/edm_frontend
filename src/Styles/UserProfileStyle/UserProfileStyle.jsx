@@ -17,7 +17,7 @@ export const ProfileDetails = styled.div`
   align-items: center;
   padding: 20px;
   width: 45%;
-  background-color: #f8f8f8;
+  background-color: #f9fafb;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-left: 40px;
@@ -111,7 +111,7 @@ export const Button = styled.button`
 export const SummaryContainer = styled.div`
   width: 75%;
   padding: 20px;
-  background-color: #f8f8f8;
+  background-color: #f9fafb;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-right: 40px; 

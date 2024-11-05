@@ -1,16 +1,17 @@
-import { AssessmentContainer, TextContainer, Title, Subtitle, Description, AssessmentButton, Arrow, DetailsContainer } from '../../Styles/UserHomeStyle/AssessmentLinkStyle'
+import { AssessmentContainer, TextContainer, Title, Subtitle, Description, AssessmentButton, ArrowIcon, DetailsContainer } from '../../Styles/UserHomeStyle/AssessmentLinkStyle'
+import arrow from '../../assets/images/arrow.svg'
 
 const AssessmentLink = () => {
   return (
     <AssessmentContainer>
         <TextContainer>
             <Subtitle>Assessment Portal</Subtitle>
-            <Title>Take me to the Assessment self screening first person assess</Title>
-            <AssessmentButton to="/assessment">Assessment <Arrow>&#8594;</Arrow></AssessmentButton>
+            <Title>Start your evaluation : Navigate to our assessment page</Title>
+            <AssessmentButton to="/assessment">Assessment <ArrowIcon src={arrow} alt="arrow icon" /></AssessmentButton>
         </TextContainer>
         <DetailsContainer>
             <Description>
-                Lorem ipsum praesent ac massa at ligula reet est iaculis. Vivamus est mist aliquet elit ac nisl. Lorem ipsum praesent ac massa at ligula reet est iaculis. Lorem ipsum praesent ac massa at ligula reet est iaculis.Lorem ipsum praesent ac massa at ligula reet est iaculis. Vivamus est mist aliquet elit ac nisl. Lorem ipsum praesent ac massa at ligula reet est iaculis.
+            The assessment process guides you to a <b>Self-Assessment</b>, allowing individuals to evaluate themselves, and an <b>Informant Interview</b>, where a family member or caregiver can complete the evaluation on the individuals behalf, ensuring a comprehensive evaluation.
             </Description>
         </DetailsContainer>
     </AssessmentContainer>

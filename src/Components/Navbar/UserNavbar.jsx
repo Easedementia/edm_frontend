@@ -1,5 +1,5 @@
 import { NavbarContainer, Logo, NavItems, NavItem, UserIcon, LogoContainer, Dropdown, DropdownItem, HamburgerIcon} from '../../Styles/Navbar/UserNavbarStyles'
-import {Link, useNavigate} from 'react-router-dom'
+import {Link, useLocation, useNavigate} from 'react-router-dom'
 import easedementia_logo from '../../assets/images/easedementia_logo.png'
 import user_icon from '../../assets/images/user_icon.svg'
 import { useState } from 'react'
@@ -16,6 +16,7 @@ const UserNavbar = () => {
     const [isNavOpen, setIsNavOpen] = useState(false); // Hamburger menu state
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const location = useLocation();
 
     const { isAuthenticated, user } = useSelector(state => state.user);
     console.log("***User***", user);
@@ -43,6 +44,8 @@ const UserNavbar = () => {
         setIsNavOpen(!isNavOpen); // Toggle mobile navigation
     };
 
+    const isActive = (path) => location.pathname === path;
+
     return (
         <NavbarContainer>
             <LogoContainer>
@@ -58,11 +61,11 @@ const UserNavbar = () => {
 
             {/* Conditional rendering of NavItems based on isNavOpen */}
             <NavItems className={isNavOpen ? 'active' : ''}>
-                <NavItem as={Link} to="/about">About Us</NavItem>
-                <NavItem as={Link} to="/services">Services</NavItem>
-                <NavItem as={Link} to="/doctor-consulting">Doctor Consulting</NavItem>
-                <NavItem as={Link} to="/assessment">Assessment</NavItem>
-                <NavItem as={Link} to="/contact">Contact Us</NavItem>
+                <NavItem as={Link} to="/about" style={{ color: isActive('/about') ? '#5517A8' : 'black' }} >About Us</NavItem>
+                <NavItem as={Link} to="/services" style={{ color: isActive('/services') ? '#5517A8' : 'black' }} >Services</NavItem>
+                <NavItem as={Link} to="/doctor-consulting" style={{ color: isActive('/doctor-consulting') ? '#5517A8' : 'black' }} >Doctor Consulting</NavItem>
+                <NavItem as={Link} to="/assessment" style={{ color: isActive('/assessment') ? '#5517A8' : 'black' }} >Assessment</NavItem>
+                <NavItem as={Link} to="/contact" style={{ color: isActive('/contact') ? '#5517A8' : 'black' }} >Contact Us</NavItem>
 
                 <UserIcon onClick={handleUserIconClick} src={user_icon} alt="User Icon" />
                 {isAuthenticated && dropdownOpen && (

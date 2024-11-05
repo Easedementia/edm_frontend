@@ -36,6 +36,8 @@ import FirstPersonAssessmentNewUser from './Components/Assessment/FirstPersonAss
 import DoctorSignupPage from './Pages/DoctorSignupPage';
 import TermsConditions from './Components/Footer/TermsConditions';
 import PrivacyPolicy from './Components/Footer/PrivacyPolicy';
+import Clock from './Components/Assessment/Clock';
+
 
 
 
@@ -81,6 +83,9 @@ function App() {
           <Route path='/assessment/first-person-assessment-new-user' element={<FirstPersonAssessmentNewUser/>} />
           <Route path='/terms-conditions' element={<TermsConditions/>} />
           <Route path='/privacy-policy' element={<PrivacyPolicy/>} />
+          <Route path='/clock' element={<Clock/>} />
+
+          
 
           <Route path='/admin-login' element={<AdminLoginPage/>} />
           <Route path='/admin-dashboard' element={<AdminDashboard/>} />

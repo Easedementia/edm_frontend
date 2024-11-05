@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import starrating_new from '../../assets/images/starrating_new.png'
 
 export const TestimonialsWrapper = styled.div`
     padding: 50px 20px;
@@ -27,7 +28,7 @@ export const TestimonialsContainer = styled.div`
 
 
 export const TestimonialCard = styled.div`
-    background-color: #f9f9f9;
+    background-color: #f9fafb;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
     padding: 20px;
@@ -48,15 +49,20 @@ export const TestimonialText = styled.p`
 
 
 export const Stars = styled.div`
-    font-size: 30px;
-    color: #FFD700;
-    margin-bottom: 20px;
+  width: 80%;  /* Full width since it will always show all 5 stars */
+  height: 50px; /* Adjust the height as needed */
+  background-image: url(${starrating_new});
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  margin-right: 80px;
 `;
 
 
 export const Profile = styled.div`
     display: flex;
     align-items: center;
+    margin-right: 60px;
 `;
 
 

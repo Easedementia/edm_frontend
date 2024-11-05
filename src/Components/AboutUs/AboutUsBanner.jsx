@@ -1,5 +1,5 @@
 import { AboutUsContainer, HeadingContainer, SubHeading, MainHeading, Description, ImageContainer, StyledImage } from '../../Styles/AboutUsStyle/AboutUsBannerStyle'
-import brain from '../../assets/images/brain.svg'
+import aboutusbanner from '../../assets/images/aboutusbanner.svg'
 
 
 const AboutUsBanner = () => {
@@ -14,7 +14,7 @@ const AboutUsBanner = () => {
             </Description>
         </HeadingContainer>
         <ImageContainer>
-            <StyledImage src={brain} alt='Puzzle Hands' />
+            <StyledImage src={aboutusbanner} alt='Puzzle Hands' />
         </ImageContainer>
     </AboutUsContainer>
   )

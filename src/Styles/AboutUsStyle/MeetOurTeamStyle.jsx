@@ -4,16 +4,16 @@ import styled from "styled-components";
 
 export const OuterContainer = styled.div`
   background-color: #ffffff;
-  padding: 3rem 3rem;
-  border-radius: 25px;
+  padding: 0;
+  border-radius: 5px;
   margin-bottom: 150px;
-  margin-top: 150px;
+  margin-top: 100px;
 `;
 
 
 
 export const InnerContainer = styled.div`
-  background-color: #f9f9f9;
+  background-color: #f9fafb;
   border-radius: 10px;
   padding: 2rem;
   max-width: 1200px;
@@ -37,7 +37,7 @@ export const TeamSubHeading = styled.h2`
 
 export const TeamHeading = styled.h3`
     font-size: 2rem;
-    color: #2b2b2b;
+    color: #000;
     font-weight: bold;
     margin-bottom: 2rem;
 `;
@@ -70,13 +70,14 @@ export const TeamMemberImage = styled.img`
 
 export const TeamMemberName = styled.h4`
     font-size: 1rem;
-    color: #2b2b2b;
+    color: #000;
     font-weight: bold;
     margin-bottom: 0;
+    margin-top: 10px;
 `;
 
 
 export const TeamMemberRole = styled.p`
     font-size: 1rem;
-    color: gray;
+    color: #2f2e2e;
 `;

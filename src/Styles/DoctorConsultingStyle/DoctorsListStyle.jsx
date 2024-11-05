@@ -14,7 +14,7 @@ export const CategorySection = styled.div`
 export const SectionTitle = styled.h2`
   font-size: 24px;
   margin-bottom: 20px;
-  color: #242323;
+  color: #000;
   font-weight: 700;
   margin-top: 50px;
 `;
@@ -117,8 +117,30 @@ export const Description = styled.p`
 
 export const ExploreMore = styled.div`
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  color: #5517A8;
-  cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-left: 330px;
+    font-weight: 300;
+    cursor: pointer;
+    
+    transition: transform 0.3s;
+
+
+    &:hover {
+        transform: scale(1.05);
+        color: #5517A8;
+    }
+
+    img {
+        width: 56px;
+        height: 56px;
+    }
 `;

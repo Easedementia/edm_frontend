@@ -1,5 +1,14 @@
 import { ServiceListingWrapper, ServiceContainer, ServiceCard, ServiceIcon, ServiceTitle, ServiceDescription, ServiceLink } from '../../Styles/UserHomeStyle/ServiceListingStyle';
-import dementia_bro from '../../assets/images/dementia_bro.png'
+import arrow from '../../assets/images/arrow.svg'
+// import earlyscreening from '../../assets/images/earlyscreening.png'
+// import teleconsultation from '../../assets/images/teleconsultation.png'
+// import intervention from '../../assets/images/intervention.png'
+// import caregiversupport from '../../assets/images/caregiversupport.png'
+import screening1 from '../../assets/images/screening1.svg'
+import teleconsulting1 from '../../assets/images/teleconsulting1.svg'
+import intervention1 from '../../assets/images/intervention1.svg'
+import caregiver1 from '../../assets/images/caregiver1.svg'
+
 
 
 
@@ -7,30 +16,30 @@ import dementia_bro from '../../assets/images/dementia_bro.png'
 const ServiceListing = () => {
     const services = [
         {
-            icon: dementia_bro,
+            icon: screening1,
             title: "Early Screening",
-            description: "Lorem ipsum dolor sit amet consectetur. jscnsds Convallis est urna adipiscing fringilla nulla diam .",
+            description: "This is a comprehensive assessment process which includes self assessment and an informant interview that allow assessors to explore the possibility of early early dementia.",
             link: "/services"
         },
 
         {
-            icon: dementia_bro,
+            icon: teleconsulting1,
             title: "Tele Consultation",
-            description: "Lorem ipsum dolor sit amet consectetur. jscnsds Convallis est urna adipiscing fringilla nulla diam .",
+            description: "At the indication of potential dementia, we offer consultations with experienced physicians to ensure concerns are promptly identified and addressed with appropriate measures.",
             link: "/services"
         },
 
         {
-            icon: dementia_bro,
+            icon: intervention1,
             title: "Intervention",
-            description: "Lorem ipsum dolor sit amet consectetur. jscnsds Convallis est urna adipiscing fringilla nulla diam .",
+            description: "Our intervention specialists provide personalized, home-based support for clients with dementia focussing on a holistic approach to enhance quality of life for clients and their families.",
             link: "/services"
         },
 
         {
-            icon: dementia_bro,
+            icon: caregiver1,
             title: "Caregiver Support",
-            description: "Lorem ipsum dolor sit amet consectetur. jscnsds Convallis est urna adipiscing fringilla nulla diam .",
+            description: "Caring for someone with dementia can be overwhelming, Our program offers sessions led by experienced healthcare professionals for caregivers of elderly individuals with dementia.",
             link: "/services"
         }
     ];
@@ -46,7 +55,8 @@ const ServiceListing = () => {
                     <ServiceTitle>{service.title}</ServiceTitle>
                     <ServiceDescription>{service.description}</ServiceDescription>
                     <ServiceLink href={service.link}>
-                        Explore More
+                    Explore More
+                    <img src={arrow} alt="Arrow Icon" />
                     </ServiceLink>
                 </ServiceCard>
             ))}

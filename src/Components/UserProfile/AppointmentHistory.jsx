@@ -112,7 +112,6 @@ const AppointmentHistory = () => {
   return (
     <>
     <UserNavbar/>
-    <UserNavbar/>
     <ProfileContainer>
     <ProfileDetails>
           <AvatarWrapper onClick={() => document.getElementById('fileInput').click()}>
@@ -160,7 +159,10 @@ const AppointmentHistory = () => {
           </thead>
           <tbody>
             {appointments.length > 0 ? (
-              appointments.map((appointment) => (
+              appointments
+              .slice()
+              .reverse()
+              .map((appointment) => (
                 <TableRow key={appointment.id}>
                   <TableData>{appointment.doctor_name}</TableData>
                   <TableData>

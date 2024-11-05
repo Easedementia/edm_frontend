@@ -6,7 +6,7 @@ export const PageWrapper = styled.div`
     justify-content: space-around;
     align-items: center;
     min-height: 80vh;
-    background-color: #f9f9f9;
+    background-color: #f9fafb;
     margin-top: 80px;
     font-family: 'Poppins', sans-serif;
 `;
@@ -35,6 +35,7 @@ export const RightSide = styled.div`
 export const InfoSection = styled.div`
     max-width: 400px;
     text-align: left;
+    margin-bottom: 80px;
 `;
 
 
@@ -66,32 +67,48 @@ export const Subtitle = styled.p`
 
 export const Description = styled.p`
     font-size: 1rem;
-    color: #000;
+    color: #2f2e2e;
     margin-bottom: 1.5rem;
 `;
 
 
 export const Button = styled.button`
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    background-color: #5517A8;
-    color: #fff;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    display: flex;
+    display: flex; 
     align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px; /* Adjust padding */
+    background-color: #5517A8;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    height: 40px; 
+    width: 138px; 
+    align-self: flex-start;
+    margin-top: 15px;
+    margin-right: 375px;
+    white-space: nowrap; 
 
-    &:hover{
-        background-color: #5753d9;
+    &:hover {
+        background-color: #6d22d1;
+        color: #fff;
     }
 `;
 
 
-export const ArrowIcon = styled.span`
-    margin-left: 0.5rem;
-    display: inline-block;
-    transform: translateX(5px);
+export const ArrowIcon = styled.img`
+    margin-right: 20px;
+    width: 65px;
+    height: 65px; 
+    transition: transform 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.2); 
+    }
 `;
 
 
@@ -99,7 +116,7 @@ export const FormWrapper = styled.div`
     padding: 2rem;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    background-color: #f6eefc;
+    background-color: #f9f9f9;
     max-width: 400px;
     width: 80%;
     height: 50%;
@@ -116,6 +133,7 @@ export const FormTitle = styled.h2`
     align-items: center;
     text-align: center;
     color: #000;
+    font-weight: 600;
 `;
 
 
@@ -137,8 +155,8 @@ export const Form = styled.form`
 
 export const Label = styled.label`
     font-size: 14px;
-    font-weight: bold;
-    color: #000;
+    font-weight: 500;
+    color: #2f2e2e;
     margin-bottom: 0.5rem;
 `;
 
@@ -182,7 +200,6 @@ export const ButtonContainer = styled.div`
 
 
 export const FormButton = styled.button`
-    padding: 0.75rem;
     font-size: 1rem;
     background-color: #5517A8;
     color: #fff;
@@ -190,6 +207,7 @@ export const FormButton = styled.button`
     border-radius: 25px;
     cursor: pointer;
     width: 100px;
+    height: 40px;
 
     &:hover{
         background-color: #5753d9;

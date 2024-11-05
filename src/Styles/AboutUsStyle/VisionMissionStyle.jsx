@@ -31,7 +31,7 @@ export const CardsContainer = styled.div`
 `;
 
 export const Card = styled.div`
-  background-color: #f8f8f8;
+  background-color: #f9fafb;
   border-radius: 10px;
   padding: 1.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -49,21 +49,29 @@ export const CardIconContainer = styled.div`
 `;
 
 export const CardIcon = styled.img`
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 1px;
+  margin-left: 0;
+  margin-top: -30px;
 `;
 
 export const CardHeading = styled.h3`
-  font-size: 1.5rem;
-  color: #2b2b2b;
+  font-size: 17px;
+  color: #000;
   font-weight: bold;
+  margin-top: 25px;
+  white-space: nowrap;
+  overflow: visible;
+  
 `;
+
 
 export const CardDescription = styled.p`
   font-size: 15px;
-  color: gray;
+  color: #2f2e2e;
   text-align: left;
-  margin-top: 1rem; 
+  margin-top: -10px;
 `;
 
 export const Heading = styled.h2`
@@ -75,13 +83,13 @@ export const Heading = styled.h2`
 
 export const SubHeading = styled.h1`
   font-size: 2.3rem;
-  color: #2b2b2b;
+  color: #000;
   font-weight: bold;
   margin-bottom: 1rem;
 `;
 
 export const Description = styled.p`
   font-size: 1.1rem;
-  color: #000000;
+  color: #2f2e2e;
   margin-bottom: 2rem;
 `;

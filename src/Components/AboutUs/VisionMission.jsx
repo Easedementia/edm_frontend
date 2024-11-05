@@ -1,6 +1,6 @@
 import { VisionMissionContainer, LeftContainer, RightContainer, Heading, SubHeading, Description, CardsContainer, Card, CardIconContainer, CardIcon, CardHeading, CardDescription } from '../../Styles/AboutUsStyle/VisionMissionStyle'
-import dementia_bro from '../../assets/images/dementia_bro.png'
-import Dementia_pana from '../../assets/images/Dementia_pana.png'
+import vision from '../../assets/images/vision.svg'
+import mission from '../../assets/images/mission.svg'
 
 
 const VisionMission = () => {
@@ -18,19 +18,19 @@ const VisionMission = () => {
           <Card>
             <CardIconContainer>
               <CardHeading>Our Vision</CardHeading>
-              <CardIcon src={dementia_bro} alt="Lightbulb Icon" />
+              <CardIcon src={vision} alt="Lightbulb Icon" />
             </CardIconContainer>
             <CardDescription>
-              Whether you are a caregiver, someone living with memory loss, or a compassionate community member, the Memory Cafe warmly welcomes you. Together, we can create a supportive and inclusive space where memories are shared, friendled.
+              Whether you are a caregiver, someone living with memory loss, or a compassionate community member, the Memory Cafe warmly welcomes you.
             </CardDescription>
           </Card>
           <Card>
             <CardIconContainer>
               <CardHeading>Our Mission</CardHeading>
-              <CardIcon src={Dementia_pana} alt="Target Icon" />
+              <CardIcon src={mission} alt="Target Icon" />
             </CardIconContainer>
             <CardDescription>
-              Whether you are a caregiver, someone living with memory loss, or a compassionate community member, the Memory Cafe warmly welcomes you. Together, we can create a supportive and inclusive space where memories are shared, friendled.
+              Whether you are a caregiver, someone living with memory loss, or a compassionate community member, the Memory Cafe warmly welcomes you.
             </CardDescription>
           </Card>
         </CardsContainer>

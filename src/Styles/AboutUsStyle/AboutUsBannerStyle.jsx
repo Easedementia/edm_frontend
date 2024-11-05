@@ -7,8 +7,9 @@ export const AboutUsContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
-    background-color: #f9f9f9;
+    background-color: #f9fafb;
     font-family: 'Poppins', sans-serif;
+    margin-top: 110px;
 `;
 
 
@@ -35,8 +36,8 @@ export const MainHeading = styled.h1`
 
 
 export const Description = styled.p`
-    font-size: 1.2rem;
-    color: gray;
+    font-size: 16px;
+    color: #2f2e2e;
     text-align: left;
 `;
 
@@ -49,6 +50,8 @@ export const ImageContainer = styled.div`
 export const StyledImage = styled.img`
     width: 100%;
     height: auto;
+    margin-bottom: 60px;
+    margin-left: 30px;
 `;
 
 

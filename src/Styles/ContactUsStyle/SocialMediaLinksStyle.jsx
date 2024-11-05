@@ -25,12 +25,15 @@ export const IconLink = styled.a`
   color: black;
   text-decoration: none;
   font-size: 30px;
+  transition: transform 0.2s ease;
   
   &:hover {
     color: #5517A8; 
+    transform: scale(1.2); 
   }
 `;
 
 export const Icon = styled.div`
   transition: color 0.3s;
+  
 `;

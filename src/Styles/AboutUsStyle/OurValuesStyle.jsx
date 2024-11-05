@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ValuesContainer = styled.div`
   padding: 2rem;
-  background-color: #f9f9f9;
+  background-color: #f9fafb;
   text-align: center;
   margin-top: 50px;
 `;
@@ -33,19 +33,20 @@ export const ValuesContent = styled.div`
 `;
 
 export const ValuesIcon = styled.img`
-  width: 70px;
-  height: 70px;
-  margin-bottom: 0.7rem;
+  width: 90px;
+  height: 90px;
+  margin-bottom: 0.1rem;
+  margin-top: -20px;
 `;
 
 export const ValuesHeading = styled.h3`
   font-size: 1.2rem;
-  color: #2b2b2b;
+  color: #000;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 `;
 
 export const ValuesDescription = styled.p`
-  font-size: 1rem;
-  color: gray;
+  font-size: 15px;
+  color: #2f2e2e;
 `;

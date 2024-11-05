@@ -1,11 +1,11 @@
 import { Container, CategorySection, SectionTitle, CardsWrapper, Card, TopRow, ImageWrapper, DoctorInfo, Name, Specialized, DetailsRow, Rating, StarIcon, Schedule, Time, Description, ExploreMore } from '../../Styles/DoctorConsultingStyle/DoctorsListStyle'
-import { FiArrowRightCircle } from 'react-icons/fi';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { baseURL } from '../../api/api';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import arrow from '../../assets/images/arrow.svg'
 
 const doctorsRating = [
   { rating: 4.8 },
@@ -89,7 +89,8 @@ const DoctorsList = () => {
               </TopRow>
               <Description>{doctor.details}</Description>
               <ExploreMore>
-                Explore More <FiArrowRightCircle />
+                Explore More
+                <img src={arrow} alt="Arrow Icon" />
               </ExploreMore>
             </Card>
           ))}
@@ -119,7 +120,8 @@ const DoctorsList = () => {
               </TopRow>
               <Description>{counselor.details}</Description>
               <ExploreMore>
-                Explore More <FiArrowRightCircle />
+                Explore More
+                <img src={arrow} alt="Arrow Icon" />
               </ExploreMore>
             </Card>
           ))}

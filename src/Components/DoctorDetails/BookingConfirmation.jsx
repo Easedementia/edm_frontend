@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import { baseURL } from "../../api/api";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Footer from "../Footer/Footer";
 
 
 
@@ -201,6 +202,7 @@ const BookingConfirmation = () => {
         <ConfirmButton onClick={showRazorpay}>MAKE PAYMENT</ConfirmButton>
       </ButtonContainer>
     </Container>
+    <Footer/>
     </>
     
   )

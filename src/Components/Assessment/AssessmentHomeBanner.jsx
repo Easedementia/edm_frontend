@@ -1,5 +1,6 @@
 import { AssessmentContainer, HeadingContainer, MainHeading, SubHeading, Description, ButtonContainer, AssessmentButton, Icon, ImageContainer, StyledImage } from '../../Styles/AssessmentStyle/AssessmentHomeBannerStyle'
-import brain from '../../assets/images/brain.svg'
+import arrow from '../../assets/images/arrow.svg'
+import assessmentpage_banner from '../../assets/images/assessmentpage_banner.svg'
 
 const AssessmentHomeBanner = () => {
   return (
@@ -13,12 +14,12 @@ const AssessmentHomeBanner = () => {
             <ButtonContainer>
                 <AssessmentButton to='/assessment'>
                     Take me to the Assessment
-                    <Icon>→</Icon>
+                    <Icon src={arrow} alt="Arrow Icon" />
                 </AssessmentButton>
             </ButtonContainer>
         </HeadingContainer>
         <ImageContainer>
-            <StyledImage src={brain} alt="Assessment Illustration"  />
+            <StyledImage src={assessmentpage_banner} alt="Assessment Illustration"  />
         </ImageContainer>
     </AssessmentContainer>
   )

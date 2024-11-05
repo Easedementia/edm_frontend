@@ -224,14 +224,14 @@ export const PageWrapper = styled.div`
     justify-content: center;
     align-items: center;
     min-height: 100vh; 
-    background-color: #f9f9f9;
+    background-color: #f9fafb;
     margin-top: 120px;
     border-radius: 25px;
 `;
 
 export const FormWrapper = styled.div`
     padding: 2rem;
-    background-color: #f9f9f9;
+    background-color: #f9fafb;
     max-width: 400px;
     width: 100%;
     text-align: center;

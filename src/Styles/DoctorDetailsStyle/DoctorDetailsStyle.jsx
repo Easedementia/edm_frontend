@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import {Button} from 'react-bootstrap'
+import calendar from '../../assets/images/calendar.svg'
 
 export const Container = styled.div`
-  background: #f9f9f9;
+  background: #f9fafb;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -63,14 +64,19 @@ export const IconGroup = styled.div`
 `;
 
 export const Icon = styled.div`
-  background: #f0f0f0;
+  background: #f9fafb;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 70px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+        transform: scale(1.2); 
+    }
 `;
 
 export const Details = styled.div`
@@ -96,6 +102,8 @@ export const WorkingHours = styled.div`
   text-align: left;
   color: #000;
   font-family: 'Poppins', sans-serif;
+  margin-top: 10px;
+  
   
   h3{
     font-size: 16px;
@@ -132,6 +140,7 @@ export const TodayDate = styled.div`
   display: flex;
   align-items: center;
   color: #000;
+  
 
   .react-datepicker-wrapper {
     display: flex;
@@ -139,7 +148,7 @@ export const TodayDate = styled.div`
     border: 1px solid #ccc;
     padding: 8px 12px;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: #f9fafb;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     cursor: pointer;
   }
@@ -150,12 +159,19 @@ export const TodayDate = styled.div`
   }
 
   .calendar-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-    background-image: url('/src/assets/images/calendar_icon.png');
-    background-size: cover;
+    width: 80px;
+    height: 80px;
+    margin-right: 9px;
+    background-image: url(${calendar});
+    background-size: contain;
     background-repeat: no-repeat;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+          transform: scale(1.2); 
+      }
   }
 
   .react-datepicker__input-container {

@@ -16,6 +16,7 @@ export const LeftSide = styled.div`
   justify-content: center;
   align-items: flex-start;
   font-family: 'Poppins', sans-serif;
+  margin-top: 60px;
 `;
 
 export const RightSide = styled.div`
@@ -23,6 +24,7 @@ export const RightSide = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 `;
 
 
@@ -67,28 +69,49 @@ export const Description = styled.p`
 `;
 
 export const KnowMoreButton = styled.button`
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #5517A8;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  svg {
-    margin-left: 0.5rem;
-  }
-  &:hover {
-    background-color: #5753d9;
-  }
+  display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px; /* Adjust padding */
+    background-color: #5517A8;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    height: 40px; 
+    width: 165px; 
+    align-self: flex-start;
+    margin-top: 15px;
+    margin-right: 375px;
+    white-space: nowrap; 
+
+    &:hover {
+        background-color: #6d22d1;
+        color: #fff;
+    }
+`;
+
+
+export const ArrowIcon = styled.img`
+    margin-left: 10px;
+    width: 65px;
+    height: 65px; 
+    transition: transform 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.2); 
+    }
 `;
 
 export const FormWrapper = styled.div`
   padding: 1.5rem;
   border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  background-color: #f9f9f9;
+  background-color: #f9fafb;
   max-width: 400px;
   width: 100%;
   height: 85vh;
@@ -115,8 +138,8 @@ export const Icon = styled.img`
   font-size: 1rem;
   margin-right: 0.5rem;
   color: #5517A8;
-  height: 55px;
-  width: 55px;
+  height: 60px;
+  width: 60px;
 `;
 
 
@@ -157,7 +180,7 @@ export const ButtonContainer = styled.div`
 `;
 
 export const Button = styled.button`
-  padding: 0.25rem;
+  height: 35px;
   font-size: 1rem;
   background-color: #5517A8;
   color: #fff;
@@ -168,6 +191,6 @@ export const Button = styled.button`
   cursor: pointer;
   width: 120px; 
   &:hover {
-    background-color: #5753d9;
+    background-color: #6d22d1;
   }
 `;

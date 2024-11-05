@@ -14,66 +14,72 @@ export const Card = styled.div`
     background-color: #fff;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 30%;
-    text-align: center;
+    width: 310px;
+    text-align: left;
     padding: 20px;
-    
+    display: flex;
+    flex-direction: column;
+    height: 380px;
 `;
 
 
 export const Image = styled.img`
-  width: 100%;
-  border-radius: 25px;
-  height: 200px;
-  width: 200px;
-  border-radius: 25px;
-  cursor: pointer;
+    width: 280px;
+    height: 280px;
+    border-radius: 25px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    align-items: center;
+    margin-top: -18px;
 `;
 
 export const CardTitle = styled.h2`
-  font-size: 18px;
-  margin: 10px 0 10px;
-  font-family: 'Poppins', sans-serif;
-  color: #000;
-  text-align: left;
-  cursor: pointer;
+    font-size: 18px;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    text-align: left;
+    width: 100%;
 `;
 
 export const CardSubtitle = styled.p`
-  font-size: 15px;
-  color: #000;
-  font-family: 'Poppins', sans-serif;
-  text-align: left;
-  cursor: pointer;
+    font-size: 15px;
+    color: #2f2e2e;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    width: 100%;
+    margin-top: 5px;
 `;
 
 
 export const ExploreMore = styled.button`
-  align-self: flex-end;
-  margin-top: auto;
-  padding: 8px 10px;
-  margin-left: 170px;
-  color: #5517A8;
-  text-decoration: none;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  border: none;
-  outline: none;
-  font-family: 'Poppins', sans-serif;
-  cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: 300;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform 0.3s;
+    margin-left: 110px;
+    margin-top: -40px;
+    gap: -10px;
 
-  &:hover {
-    outline: none;
-    color: #4738ca;
-  }
+    &:hover {
+        transform: scale(1.05);
+        color: #5517A8;
+    }
 
-  &:focus {
-    outline: none; 
-  }
-
-  &::after {
-    content: '→';
-    margin-left: 5px;
-  }
+    img {
+        width: 56px; /* Smaller size to fit well */
+        height: 56px;
+    }
 `;
+

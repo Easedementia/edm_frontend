@@ -4,10 +4,10 @@ import testimonial_2 from '../../assets/images/testimonial_2.jpg'
 import testimonial_3 from '../../assets/images/testimonial_3.jpg'
 
 
+
 const testimonials = [
     {
         text: "Awesome team! Lorem ipsum praesent ac massa at ligula reet est iaculis. Vivamus est mist aliquet elit ac nisl.",
-        stars: "★★★★★",
         name: "Mathew Paul",
         title: "Founder of Borcelle",
         image: testimonial_2
@@ -15,7 +15,6 @@ const testimonials = [
 
     {
         text: "Great Service Lorem ipsum praesent ac massa at ligula reet est iaculis. Vivamus est mist aliquet elit ac nisl.",
-        stars: "★★★★★",
         name: "Meera Nambiar",
         title: "CEO at Borcelle",
         image: testimonial_1
@@ -23,7 +22,6 @@ const testimonials = [
 
     {
         text: "Good Initiative Lorem ipsum praesent ac massa at ligula reet est iaculis. Vivamus est mist aliquet elit ac nisl.",
-        stars: "★★★★★",
         name: "David John",
         title: "CFO at Borcelle",
         image: testimonial_3
@@ -39,7 +37,7 @@ const Testimonials = () => {
             {testimonials.map((testimonial, index) => (
                 <TestimonialCard key={index} >
                     <TestimonialText>{testimonial.text}</TestimonialText>
-                    <Stars>{testimonial.stars}</Stars>
+                    <Stars/>
                     <Profile>
                         <ProfileImage src={testimonial.image} alt = {testimonial.name} />
                         <ProfileInfo>

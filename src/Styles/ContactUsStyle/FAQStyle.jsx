@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const FAQContainer = styled.div`
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #f9fafb;
     border-radius: 8px;
     width: 80%;
     margin: 0 auto;
@@ -53,8 +53,16 @@ export const Answer = styled.div`
 `;
 
 
-export const ArrowIcon = styled.span`
+export const ArrowIcon = styled.img`
     display: inline-block;
     transition: transform 0.3s ease;
     transform: rotate(${props => props.rotate}deg);
+    transform-origin: center;
+    height: 50px;
+    width: 50px;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.2); 
+    }
 `;

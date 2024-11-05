@@ -1,13 +1,22 @@
 import styled from "styled-components";
 
 
+export const Wrapper = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+`;
+
+
 export const Container = styled.div`
     width: 60%;
     margin: 150px auto;
-    background-color: #f8f9fa;
+    background-color: #f9fafb;
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-right: 200px;
 `;
 
 
@@ -75,10 +84,12 @@ export const NavButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 40px;
+    width: 150px;
 
 
     &:hover {
-        background-color: #5b00d0;
+        background-color: #6d22d1;
     }
 
 
@@ -90,6 +101,22 @@ export const NavButton = styled.button`
     
     span {
         margin-left: 8px;
+    }
+`;
+
+
+export const ArrowIcon = styled.img`
+    margin-left: ${(props) => (props.rotate === 180 ? '-15px' : '-2px')};
+    margin-right: ${(props) => (props.rotate === 180 ? '-2px' : '-15px')};
+    width: 56px;
+    height: 56px; 
+    transition: transform 0.2s ease;
+    cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+    opacity: ${(props) => (props.disabled ? 0.5 : 1)};
+    transform: rotate(${(props) => props.rotate || 0}deg);
+
+    &:hover {
+        transform: ${(props) => (props.disabled ? `rotate(${props.rotate || 0}deg)` : `rotate(${props.rotate || 0}deg) scale(1.2)`)};
     }
 `;
 
@@ -132,5 +159,18 @@ export const ProgressBar = styled.div`
         width: ${(props) => props.progress}%;
         transition: width 0.4s ease;
     }
+`;
+
+
+export const VideoContainer = styled.div`
+  flex: 1;
+  max-width: 400px;
+  
+  video {
+    width: 80%;
+    margin-top: 280px;
+    height: auto;
+    border-radius: 10px;
+  }
 `;
 

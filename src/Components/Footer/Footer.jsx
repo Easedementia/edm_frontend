@@ -1,15 +1,18 @@
 import { useState } from 'react'
-import { FooterContainer, TopSection, LeftContainer, Logo, NewsletterContainer, NewsletterText, EmailInput, SubmitButton, RightContainer, ContactDetails, ContactItem, LinksContainer, LinkItem, BottomSection, FooterWrapper, FooterBottomText } from '../../Styles/Footer/FooterStyle'
+import { FooterContainer, TopSection, LeftContainer, Logo, NewsletterContainer, NewsletterText, EmailInput, ArrowIcon, InputWrapper, RightContainer, ContactDetails, ContactItem, LinksContainer, LinkItem, BottomSection, FooterWrapper, FooterBottomText, SocialMediaIconsContainer, SocialMediaIconLink, HeartIcon } from '../../Styles/Footer/FooterStyle'
 import easedementia_logo from '../../assets/images/easedementia_logo.png'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 import { baseURL } from '../../api/api'
 import { toast } from 'react-toastify'
+import arrow from '../../assets/images/arrow.svg'
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import footerelement1 from '../../assets/images/footerelement1.svg'
 
 
 const Footer = () => {
     const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+    
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
@@ -19,13 +22,11 @@ const Footer = () => {
     const handleSubscribe = async () => {
         try {
             const response = await axios.post(`${baseURL}/subscribe-newsletter/`, {email});
-            setMessage(response.data.message);
             if (response.status === 201 || response.status === 200) {
                 setEmail('');
             }
             toast.success("Subscribed to the news letter successfully");
         } catch (error) {
-            setMessage('An error occurred. Please try again.');
             toast.error('An error occurred. Please try again.');
         }
     }
@@ -37,11 +38,28 @@ const Footer = () => {
                 <Logo src={easedementia_logo} alt='easedementia-logo' />
                 <NewsletterContainer>
                     <NewsletterText>Stay in the loop and sign up for the newsletter:</NewsletterText>
-                    <div style={{display:'flex'}} >
-                        <EmailInput type='email' placeholder='Enter your email' value={email} onChange={handleEmailChange} />
-                        <SubmitButton onClick={handleSubscribe}>➔</SubmitButton>
-                    </div>
-                    {message && <p>{message}</p>}
+                    <InputWrapper>
+                    <EmailInput
+                        type="email"
+                        placeholder="Enter your email"
+                        value={email}
+                        onChange={handleEmailChange}
+                    />
+                    <ArrowIcon src={arrow} alt="Submit" onClick={handleSubscribe} />
+                    
+                    </InputWrapper>
+                    <SocialMediaIconsContainer>
+                        <span>Connect us on</span> 
+                        <SocialMediaIconLink href="https://www.instagram.com/easedementia__/?igshid=MzRlODBiNWFlZA%3D%3D" target="_blank" rel="noopener noreferrer">
+                            <FaInstagram />
+                        </SocialMediaIconLink>
+                        <SocialMediaIconLink href="https://www.facebook.com/people/Easedementia/61550949666708/?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer">
+                            <FaFacebookF />
+                        </SocialMediaIconLink>
+                        <SocialMediaIconLink href="https://www.linkedin.com/company/ease-dementia/" target="_blank" rel="noopener noreferrer">
+                            <FaLinkedinIn />
+                        </SocialMediaIconLink>
+                    </SocialMediaIconsContainer>
                 </NewsletterContainer>
             </LeftContainer>
             <RightContainer>
@@ -70,7 +88,9 @@ const Footer = () => {
                 <LinkItem as={Link} to='/faq'>FAQ</LinkItem>
                 <LinkItem as={Link} to='/contact'>Contact Us</LinkItem>
                 <LinkItem as={Link} to='/careers'>Careers</LinkItem>
+                <HeartIcon src={footerelement1} alt="Heart Icon" />
             </LinksContainer>
+            
         </RightContainer>
         </TopSection>
         <BottomSection>
@@ -80,7 +100,8 @@ const Footer = () => {
                     <FooterBottomText>Terms & Conditions</FooterBottomText>
                 </Link>
             </FooterWrapper>
-            <a href="https://lordicon.com/">Icons by Lordicon.com</a>
+            
+            
         </BottomSection>
     </FooterContainer>
   )

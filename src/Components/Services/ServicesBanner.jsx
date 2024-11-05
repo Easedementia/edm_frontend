@@ -1,5 +1,5 @@
 import { ServicesContainer, HeadingContainer, SubHeading, MainHeading, Description, ImageContainer, StyledImage } from '../../Styles/ServicesStyle/ServicesBannerStyle'
-import intervention from '../../assets/images/intervention.svg'
+import servicesbannerimage from '../../assets/images/servicesbannerimage.svg'
 
 
 const ServicesBanner = () => {
@@ -14,7 +14,7 @@ const ServicesBanner = () => {
             </Description>
         </HeadingContainer>
         <ImageContainer>
-            <StyledImage src={intervention} alt='Puzzle Hands' />
+            <StyledImage src={servicesbannerimage} alt='Puzzle Hands' />
         </ImageContainer>
     </ServicesContainer>
   )

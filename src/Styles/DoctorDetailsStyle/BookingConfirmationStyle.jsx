@@ -3,11 +3,11 @@ import { Button } from "react-bootstrap";
 
 
 export const Container = styled.div`
-  background: #f9f9f9;
+  background: #f9fafb;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 100%;
+  width: 45%;
   max-width: 800px;
   margin: 0 auto;
   font-family: 'Poppins', sans-serif;

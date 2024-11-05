@@ -5,6 +5,7 @@ import { PageWrapper, LeftSide, RightSide, InfoSection, Title, Description, Butt
 import axios from 'axios';
 import { baseURL } from '../../api/api';
 import { toast } from 'react-toastify';
+import arrow from '../../assets/images/arrow.svg'
 
 
 const ContactUsBanner = () => {
@@ -108,7 +109,8 @@ const ContactUsBanner = () => {
                 </Description>
 
                 <Button>
-                    Call Now <ArrowIcon>→</ArrowIcon>
+                    Call Now <ArrowIcon src={arrow} alt="arrow-icon" />
+                    
                 </Button>
             </InfoSection>
         </LeftSide>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const MontessoriApproachContainer = styled.div`
     padding: 50px 20px;
-    background-color: #f9f9f9;
+    background-color: #f9fafb;
     text-align: center;
     border-radius: 25px;
     margin-top: 40px;
@@ -34,7 +34,7 @@ export const ApproachContainer = styled.div`
 
 
 export const ApproachCard = styled.div`
-    background-color: #f9f9f9;
+    background-color: #f9fafb;
     border-radius: 15px;
     /* box-shadow: 0px 4px 10px rgba(0,0,0,0.1); */
     padding: 20px;

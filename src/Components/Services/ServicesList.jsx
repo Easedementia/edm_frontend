@@ -1,8 +1,9 @@
-import { HeadingContainer, SubHeading, MainHeading, Description, CardContainer, ServiceWrapper, ServiceCard, ServiceContent, ServiceTitle, ServiceDescription, BookButton, StyledImage, FirstRow } from '../../Styles/ServicesStyle/ServicesListStyle'
+import { HeadingContainer, SubHeading, MainHeading, Description, CardContainer, ServiceWrapper, ServiceCard, ServiceContent, ServiceTitle, ServiceDescription, BookButton, StyledImage, FirstRow, ArrowIcon } from '../../Styles/ServicesStyle/ServicesListStyle'
 // import caregiver from '../../assets/images/caregiver.svg'
 import { baseURL } from '../../api/api'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import arrow from '../../assets/images/arrow.svg'
 
 
 
@@ -41,7 +42,10 @@ const ServicesList = () => {
               <ServiceContent>
                 <ServiceTitle>{service.title}</ServiceTitle>
                 <ServiceDescription>{service.description}</ServiceDescription>
-                <BookButton>Book an Appointment</BookButton>
+                <BookButton>
+                  Book an Appointment
+                  <ArrowIcon src={arrow} alt="arrow icon" />
+                </BookButton>
               </ServiceContent>
               <StyledImage src={getFullImageUrl(service.image)} alt='Service Image' />
             </ServiceCard>
@@ -55,7 +59,10 @@ const ServicesList = () => {
               <ServiceContent>
                 <ServiceTitle>{service.title}</ServiceTitle>
                 <ServiceDescription>{service.description}</ServiceDescription>
-                <BookButton>Book an Appointment</BookButton>
+                <BookButton>
+                  Book an Appointment
+                  <ArrowIcon src={arrow} alt="arrow icon" />
+                </BookButton>
               </ServiceContent>
               <StyledImage src={getFullImageUrl(service.image)} alt='Service Image' />
             </ServiceCard>

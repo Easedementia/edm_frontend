@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
-  background-color: #f9f9f9;
+  position: relative;
+  background-color: #f9fafb;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -41,19 +42,52 @@ export const NewsletterText = styled.p`
   color: #000;
 `;
 
-export const EmailInput = styled.input`
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-right: 10px;
+
+export const InputWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  max-width: 400px;
 `;
+
+
+export const EmailInput = styled.input`
+  width: 100%;
+  padding: 12px 50px 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  margin-right: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+
+  &:focus {
+    border-color: #5517A8;
+  }
+`;
+
+
+export const ArrowIcon = styled.img`
+  position: absolute;
+  left: 300px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover{
+    transform: translateY(-50%) scale(1.1);
+  }
+`;
+
 
 export const SubmitButton = styled.button`
   padding: 10px 20px;
-  background-color: #6200ea;
+  background-color: #5517A8;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 25px;
   cursor: pointer;
 
   &:hover {
@@ -92,6 +126,7 @@ export const LinkItem = styled.a`
 
   &:hover {
     text-decoration: underline;
+    color: #6d22d1;
   }
 `;
 
@@ -116,3 +151,40 @@ export const FooterBottomText = styled.p`
   margin: 0;
 `;
 
+
+export const SocialMediaIconsContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 120px;
+
+  & > span {
+    margin-right: 12px;
+  }
+`;
+
+
+export const SocialMediaIconLink = styled.a`
+  margin-right: 15px;
+  font-size: 24px;
+  color: #000;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.2);
+    color: #5517A8;
+  }
+`;
+
+
+export const HeartIcon = styled.img`
+  position: relative;
+  top: 20px;
+  left: 25px;
+  width: 100px;
+  height: 100px;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`;

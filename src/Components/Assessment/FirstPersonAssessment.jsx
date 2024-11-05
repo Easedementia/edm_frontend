@@ -1,11 +1,13 @@
 import UserNavbar from "../Navbar/UserNavbar"
-import { Container, QuestionText, Description, ButtonContainer, OptionButton, NavButtonContainer, NavButton, ResultContainer, ProgressBarWrapper, ProgressBar } from '../../Styles/AssessmentStyle/FirstPersonAssessmentStyle'
+import { Wrapper, Container, QuestionText, Description, ButtonContainer, OptionButton, NavButtonContainer, NavButton, ResultContainer, ProgressBarWrapper, ProgressBar, VideoContainer, ArrowIcon } from '../../Styles/AssessmentStyle/FirstPersonAssessmentStyle'
 import { useState } from "react";
 // import { useSelector } from 'react-redux';
 import Footer from "../Footer/Footer";
 import axios from "axios";
 import { baseURL } from "../../api/api";
 import { useLocation, useNavigate } from "react-router-dom";
+import small_plants from '../../assets/animations/small_plants.mp4'
+import arrow from '../../assets/images/arrow.svg'
 
 
 
@@ -163,49 +165,57 @@ const FirstPersonAssessment = () => {
 
   return (
     <>
-    <UserNavbar/>
-    <Container>
-      {currentQuestionIndex < questions.length && (
-        <ProgressBarWrapper>
-          <ProgressBar progress={progress} />
-        </ProgressBarWrapper>
-      )}
-      {currentQuestionIndex < questions.length ? (
-        <>
-          <QuestionText>{currentQuestion.text}</QuestionText>
-          <Description>{currentQuestion.description}</Description>
-          <ButtonContainer>
-            <OptionButton
-              active={answers[currentQuestionIndex] === 1}
-              onClick={() => handleAnswer(1)}
-            >
-              Yes
-            </OptionButton>
-            <OptionButton
-              active={answers[currentQuestionIndex] === 0}
-              onClick={() => handleAnswer(0)}
-            >
-              No
-            </OptionButton>
-          </ButtonContainer>
+    <UserNavbar />
+      <Wrapper>
+        <VideoContainer>
+          <video src={small_plants} autoPlay loop muted />
+        </VideoContainer>
 
-          <NavButtonContainer>
-            <NavButton onClick={handlePrevious} disabled={currentQuestionIndex === 0}>
-              Previous <span>←</span>
-            </NavButton>
-            <NavButton onClick={handleNext} disabled={answers[currentQuestionIndex] === null}>
-              {currentQuestionIndex === questions.length - 1 ? 'Finish' : 'Next'} <span>→</span>
-            </NavButton>
-          </NavButtonContainer>
-        </>
-      ) : (
-        <ResultContainer>
-          <h2>Your Total Score: {calculateScore()}</h2>
-          <p>{getInterpretation(calculateScore())}</p>
-        </ResultContainer>
-      )}
-    </Container>
-    <Footer/>
+        <Container>
+          {currentQuestionIndex < questions.length ? (
+            <>
+              <ProgressBarWrapper>
+                <ProgressBar progress={progress} />
+              </ProgressBarWrapper>
+
+              <QuestionText>{currentQuestion.text}</QuestionText>
+              <Description>{currentQuestion.description}</Description>
+
+              <ButtonContainer>
+                <OptionButton
+                  active={answers[currentQuestionIndex] === 1}
+                  onClick={() => handleAnswer(1)}
+                >
+                  Yes
+                </OptionButton>
+                <OptionButton
+                  active={answers[currentQuestionIndex] === 0}
+                  onClick={() => handleAnswer(0)}
+                >
+                  No
+                </OptionButton>
+              </ButtonContainer>
+
+              <NavButtonContainer>
+                <NavButton onClick={handlePrevious} disabled={currentQuestionIndex === 0}>
+                    <ArrowIcon src={arrow} alt="Arrow Icon" rotate={180} disabled={currentQuestionIndex === 0} />
+                    Previous
+                </NavButton>
+                <NavButton onClick={handleNext} disabled={answers[currentQuestionIndex] === null}>
+                    {currentQuestionIndex === questions.length - 1 ? 'Finish' : 'Next'}
+                    <ArrowIcon src={arrow} alt="Arrow Icon" disabled={answers[currentQuestionIndex] === null} />
+                </NavButton>
+            </NavButtonContainer>
+            </>
+          ) : (
+            <ResultContainer>
+              <h2>Your Total Score: {calculateScore()}</h2>
+              <p>{getInterpretation(calculateScore())}</p>
+            </ResultContainer>
+          )}
+        </Container>
+      </Wrapper>
+      <Footer />
     </>
   )
 }

@@ -5,13 +5,14 @@ export const ServicesContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
-  background-color: #f9f9f9;
+  background-color: #f9fafb;
   font-family: 'Poppins', sans-serif;
   margin-top: 200px;
 `;
 
 export const HeadingContainer = styled.div`
   max-width: 50%;
+  background-color: #f9fafb;
 `;
 
 export const SubHeading = styled.h2`
@@ -30,7 +31,7 @@ export const MainHeading = styled.h1`
 `;
 
 export const Description = styled.p`
-  font-size: 1.2rem;
+  font-size: 17px;
   color: #000;
   text-align: left;
   font-weight: 300;
@@ -41,7 +42,7 @@ export const ServiceWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
-  background-color: #f9f9f9;
+  background-color: #f9fafb;
   font-family: 'Poppins', sans-serif;
   ${({ reverse }) =>
     reverse &&
@@ -78,25 +79,36 @@ export const ServiceTitle = styled.h2`
 `;
 
 export const ServiceDescription = styled.p`
-  font-size: 15px;
+  font-size: 14px;
   margin-bottom: 20px;
-  color: #000;
-  font-weight: 300;
+  color: #2f2e2e;
+  font-weight: 380;
 `;
 
 export const BookButton = styled.button`
-  background-color: #5517A8;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-left: 50px;
+  display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px; /* Adjust padding */
+    background-color: #5517A8;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    height: 40px; 
+    width: 243px; 
+    align-self: flex-start;
+    margin-top: 15px;
+    margin-right: 375px;
+    white-space: nowrap; 
 
-  &:hover {
-    background-color: #5553d7;
-  }
+    &:hover {
+        background-color: #6d22d1;
+        color: #fff;
+    }
 `;
 
 export const StyledImage = styled.img`
@@ -104,6 +116,7 @@ export const StyledImage = styled.img`
   height: 150px;
   width: 150px;
   object-fit: cover;
+  margin-left: 80px;
 `;
 
 export const FirstRow = styled.div`
@@ -111,7 +124,20 @@ export const FirstRow = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   padding: 2rem;
-  background-color: #f9f9f9;
+  background-color: #f9fafb;
   font-family: 'Poppins', sans-serif;
   margin-top: 100px;
+`;
+
+
+export const ArrowIcon = styled.img`
+    margin-left: 0;
+    width: 65px;
+    height: 65px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.2);
+    }
 `;

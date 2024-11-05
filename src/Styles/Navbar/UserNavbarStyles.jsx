@@ -14,7 +14,7 @@ export const NavbarContainer = styled.nav`
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: white;
-    box-shadow: 0 4px 2px -2px gray;
+    box-shadow: 0 4px 2px -2px #f9fafb;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -45,7 +45,8 @@ export const LogoContainer = styled.div`
 
 
 export const Logo = styled.img`
-    height: 80px;
+    height: 60px;
+    margin-left: 25px;
     cursor: pointer;
 
     @media (max-width: 480px) {
@@ -109,6 +110,7 @@ export const NavItem = styled.a`
     color: black;
     font-size: 16px;
     font-weight: 400;
+    letter-spacing: 0.5px;
     cursor: pointer;
     &:hover{
         color: #5517A8;
@@ -147,7 +149,11 @@ export const UserIcon = styled.img`
   width: 75px;
   margin-right: 5px;
   cursor: pointer;
-  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
+  transition: transform 0.2s ease;
+
+  &:hover {
+        transform: scale(1.2); 
+    }
 
   @media (max-width: 480px) {
         height: 20px;

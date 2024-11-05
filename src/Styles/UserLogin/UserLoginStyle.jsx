@@ -67,27 +67,42 @@ export const Description = styled.p`
 
 
 export const Button = styled.button`
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    background-color: #5517A8;
-    color: #fff;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    display: flex;
+    display: flex; 
     align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px; /* Adjust padding */
+    background-color: #5517A8;
+    color: white;
+    border: none;
+    border-radius: 50px;
     font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    height: 40px; 
+    width: 165px; 
+    align-self: flex-start;
+    margin-top: 15px;
+    margin-right: 375px;
+    white-space: nowrap; 
 
-    &:hover{
-        background-color: #5753d9;
+    &:hover {
+        background-color: #6d22d1;
+        color: #fff;
     }
 `;
 
 
-export const ArrowIcon = styled.span`
-    margin-left: 0.5rem;
-    display: inline-block;
-    transform: translateX(5px);
+export const ArrowIcon = styled.img`
+    margin-left: 10px;
+    width: 65px;
+    height: 65px; 
+    transition: transform 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.2); 
+    }
 `;
 
 
@@ -95,7 +110,7 @@ export const FormWrapper = styled.div`
     padding: 2rem;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    background-color: #f8f8f8;
+    background-color: #f9fafb;
     max-width: 400px;
     width: 100%;
     text-align: center;
@@ -103,8 +118,9 @@ export const FormWrapper = styled.div`
 
 
 export const FormTitle = styled.h2`
-    font-size: 2rem;
-    margin-bottom: 1.1rem;
+    font-size: 28px;
+    margin-bottom: 10px;
+    margin-top: -10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,8 +148,8 @@ export const Form = styled.form`
 
 
 export const Label = styled.label`
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: 600;
     color: #000;
     margin-bottom: 0.5rem;
 `;
@@ -162,7 +178,6 @@ export const ButtonContainer = styled.div`
 
 
 export const FormButton = styled.button`
-    padding: 0.75rem;
     font-size: 1rem;
     background-color: #5517A8;
     color: #fff;
@@ -170,7 +185,7 @@ export const FormButton = styled.button`
     border-radius: 25px;
     cursor: pointer;
     width: 100px;
-    height: 50px;
+    height: 40px;
     font-weight: 600;
 
     &:hover{

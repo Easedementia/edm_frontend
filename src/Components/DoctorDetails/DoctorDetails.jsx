@@ -4,13 +4,15 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useState, useEffect } from 'react';
 import Footer from '../Footer/Footer';
-import { FaCommentDots, FaPhoneAlt, FaVideo } from 'react-icons/fa';
 import { useNavigate, useParams } from 'react-router-dom';
 import { baseURL } from '../../api/api';
 import axios from 'axios';
 import moment from 'moment';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
+import doctordetailsicon1 from '../../assets/images/doctordetailsicon1.svg'
+import doctordetailsicon2 from '../../assets/images/doctordetailsicon2.svg'
+import doctordetailsicon3 from '../../assets/images/doctordetailsicon3.svg'
 
 
 
@@ -143,9 +145,15 @@ const DoctorDetails = () => {
           <Rating>4.9⭐<span>{doctor.schedule}</span> </Rating>
         </DoctorInfo>
         <IconGroup>
-          <Icon><FaCommentDots /></Icon>
-          <Icon><FaPhoneAlt /></Icon>
-          <Icon><FaVideo /></Icon>
+          <Icon>
+            <img src={doctordetailsicon1} alt="Comment Icon" />
+          </Icon>
+          <Icon>
+            <img src={doctordetailsicon2} alt="Phone Icon" />
+          </Icon>
+          <Icon>
+            <img src={doctordetailsicon3} alt="Video Icon" />
+          </Icon>
         </IconGroup>
       </Header>
       <Details>

@@ -11,6 +11,7 @@ import { toast } from 'react-toastify';
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import Cookies from 'js-cookie';
 import { Link } from 'react-router-dom';
+import arrow from '../assets/images/arrow.svg'
 
 
 export const UserLoginPage = () => {
@@ -117,9 +118,66 @@ export const UserLoginPage = () => {
                 </Description>
 
                 <Button>
-                    Know More <ArrowIcon>→</ArrowIcon>
+                    Know More <ArrowIcon src={arrow} alt="Arrow Icon" />
                 </Button>
             </InfoSection>
+                <GoogleOAuthProvider clientId="983196844931-f4h8h0ckn48vrmn01adl89k0csqmrrv1.apps.googleusercontent.com">
+                    <div style={{marginTop:'30px'}} >
+                    <GoogleLogin
+                                onSuccess={credentialResponse => {
+                                    const decoded = jwtDecode(credentialResponse.credential);
+                                    console.log(decoded);
+                                    const fullName = decoded.name;
+                                    const spaceIndex = fullName.indexOf(' ');
+                                    
+                                    let firstName, lastName;
+                                    
+                                    if (spaceIndex !== -1) {
+                                    firstName = fullName.substring(0, spaceIndex);
+                                    lastName = fullName.substring(spaceIndex + 1);
+                                    } else {
+                                    firstName = fullName;
+                                    lastName = ''; 
+                                    }
+
+                                    axios
+                    .post(`${baseURL}/user-google-auth/`, {
+                        email: decoded.email,
+                        first_name: firstName,
+                        last_name: lastName,
+                    }, { withCredentials: true })
+                    .then((response) => {
+                        localStorage.setItem('accessToken', response.data.access);
+                        localStorage.setItem('refreshToken', response.data.refresh);
+                        console.log("response.data", response.data);
+                        console.log(response.data);
+                        dispatch(setAccessToken(response.data.data));
+                        dispatch(setUser(response.data.user));
+                        
+
+                        // Redirect to the desired page after successful login
+                        toast.success('Login Successful');
+                        navigator('/');
+                    })
+                    .catch((error) => {
+                        if (error.response && error.response.status === 401) {
+                        // Unauthorized: Invalid credentials
+                        setEmailError('Invalid email or password');
+                        setPasswordError('Invalid email or password');
+                        } else {
+                        // Other errors
+                        console.error('Login error:', error);
+                        }
+                    });
+                                }}
+                                onError={() => {
+                                    console.log('Login Failed');
+                                }}
+                                />
+
+                    </div>
+                            
+                        </GoogleOAuthProvider>     
         </LeftSide>
         
         <RightSide>
@@ -144,60 +202,9 @@ export const UserLoginPage = () => {
                 </Form>
             </FormWrapper>
         </RightSide>
-    </PageWrapper>
-    <GoogleOAuthProvider clientId="983196844931-f4h8h0ckn48vrmn01adl89k0csqmrrv1.apps.googleusercontent.com">
-            <GoogleLogin
-                onSuccess={credentialResponse => {
-                    const decoded = jwtDecode(credentialResponse.credential);
-                    console.log(decoded);
-                    const fullName = decoded.name;
-                    const spaceIndex = fullName.indexOf(' ');
-                    
-                    let firstName, lastName;
-                    
-                    if (spaceIndex !== -1) {
-                    firstName = fullName.substring(0, spaceIndex);
-                    lastName = fullName.substring(spaceIndex + 1);
-                    } else {
-                    firstName = fullName;
-                    lastName = ''; 
-                    }
-
-                    axios
-    .post(`${baseURL}/user-google-auth/`, {
-        email: decoded.email,
-        first_name: firstName,
-        last_name: lastName,
-    }, { withCredentials: true })
-    .then((response) => {
-        localStorage.setItem('accessToken', response.data.access);
-        localStorage.setItem('refreshToken', response.data.refresh);
-        console.log("response.data", response.data);
-        console.log(response.data);
-        dispatch(setAccessToken(response.data.data));
-        dispatch(setUser(response.data.user));
         
-
-        // Redirect to the desired page after successful login
-        toast.success('Login Successful');
-        navigator('/');
-    })
-    .catch((error) => {
-        if (error.response && error.response.status === 401) {
-        // Unauthorized: Invalid credentials
-        setEmailError('Invalid email or password');
-        setPasswordError('Invalid email or password');
-        } else {
-        // Other errors
-        console.error('Login error:', error);
-        }
-    });
-                }}
-                onError={() => {
-                    console.log('Login Failed');
-                }}
-                />
-        </GoogleOAuthProvider>
+    </PageWrapper>
+    
     </>
     
     

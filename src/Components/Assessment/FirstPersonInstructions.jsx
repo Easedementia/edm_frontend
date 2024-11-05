@@ -3,6 +3,7 @@ import { Container, Title, Subtitle, InstructionsList, InstructionItem, Checkbox
 import UserNavbar from '../Navbar/UserNavbar';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../Footer/Footer';
+import arrow from '../../assets/images/arrow.svg'
 
 const FirstPersonInstructions = () => {
     const [isChecked, setIsChecked] = useState(false);
@@ -60,7 +61,7 @@ const FirstPersonInstructions = () => {
 
         <Button disabled={!isChecked} onClick={handleProceedClick}>
         Proceed
-        <ArrowIcon>→</ArrowIcon>
+        <ArrowIcon src={arrow} alt="arrow icon" disabled={!isChecked} />
         </Button>
     </Container>
     <Footer/>

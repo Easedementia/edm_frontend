@@ -1,9 +1,10 @@
-import { Container, LeftSide, RightSide, MainTitle, TitleSpan, Subtitle, Description, FormWrapper, FormTitle, Icon, KnowMoreButton, Form, Label, Input, ButtonContainer, Button } from '../Styles/UserSignup/UserSignupStyle'
+import { Container, LeftSide, RightSide, MainTitle, TitleSpan, Subtitle, Description, FormWrapper, FormTitle, Icon, KnowMoreButton, Form, Label, Input, ButtonContainer, Button, ArrowIcon } from '../Styles/UserSignup/UserSignupStyle'
 import user_icon from '../assets/images/user_icon.svg'
 import axios from 'axios' 
 import {useNavigate} from 'react-router-dom'
 import {baseURL} from '../api/api'
 import { useState } from 'react'
+import arrow from '../assets/images/arrow.svg'
 
 const UserSignupPage = () => {
   const navigator = useNavigate();
@@ -128,9 +129,7 @@ const UserSignupPage = () => {
         <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Aenean semper mauris.</Description>
         <KnowMoreButton>
             Know More
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
+            <ArrowIcon src={arrow} alt="Arrow Icon" />
         </KnowMoreButton>
         </LeftSide>
         <RightSide>

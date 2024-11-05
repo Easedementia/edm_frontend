@@ -52,27 +52,46 @@ export const CheckboxWrapper = styled.div`
 `;
 
 
+
+
+
 export const Button = styled.button`
+    display: flex;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
     background-color: ${(props) => (props.disabled ? '#cccccc' : '#5517A8')};
     color: white;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 14px;
+    letter-spacing: 1px;
     font-weight: bold;
     border: none;
-    border-radius: 30px;
+    border-radius: 25px;
     cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 40px;
+    width: 170px;
 
     &:hover{
         background-color: ${(props) => (props.disabled ? '#cccccc' : '#5b00d0')};
     }
+
+    
 `;
 
 
-export const ArrowIcon = styled.span`
-    margin-left: 8px;
-    font-size: 16px;
+export const ArrowIcon = styled.img`
+    margin-right: 0;
+    width: 56px;
+    height: 56px; 
+    transition: transform 0.2s ease;
+    cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+    opacity: ${(props) => (props.disabled ? 0.5 : 1)};
+    &:hover {
+        transform: scale(1.2); 
+        opacity: ${(props) => (props.disabled ? 0.5 : 1)}; 
+    }
 `;
 

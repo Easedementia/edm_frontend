@@ -7,8 +7,10 @@ export const ServicesContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
-    background-color: #f9f9f9;
+    background-color: #f9fafb;
     font-family: 'Poppins', sans-serif;
+    margin-top: 90px;
+    margin-bottom: 90px;
 `;
 
 
@@ -37,7 +39,7 @@ export const MainHeading = styled.h1`
 
 export const Description = styled.p`
     font-size: 1.2rem;
-    color: gray;
+    color: #2f2e2e;
     text-align: left;
 `;
 

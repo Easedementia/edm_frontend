@@ -58,7 +58,7 @@ const UserProfile = () => {
     if (selectedFile) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setAvatarPreview(reader.result); // Update the avatar preview
+        setAvatarPreview(reader.result);
       };
       reader.readAsDataURL(selectedFile);
       handleFileUpload(selectedFile);
