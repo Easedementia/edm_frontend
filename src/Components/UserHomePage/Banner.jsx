@@ -9,7 +9,7 @@ const Banner = () => {
     <BannerContainer>
       <TextContainer>
         <Title>New Dawn for Dementia Care</Title>
-        <Subtitle>A new journey in dementia care, offering a unique blend of innovative and empathetic approaches tailored to support our elderly loved ones. Eliminating the stigma associated with dementia,fostering awareness about the condition. Dedicated to enhancing the overall quality of life of the elderly.</Subtitle>
+        <Subtitle>A new journey in dementia care, offering a unique blend of innovative and empathetic approaches tailored to support our elderly loved ones.</Subtitle>
         <ContactButton to='/contact'>
             Contact Us
             <ArrowIcon src={arrow} alt="arrow icon" />

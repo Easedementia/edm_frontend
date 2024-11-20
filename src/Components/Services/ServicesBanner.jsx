@@ -9,8 +9,7 @@ const ServicesBanner = () => {
             <SubHeading>Our Services</SubHeading>
             <MainHeading>What We Offer</MainHeading>
             <Description>
-                Here we strive to redefine dementia care, empower individuals to
-                thrive, and inculcate a sense of belongingness!
+            At Easedementia, we offer a holistic approach that prioritizes the cognitive, psychological, and emotional well-being of elders.
             </Description>
         </HeadingContainer>
         <ImageContainer>

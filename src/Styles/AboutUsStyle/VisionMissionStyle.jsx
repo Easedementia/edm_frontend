@@ -75,7 +75,7 @@ export const CardDescription = styled.p`
 `;
 
 export const Heading = styled.h2`
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: #5517A8;
   font-weight: 300;
   margin-bottom: 0.5rem;
@@ -89,7 +89,7 @@ export const SubHeading = styled.h1`
 `;
 
 export const Description = styled.p`
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #2f2e2e;
   margin-bottom: 2rem;
 `;

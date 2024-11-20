@@ -33,7 +33,7 @@ const ServicesList = () => {
           <SubHeading>Offer closes soon</SubHeading>
           <MainHeading>Wide range of dementia care services</MainHeading>
           <Description>
-            Here we strive to redefine dementia care, empower individuals to thrive, and inculcate a sense of belongingness!
+          Our services are designed to promote cognitive stimulation, emotional support, and overall quality of life, empowering elders to live with dignity and purpose.
           </Description>
         </HeadingContainer>
         {services.slice(0, 1).map((service) => (

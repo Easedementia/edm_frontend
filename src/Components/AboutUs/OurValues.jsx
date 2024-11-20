@@ -14,8 +14,8 @@ const valuesData = [
 
     {
         icon: progress,
-        heading: 'Progress',
-        description: 'We constantly innovate to enhance dementia care, always seeking new ways to improve lives.'
+        heading: 'Innovation',
+        description: 'We provide extensive care by employing the best innovative practices to ensure the highest quality of support for our clients.'
     },
 
     {
@@ -28,7 +28,15 @@ const valuesData = [
         icon: integrity,
         heading:'Integrity',
         description: 'We prioritize honesty and transparency, always acting in the best interests of our clients.'
-    }
+    },
+
+    {
+        icon: accountability,
+        heading: 'Empathy',
+        description: 'We strive to ensure that every client feels heard and valued by offering genuine companionship along the way.'
+    },
+
+    
 ];
 
 

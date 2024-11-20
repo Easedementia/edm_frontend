@@ -6,16 +6,7 @@ const AboutUsBannerImage = () => {
         <Overlay/>
         <TextContainer>
             <TextParagraph>
-                Easedementia was conceived from the idea to revolutionize dementia care and make meaningful
-                difference in the lives of those living with dementia and their caregivers. We are not just a platform; 
-                a dedicated community driven by compassion and powered by innovative technology.
-            </TextParagraph>
-
-            <TextParagraph>
-                The Montessori Method is the cornerstone of our journey which promotes independence and provides 
-                utmost respect to each individuals psychological, physical, and social development. With individualized 
-                activities and gentle guidance, we nurture dignity and self-esteem, helping individuals look into each day 
-                with purpose.
+            At Easedementia, we understand the profound impact dementia can have on individuals and their families. Our team of experienced psychologists and social workers offer comprehensive support to help navigate the challenges of dementia care. We provide compassionate care designed to ease the emotional, psychological, and practical burdens of dementia, while also addressing caregiver burnout. With our expertise, we are committed to helping you manage these challenges and support your loved ones through every step of their journey. We are dedicated to creating a supportive community by offering programs and events that bring people together, helping to combat loneliness and strengthen social bonds among those affected by dementia.
             </TextParagraph>
         </TextContainer>
     </BannerContainer>

@@ -11,7 +11,7 @@ const AssessmentLink = () => {
         </TextContainer>
         <DetailsContainer>
             <Description>
-            The assessment process guides you to a <b>Self-Assessment</b>, allowing individuals to evaluate themselves, and an <b>Informant Interview</b>, where a family member or caregiver can complete the evaluation on the individuals behalf, ensuring a comprehensive evaluation.
+            The assessment process guides you to a <b>Self-Assessment</b>, allowing individuals with dementia to evaluate themselves, and an <b>Informant interview</b>, where a family member or caregiver can complete the evaluation on the individuals behalf, ensuring a comprehensive evaluation.
             </Description>
         </DetailsContainer>
     </AssessmentContainer>

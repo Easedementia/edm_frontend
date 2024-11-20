@@ -97,8 +97,10 @@ export const UserLoginPage = () => {
                 if (error.response && error.response.status === 401) {
                     setEmailError('Invalid email!');
                     setPasswordError('Invalid password!');
+                    toast.error("Invalid email or password!")
                 } else {
                     console.error('Login error', error);
+                    toast.error("Please provide the correct credentials!")
                 }
             });
         }

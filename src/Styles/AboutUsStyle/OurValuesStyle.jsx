@@ -9,7 +9,7 @@ export const ValuesContainer = styled.div`
 
 export const Heading = styled.h2`
   font-size: 2rem;
-  color: #2b2b2b;
+  color: #000;
   font-weight: bold;
   margin-bottom: 2rem;
 `;
@@ -33,20 +33,20 @@ export const ValuesContent = styled.div`
 `;
 
 export const ValuesIcon = styled.img`
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   margin-bottom: 0.1rem;
   margin-top: -20px;
 `;
 
 export const ValuesHeading = styled.h3`
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #000;
   font-weight: bold;
   margin-bottom: 0.3rem;
 `;
 
 export const ValuesDescription = styled.p`
-  font-size: 15px;
+  font-size: 13px;
   color: #2f2e2e;
 `;

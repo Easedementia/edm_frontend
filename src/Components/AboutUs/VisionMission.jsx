@@ -7,10 +7,11 @@ const VisionMission = () => {
   return (
     <VisionMissionContainer>
       <LeftContainer>
-        <Heading>Text kittmbho ida</Heading>
-        <SubHeading>Easedementia is the core of everything we do.</SubHeading>
+        <Heading>Revolutionizing dementia care through heart and hope
+        </Heading>
+        <SubHeading>Easing dementia with compassion and dedication</SubHeading>
         <Description>
-          Here we strive to redefine dementia care, empower individuals to thrive, and inculcate a sense of belongingness!
+        At Easedementia, we are driven by a passion to transform dementia care, putting compassion, connection, and empowerment at the heart of all we do.
         </Description>
       </LeftContainer>
       <RightContainer>

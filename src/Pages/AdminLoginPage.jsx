@@ -97,9 +97,9 @@ const AdminLoginPage = () => {
         
         <RightSide>
             <FormWrapper>
-                <FormTitle>
-                    Admin Login <Icon src={user_icon} alt='User-Icon' />
-                </FormTitle>
+            <FormTitle>
+                Admin Login <Icon src={user_icon} alt='User-Icon' />
+            </FormTitle>
                 <Form>
                     <Label htmlFor='email' >Email Id</Label>
                     <Input label='Email Address' type='email' id='email' name='email' value={email}
