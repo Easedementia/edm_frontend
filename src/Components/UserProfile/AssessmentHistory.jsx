@@ -3,12 +3,13 @@ import UserNavbar from '../Navbar/UserNavbar'
 import Footer from '../Footer/Footer'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { toast } from 'react-toastify'
 import { baseURL } from '../../api/api'
 import axios from 'axios'
 import edit_icon from '../../assets/images/edit_icon.svg'
 import arrow from '../../assets/images/arrow.svg'
+import { clearAuth } from '../../Redux/UserSlice'
 
 
 const AssessmentHistory = () => {
@@ -16,6 +17,7 @@ const AssessmentHistory = () => {
   const [avatarPreview, setAvatarPreview] = useState(null);
   const [assessments, setAssessments] = useState([]);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const userID = useSelector((state) => state.user.user.user.id);
 
   useEffect(() => {
@@ -62,6 +64,14 @@ const AssessmentHistory = () => {
   };
 
 
+  const handleLogout = () => {
+    // Clear authentication data
+    dispatch(clearAuth());
+    // Navigate to the login page
+    navigate('/login');
+  };
+
+
   
 
   return (
@@ -85,9 +95,9 @@ const AssessmentHistory = () => {
           <Button selected={false} onClick={() => handleNavigate('/user-profile/appointments-history')} >
             Appointment History <img src={arrow} alt="Arrow Icon" />
           </Button>
-          <Button selected={false} onClick={() => handleNavigate('/logout')}>
+          <Button onClick={handleLogout}>
               Log Out <img src={arrow} alt="Arrow Icon" />
-          </Button>
+            </Button>
         </ButtonsContainer>
       </ProfileDetails>
 

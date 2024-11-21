@@ -13,8 +13,9 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import { baseURL } from "../../api/api"
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 import { toast } from "react-toastify"
+import { clearAuth } from '../../Redux/UserSlice'
 
 
 const UserProfile = () => {
@@ -23,6 +24,7 @@ const UserProfile = () => {
   const [avatarPreview, setAvatarPreview] = useState(null);
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const userID = useSelector((state) => state.user.user.user.id);
   console.log("UserID:", userID);
 
@@ -49,6 +51,15 @@ const UserProfile = () => {
   const handleNavigate = (path) => {
     navigate(path);
   }
+
+
+  const handleLogout = () => {
+    // Clear authentication data
+    dispatch(clearAuth());
+    // Navigate to the login page
+    navigate('/login');
+  };
+  
 
 
 
@@ -120,7 +131,7 @@ const UserProfile = () => {
             <Button onClick={() => handleNavigate('/user-profile/appointments-history')}>
               Appointment History <img src={arrow} alt="Arrow Icon" />
             </Button>
-            <Button onClick={() => handleNavigate('/logout')}>
+            <Button onClick={handleLogout}>
               Log Out <img src={arrow} alt="Arrow Icon" />
             </Button>
           </ButtonsContainer>

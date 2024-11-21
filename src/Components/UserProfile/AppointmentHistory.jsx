@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import UserNavbar from "../Navbar/UserNavbar"
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { baseURL } from "../../api/api";
@@ -9,6 +9,7 @@ import { ProfileContainer, ProfileDetails, AvatarWrapper, Avatar, UserName, User
 import Footer from "../Footer/Footer";
 import arrow from '../../assets/images/arrow.svg'
 import edit_icon from '../../assets/images/edit_icon.svg'
+import { clearAuth } from '../../Redux/UserSlice'
 
 
 const AppointmentHistory = () => {
@@ -19,6 +20,7 @@ const AppointmentHistory = () => {
     console.log("APPOINTMENTS:", appointments)
 
     const navigate = useNavigate();
+    const dispatch = useDispatch();
     const userID = useSelector((state) => state.user.user.user.id);
     console.log("UserID:", userID);
 
@@ -64,6 +66,14 @@ const AppointmentHistory = () => {
       const handleNavigate = (path) => {
         navigate(path);
       }
+
+
+      const handleLogout = () => {
+        // Clear authentication data
+        dispatch(clearAuth());
+        // Navigate to the login page
+        navigate('/login');
+      };
 
 
       const handleFileChange = (e) => {
@@ -139,7 +149,7 @@ const AppointmentHistory = () => {
             <Button selected={true} onClick={() => handleNavigate('/user-profile/appointments-history')}>
               Appointment History <img src={arrow} alt="Arrow Icon" />
             </Button>
-            <Button selected={false} onClick={() => handleNavigate('/logout')}>
+            <Button onClick={handleLogout}>
               Log Out <img src={arrow} alt="Arrow Icon" />
             </Button>
           </ButtonsContainer>
