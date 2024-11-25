@@ -28,6 +28,7 @@ const BookingConfirmation = () => {
     console.log("Appointment ID:", appointmentId)
     console.log("Consulting fee:", consultingFee)
     console.log("Doctor ID:", doctor_id)
+    console.log("Selected Date:", selectedDate)
     console.log("Selected Slot", selectedSlot)
     const slot_id = selectedSlot.id;
 
@@ -131,6 +132,7 @@ const BookingConfirmation = () => {
         const bodyData = {
           appointment_id: appointmentId,
           slot_id,
+          selected_date: selectedDate,
           response: JSON.stringify(response),
           razorpay_order_id: response.razorpay_order_id,
           razorpay_payment_id: response.razorpay_payment_id,
