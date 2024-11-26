@@ -71,7 +71,7 @@ const DoctorDetails = () => {
       } else {
         setSelectedSlot(slot.id);
       }
-    };
+    };  
     
 
 
