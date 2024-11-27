@@ -1,6 +1,17 @@
 import styled from 'styled-components'
 
 
+const breakpoints = {
+    mobileS: '320px',
+    mobileM: '375px',
+    mobileL: '425px',
+    tablet: '768px',
+    laptop: '1024px',
+    laptopL: '1440px',
+    desktop: '2560px',
+  };
+
+
 export const NavbarContainer = styled.nav`
     width: 100%;
     position: fixed;
@@ -20,16 +31,20 @@ export const NavbarContainer = styled.nav`
     font-style: normal;
     height: 95px;
 
-    @media (max-width: 768px) {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 20px;
-    }
+    @media (max-width: ${breakpoints.laptop}) {
+    padding: 15px 30px;
+  }
 
-    @media (max-width: 480px) {
-        padding: 10px 15px;
-        height: auto;
-    }
+  @media (max-width: ${breakpoints.tablet}) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    height: auto;
+  }
+
+  @media (max-width: ${breakpoints.mobileL}) {
+    padding: 10px 15px;
+  }
 `
 
 
@@ -37,9 +52,13 @@ export const LogoContainer = styled.div`
     display: flex;
     align-items: center;
 
-    @media (max-width: 768px) {
-        margin-bottom: 10px;
-    }
+    @media (max-width: ${breakpoints.tablet}) {
+    height: 50px;
+  }
+
+  @media (max-width: ${breakpoints.mobileL}) {
+    height: 45px;
+  }
 
 `
 
@@ -49,9 +68,15 @@ export const Logo = styled.img`
     margin-left: 25px;
     cursor: pointer;
 
-    @media (max-width: 480px) {
-        height: 45px;
-    }
+    @media (max-width: ${breakpoints.tablet}) {
+    display: block;
+    z-index: 1500;
+  }
+
+  img {
+    height: 30px;
+    width: 30px;
+  }
 `;
 
 
@@ -59,15 +84,29 @@ export const HamburgerIcon = styled.div`
     display: none;
     cursor: pointer;
     
-    @media (max-width: 768px) {
-        display: block;
-        z-index: 1500; 
-    }
+    @media (max-width: ${breakpoints.tablet}) {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-    img {
-        height: 30px;
-        width: 30px;
+    &.active {
+      display: flex;
     }
+  }
+
+  @media (max-width: ${breakpoints.mobileL}) {
+    gap: 15px;
+    padding: 15px;
+  }
 `;
 
 
@@ -116,13 +155,13 @@ export const NavItem = styled.a`
         color: #5517A8;
     }
 
-    @media (max-width: 768px) {
-        font-size: 15px;
-    }
+    @media (max-width: ${breakpoints.laptop}) {
+    font-size: 15px;
+  }
 
-    @media (max-width: 480px) {
-        font-size: 14px;
-    }
+  @media (max-width: ${breakpoints.mobileL}) {
+    font-size: 14px;
+  }
 `;
 
 
@@ -138,10 +177,10 @@ export const UserIconContainer = styled.div`
   overflow: hidden;
   cursor: pointer;
 
-  @media (max-width: 480px) {
-        height: 35px;
-        width: 35px;
-    }
+  @media (max-width: ${breakpoints.mobileL}) {
+    height: 35px;
+    width: 35px;
+  }
 `;
 
 export const UserIcon = styled.img`
@@ -155,10 +194,10 @@ export const UserIcon = styled.img`
         transform: scale(1.2); 
     }
 
-  @media (max-width: 480px) {
-        height: 20px;
-        width: 20px;
-    }
+    @media (max-width: ${breakpoints.mobileL}) {
+    height: 20px;
+    width: 20px;
+  }
 `;
 
 export const Dropdown = styled.div`
@@ -176,12 +215,12 @@ export const Dropdown = styled.div`
   margin-top: 10px;
 
 
-  @media (max-width: 768px) {
+  @media (max-width: ${breakpoints.tablet}) {
     width: 120px;
     right: -10px;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: ${breakpoints.mobileL}) {
     width: 100px;
     right: -5px;
   }
@@ -202,12 +241,12 @@ export const DropdownItem = styled.a`
   }
 
 
-  @media (max-width: 768px) {
+  @media (max-width: ${breakpoints.tablet}) {
     padding: 8px 12px;
     font-size: 13px;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: ${breakpoints.mobileL}) {
     padding: 6px 10px;
     font-size: 12px;
   }
