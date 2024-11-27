@@ -157,6 +157,7 @@ export const NavItem = styled.a`
 
     @media (max-width: ${breakpoints.laptop}) {
     font-size: 15px;
+    display: block;
   }
 
   @media (max-width: ${breakpoints.mobileL}) {
