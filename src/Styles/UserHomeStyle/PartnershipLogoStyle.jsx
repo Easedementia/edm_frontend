@@ -24,11 +24,12 @@ export const LogosContainer = styled.div`
   width: 100%;
   max-width: 900px;
   background-color: #f9fafb;
-  flex-wrap: wrap; /* Allow logos to wrap on smaller screens */
+  flex-wrap: nowrap; /* Allow logos to wrap on smaller screens */
 
   @media (max-width: 768px) {
     padding-top: 10px;
     max-width: 100%;
+    flex-wrap: wrap;
   }
 `;
 
