@@ -1,4 +1,3 @@
-// src/Styles/UserHomeStyle/SpecialitiesStyle.jsx
 import styled from 'styled-components';
 
 export const SpecialitiesContainer = styled.div`
@@ -7,6 +6,14 @@ export const SpecialitiesContainer = styled.div`
   align-items: center;
   padding: 50px 0;
   background-color: #f9fafb;
+
+  @media (max-width: 768px) {
+    padding: 30px 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px 0;
+  }
 `;
 
 export const GridWrapper = styled.div`
@@ -29,6 +36,7 @@ export const GridWrapper = styled.div`
       "card3 card4"
       "card5 card6"
       "card7 card8";
+    grid-gap: 15px;
   }
 
   @media (max-width: 480px) {
@@ -42,6 +50,8 @@ export const GridWrapper = styled.div`
       "card6"
       "card7"
       "card8";
+    grid-gap: 10px;
+    width: 90%;
   }
 `;
 
@@ -57,18 +67,44 @@ export const SpecialityCard = styled.div`
   align-items: center;
   min-height: 150px;
   grid-area: ${({ area }) => area};
+
+  @media (max-width: 768px) {
+    padding: 15px;
+    min-height: 130px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px;
+    min-height: 120px;
+  }
 `;
 
 export const SpecialityImage = styled.img`
   width: 100px;
   height: auto;
   margin-top: 10px;
+
+  @media (max-width: 768px) {
+    width: 80px;
+  }
+
+  @media (max-width: 480px) {
+    width: 70px;
+  }
 `;
 
 export const Title = styled.h1`
   font-size: 24px;
-  color: #5517A8;
+  color: #5517a8;
   font-family: 'Poppins', sans-serif;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
 `;
 
 export const SubTitle = styled.p`
@@ -76,11 +112,27 @@ export const SubTitle = styled.p`
   color: #333;
   font-family: 'Poppins', sans-serif;
   margin: 10px 0;
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 `;
 
 export const HighlightedText = styled.h2`
   font-size: 28px;
   font-weight: bold;
-  color: #5517A8;
+  color: #5517a8;
   margin: 5px 0;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
 `;
