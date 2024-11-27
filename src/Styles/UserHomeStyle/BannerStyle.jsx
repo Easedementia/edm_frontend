@@ -68,7 +68,7 @@ export const Subtitle = styled.p`
 
     @media (max-width: 768px) {
         font-size: 12px; /* Smaller font on mobile */
-        text-align: center; /* Center align subtitle on mobile */
+        text-align: left; /* Center align subtitle on mobile */
     }
 
     @media (max-width: 480px) {
@@ -106,7 +106,7 @@ export const ContactButton = styled(Link)`
     }
 
     @media (max-width: 768px) {
-        margin-right: 0; /* Remove right margin on mobile */
+        margin-right: -10px; /* Remove right margin on mobile */
         width: 140px;
         justify-content: center; /* Center the button on mobile */
     }
