@@ -160,6 +160,9 @@ export const NavItem = styled.a`
   }
 
   @media (max-width: ${breakpoints.mobileL}) {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
     font-size: 14px;
   }
 `;
