@@ -106,7 +106,7 @@ export const ContactButton = styled(Link)`
     }
 
     @media (max-width: 768px) {
-        margin-right: -10px; /* Remove right margin on mobile */
+        margin-right: -30px; /* Remove right margin on mobile */
         width: 140px;
         justify-content: center; /* Center the button on mobile */
     }
