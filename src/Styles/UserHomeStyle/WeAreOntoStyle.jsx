@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const WeAreOntoWrapper = styled.div`
     padding: 50px 20px;
     background-color: #f9fafb;
@@ -8,42 +7,81 @@ export const WeAreOntoWrapper = styled.div`
     border-radius: 25px;
     margin-top: 40px;
 
-    h2{
+    h2 {
         font-family: 'Poppins', sans-serif;
         font-size: 36px;
         color: #000;
         margin-bottom: 40px;
         font-weight: 700;
     }
-`;
 
+    @media (max-width: 768px) {
+        padding: 40px 15px;
+        h2 {
+            font-size: 28px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        padding: 30px 10px;
+        h2 {
+            font-size: 24px;
+        }
+    }
+`;
 
 export const CardContainer = styled.div`
     display: flex;
     justify-content: center;
     gap: 50px;
     flex-wrap: wrap;
-`;
 
+    @media (max-width: 768px) {
+        gap: 30px;
+    }
+
+    @media (max-width: 480px) {
+        gap: 20px;
+    }
+`;
 
 export const Card = styled.div`
     background-color: white;
     border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 480px;
     height: 360px;
     text-align: center;
-`;
 
+    @media (max-width: 768px) {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+        padding: 10px;
+    }
+`;
 
 export const CardImage = styled.img`
     width: 130px;
     height: 70px;
     margin-bottom: 10px;
-    margin-left: 35%;
-`;
+    margin-left: auto;
+    margin-right: auto;
 
+    @media (max-width: 768px) {
+        width: 110px;
+        height: auto;
+    }
+
+    @media (max-width: 480px) {
+        width: 90px;
+    }
+`;
 
 export const CardTitle = styled.h3`
     font-family: 'Poppins', sans-serif;
@@ -51,9 +89,15 @@ export const CardTitle = styled.h3`
     color: #000;
     margin-bottom: 15px;
     font-weight: 700;
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 16px;
+    }
 `;
-
-
 
 export const CardDescription = styled.p`
     font-family: 'Poppins', sans-serif;
@@ -61,10 +105,17 @@ export const CardDescription = styled.p`
     color: #282626;
     margin-bottom: 20px;
     text-align: left;
+
+    @media (max-width: 768px) {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
 `;
-
-
-
 
 export const CardButton = styled.button`
     display: flex;
@@ -78,12 +129,12 @@ export const CardButton = styled.button`
     border: none;
     border-radius: 20px;
     padding: 10px 20px;
-    margin-left: 120px;
     font-weight: 300;
     cursor: pointer;
-    
-    transition: transform 0.3s;
+    margin-left: auto;
+    margin-right: auto;
 
+    transition: transform 0.3s;
 
     &:hover {
         transform: scale(1.05);
@@ -93,5 +144,25 @@ export const CardButton = styled.button`
     img {
         width: 56px;
         height: 56px;
+
+        @media (max-width: 768px) {
+            width: 48px;
+            height: 48px;
+        }
+
+        @media (max-width: 480px) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 6px 12px;
+        font-size: 12px;
     }
 `;
