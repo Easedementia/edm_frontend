@@ -51,10 +51,12 @@ export const RightSide = styled.div`
 
   @media (max-width: 768px) {
     margin-top: 20px;
+    width: 100%;
   }
 
   @media (max-width: 480px) {
     margin-top: 10px;
+    width: 100%;
   }
 `;
 
@@ -193,17 +195,26 @@ export const FormWrapper = styled.div`
   background-color: #f9fafb;
   max-width: 400px;
   width: 100%;
-  height: 85vh;
+  height: auto;
   text-align: center;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
 
+  @media (min-width: 1024px) {
+    height: 70%; /* Adjust for larger screens */
+    padding: 2.5rem;
+  }
+
   @media (max-width: 768px) {
+    max-width: 90%;
     height: auto;
-    padding: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 95%;
+    padding: 1.5rem;
   }
 `;
 
