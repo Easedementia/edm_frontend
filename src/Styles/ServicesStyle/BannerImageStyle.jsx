@@ -12,6 +12,15 @@ export const BannerContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+
+    @media (max-width: 768px) {
+        height: 250px; /* Adjust height for tablets */
+    }
+
+    @media (max-width: 480px) {
+        height: 200px; /* Adjust height for mobile phones */
+    }
 `;
 
 
@@ -30,10 +39,29 @@ export const TextContainer = styled.div`
     color: white;
     text-align: left;
     padding: 5rem;  
+
+
+    @media (max-width: 768px) {
+        padding: 3rem; /* Reduce padding for tablets */
+    }
+
+    @media (max-width: 480px) {
+        padding: 1.5rem; /* Reduce padding for mobile phones */
+        text-align: center; /* Center-align text for smaller screens */
+    }
 `;
 
 
 export const TextParagraph = styled.p`
     font-size: 1.1rem;
     margin: 0.5rem 0;
+
+
+    @media (max-width: 768px) {
+        font-size: 1rem; /* Slightly smaller font size for tablets */
+    }
+
+    @media (max-width: 480px) {
+        font-size: 0.9rem; /* Smaller font size for mobile phones */
+    }
 `;
