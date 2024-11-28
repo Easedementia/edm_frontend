@@ -7,6 +7,13 @@ export const PageWrapper = styled.div`
     align-items: center;
     min-height: 80vh;
     background-color: white;
+
+
+    @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+  }
 `;
 
 
@@ -19,6 +26,13 @@ export const LeftSide = styled.div`
   justify-content: center;
   align-items: flex-start;
   font-family: 'Poppins', sans-serif;
+
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 export const RightSide = styled.div`
@@ -26,11 +40,23 @@ export const RightSide = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 2rem;
+  }
 `;
 
 export const InfoSection = styled.div`
     max-width: 400px;
     text-align: left;
+
+
+    @media (max-width: 768px) {
+    max-width: 100%;
+    text-align: center;
+  }
 `;
 
 
@@ -40,6 +66,11 @@ export const Title = styled.h1`
     padding-bottom: 10px;
     color: #000;
     font-weight: 700;
+
+
+    @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
 `;
 
 
@@ -56,6 +87,11 @@ export const Subtitle = styled.p`
       text-decoration: underline;
     }
   }
+
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
 `;
 
 
@@ -63,6 +99,11 @@ export const Description = styled.p`
     font-size: 1rem;
     color: #000;
     margin-bottom: 1.5rem;
+
+
+    @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
 `;
 
 
@@ -90,6 +131,13 @@ export const Button = styled.button`
         background-color: #6d22d1;
         color: #fff;
     }
+
+
+    @media (max-width: 768px) {
+    width: 100%;
+    justify-content: center;
+    margin-right: 0;
+  }
 `;
 
 
@@ -103,6 +151,12 @@ export const ArrowIcon = styled.img`
     &:hover {
         transform: scale(1.2); 
     }
+
+
+    @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 
 
@@ -114,6 +168,12 @@ export const FormWrapper = styled.div`
     max-width: 400px;
     width: 100%;
     text-align: center;
+
+
+    @media (max-width: 768px) {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
 `;
 
 
@@ -128,6 +188,11 @@ export const FormTitle = styled.h2`
     color: #000;
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
+
+
+    @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 
@@ -137,6 +202,12 @@ export const Icon = styled.img`
     color: #5517A8;
     height: 80px;
     width: 80px;
+
+
+    @media (max-width: 768px) {
+    height: 60px;
+    width: 60px;
+  }
 `;
 
 
@@ -144,6 +215,11 @@ export const Form = styled.form`
     display: flex;
     flex-direction: column;
     text-align: left;
+
+
+    @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 
@@ -152,6 +228,11 @@ export const Label = styled.label`
     font-weight: 600;
     color: #000;
     margin-bottom: 0.5rem;
+
+
+    @media (max-width: 768px) {
+    font-size: 13px;
+  }
 `;
 
 
@@ -168,12 +249,22 @@ export const Input = styled.input`
         border-color: #5517A8;
         outline: none;
     }
+
+
+    @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 
 export const ButtonContainer = styled.div`
     display: flex;
     justify-content: center;
+
+
+    @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 
@@ -191,6 +282,11 @@ export const FormButton = styled.button`
     &:hover{
         background-color: #5753d9;
     }
+
+
+    @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 
