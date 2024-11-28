@@ -5,6 +5,12 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+
+
+  @media (max-width: 768px) {
+    padding: 10px;
+    height: auto; /* Adjust height for smaller screens */
+  }
 `;
 
 export const FormWrapper = styled.div`
@@ -14,6 +20,17 @@ export const FormWrapper = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 400px;
   max-width: 100%;
+
+
+  @media (max-width: 768px) {
+    width: 90%; /* Adjust width for tablets */
+    padding: 30px;
+  }
+
+  @media (max-width: 480px) {
+    width: 95%; /* Adjust width for mobile screens */
+    padding: 20px;
+  }
 `;
 
 export const FormTitle = styled.h2`
@@ -24,12 +41,24 @@ export const FormTitle = styled.h2`
   font-weight: 700;
   text-align: center;
   font-family: 'Poppins', sans-serif;
+
+
+  @media (max-width: 480px) {
+    font-size: 20px; /* Slightly smaller font on mobile */
+    margin-bottom: 20px;
+  }
 `;
 
 export const Icon = styled.img`
   margin-left: 10px;
   width: 32px;
   height: 32px;
+
+
+  @media (max-width: 480px) {
+    width: 28px; /* Adjust icon size */
+    height: 28px;
+  }
 `;
 
 export const Form = styled.form`
@@ -43,6 +72,11 @@ export const Label = styled.label`
   color: #000;
   font-family: 'Poppins', sans-serif;
   border-radius: 25px;
+
+
+  @media (max-width: 480px) {
+    font-size: 13px; /* Slightly smaller font on mobile */
+  }
 `;
 
 export const Input = styled.input`
@@ -53,6 +87,12 @@ export const Input = styled.input`
   border-radius: 4px;
   &.error {
     border-color: red;
+  }
+
+
+  @media (max-width: 480px) {
+    padding: 8px; /* Adjust padding for mobile */
+    font-size: 14px;
   }
 `;
 
@@ -72,10 +112,21 @@ export const Button = styled.button`
   &:hover {
     background-color: #000000;
   }
+
+
+  @media (max-width: 480px) {
+    padding: 10px 18px; /* Adjust padding for mobile */
+    font-size: 14px; /* Smaller font size on mobile */
+  }
 `;
 
 export const Message = styled.p`
   margin-top: 10px;
   font-size: 14px;
   color: green;
+
+
+  @media (max-width: 480px) {
+    font-size: 12px; /* Adjust font size for mobile */
+  }
 `;
