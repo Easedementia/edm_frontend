@@ -5,10 +5,28 @@ export const Container = styled.div`
   width: 100%;
   padding: 20px 0;
   font-family: 'Poppins', sans-serif;
+
+
+  @media (max-width: 768px) {
+    padding: 15px 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px 0;
+  }
 `;
 
 export const CategorySection = styled.div`
   margin-bottom: 40px;
+
+
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 20px;
+  }
 `;
 
 export const SectionTitle = styled.h2`
@@ -17,13 +35,33 @@ export const SectionTitle = styled.h2`
   color: #000;
   font-weight: 700;
   margin-top: 50px;
+
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
 `;
 
 
 export const CardsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;  /* Adjust the gap between cards */
+  gap: 20px;
+
+
+  @media (max-width: 768px) {
+    gap: 15px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 10px;
+  }
 `;
 
 export const Card = styled.div`
@@ -39,8 +77,13 @@ export const Card = styled.div`
   cursor: pointer;
 
   @media (max-width: 768px) {
-    flex: 1 1 100%;  /* For small screens, make cards take full width */
-    max-width: 100%;
+    flex: 1 1 calc(100% - 20px);
+    max-width: calc(100% - 20px);
+    padding: 15px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px;
   }
 `;
 
@@ -49,6 +92,12 @@ export const Card = styled.div`
 export const TopRow = styled.div`
   display: flex;
   align-items: center;
+
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -57,6 +106,17 @@ export const ImageWrapper = styled.div`
     width: 80px;
     height: 80px;
     border-radius: 50%;
+
+
+    @media (max-width: 768px) {
+      width: 70px;
+      height: 70px;
+    }
+
+    @media (max-width: 480px) {
+      width: 60px;
+      height: 60px;
+    }
   }
 `;
 
@@ -64,6 +124,12 @@ export const DoctorInfo = styled.div`
   margin-left: 15px;
   display: flex;
   flex-direction: column;
+
+
+  @media (max-width: 480px) {
+    margin-left: 0;
+    margin-top: 10px;
+  }
 `;
 
 export const Name = styled.h3`
@@ -72,12 +138,30 @@ export const Name = styled.h3`
   margin: 0;
   color: #000;
   text-align: left;
+
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 15px;
+  }
 `;
 
 export const Specialized = styled.p`
   margin: 5px 0;
   color: #000;
   text-align: left;
+
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+  }
 `;
 
 export const DetailsRow = styled.div`
@@ -85,6 +169,12 @@ export const DetailsRow = styled.div`
   align-items: center;
   margin-top: 5px;
   white-space: nowrap;
+
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 export const Rating = styled.div`
@@ -92,6 +182,15 @@ export const Rating = styled.div`
   align-items: center;
   color: black;
   margin-right: 10px;
+
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 `;
 
 export const StarIcon = styled(FaStar)`
@@ -102,17 +201,36 @@ export const StarIcon = styled(FaStar)`
 export const Schedule = styled.div`
   margin-right: 10px;
   color: #000;
+
+
+  @media (max-width: 480px) {
+    margin-right: 0;
+  }
 `;
 
 export const Time = styled.div`
   margin-right: 10px;
   color: #000;
+
+
+  @media (max-width: 480px) {
+    margin-right: 0;
+  }
 `;
 
 export const Description = styled.p`
   margin: 10px 0;
   color: #000;
   text-align: left;
+
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+  }
 `;
 
 export const ExploreMore = styled.div`
@@ -142,5 +260,16 @@ export const ExploreMore = styled.div`
     img {
         width: 56px;
         height: 56px;
+
+
+        @media (max-width: 768px) {
+      width: 40px;
+      height: 40px;
+    }
+
+    @media (max-width: 480px) {
+      width: 35px;
+      height: 35px;
+    }
     }
 `;
