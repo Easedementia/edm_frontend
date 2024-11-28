@@ -8,6 +8,19 @@ export const SocialMediaContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+
+  @media (max-width: 768px) {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
 `;
 
 export const ConnectText = styled.p`
@@ -17,6 +30,19 @@ export const ConnectText = styled.p`
   color: #000;
   margin-right: 20px; 
   margin-top: 45px;
+
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+    margin-right: 15px;
+    margin-top: 30px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 `;
 
 export const IconLink = styled.a`
@@ -30,6 +56,17 @@ export const IconLink = styled.a`
   &:hover {
     color: #5517A8; 
     transform: scale(1.2); 
+  }
+
+
+  @media (max-width: 768px) {
+    font-size: 25px;
+    margin: 0 8px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 22px;
+    margin: 5px 0;
   }
 `;
 
