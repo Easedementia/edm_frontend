@@ -10,12 +10,36 @@ export const ConsultingContainer = styled.div`
     background-color: #f9fafb;
     font-family: 'Poppins', sans-serif;
     margin-top: 80px;
+
+
+    @media (max-width: 1024px) {
+    flex-wrap: wrap;
+    padding: 1.5rem;
+    margin-top: 60px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+  }
 `;
 
 
 export const HeadingContainer = styled.div`
     max-width: 50%;
     margin-top: 70px;
+
+
+    @media (max-width: 1024px) {
+    max-width: 100%;
+    margin-top: 50px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
 `;
 
 
@@ -24,6 +48,16 @@ export const SubHeading = styled.h2`
     font-weight: 350;
     color: #5517A8;
     text-align: left;
+
+
+    @media (max-width: 768px) {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+  }
 `;
 
 
@@ -34,6 +68,16 @@ export const MainHeading = styled.h1`
     text-align: left;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
+
+
+    @media (max-width: 768px) {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
 `;
 
 
@@ -41,11 +85,35 @@ export const Description = styled.p`
     font-size: 1.1rem;
     color: #2f2e2e;
     text-align: left;
+
+
+    @media (max-width: 768px) {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;
 
 
 export const ImageContainer = styled.div`
     max-width: 68%;
+
+
+    @media (max-width: 1024px) {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 80%;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 100%;
+  }
 `;
 
 
@@ -54,6 +122,16 @@ export const StyledImage = styled.img`
     height: auto;
     object-fit: cover;
     margin-left: 50px;
+
+
+    @media (max-width: 1024px) {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 
@@ -82,6 +160,19 @@ export const ContactButton = styled(Link)`
         background-color: #6d22d1;
         color: #fff;
     }
+
+
+    @media (max-width: 768px) {
+    align-self: center;
+    font-size: 14px;
+    padding: 10px 14px;
+    width: auto;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
 `
 
 
@@ -95,5 +186,16 @@ export const ArrowIcon = styled.img`
     &:hover {
         transform: scale(1.2); 
     }
+
+
+    @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+  }
+
+  @media (max-width: 480px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
