@@ -203,11 +203,12 @@ export const FormWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow-y: auto;
+  overflow: visible;
+  margin: auto;
 
 
   @media (min-width: 1024px) {
-    height: 70%; /* Adjust for larger screens */
+    height: auto; /* Adjust for larger screens */
     padding: 2.5rem;
   }
 
