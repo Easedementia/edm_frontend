@@ -192,11 +192,11 @@ export const ArrowIcon = styled.img`
 `;
 
 export const FormWrapper = styled.div`
-  padding: 2rem;
-  border-radius: 25px;
+  padding: 1.5rem;
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   background-color: #f9fafb;
-  max-width: 400px;
+  max-width: 350px;
   width: 100%;
   height: auto;
   text-align: center;
@@ -209,29 +209,29 @@ export const FormWrapper = styled.div`
 
   @media (min-width: 1024px) {
     height: auto; /* Adjust for larger screens */
-    padding: 2.5rem;
+    padding: 2rem;
   }
 
   @media (max-width: 768px) {
-    max-width: 90%;
+    max-width: 85%;
     height: auto;
   }
 
   @media (max-width: 480px) {
-    max-width: 95%;
-    padding: 1.5rem;
+    max-width: 90%;
+    padding: 1rem;
   }
 `;
 
 export const FormTitle = styled.h2`
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 0.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 0;
   color: #000;
-  font-weight: 600;
+  font-weight: bold;
   font-family: 'Poppins', sans-serif;
 
 
@@ -306,7 +306,7 @@ export const Input = styled.input`
   border: 1px solid #ddd;
   height: 35px;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   &:focus {
     border-color: #5517A8;
     outline: none;
@@ -336,11 +336,11 @@ export const ButtonContainer = styled.div`
 
 export const Button = styled.button`
   height: 35px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   background-color: #5517A8;
   color: #fff;
   border: none;
-  border-radius: 25px;
+  border-radius: 15px;
   font-weight: 700;
   text-align: center;
   cursor: pointer;
