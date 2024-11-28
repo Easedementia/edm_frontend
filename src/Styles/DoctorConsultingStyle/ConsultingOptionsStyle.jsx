@@ -7,6 +7,19 @@ export const Container = styled.div`
     padding: 20px;
     margin-top: 100px;
     font-family: 'Poppins', sans-serif;
+
+
+    @media (max-width: 1024px) {
+    margin-top: 80px;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+  }
 `;
 
 
@@ -20,6 +33,18 @@ export const Card = styled.div`
     display: flex;
     flex-direction: column;
     height: 380px;
+
+
+    @media (max-width: 1024px) {
+    width: 280px;
+    height: 360px;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+  }
 `;
 
 
@@ -31,6 +56,18 @@ export const Image = styled.img`
     margin-bottom: 15px;
     align-items: center;
     margin-top: -18px;
+
+
+    @media (max-width: 1024px) {
+    width: 250px;
+    height: 250px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
 `;
 
 export const CardTitle = styled.h2`
@@ -40,6 +77,16 @@ export const CardTitle = styled.h2`
     color: #000;
     text-align: left;
     width: 100%;
+
+
+    @media (max-width: 768px) {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 15px;
+  }
 `;
 
 export const CardSubtitle = styled.p`
@@ -49,6 +96,16 @@ export const CardSubtitle = styled.p`
     text-align: left;
     width: 100%;
     margin-top: 5px;
+
+
+    @media (max-width: 768px) {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+  }
 `;
 
 
@@ -80,6 +137,17 @@ export const ExploreMore = styled.button`
     img {
         width: 56px; /* Smaller size to fit well */
         height: 56px;
+
+
+        @media (max-width: 768px) {
+      width: 35px;
+      height: 35px;
+    }
+
+    @media (max-width: 480px) {
+      width: 30px;
+      height: 30px;
+    }
     }
 `;
 
