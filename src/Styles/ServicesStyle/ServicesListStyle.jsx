@@ -8,11 +8,23 @@ export const ServicesContainer = styled.div`
   background-color: #f9fafb;
   font-family: 'Poppins', sans-serif;
   margin-top: 200px;
+
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-top: 100px;
+  }
 `;
 
 export const HeadingContainer = styled.div`
   max-width: 50%;
   background-color: #f9fafb;
+
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    text-align: center;
+  }
 `;
 
 export const SubHeading = styled.h2`
@@ -20,6 +32,11 @@ export const SubHeading = styled.h2`
   font-weight: 350;
   color: #5517A8;
   text-align: left;
+
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const MainHeading = styled.h1`
@@ -28,6 +45,16 @@ export const MainHeading = styled.h1`
   margin: 0.5rem 0;
   text-align: left;
   font-weight: 700;
+
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
+  }
 `;
 
 export const Description = styled.p`
@@ -35,6 +62,12 @@ export const Description = styled.p`
   color: #000;
   text-align: left;
   font-weight: 300;
+
+
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 15px;
+  }
 `;
 
 export const ServiceWrapper = styled.div`
@@ -49,10 +82,21 @@ export const ServiceWrapper = styled.div`
     css`
       flex-direction: row-reverse;
     `}
+
+
+    @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const CardContainer = styled.div`
   max-width: 50%;
+
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
 `;
 
 export const ServiceCard = styled.div`
@@ -64,11 +108,24 @@ export const ServiceCard = styled.div`
   width: 100%;
   flex-direction: row;
   text-align: left;
+
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 export const ServiceContent = styled.div`
   padding: 20px;
   width: 60%;
+
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 15px;
+  }
 `;
 
 export const ServiceTitle = styled.h2`
@@ -76,6 +133,11 @@ export const ServiceTitle = styled.h2`
   font-weight: bold;
   margin-bottom: 10px;
   color: #000;
+
+
+  @media (max-width: 480px) {
+    font-size: 1.3rem;
+  }
 `;
 
 export const ServiceDescription = styled.p`
@@ -83,6 +145,11 @@ export const ServiceDescription = styled.p`
   margin-bottom: 20px;
   color: #2f2e2e;
   font-weight: 380;
+
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+  }
 `;
 
 export const BookButton = styled.button`
@@ -109,6 +176,17 @@ export const BookButton = styled.button`
         background-color: #6d22d1;
         color: #fff;
     }
+
+
+    @media (max-width: 768px) {
+    align-self: center;
+    margin-right: 0;
+  }
+
+  @media (max-width: 480px) {
+    width: 200px;
+    font-size: 14px;
+  }
 `;
 
 export const StyledImage = styled.img`
@@ -117,6 +195,14 @@ export const StyledImage = styled.img`
   width: 150px;
   object-fit: cover;
   margin-left: 80px;
+
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 1rem;
+    width: 100px;
+    height: 100px;
+  }
 `;
 
 export const FirstRow = styled.div`
@@ -127,6 +213,12 @@ export const FirstRow = styled.div`
   background-color: #f9fafb;
   font-family: 'Poppins', sans-serif;
   margin-top: 100px;
+
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 
@@ -140,4 +232,10 @@ export const ArrowIcon = styled.img`
     &:hover {
         transform: scale(1.2);
     }
+
+
+    @media (max-width: 480px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
