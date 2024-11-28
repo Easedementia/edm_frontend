@@ -47,7 +47,7 @@ export const RightSide = styled.div`
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  margin-top: 50px;
+  margin-top: 20px;
 
 
   @media (max-width: 768px) {
