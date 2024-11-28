@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  height: 80vh;
+  height: 100vh;
+  flex-direction: row;
   background-color: #fff;
   width: 100%;
 
@@ -32,7 +33,6 @@ export const LeftSide = styled.div`
     align-items: center;
     text-align: center;
     padding: 2rem;
-    margin-top: 0;
   }
 
   @media (max-width: 480px) {
@@ -46,17 +46,20 @@ export const RightSide = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
   margin-top: 50px;
 
 
   @media (max-width: 768px) {
     margin-top: 20px;
     width: 100%;
+    padding: 1.5rem;
   }
 
   @media (max-width: 480px) {
     margin-top: 10px;
     width: 100%;
+    padding: 1rem;
   }
 `;
 
@@ -189,7 +192,7 @@ export const ArrowIcon = styled.img`
 `;
 
 export const FormWrapper = styled.div`
-  padding: 1.5rem;
+  padding: 2rem;
   border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   background-color: #f9fafb;
@@ -200,6 +203,7 @@ export const FormWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-y: auto;
 
 
   @media (min-width: 1024px) {
