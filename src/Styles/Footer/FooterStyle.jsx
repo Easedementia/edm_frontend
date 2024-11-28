@@ -299,5 +299,5 @@ export const HeartIcon = styled.img`
   @media (max-width: 480px) {
     width: 80px;
     height: 80px;
-  }
+  } 
 `;

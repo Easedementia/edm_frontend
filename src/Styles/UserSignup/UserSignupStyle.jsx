@@ -6,6 +6,15 @@ export const Container = styled.div`
   height: 80vh;
   background-color: #fff;
   width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+  }
 `;
 
 export const LeftSide = styled.div`
@@ -17,7 +26,20 @@ export const LeftSide = styled.div`
   align-items: flex-start;
   font-family: 'Poppins', sans-serif;
   margin-top: 60px;
+
+
+  @media (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+  }
 `;
+
 
 export const RightSide = styled.div`
   flex: 1;
@@ -25,6 +47,15 @@ export const RightSide = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
+
+  @media (max-width: 480px) {
+    margin-top: 10px;
+  }
 `;
 
 
@@ -36,6 +67,16 @@ export const MainTitle = styled.h1`
   color: black;
   font-weight: 700;
   margin-bottom: 30px;
+
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
+  }
 `;
 
 
@@ -43,6 +84,10 @@ export const MainTitle = styled.h1`
 export const TitleSpan = styled.span`
   display: block;
   text-align: left;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 
@@ -59,6 +104,15 @@ export const Subtitle = styled.p`
       text-decoration: underline;
     }
   }
+
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;
 
 export const Description = styled.p`
@@ -66,6 +120,15 @@ export const Description = styled.p`
   margin-bottom: 2rem;
   color: #000;
   text-align: left;
+
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 export const KnowMoreButton = styled.button`
@@ -92,6 +155,16 @@ export const KnowMoreButton = styled.button`
         background-color: #6d22d1;
         color: #fff;
     }
+
+
+    @media (max-width: 768px) {
+    align-self: center;
+  }
+
+  @media (max-width: 480px) {
+    width: 140px;
+    font-size: 14px;
+  }
 `;
 
 
@@ -105,6 +178,12 @@ export const ArrowIcon = styled.img`
     &:hover {
         transform: scale(1.2); 
     }
+
+
+    @media (max-width: 480px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 
 export const FormWrapper = styled.div`
@@ -120,6 +199,12 @@ export const FormWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 1rem;
+  }
 `;
 
 export const FormTitle = styled.h2`
@@ -132,6 +217,11 @@ export const FormTitle = styled.h2`
   color: #000;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
+
+
+  @media (max-width: 480px) {
+    font-size: 24px;
+  }
 `;
 
 export const Icon = styled.img`
@@ -140,6 +230,18 @@ export const Icon = styled.img`
   color: #5517A8;
   height: 60px;
   width: 60px;
+
+
+  @media (max-width: 768px) {
+    height: 50px;
+    width: 50px;
+  }
+
+  @media (max-width: 480px) {
+    height: 40px;
+    width: 40px;
+    margin-right: 0.3rem;
+  }
 `;
 
 
@@ -148,6 +250,17 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+
+
+  @media (max-width: 768px) {
+    flex-grow: unset;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0;
+  }
 `;
 
 
@@ -159,6 +272,16 @@ export const Label = styled.label`
   color: #000;
   margin-bottom: 0.2rem;
   font-family: 'Poppins', sans-serif;
+
+
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.6rem;
+    text-align: center;
+  }
 `;
 
 export const Input = styled.input`
@@ -172,11 +295,27 @@ export const Input = styled.input`
     border-color: #5517A8;
     outline: none;
   }
+
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    height: 30px;
+  }
 `;
 
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
+
+
+  @media (max-width: 768px) {
+    justify-content: space-around;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Button = styled.button`
@@ -192,5 +331,12 @@ export const Button = styled.button`
   width: 120px; 
   &:hover {
     background-color: #6d22d1;
+  }
+
+
+  @media (max-width: 480px) {
+    width: 100px;
+    font-size: 0.9rem;
+    height: 30px;
   }
 `;
