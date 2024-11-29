@@ -8,6 +8,17 @@ export const ProfileContainer = styled.div`
   padding: 20px;
   margin-top: 100px;
   gap: 120px;
+
+
+  @media (max-width: 1024px) {
+    gap: 60px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 `;
 
 // Profile details on the left side
@@ -22,6 +33,12 @@ export const ProfileDetails = styled.div`
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-left: 40px;
   font-family: 'Poppins', sans-serif;
+
+
+  @media (max-width: 768px) {
+    width: 90%;
+    margin-left: 0;
+  }
 `;
 
 export const AvatarWrapper = styled.div`
@@ -36,6 +53,12 @@ export const Avatar = styled.img`
   height: 100px;
   border-radius: 50%;
   border: 2px solid #5517A8;
+
+
+  @media (max-width: 480px) {
+    width: 80px;
+    height: 80px;
+  }
 `;
 
 
@@ -49,6 +72,12 @@ export const EditIcon = styled.img`
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   background: none;  
   border-radius: 50%;
+
+
+  @media (max-width: 480px) {
+    width: 25px;
+    height: 25px;
+  }
 `;
 
 
@@ -59,6 +88,11 @@ export const UserName = styled.h2`
   margin-bottom: 8px;
   color: #000;
   font-weight: 600;
+
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
 `;
 
 // User contact details
@@ -66,12 +100,22 @@ export const UserContact = styled.div`
   text-align: center;
   font-size: 14px;
   color: #000;
+
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 `;
 
 // Buttons container
 export const ButtonsContainer = styled.div`
   margin-top: 40px;
   width: 100%;
+
+
+  @media (max-width: 480px) {
+    margin-top: 30px;
+  }
 `;
 
 export const Button = styled.button`
@@ -102,6 +146,11 @@ export const Button = styled.button`
     width: 58px;
     height: 58px;
     filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
+
+    @media (max-width: 480px) {
+      width: 48px;
+      height: 48px;
+    }
   }
 `;
 
@@ -114,7 +163,13 @@ export const SummaryContainer = styled.div`
   background-color: #f9fafb;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-right: 40px; 
+  margin-right: 40px;
+
+
+  @media (max-width: 768px) {
+    width: 90%;
+    margin-right: 0;
+  }
 `;
 
 // Summary title
@@ -125,6 +180,11 @@ export const SummaryTitle = styled.h3`
   color: #000;
   text-align: left;
   font-weight: 600;
+
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
 `;
 
 
@@ -133,6 +193,17 @@ export const SummaryImage = styled.img`
   height: 400px;
   align-items: center;
   border-radius: 12px;
+
+
+  @media (max-width: 768px) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @media (max-width: 480px) {
+    width: 250px;
+    height: 250px;
+  }
 `;
 
 // Table container
@@ -152,6 +223,10 @@ export const TableHeader = styled.th`
   font-size: 16px;
   color: #000;
   text-align: center;
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
 `;
 
 export const TableRow = styled.tr`
@@ -165,6 +240,11 @@ export const TableData = styled.td`
   text-align: center;
   color: #000;
   font-family: 'Poppins', sans-serif;
+
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 `;
 
 export const Status = styled.span`
@@ -188,5 +268,11 @@ export const MeetingLink = styled.button`
 
   &:hover {
     background-color: #eaeaea;
+  }
+
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+    padding: 6px 12px;
   }
 `;
