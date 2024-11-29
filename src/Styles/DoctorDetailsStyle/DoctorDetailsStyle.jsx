@@ -13,6 +13,19 @@ export const Container = styled.div`
   font-family: 'Poppins', sans-serif;
   margin-top: 120px;
   margin-bottom: 150px;
+
+
+  @media (max-width: 768px) {
+    padding: 15px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px;
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
 `;
 
 export const Header = styled.div`
@@ -20,6 +33,12 @@ export const Header = styled.div`
   align-items: center;
   justify-content: space-between;
   color: #000;
+
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 export const ProfileImage = styled.img`
@@ -27,19 +46,37 @@ export const ProfileImage = styled.img`
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
+
+
+  @media (max-width: 480px) {
+    width: 80px;
+    height: 80px;
+  }
 `;
 
 export const DoctorInfo = styled.div`
   flex-grow: 1;
   margin-left: 20px;
-  font-family: 'Poppins', sans-serif;
   text-align: left;
-  margin-left: 80px;
 
   h2 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    margin: 0;
+    font-size: 24px;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 15px;
+    text-align: center;
+
+    h2 {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 18px;
+    }
   }
 `;
 
@@ -47,6 +84,11 @@ export const Specialization = styled.p`
   color: #000;
   margin: 5px 0;
   font-family: 'Poppins', sans-serif;
+
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const Rating = styled.div`
@@ -56,11 +98,22 @@ export const Rating = styled.div`
   span {
     margin-left: 5px;
   }
+
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 export const IconGroup = styled.div`
   display: flex;
   gap: 10px;
+
+
+  @media (max-width: 768px) {
+    margin-top: 15px;
+    justify-content: center;
+  }
 `;
 
 export const Icon = styled.div`
@@ -77,6 +130,12 @@ export const Icon = styled.div`
   &:hover {
         transform: scale(1.2); 
     }
+
+
+    @media (max-width: 480px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 
 export const Details = styled.div`
@@ -109,6 +168,11 @@ export const WorkingHours = styled.div`
     font-size: 16px;
     font-weight: 700;
   }
+
+
+  @media (max-width: 768px) {
+    margin-top: 30px;
+  }
 `;
 
 
@@ -116,6 +180,12 @@ export const WorkingHoursHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 
@@ -123,6 +193,11 @@ export const Hours = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+
+
+  @media (max-width: 480px) {
+    justify-content: center;
+  }
 `;
 
 export const TimeSlot = styled.div`
@@ -133,6 +208,12 @@ export const TimeSlot = styled.div`
   cursor: ${({ available }) => (available ? 'pointer' : 'not-allowed')};
   user-select: none;
   margin-top: 8px;
+
+
+  @media (max-width: 480px) {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
 `;
 
 
@@ -172,6 +253,7 @@ export const TodayDate = styled.div`
     &:hover {
           transform: scale(1.2); 
       }
+      
   }
 
   .react-datepicker__input-container {
@@ -197,6 +279,14 @@ export const TodayDate = styled.div`
   .react-datepicker__input-container input:focus {
     box-shadow: none;
   }
+
+
+  @media (max-width: 480px) {
+    .calendar-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
 `;
 
 
@@ -206,6 +296,11 @@ export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 20px;
+
+
+  @media (max-width: 480px) {
+    margin-top: 15px;
+  }
 `;
 
 
@@ -219,6 +314,12 @@ export const BookButton = styled(Button)`
   &:disabled {
     background-color: #8a8a8a;
     cursor: not-allowed;
+  }
+
+
+  @media (max-width: 480px) {
+    padding: 10px 20px;
+    font-size: 14px;
   }
 
 `;
