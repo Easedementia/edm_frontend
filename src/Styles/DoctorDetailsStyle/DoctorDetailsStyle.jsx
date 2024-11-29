@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {Button} from 'react-bootstrap'
-import calendar from '../../assets/images/calendar.svg'
+import calendar1 from '../../assets/images/calendar1.svg'
 
 export const Container = styled.div`
   background: #fff;
@@ -244,7 +244,7 @@ export const TodayDate = styled.div`
     width: 80px;
     height: 80px;
     margin-right: 9px;
-    background-image: url(${calendar});
+    background-image: url(${calendar1});
     background-size: contain;
     background-repeat: no-repeat;
     margin-top: 40px;
