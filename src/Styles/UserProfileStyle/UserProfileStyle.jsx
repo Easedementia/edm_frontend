@@ -150,6 +150,7 @@ export const Button = styled.button`
     @media (max-width: 480px) {
       width: 48px;
       height: 48px;
+      text-align: left;
     }
   }
 `;
