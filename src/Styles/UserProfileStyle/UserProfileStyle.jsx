@@ -262,7 +262,6 @@ export const TableData = styled.td`
   word-wrap: break-word;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 
 
   @media (max-width: 480px) {
@@ -290,7 +289,6 @@ export const MeetingLink = styled.button`
   border-radius: 16px;
   cursor: pointer;
   max-width: 100px;
-  text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 
