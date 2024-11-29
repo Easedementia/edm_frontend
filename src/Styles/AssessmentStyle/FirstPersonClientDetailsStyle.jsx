@@ -227,6 +227,15 @@ export const PageWrapper = styled.div`
     background-color: #f9fafb;
     margin-top: 120px;
     border-radius: 25px;
+
+
+    @media (max-width: 768px) {
+        margin-top: 60px;
+    }
+
+    @media (max-width: 480px) {
+        margin-top: 30px;
+    }
 `;
 
 export const FormWrapper = styled.div`
@@ -237,6 +246,16 @@ export const FormWrapper = styled.div`
     text-align: center;
     border: none; 
     margin-bottom: 120px;
+
+
+    @media (max-width: 768px) {
+        padding: 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+        padding: 1rem;
+        max-width: 90%;
+    }
 `;
 
 export const FormTitle = styled.h2`
@@ -244,6 +263,17 @@ export const FormTitle = styled.h2`
     color: #5517A8; 
     margin-bottom: 5rem;
     font-family: 'Poppins', sans-serif;
+
+
+    @media (max-width: 768px) {
+        font-size: 1.3rem;
+        margin-bottom: 4rem;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+    }
 `;
 
 export const Form = styled.form`
@@ -251,6 +281,11 @@ export const Form = styled.form`
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+
+
+    @media (max-width: 480px) {
+        gap: 0.8rem;
+    }
 `;
 
 export const Label = styled.label`
@@ -258,6 +293,15 @@ export const Label = styled.label`
     color: #000;
     font-family: 'Poppins', sans-serif;
     text-align: center;
+
+
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 14px;
+    }
 `;
 
 export const Input = styled.input`
@@ -268,6 +312,15 @@ export const Input = styled.input`
     &:focus {
         border-color: #5517A8;
         outline: none;
+    }
+
+
+    @media (max-width: 768px) {
+        padding: 0.6rem;
+    }
+
+    @media (max-width: 480px) {
+        padding: 0.5rem;
     }
 `;
 
@@ -282,6 +335,17 @@ export const FormButton = styled.button`
     &:hover {
         background-color: #473693;
     }
+
+
+    @media (max-width: 768px) {
+        padding: 0.7rem 1.8rem;
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 480px) {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.8rem;
+    }
 `;
 
 export const ErrorMessage = styled.p`
@@ -289,6 +353,15 @@ export const ErrorMessage = styled.p`
     font-size: 12px;
     width: 100%;
     text-align: left;
+
+
+    @media (max-width: 768px) {
+        font-size: 11px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 10px;
+    }
 `;
 
 export const Asterisk = styled.span`
