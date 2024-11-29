@@ -118,7 +118,7 @@ export const IconGroup = styled.div`
 `;
 
 export const Icon = styled.div`
-  background: #f9fafb;
+  background: #fff;
   border-radius: 50%;
   width: 70px;
   height: 70px;
