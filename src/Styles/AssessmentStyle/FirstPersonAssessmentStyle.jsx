@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
 export const Container = styled.div`
     width: 60%;
     margin: 150px auto;
-    background-color: #f9fafb;
+    background-color: #fff;
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
