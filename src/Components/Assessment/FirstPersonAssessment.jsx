@@ -1,12 +1,11 @@
 import UserNavbar from "../Navbar/UserNavbar"
-import { Wrapper, Container, QuestionText, Description, ButtonContainer, OptionButton, NavButtonContainer, NavButton, ResultContainer, ProgressBarWrapper, ProgressBar, VideoContainer, ArrowIcon } from '../../Styles/AssessmentStyle/FirstPersonAssessmentStyle'
+import { Wrapper, Container, QuestionText, Description, ButtonContainer, OptionButton, NavButtonContainer, NavButton, ResultContainer, ProgressBarWrapper, ProgressBar, ArrowIcon } from '../../Styles/AssessmentStyle/FirstPersonAssessmentStyle'
 import { useState } from "react";
 // import { useSelector } from 'react-redux';
 import Footer from "../Footer/Footer";
 import axios from "axios";
 import { baseURL } from "../../api/api";
 import { useLocation, useNavigate } from "react-router-dom";
-import small_plants from '../../assets/animations/small_plants.mp4'
 import arrow from '../../assets/images/arrow.svg'
 
 
@@ -167,10 +166,6 @@ const FirstPersonAssessment = () => {
     <>
     <UserNavbar />
       <Wrapper>
-        <VideoContainer>
-          <video src={small_plants} autoPlay loop muted />
-        </VideoContainer>
-
         <Container>
           {currentQuestionIndex < questions.length ? (
             <>
