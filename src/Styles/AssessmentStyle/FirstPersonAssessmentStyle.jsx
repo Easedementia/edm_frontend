@@ -6,6 +6,13 @@ export const Wrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   padding: 0;
+
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
 `;
 
 
@@ -17,6 +24,22 @@ export const Container = styled.div`
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     margin-right: 200px;
+
+
+    @media (max-width: 1024px) {
+    width: 80%;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    margin: 100px auto;
+    padding: 20px;
+  }
+
+  @media (max-width: 480px) {
+    margin: 60px auto;
+    padding: 15px;
+  }
 `;
 
 
@@ -26,6 +49,11 @@ export const QuestionText = styled.h2`
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
     color: black;
+
+
+    @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 
@@ -35,6 +63,11 @@ export const Description = styled.p`
     color: black;
     font-family: 'Poppins', sans-serif;
     text-align: left;
+
+
+    @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 
@@ -45,6 +78,11 @@ export const ButtonContainer = styled.div`
     align-items: center;
     margin-bottom: 30px;
     gap: 15px;
+
+
+    @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
 `;
 
 
@@ -63,12 +101,31 @@ export const OptionButton = styled.button`
     &:hover{
         background-color: ${(props) => (props.active ? '#5b00d0' : '#dcdcdc')};
     }
+
+
+    @media (max-width: 768px) {
+    width: 80%;
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
 `;
 
 
 export const NavButtonContainer = styled.div`
     display: flex;
     justify-content: space-between;
+
+
+    @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 15px;
+  }
 `;
 
 
@@ -102,6 +159,13 @@ export const NavButton = styled.button`
     span {
         margin-left: 8px;
     }
+
+
+    @media (max-width: 768px) {
+    width: 120px;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
 `;
 
 
@@ -118,6 +182,12 @@ export const ArrowIcon = styled.img`
     &:hover {
         transform: ${(props) => (props.disabled ? `rotate(${props.rotate || 0}deg)` : `rotate(${props.rotate || 0}deg) scale(1.2)`)};
     }
+
+
+    @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 
@@ -129,6 +199,12 @@ export const ResultContainer = styled.div`
     border-radius: 8px;
     color: black;
     font-family: 'Poppins', sans-serif;
+
+
+    @media (max-width: 768px) {
+    margin-top: 30px;
+    padding: 15px;
+  }
 `;
 
 
@@ -171,6 +247,16 @@ export const VideoContainer = styled.div`
     margin-top: 280px;
     height: auto;
     border-radius: 10px;
+  }
+
+
+  @media (max-width: 768px) {
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    margin-top: 20px;
   }
 `;
 
