@@ -194,7 +194,7 @@ export const ArrowIcon = styled.img`
 export const ResultContainer = styled.div`
     margin-top: 40px;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     color: black;
