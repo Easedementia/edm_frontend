@@ -259,14 +259,10 @@ export const TableData = styled.td`
   text-align: center;
   color: #000;
   font-family: 'Poppins', sans-serif;
-  word-wrap: break-word;
-  white-space: nowrap;
-  overflow: hidden;
 
 
   @media (max-width: 480px) {
     font-size: 12px;
-    padding: 8px;
   }
 `;
 
@@ -288,9 +284,6 @@ export const MeetingLink = styled.button`
   border: 1px solid #eaeaea;
   border-radius: 16px;
   cursor: pointer;
-  max-width: 100px;
-  overflow: hidden;
-  white-space: nowrap;
 
   &:hover {
     background-color: #eaeaea;
@@ -300,6 +293,5 @@ export const MeetingLink = styled.button`
   @media (max-width: 480px) {
     font-size: 12px;
     padding: 6px 12px;
-    max-width: 80px;
   }
 `;
