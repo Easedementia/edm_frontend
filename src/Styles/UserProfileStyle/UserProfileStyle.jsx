@@ -19,6 +19,11 @@ export const ProfileContainer = styled.div`
     align-items: center;
     gap: 20px;
   }
+
+  @media (max-width: 480px) {
+    padding: 10px;
+    margin-top: 50px;
+  }
 `;
 
 // Profile details on the left side
@@ -38,6 +43,10 @@ export const ProfileDetails = styled.div`
   @media (max-width: 768px) {
     width: 90%;
     margin-left: 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 15px;
   }
 `;
 
@@ -171,6 +180,11 @@ export const SummaryContainer = styled.div`
     width: 90%;
     margin-right: 0;
   }
+
+
+  @media (max-width: 480px) {
+    padding: 15px;
+  }
 `;
 
 // Summary title
@@ -216,6 +230,10 @@ export const TableContainer = styled.div`
 export const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 `;
 
 export const TableHeader = styled.th`
