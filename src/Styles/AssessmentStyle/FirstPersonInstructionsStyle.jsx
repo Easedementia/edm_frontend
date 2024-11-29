@@ -10,6 +10,27 @@ export const Container = styled.div`
     font-family: 'Poppins', sans-serif;
     margin: 50px auto;
     margin-top: 150px;
+
+
+    @media (max-width: 1200px) {
+    width: 90%;
+  }
+
+  @media (max-width: 1024px) {
+    width: 85%;
+    padding: 25px;
+  }
+
+  @media (max-width: 768px) {
+    width: 95%;
+    margin-top: 100px;
+    padding: 20px;
+  }
+
+  @media (max-width: 480px) {
+    margin-top: 60px;
+    padding: 15px;
+  }
 `;
 
 
@@ -19,6 +40,15 @@ export const Title = styled.h1`
     margin-bottom: 16px;
     color: black;
     text-align: left;
+
+
+    @media (max-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
 `;
 
 
@@ -28,6 +58,15 @@ export const Subtitle = styled.h2`
     margin-bottom: 10px;
     text-align: left;
     color: #1a1919;
+
+
+    @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
 `;
 
 
@@ -36,6 +75,15 @@ export const InstructionsList = styled.ul`
     line-height: 1.8;
     padding-left: 20px;
     margin-bottom: 20px;
+
+
+    @media (max-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 `;
 
 
@@ -43,12 +91,30 @@ export const InstructionItem = styled.li`
     margin-bottom: 10px;
     text-align: left;
     color: black;
+
+
+    @media (max-width: 768px) {
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 6px;
+  }
 `;
 
 
 export const CheckboxWrapper = styled.div`
     margin-bottom: 20px;
     text-align: left;
+
+
+    @media (max-width: 768px) {
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 10px;
+  }
 `;
 
 
@@ -78,6 +144,19 @@ export const Button = styled.button`
         background-color: ${(props) => (props.disabled ? '#cccccc' : '#5b00d0')};
     }
 
+
+    @media (max-width: 768px) {
+    width: 150px;
+    padding: 8px 18px;
+    font-size: 12px;
+  }
+
+  @media (max-width: 480px) {
+    width: 130px;
+    padding: 8px 15px;
+    font-size: 10px;
+  }
+
     
 `;
 
@@ -93,5 +172,16 @@ export const ArrowIcon = styled.img`
         transform: scale(1.2); 
         opacity: ${(props) => (props.disabled ? 0.5 : 1)}; 
     }
+
+
+    @media (max-width: 768px) {
+    width: 45px;
+    height: 45px;
+  }
+
+  @media (max-width: 480px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
