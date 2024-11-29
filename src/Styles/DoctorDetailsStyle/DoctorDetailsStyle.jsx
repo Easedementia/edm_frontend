@@ -58,6 +58,7 @@ export const DoctorInfo = styled.div`
   flex-grow: 1;
   margin-left: 20px;
   text-align: left;
+  font-weight: 700;
 
   h2 {
     font-size: 24px;
