@@ -33,7 +33,7 @@ export const ProfileDetails = styled.div`
   align-items: center;
   padding: 20px;
   width: 45%;
-  background-color: #f9fafb;
+  background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-left: 40px;
@@ -128,8 +128,8 @@ export const ButtonsContainer = styled.div`
 `;
 
 export const Button = styled.button`
-  background-color: ${(props) => (props.selected ? '#5517A8' : '#ffffff')};
-  color: ${(props) => (props.selected ? '#ffffff' : '#000')}; 
+  background-color: ${(props) => (props.selected ? '#5517A8' : '#f9fafb')};
+  color: ${(props) => (props.selected ? '#f9fafb' : '#000')}; 
   font-size: 14px;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
@@ -170,7 +170,7 @@ export const Button = styled.button`
 export const SummaryContainer = styled.div`
   width: 75%;
   padding: 20px;
-  background-color: #f9fafb;
+  background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-right: 40px;
