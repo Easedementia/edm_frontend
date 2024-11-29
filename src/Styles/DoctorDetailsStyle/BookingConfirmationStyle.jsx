@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 
 
 export const Container = styled.div`
-  background: #f9fafb;
+  background: #fff;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
