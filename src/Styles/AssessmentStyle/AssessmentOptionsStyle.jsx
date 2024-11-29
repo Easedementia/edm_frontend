@@ -8,6 +8,15 @@ export const OptionsContainer = styled.div`
     padding: 2rem;
     gap: 2rem;
     background-color: #f9fafb;
+
+    @media (max-width: 1200px) {
+    justify-content: space-around;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 1rem;
+  }
 `;
 
 
@@ -20,6 +29,13 @@ export const OptionCard = styled.div`
     max-width: 300px;
     cursor: pointer;
     height: 305px;
+
+    @media (max-width: 768px) {
+    max-width: 100%;
+    margin: 1rem auto;
+    height: auto; /* Let the card height adjust automatically */
+    padding: 1.5rem;
+  }
 `;  
 
 
@@ -30,6 +46,11 @@ export const OptionImage = styled.img`
     margin-top: -40px;
     align-items: center;
     margin-left: 60px;
+
+    @media (max-width: 768px) {
+    width: 100px;
+    height: 100px;
+  }
 `;
 
 
@@ -39,6 +60,10 @@ export const OptionTitle = styled.h3`
     margin: 1rem 0;
     color: black;
     margin-top: -10px;
+
+    @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 
@@ -47,6 +72,10 @@ export const OptionDescription = styled.p`
     color: #2f2e2e;
     margin: 1rem 0;
     text-align: left;
+
+    @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 
@@ -70,6 +99,11 @@ export const OptionLink = styled(Link)`
     
     transition: transform 0.3s;
 
+    @media (max-width: 768px) {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
 
     &:hover {
         transform: scale(1.05);
@@ -79,5 +113,10 @@ export const OptionLink = styled(Link)`
     img {
         width: 56px;
         height: 56px;
+
+        @media (max-width: 768px) {
+      width: 40px;
+      height: 40px;
+    }
     }
 `;
