@@ -1,14 +1,27 @@
 import { NavbarContainer, Logo, NavItems, NavItem, UserIcon, LogoContainer} from '../../Styles/AdminSideStyle/AdminNavbarStyle'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import easedementia_logo from '../../assets/images/easedementia_logo.png'
 import user_icon from '../../assets/images/user_icon.svg'
-import { useSelector} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
+import Cookies from 'js-cookie';
+import { clearAdminAuth } from '../../Redux/AdminSlice'
 
 
 const AdminNavbar = () => {
-    // const dispatch = useDispatch();
-    const admin = useSelector(state => state.admin);
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const { isAuthenticated, admin } = useSelector(state => state.admin);
     console.log("ADMIN:", admin)
+
+    const handleLogout = () => {
+        Cookies.remove('accessToken');
+        Cookies.remove('refreshToken');
+        localStorage.removeItem('accessToken');
+        localStorage.removeItem('refreshToken');
+        dispatch(clearAdminAuth());
+        navigate('/login');
+    };
+
     return (
         <NavbarContainer>
             <LogoContainer>
@@ -16,12 +29,19 @@ const AdminNavbar = () => {
             </LogoContainer>
             
             <NavItems>
-                <NavItem as={Link} to="/admin-dashboard/user-list">Users</NavItem>
-                <NavItem as={Link} to="/admin-dashboard/admin-services">Services</NavItem>
-                <NavItem as={Link} to="/admin-dashboard/doctor-consulting">Doctor Consulting</NavItem>
-                <NavItem as={Link} to="/admin-assessment">Assessment</NavItem>
-                <NavItem as={Link} to="/admin-dashboard/appointment-details">Appointments</NavItem>
-                <UserIcon src={user_icon} alt="User Icon" />
+                {isAuthenticated ? (
+                    <>
+                        <NavItem as={Link} to="/admin-dashboard/user-list">Users</NavItem>
+                        <NavItem as={Link} to="/admin-dashboard/admin-services">Services</NavItem>
+                        <NavItem as={Link} to="/admin-dashboard/doctor-consulting">Doctor Consulting</NavItem>
+                        <NavItem as={Link} to="/admin-assessment">Assessment</NavItem>
+                        <NavItem as={Link} to="/admin-dashboard/appointment-details">Appointments</NavItem>
+                        <UserIcon src={user_icon} onClick={handleLogout} alt="User Icon" />
+                    </>
+                ) : (
+                    // Optionally redirect or display a login prompt for unauthenticated users
+                    <NavItem as={Link} to="/login">Login</NavItem>
+                )}
             </NavItems>
         </NavbarContainer> 
     )
