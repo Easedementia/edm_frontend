@@ -303,7 +303,7 @@ export const Label = styled.label`
 export const Input = styled.input`
   padding: 0.5rem;
   margin-bottom: 1rem;
-  border: 1px solid #f9fafb;
+  border: 1px solid #278cff;
   height: 35px;
   border-radius: 10px;
   font-size: 0.9rem;
