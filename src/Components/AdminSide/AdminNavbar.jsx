@@ -10,8 +10,8 @@ import { clearAdminAuth } from '../../Redux/AdminSlice'
 const AdminNavbar = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const { isAuthenticated, admin } = useSelector(state => state.admin);
-    console.log("ADMIN:", admin)
+    const { isAuthenticated, adminUser } = useSelector(state => state.admin);
+    console.log("ADMIN:", adminUser)
 
     const handleLogout = () => {
         Cookies.remove('accessToken');
