@@ -92,7 +92,7 @@ export const Input = styled.input`
   padding: 10px;
   font-size: 16px;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #000;
   border-radius: 10px;
   transition: border-color 0.3s ease;
 
@@ -116,8 +116,8 @@ export const TextArea = styled.textarea`
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
+  background-color: #fff;
+  border: 1px solid #000;
   border-radius: 10px;
   resize: none;
   transition: border-color 0.3s ease;
