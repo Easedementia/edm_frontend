@@ -271,7 +271,7 @@ export const ButtonContainer = styled.div`
 export const FormButton = styled.button`
     font-size: 1rem;
     background-color: #5517A8;
-    color: #fff;
+    color: #f9fafb;
     border: none;
     border-radius: 25px;
     cursor: pointer;
