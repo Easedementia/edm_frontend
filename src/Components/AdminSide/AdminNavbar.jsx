@@ -12,6 +12,7 @@ const AdminNavbar = () => {
     const dispatch = useDispatch();
     const { isAuthenticated, adminUser } = useSelector(state => state.admin);
     console.log("ADMIN:", adminUser)
+    console.log("IS AUTHENTICATED:", isAuthenticated)
 
     const handleLogout = () => {
         Cookies.remove('accessToken');
