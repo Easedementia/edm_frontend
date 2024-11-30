@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux';
 import { baseURL } from '../api/api'
 import {setAdminAccessToken, setAdminUser} from '../Redux/AdminSlice'
 import Cookies from 'js-cookie';
+import arrow from '../assets/images/arrow.svg'
 
 const AdminLoginPage = () => {
     const navigator = useNavigate();
@@ -90,7 +91,7 @@ const AdminLoginPage = () => {
                 </Description>
 
                 <Button>
-                    Know More <ArrowIcon>→</ArrowIcon>
+                    Know More <ArrowIcon src={arrow} alt="Arrow Icon" />
                 </Button>
             </InfoSection>
         </LeftSide>
