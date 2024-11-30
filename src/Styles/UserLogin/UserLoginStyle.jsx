@@ -6,7 +6,7 @@ export const PageWrapper = styled.div`
     justify-content: space-around;
     align-items: center;
     min-height: 80vh;
-    background-color: white;
+    background-color: #f9fafb;
 
 
     @media (max-width: 768px) {
@@ -164,7 +164,7 @@ export const FormWrapper = styled.div`
     padding: 2rem;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    background-color: #f9fafb;
+    background-color: #fff;
     max-width: 400px;
     width: 100%;
     text-align: center;
@@ -239,7 +239,7 @@ export const Label = styled.label`
 export const Input = styled.input`
     padding: 0.75rem;
     margin-bottom: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid #f9fafb;
     border-radius: 10px;
     font-size: 15px;
     height: 45px;
