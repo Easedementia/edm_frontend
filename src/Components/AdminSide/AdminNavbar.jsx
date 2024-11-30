@@ -26,7 +26,9 @@ const AdminNavbar = () => {
     return (
         <NavbarContainer>
             <LogoContainer>
-                <Logo src= {easedementia_logo} alt='Easedementia Logo' />
+                <Link to='/admin-login' >
+                    <Logo src= {easedementia_logo} alt='Easedementia Logo' />
+                </Link>
             </LogoContainer>
             
             <NavItems>
