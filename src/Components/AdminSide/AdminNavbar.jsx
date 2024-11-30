@@ -40,7 +40,7 @@ const AdminNavbar = () => {
                     </>
                 ) : (
                     // Optionally redirect or display a login prompt for unauthenticated users
-                    <NavItem as={Link} to="/login">Login</NavItem>
+                    <NavItem as={Link} to="/admin-login">Admin Login</NavItem>
                 )}
             </NavItems>
         </NavbarContainer> 
