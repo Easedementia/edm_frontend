@@ -19,6 +19,11 @@ export const NavbarContainer = styled.nav`
     font-weight: 400;
     font-style: normal;
 
+
+    @media (max-width: 1024px) {
+        padding: 10px 30px;
+    }
+
     @media (max-width: 768px) {
         flex-direction: column;
         align-items: flex-start;
@@ -27,6 +32,7 @@ export const NavbarContainer = styled.nav`
 
     @media (max-width: 480px) {
         padding: 10px 15px;
+        gap: 10px;
     }
 `
 
@@ -45,6 +51,11 @@ export const LogoContainer = styled.div`
 export const Logo = styled.img`
     height: 55px;
 
+
+    @media (max-width: 1024px) {
+        height: 50px;
+    }
+
     @media (max-width: 480px) {
         height: 45px;
     }
@@ -56,14 +67,20 @@ export const NavItems = styled.div`
     align-items: center;
     gap: 40px;
 
+
+    @media (max-width: 1024px) {
+        gap: 30px;
+    }
+
     @media (max-width: 768px) {
         width: 100%;
         justify-content: space-between;
+        gap: 20px;
     }
 
     @media (max-width: 480px) {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
         align-items: flex-start;
     }
 `
@@ -77,6 +94,10 @@ export const NavItem = styled.a`
     cursor: pointer;
     &:hover{
         color: purple;
+    }
+
+    @media (max-width: 1024px) {
+        font-size: 14px;
     }
 
     @media (max-width: 480px) {
@@ -108,8 +129,13 @@ export const UserIcon = styled.img`
   margin-left: 0;
   cursor: pointer;
 
-  @media (max-width: 480px) {
-        height: 20px;
-        width: 20px;
+  @media (max-width: 1024px) {
+        height: 60px;
+        width: 60px;
+    }
+
+    @media (max-width: 480px) {
+        height: 40px;
+        width: 40px;
     }
 `;
