@@ -2,10 +2,13 @@ import { NavbarContainer, Logo, NavItems, NavItem, UserIcon, LogoContainer} from
 import {Link} from 'react-router-dom'
 import easedementia_logo from '../../assets/images/easedementia_logo.png'
 import user_icon from '../../assets/images/user_icon.svg'
-
+import { useSelector} from 'react-redux'
 
 
 const AdminNavbar = () => {
+    // const dispatch = useDispatch();
+    const admin = useSelector(state => state.admin);
+    console.log("ADMIN:", admin)
     return (
         <NavbarContainer>
             <LogoContainer>
