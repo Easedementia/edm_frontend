@@ -91,7 +91,7 @@ export const Input = styled.input`
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  background-color: #f9f9f9;
+  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 10px;
   transition: border-color 0.3s ease;
