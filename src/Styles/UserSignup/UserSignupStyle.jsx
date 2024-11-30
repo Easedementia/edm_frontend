@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   height: 100vh;
   flex-direction: row;
-  background-color: #fff;
+  background-color: #f9fafb;
   width: 100%;
 
   @media (max-width: 768px) {
@@ -195,7 +195,7 @@ export const FormWrapper = styled.div`
   padding: 1.5rem;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  background-color: #f9fafb;
+  background-color: #fff;
   max-width: 350px;
   width: 100%;
   height: auto;
@@ -303,7 +303,7 @@ export const Label = styled.label`
 export const Input = styled.input`
   padding: 0.5rem;
   margin-bottom: 1rem;
-  border: 1px solid #ddd;
+  border: 1px solid #f9fafb;
   height: 35px;
   border-radius: 10px;
   font-size: 0.9rem;

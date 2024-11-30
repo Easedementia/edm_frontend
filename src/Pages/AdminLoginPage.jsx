@@ -91,7 +91,7 @@ const AdminLoginPage = () => {
                 </Description>
 
                 <Button>
-                    Know More <ArrowIcon src={arrow} alt="Arrow Icon" />
+                    Know More <ArrowIcon src={arrow} alt="Arrow Icon" />    
                 </Button>
             </InfoSection>
         </LeftSide>
