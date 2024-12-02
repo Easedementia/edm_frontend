@@ -115,7 +115,7 @@ export const EmailInput = styled.input`
 
 export const ArrowIcon = styled.img`
   position: absolute;
-  right: 10px;
+  right: 5px;
   top: 50%;
   transform: translateY(-50%);
   width: 80px;
@@ -129,8 +129,8 @@ export const ArrowIcon = styled.img`
 
 
   @media (max-width: 480px) {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
   }
 `;
 
