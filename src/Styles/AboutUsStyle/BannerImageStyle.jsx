@@ -60,7 +60,7 @@ export const TextContainer = styled.div`
 
 
 export const TextParagraph = styled.p`
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     margin: 0.5rem 0;
     line-height: 1.3;
 
