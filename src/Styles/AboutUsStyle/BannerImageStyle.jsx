@@ -39,15 +39,19 @@ export const TextContainer = styled.div`
     color: white;
     text-align: left;
     padding: 5rem;
+    max-width: 80%;
 
 
     @media (max-width: 768px) {
         padding: 3rem;
+        max-width: 90%;
     }
 
     @media (max-width: 480px) {
-        padding: 2rem;
+        padding: 1.5rem;
         text-align: center;
+        max-width: 100%; 
+        word-wrap: break-word;
     }
 `;
 
@@ -63,5 +67,6 @@ export const TextParagraph = styled.p`
 
     @media (max-width: 480px) {
         font-size: 0.9rem;
+        line-height: 1.4;
     }
 `;
