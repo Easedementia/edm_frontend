@@ -66,13 +66,13 @@ export const TextParagraph = styled.p`
 
 
     @media (max-width: 768px) {
-        font-size: 1rem;
-        line-height: 1.5;
+        font-size: 0.6rem;
+        line-height: 1;
     }
 
     @media (max-width: 480px) {
-        font-size: 0.9rem;
-        line-height: 1.4;
+        font-size: 0.5rem;
+        line-height: 1;
         margin: 0.3rem 0;
     }
 `;
