@@ -43,7 +43,7 @@ export const NavbarContainer = styled.nav`
   }
 
   @media (max-width: ${breakpoints.mobileL}) {
-    padding: 15px 20px;
+    padding: 10px 15px;
   }
 `
 
@@ -127,6 +127,7 @@ export const NavItems = styled.div`
         left: 0;
         background-color: white; 
         padding: 50px; 
+        flex-wrap: nowrap;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 
         &.active {
