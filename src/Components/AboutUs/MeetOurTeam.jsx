@@ -1,5 +1,4 @@
 import { OuterContainer, InnerContainer, TeamContainer, TeamSubHeading, TeamHeading, TeamGrid, TeamMemberCard, TeamMemberImage, TeamMemberName, TeamMemberRole } from '../../Styles/AboutUsStyle/MeetOurTeamStyle'
-import testimonial_3 from '../../assets/images/testimonial_3.jpg'
 import pj_jolly1 from '../../assets/images/pj_jolly1.jpg'
 import amrutha from '../../assets/images/amrutha.jpg'
 import snijo from '../../assets/images/snijo.jpg'
