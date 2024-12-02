@@ -155,7 +155,7 @@ export const ServiceDescription = styled.p`
 export const BookButton = styled.button`
   display: flex; 
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 12px 16px; /* Adjust padding */
     background-color: #5517A8;
     color: white;
@@ -181,13 +181,11 @@ export const BookButton = styled.button`
     @media (max-width: 768px) {
     align-self: center;
     margin-right: 0;
-    width: 200px;
-    font-size: 14px;
   }
 
   @media (max-width: 480px) {
-    width: 180px;
-    font-size: 12px;
+    width: 200px;
+    font-size: 14px;
   }
 `;
 
