@@ -38,9 +38,9 @@ export const TextContainer = styled.div`
     position: relative;
     color: white;
     text-align: left;
-    padding: 5rem;
+    padding: 3rem;
     max-width: 80%;
-    overflow-wrap: break-word; /* Ensures long words break into the next line */
+    overflow-wrap: break-word;
     word-break: break-word;
 
 
@@ -52,7 +52,7 @@ export const TextContainer = styled.div`
     @media (max-width: 480px) {
         padding: 1.5rem;
         text-align: center;
-        max-width: 100%; /* Ensures text stays within the container */
+        max-width: 100%;
         overflow-wrap: break-word;
         word-break: break-word;
     }
@@ -60,9 +60,9 @@ export const TextContainer = styled.div`
 
 
 export const TextParagraph = styled.p`
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 0.5rem 0;
-    line-height: 1.6;
+    line-height: 1.3;
 
 
     @media (max-width: 768px) {
@@ -72,7 +72,7 @@ export const TextParagraph = styled.p`
     }
 
     @media (max-width: 480px) {
-        font-size: 0.9rem;
+        font-size: 0.6rem;
         line-height: 1;
         margin: 0.3rem 0;
         text-align: left;
