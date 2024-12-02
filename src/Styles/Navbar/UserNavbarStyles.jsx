@@ -114,6 +114,7 @@ export const NavItems = styled.div`
     display: flex;
     align-items: center;
     gap: 40px;
+    flex-wrap: nowrap;
 
     @media (max-width: 768px) {
         display: none; 
@@ -127,7 +128,6 @@ export const NavItems = styled.div`
         left: 0;
         background-color: white; 
         padding: 50px; 
-        flex-wrap: nowrap;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 
         &.active {
