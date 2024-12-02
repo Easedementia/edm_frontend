@@ -32,11 +32,12 @@ export const HeadingContainer = styled.div`
 
     @media (max-width: 768px) {
         max-width: 100%;
-        text-align: center;
+        text-align: left;
     }
 
 
     @media (max-width: 480px) {
+        text-align: left;
         max-width: 50%;
         padding: 0 1rem;
     }
