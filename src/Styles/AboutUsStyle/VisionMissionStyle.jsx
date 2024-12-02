@@ -168,10 +168,12 @@ export const Heading = styled.h2`
 
   @media (max-width: 768px) {
     font-size: 1rem;
+    text-align: left;
   }
 
   @media (max-width: 480px) {
     font-size: 0.9rem;
+    text-align: left;
   }
 `;
 
