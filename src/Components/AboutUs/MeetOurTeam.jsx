@@ -1,42 +1,48 @@
 import { OuterContainer, InnerContainer, TeamContainer, TeamSubHeading, TeamHeading, TeamGrid, TeamMemberCard, TeamMemberImage, TeamMemberName, TeamMemberRole } from '../../Styles/AboutUsStyle/MeetOurTeamStyle'
 import testimonial_3 from '../../assets/images/testimonial_3.jpg'
+import pj_jolly1 from '../../assets/images/pj_jolly1.jpg'
+import amrutha from '../../assets/images/amrutha.jpg'
+import snijo from '../../assets/images/snijo.jpg'
+import jaison from '../../assets/images/jaison.jpg'
+import praveen from '../../assets/images/praveen.jpg'
+import jino from '../../assets/images/jino.jpg'
 
 
 const teamMembers = [
     {
-        image: testimonial_3,
-        name: 'Roshan Zacharias',
-        role: 'Full Stack Developer'
-    },
-
-    {
-        image: testimonial_3,
+        image: pj_jolly1,
         name: 'P J Jolly',
         role: 'CEO, Co Founder'
     },
 
     {
-        image: testimonial_3,
-        name: 'Meera Nambiar',
-        role: 'CEO at Borcelle'
+        image: amrutha,
+        name: 'Amrutha P Varghese',
+        role: 'Co Founder'
     },
 
     {
-        image: testimonial_3,
+        image: snijo,
+        name: 'Snijo P J',
+        role: 'Co Founder'
+    },
+
+    {
+        image: jaison,
+        name: 'Jaison Joseph',
+        role: 'Founder of Borcelle'
+    },
+
+    {
+        image: praveen,
+        name: 'Praveen Rajappan',
+        role: 'Founder of Borcelle'
+    },
+
+    {
+        image: jino,
         name: 'Dr. Jino Joy',
         role: 'Medical Advisor'
-    },
-
-    {
-        image: testimonial_3,
-        name: 'David John',
-        role: 'Founder of Borcelle'
-    },
-
-    {
-        image: testimonial_3,
-        name: 'Peter Parker',
-        role: 'Founder of Borcelle'
     },
 ];
 
