@@ -223,7 +223,7 @@ export const FirstRow = styled.div`
 
 
 export const ArrowIcon = styled.img`
-    margin-left: 10px;
+    margin-left: 0;
     width: 65px;
     height: 65px;
     transition: transform 0.2s ease;
