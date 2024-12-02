@@ -43,7 +43,7 @@ export const NavbarContainer = styled.nav`
   }
 
   @media (max-width: ${breakpoints.mobileL}) {
-    padding: 10px 15px;
+    padding: 15px 20px;
   }
 `
 
