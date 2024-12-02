@@ -115,7 +115,7 @@ export const EmailInput = styled.input`
 
 export const ArrowIcon = styled.img`
   position: absolute;
-  left: 300px;
+  right: 15px;
   top: 50%;
   transform: translateY(-50%);
   width: 80px;
