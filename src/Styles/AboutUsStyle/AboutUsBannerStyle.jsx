@@ -12,7 +12,7 @@ export const AboutUsContainer = styled.div`
     margin-top: 110px;
 
 
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
         flex-direction: column;
         align-items: center;
         padding: 1rem;
@@ -22,7 +22,7 @@ export const AboutUsContainer = styled.div`
     @media (max-width: 480px) {
         padding: 0.5rem;
         margin-top: 80px;
-    }
+    } */
 `;
 
 
@@ -30,7 +30,7 @@ export const HeadingContainer = styled.div`
     max-width: 50%;
 
 
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
         max-width: 100%;
         text-align: center;
     }
@@ -39,7 +39,7 @@ export const HeadingContainer = styled.div`
     @media (max-width: 480px) {
         max-width: 100%;
         padding: 0 1rem;
-    }
+    } */
 `;
 
 
@@ -50,7 +50,7 @@ export const SubHeading = styled.h2`
     text-align: left;
 
 
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
         font-size: 1.2rem;
         text-align: center;
     }
@@ -59,7 +59,7 @@ export const SubHeading = styled.h2`
     @media (max-width: 480px) {
         font-size: 1.1rem;
         text-align: center;
-    }
+    } */
 `;
 
 
@@ -71,7 +71,7 @@ export const MainHeading = styled.h1`
     font-weight: 700;
 
 
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
         font-size: 2rem;
         text-align: center;
     }
@@ -80,7 +80,7 @@ export const MainHeading = styled.h1`
     @media (max-width: 480px) {
         font-size: 1.8rem;
         text-align: center;
-    }
+    } */
 `;
 
 
@@ -90,7 +90,7 @@ export const Description = styled.p`
     text-align: left;
 
 
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
         font-size: 14px;
         text-align: center;
     }
@@ -100,7 +100,7 @@ export const Description = styled.p`
         font-size: 13px;
         text-align: center;
         padding: 0 1rem;
-    }
+    } */
 `;
 
 
@@ -108,7 +108,7 @@ export const ImageContainer = styled.div`
     max-width: 50%;
 
 
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
         max-width: 100%;
         margin-top: 20px;
     }
@@ -117,7 +117,7 @@ export const ImageContainer = styled.div`
     @media (max-width: 480px) {
         margin-top: 15px;
         max-width: 100%;
-    }
+    } */
 `;
 
 
@@ -128,7 +128,7 @@ export const StyledImage = styled.img`
     margin-left: 30px;
 
 
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
         margin-left: 0;
         margin-bottom: 30px;
     }
@@ -137,7 +137,7 @@ export const StyledImage = styled.img`
     @media (max-width: 480px) {
         margin-left: 0;
         margin-bottom: 20px;
-    }
+    } */
 `;
 
 
