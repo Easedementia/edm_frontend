@@ -4,7 +4,7 @@ import amrutha from '../../assets/images/amrutha.jpg'
 import snijo from '../../assets/images/snijo.jpg'
 import jaison from '../../assets/images/jaison.jpg'
 import praveen from '../../assets/images/praveen.jpg'
-import jino from '../../assets/images/jino.jpg'
+import jino from '../../assets/images/dr_jino.jpg'
 
 
 const teamMembers = [
