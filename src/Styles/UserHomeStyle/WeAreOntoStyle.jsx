@@ -34,7 +34,7 @@ export const CardContainer = styled.div`
     display: flex;
     justify-content: center;
     gap: 50px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 
     @media (max-width: 768px) {
         gap: 30px;
