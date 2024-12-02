@@ -13,13 +13,14 @@ export const AboutUsContainer = styled.div`
 
 
     @media (max-width: 768px) {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        align-items: flex-start;
         padding: 1rem;
     }
 
 
     @media (max-width: 480px) {
+        flex-direction: row;
         padding: 0.5rem;
         margin-top: 80px;
     }
@@ -39,7 +40,7 @@ export const HeadingContainer = styled.div`
     @media (max-width: 480px) {
         text-align: left;
         max-width: 50%;
-        padding: 0 1rem;
+        padding: 0 0.5rem;
     }
 `;
 
@@ -111,13 +112,13 @@ export const ImageContainer = styled.div`
 
     @media (max-width: 768px) {
         max-width: 50%;
-        margin-top: 20px;
+        /* margin-top: 20px; */
     }
 
 
     @media (max-width: 480px) {
         margin-top: 15px;
-        max-width: 50%;
+        /* max-width: 50%; */
     }
 `;
 
@@ -130,14 +131,16 @@ export const StyledImage = styled.img`
 
 
     @media (max-width: 768px) {
-        margin-left: 0;
-        margin-bottom: 30px;
+        /* margin-left: 0; */
+        /* margin-bottom: 30px; */
+        width: 100%;
     }
 
 
     @media (max-width: 480px) {
-        margin-left: 0;
-        margin-bottom: 20px;
+        /* margin-left: 0;
+        margin-bottom: 20px; */
+        width: 100%;
     }
 `;
 
