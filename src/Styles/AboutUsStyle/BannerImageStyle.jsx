@@ -40,6 +40,8 @@ export const TextContainer = styled.div`
     text-align: left;
     padding: 5rem;
     max-width: 80%;
+    overflow-wrap: break-word; /* Ensures long words break into the next line */
+    word-break: break-word;
 
 
     @media (max-width: 768px) {
@@ -50,8 +52,9 @@ export const TextContainer = styled.div`
     @media (max-width: 480px) {
         padding: 1.5rem;
         text-align: center;
-        max-width: 100%; 
-        word-wrap: break-word;
+        max-width: 100%; /* Ensures text stays within the container */
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
 `;
 
@@ -59,14 +62,17 @@ export const TextContainer = styled.div`
 export const TextParagraph = styled.p`
     font-size: 1.1rem;
     margin: 0.5rem 0;
+    line-height: 1.6;
 
 
     @media (max-width: 768px) {
         font-size: 1rem;
+        line-height: 1.5;
     }
 
     @media (max-width: 480px) {
         font-size: 0.9rem;
         line-height: 1.4;
+        margin: 0.3rem 0;
     }
 `;
