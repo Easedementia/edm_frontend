@@ -125,7 +125,11 @@ export const TeamMemberName = styled.h4`
 
 
     @media (max-width: 768px) {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.5rem;
   }
 `;
 
@@ -136,6 +140,10 @@ export const TeamMemberRole = styled.p`
 
 
     @media (max-width: 768px) {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.5rem;
   }
 `;
