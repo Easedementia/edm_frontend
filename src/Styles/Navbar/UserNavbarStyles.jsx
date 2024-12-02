@@ -113,7 +113,7 @@ export const HamburgerIcon = styled.div`
 export const NavItems = styled.div`
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
     flex-wrap: nowrap;
 
     @media (max-width: 768px) {
