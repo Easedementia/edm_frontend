@@ -38,30 +38,43 @@ export const TextContainer = styled.div`
     position: relative;
     color: white;
     text-align: left;
-    padding: 5rem;  
+    padding: 3rem;
+    max-width: 80%;
+    overflow-wrap: break-word;
+    word-break: break-word;
 
 
     @media (max-width: 768px) {
-        padding: 3rem; /* Reduce padding for tablets */
+        padding: 3rem;
+        max-width: 90%;
     }
 
     @media (max-width: 480px) {
-        padding: 1.5rem; /* Reduce padding for mobile phones */
-        text-align: center; /* Center-align text for smaller screens */
+        padding: 1.5rem;
+        text-align: center;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
 `;
 
 
 export const TextParagraph = styled.p`
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin: 0.5rem 0;
+    line-height: 1.3;
 
 
     @media (max-width: 768px) {
-        font-size: 1rem; /* Slightly smaller font size for tablets */
+        font-size: 0.9rem;
+        line-height: 1;
+        text-align: left;
     }
 
     @media (max-width: 480px) {
-        font-size: 0.9rem; /* Smaller font size for mobile phones */
+        font-size: 0.6rem;
+        line-height: 1;
+        margin: 0.3rem 0;
+        text-align: left;
     }
 `;
