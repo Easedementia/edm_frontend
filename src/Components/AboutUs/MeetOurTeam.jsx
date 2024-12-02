@@ -29,19 +29,19 @@ const teamMembers = [
     {
         image: jaison,
         name: 'Jaison Joseph',
-        role: 'Founder of Borcelle'
+        role: 'Advisory Board'
     },
 
     {
         image: praveen,
         name: 'Praveen Rajappan',
-        role: 'Founder of Borcelle'
+        role: 'Advisory Board'
     },
 
     {
         image: jino,
         name: 'Dr. Jino Joy',
-        role: 'Medical Advisor'
+        role: 'Advisory Board'
     },
 ];
 
