@@ -26,9 +26,11 @@ export const Container = styled.div`
     margin-right: 200px;
 
 
-    @media (max-width: 1024px) {
-    width: 100%;
-  }
+    @media (max-width: 1024px) and (min-width: 769px) {
+        width: 80%; /* Adjust width for mid-size screens */
+        margin: 100px auto; /* Ensure it's centered */
+    }
+
 
   @media (max-width: 768px) {
     width: 90%;
