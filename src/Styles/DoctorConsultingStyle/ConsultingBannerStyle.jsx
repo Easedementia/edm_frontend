@@ -13,13 +13,13 @@ export const ConsultingContainer = styled.div`
 
 
     @media (max-width: 1024px) {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 1.5rem;
     margin-top: 60px;
   }
 
   @media (max-width: 768px) {
-    flex-direction: column-reverse;
+    flex-direction: row;
     align-items: center;
     text-align: center;
     margin-top: 40px;
