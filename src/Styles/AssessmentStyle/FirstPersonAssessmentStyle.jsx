@@ -27,8 +27,8 @@ export const Container = styled.div`
 
 
     @media (max-width: 1024px) and (min-width: 769px) {
-        width: 80%; /* Adjust width for mid-size screens */
-        margin: 100px auto; /* Ensure it's centered */
+        width: 80%;
+        margin: 100px auto;
     }
 
 
@@ -122,12 +122,14 @@ export const OptionButton = styled.button`
 export const NavButtonContainer = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 
 
     @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 15px;
-  }
+        gap: 10px; /* Add some spacing if needed */
+        justify-content: center; /* Center buttons horizontally */
+    }
 `;
 
 
