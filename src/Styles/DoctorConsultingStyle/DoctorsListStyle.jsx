@@ -215,6 +215,7 @@ export const Time = styled.div`
 
   @media (max-width: 480px) {
     margin-right: 0;
+    flex-direction: row;
   }
 `;
 
