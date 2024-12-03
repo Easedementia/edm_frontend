@@ -16,6 +16,8 @@ export const ConsultingContainer = styled.div`
         flex-direction: row;
         align-items: flex-start;
         padding: 1rem;
+        justify-content: center;
+        gap: 1rem;
     }
 
 
@@ -23,6 +25,7 @@ export const ConsultingContainer = styled.div`
         flex-direction: row;
         padding: 0.5rem;
         margin-top: 80px;
+        gap: 0.5rem;
     }
 `;
 
@@ -33,14 +36,15 @@ export const HeadingContainer = styled.div`
 
 
     @media (max-width: 768px) {
-        max-width: 100%;
+      max-width: 50%; /* Retain 50% width for horizontal layout */
+        margin-top: 0; /* Remove extra margin for alignment */
         text-align: left;
     }
 
 
     @media (max-width: 480px) {
-        text-align: left;
         max-width: 50%;
+        text-align: left;
         padding: 0 0.5rem;
     }
 
@@ -96,10 +100,12 @@ export const Description = styled.p`
     @media (max-width: 768px) {
     font-size: 1rem;
     text-align: center;
+    text-align: left;
   }
 
   @media (max-width: 480px) {
     font-size: 0.9rem;
+    text-align: left;
   }
 `;
 
@@ -109,14 +115,14 @@ export const ImageContainer = styled.div`
 
 
     @media (max-width: 768px) {
-        max-width: 50%;
-        /* margin-top: 20px; */
+        max-width: 50%; /* Reduce size for smaller screens */
+        margin-top: 0; /* Keep alignment intact */
+        text-align: right; /* Optional: Align image container content */
     }
 
-
     @media (max-width: 480px) {
-        margin-top: 15px;
-        /* max-width: 50%; */
+        max-width: 50%; /* Ensure same size as HeadingContainer */
+        margin-top: 0;
     }
 `;
 
