@@ -310,7 +310,7 @@ export const PaginationButton = styled.div`
   background-color: ${({ disabled, isActive }) =>
     disabled ? '#e0e0e0' : isActive ? '#5517A8' : '#5517A8'};
   color: ${({ disabled, isActive }) =>
-    disabled ? '#9e9e9e' : isActive ? '#fff' : '#000'};
+    disabled ? '#9e9e9e' : isActive ? '#fff' : '#fff'};
   border: 1px solid ${({ disabled, isActive }) =>
     disabled ? '#e0e0e0' : isActive ? '#5517A8' : '#5517A8'};
   border-radius: 5px;
