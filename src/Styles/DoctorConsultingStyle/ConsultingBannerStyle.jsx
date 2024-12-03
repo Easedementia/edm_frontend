@@ -82,11 +82,12 @@ export const MainHeading = styled.h1`
 
     @media (max-width: 768px) {
     font-size: 2.5rem;
-    text-align: center;
+    text-align: left;
   }
 
   @media (max-width: 480px) {
     font-size: 2rem;
+    text-align: left;
   }
 `;
 
