@@ -12,18 +12,18 @@ export const ConsultingContainer = styled.div`
     margin-top: 80px;
 
 
-    @media (max-width: 1024px) {
-    flex-wrap: nowrap;
-    padding: 1.5rem;
-    margin-top: 60px;
-  }
+    @media (max-width: 768px) {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 1rem;
+    }
 
-  @media (max-width: 768px) {
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    margin-top: 40px;
-  }
+
+    @media (max-width: 480px) {
+        flex-direction: row;
+        padding: 0.5rem;
+        margin-top: 80px;
+    }
 `;
 
 
@@ -32,14 +32,18 @@ export const HeadingContainer = styled.div`
     margin-top: 70px;
 
 
-    @media (max-width: 1024px) {
-    max-width: 100%;
-    margin-top: 50px;
-  }
+    @media (max-width: 768px) {
+        max-width: 100%;
+        text-align: left;
+    }
 
-  @media (max-width: 768px) {
-    margin-top: 20px;
-  }
+
+    @media (max-width: 480px) {
+        text-align: left;
+        max-width: 50%;
+        padding: 0 0.5rem;
+    }
+
 `;
 
 
@@ -51,13 +55,15 @@ export const SubHeading = styled.h2`
 
 
     @media (max-width: 768px) {
-    font-size: 1.3rem;
-    text-align: center;
-  }
+        font-size: 1.2rem;
+        text-align: left;
+    }
 
-  @media (max-width: 480px) {
-    font-size: 1.2rem;
-  }
+
+    @media (max-width: 480px) {
+        font-size: 1.1rem;
+        text-align: left;
+    }
 `;
 
 
@@ -102,18 +108,16 @@ export const ImageContainer = styled.div`
     max-width: 68%;
 
 
-    @media (max-width: 1024px) {
-    max-width: 100%;
-    margin-top: 20px;
-  }
+    @media (max-width: 768px) {
+        max-width: 50%;
+        /* margin-top: 20px; */
+    }
 
-  @media (max-width: 768px) {
-    max-width: 80%;
-  }
 
-  @media (max-width: 480px) {
-    max-width: 100%;
-  }
+    @media (max-width: 480px) {
+        margin-top: 15px;
+        /* max-width: 50%; */
+    }
 `;
 
 
@@ -124,14 +128,18 @@ export const StyledImage = styled.img`
     margin-left: 50px;
 
 
-    @media (max-width: 1024px) {
-    width: 100%;
-    margin-left: 0;
-  }
+    @media (max-width: 768px) {
+        /* margin-left: 0; */
+        /* margin-bottom: 30px; */
+        width: 100%;
+    }
 
-  @media (max-width: 768px) {
-    width: 90%;
-  }
+
+    @media (max-width: 480px) {
+        /* margin-left: 0;
+        margin-bottom: 20px; */
+        width: 100%;
+    }
 `;
 
 
