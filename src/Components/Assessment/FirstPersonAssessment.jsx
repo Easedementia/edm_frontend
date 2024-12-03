@@ -1,6 +1,6 @@
 import UserNavbar from "../Navbar/UserNavbar"
 import { Wrapper, Container, QuestionText, Description, ButtonContainer, OptionButton, NavButtonContainer, NavButton, ResultContainer, ProgressBarWrapper, ProgressBar, ArrowIcon } from '../../Styles/AssessmentStyle/FirstPersonAssessmentStyle'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import { useSelector } from 'react-redux';
 import Footer from "../Footer/Footer";
 import axios from "axios";
@@ -77,6 +77,10 @@ const questions = [
 const FirstPersonAssessment = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState(Array(questions.length).fill(null));
+  const [clientId, setClientId] = useState(() => {
+    return localStorage.getItem('clientId') || 'No Client ID';
+  });
+  console.log("Client ID:", clientId);
 
   const navigator = useNavigate();
 
@@ -85,8 +89,19 @@ const FirstPersonAssessment = () => {
   // const fullname = currentUser.user.fullname;
 
   const location = useLocation();
-  const clientId = location.state?.clientId || "No Client ID";
-  console.log("Client ID:", clientId);
+  // const clientId = location.state?.clientId || "No Client ID";
+  
+
+
+
+  useEffect(() => {
+    const clientIdFromState = location.state?.clientId;
+    if (clientIdFromState) {
+      setClientId(clientIdFromState);
+      localStorage.setItem('clientId', clientIdFromState);
+    }
+  }, [location.state]);
+
   
 
 
