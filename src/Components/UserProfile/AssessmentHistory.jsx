@@ -16,9 +16,11 @@ const AssessmentHistory = () => {
   const [userDetails, setUserDetails] = useState('');
   const [avatarPreview, setAvatarPreview] = useState(null);
   const [assessments, setAssessments] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const userID = useSelector((state) => state.user.user.user.id);
+  const entriesPerPage = 8;
 
   useEffect(() => {
     const fetchUserDetails = async () => {
@@ -72,6 +74,26 @@ const AssessmentHistory = () => {
   };
 
 
+  // Pagination logic
+  const totalPages = Math.ceil(assessments.length / entriesPerPage);
+  const currentEntries = assessments
+    .slice()
+    .reverse()
+    .slice((currentPage - 1) * entriesPerPage, currentPage * entriesPerPage);
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage((prevPage) => prevPage + 1);
+    }
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prevPage) => prevPage - 1);
+    }
+  };
+
+
   
 
   return (
@@ -114,11 +136,8 @@ const AssessmentHistory = () => {
               </tr>
             </thead>
             <tbody>
-              {assessments.length > 0 ? (
-                assessments
-                  .slice()  // Create a shallow copy to avoid mutating the original array
-                  .reverse()  // Reverse the order of the array
-                  .map((assessment) => (
+                {currentEntries.length > 0 ? (
+                  currentEntries.map((assessment) => (
                     <TableRow key={assessment.id}>
                       <TableData>{assessment.fullname}</TableData>
                       <TableData>
@@ -132,14 +151,23 @@ const AssessmentHistory = () => {
                       <TableData>{assessment.interpretation || 'N/A'}</TableData>
                     </TableRow>
                   ))
-              ) : (
-                <TableRow>
-                  <TableData colSpan="4">No assessments found</TableData>
-                </TableRow>
-              )}
-            </tbody>
+                ) : (
+                  <TableRow>
+                    <TableData colSpan="4">No assessments found</TableData>
+                  </TableRow>
+                )}
+              </tbody>
           </Table>
         </TableContainer>
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+            <Button selected={false} onClick={handlePreviousPage} disabled={currentPage === 1}>
+              Previous
+            </Button>
+            <span style={{ margin: '0 20px' }}>Page {currentPage} of {totalPages}</span>
+            <Button selected={false} onClick={handleNextPage} disabled={currentPage === totalPages}>
+              Next
+            </Button>
+          </div>
       </SummaryContainer>
     </ProfileContainer>
     <Footer/>
