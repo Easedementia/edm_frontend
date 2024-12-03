@@ -127,8 +127,15 @@ export const NavButtonContainer = styled.div`
 
 
     @media (max-width: 768px) {
-        gap: 150px; /* Add some spacing if needed */
-        justify-content: center; /* Center buttons horizontally */
+        gap: 150px;
+        justify-content: center;
+    }
+
+
+    @media (max-width: 562px) {
+        flex-wrap: nowrap;
+        justify-content: space-between; /* Horizontally align */
+        gap: 150px; /* Optional, for some spacing */
     }
 `;
 
