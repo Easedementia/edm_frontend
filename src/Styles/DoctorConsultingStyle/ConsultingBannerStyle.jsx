@@ -153,7 +153,7 @@ export const StyledImage = styled.img`
 export const ContactButton = styled(Link)`
     display: flex; 
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 12px 16px; /* Adjust padding */
     background-color: #5517A8;
     color: white;
@@ -164,11 +164,11 @@ export const ContactButton = styled(Link)`
     text-decoration: none;
     transition: background-color 0.3s ease;
     height: 40px; 
-    width: 252px; 
+    width: fit-content; 
     align-self: flex-start;
     margin-top: 15px;
-    margin-right: 375px;
     white-space: nowrap; 
+    align-self: flex-start;
 
     &:hover {
         background-color: #6d22d1;
@@ -177,15 +177,18 @@ export const ContactButton = styled(Link)`
 
 
     @media (max-width: 768px) {
-    align-self: center;
+    align-self: flex-start;
     font-size: 14px;
     padding: 10px 14px;
-    width: auto;
+    width: fit-content;
+    margin: 10px 0 0;
   }
 
   @media (max-width: 480px) {
     font-size: 12px;
     padding: 8px 12px;
+    margin: 8px 0 0;
+    align-self: flex-start;
   }
 `
 
