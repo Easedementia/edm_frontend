@@ -325,6 +325,9 @@ export const PaginationButton = styled.div`
       disabled ? '#e0e0e0' : isActive ? '#451390' : '#e6e6e6'};
     border-color: ${({ disabled, isActive }) =>
       disabled ? '#e0e0e0' : isActive ? '#451390' : '#ccc'};
+    
+    color: ${({ disabled, isActive }) =>
+      disabled ? '#e0e0e0' : isActive ? '#000' : '#000'};
   }
 `;
 
