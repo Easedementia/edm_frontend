@@ -295,3 +295,42 @@ export const MeetingLink = styled.button`
     padding: 6px 12px;
   }
 `;
+
+
+
+export const PaginationWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px; /* Adjust spacing between buttons */
+  margin-top: 20px;
+`;
+
+export const PaginationButton = styled.div`
+  background-color: ${({ disabled, isActive }) =>
+    disabled ? '#e0e0e0' : isActive ? '#007BFF' : '#f5f5f5'};
+  color: ${({ disabled, isActive }) => 
+    disabled ? '#9e9e9e' : isActive ? '#fff' : '#000'};
+  border: 1px solid ${({ disabled, isActive }) =>
+    disabled ? '#e0e0e0' : isActive ? '#007BFF' : '#ddd'};
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: ${({ disabled, isActive }) =>
+      disabled ? '#e0e0e0' : isActive ? '#0056b3' : '#e6e6e6'};
+    border-color: ${({ disabled, isActive }) =>
+      disabled ? '#e0e0e0' : isActive ? '#0056b3' : '#ccc'};
+  }
+`;
+
+export const PaginationInfo = styled.span`
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  margin: 0 8px;
+`;

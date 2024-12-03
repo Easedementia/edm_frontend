@@ -1,4 +1,4 @@
-import { ProfileContainer, ProfileDetails, AvatarWrapper, Avatar, UserName, UserContact, ButtonsContainer, Button, SummaryContainer ,SummaryTitle, TableContainer, Table, TableHeader, TableRow, TableData, EditIcon } from '../../Styles/UserProfileStyle/UserProfileStyle'
+import { ProfileContainer, ProfileDetails, AvatarWrapper, Avatar, UserName, UserContact, ButtonsContainer, Button, SummaryContainer ,SummaryTitle, TableContainer, Table, TableHeader, TableRow, TableData, EditIcon, PaginationWrapper, PaginationButton, PaginationInfo } from '../../Styles/UserProfileStyle/UserProfileStyle'
 import UserNavbar from '../Navbar/UserNavbar'
 import Footer from '../Footer/Footer'
 import { useEffect, useState } from 'react'
@@ -159,15 +159,17 @@ const AssessmentHistory = () => {
               </tbody>
           </Table>
         </TableContainer>
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-            <Button selected={false} onClick={handlePreviousPage} disabled={currentPage === 1}>
+        <PaginationWrapper>
+            <PaginationButton onClick={handlePreviousPage} disabled={currentPage === 1}>
               Previous
-            </Button>
-            <span style={{ margin: '0 20px' }}>Page {currentPage} of {totalPages}</span>
-            <Button selected={false} onClick={handleNextPage} disabled={currentPage === totalPages}>
+            </PaginationButton>
+            <PaginationInfo>
+              Page {currentPage} of {totalPages}
+            </PaginationInfo>
+            <PaginationButton onClick={handleNextPage} disabled={currentPage === totalPages}>
               Next
-            </Button>
-          </div>
+            </PaginationButton>
+          </PaginationWrapper>
       </SummaryContainer>
     </ProfileContainer>
     <Footer/>
