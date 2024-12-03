@@ -116,13 +116,13 @@ export const ImageContainer = styled.div`
 
 
     @media (max-width: 768px) {
-        max-width: 50%; /* Reduce size for smaller screens */
-        margin-top: 0; /* Keep alignment intact */
-        text-align: right; /* Optional: Align image container content */
+        max-width: 50%; 
+        margin-top: 0; 
+        text-align: right; 
     }
 
     @media (max-width: 480px) {
-        max-width: 50%; /* Ensure same size as HeadingContainer */
+        max-width: 50%; 
         margin-top: 0;
     }
 `;
