@@ -327,3 +327,12 @@ export const PaginationButton = styled.div`
       disabled ? '#e0e0e0' : isActive ? '#451390' : '#ccc'};
   }
 `;
+
+
+
+export const PaginationInfo = styled.span`
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  margin: 0 8px;
+`;
