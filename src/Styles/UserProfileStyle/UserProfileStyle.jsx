@@ -322,8 +322,8 @@ export const PaginationButton = styled.div`
 
   &:hover {
     background-color: ${({ disabled, isActive }) =>
-      disabled ? '#e0e0e0' : isActive ? '#451390' : '#451390'};
+      disabled ? '#e0e0e0' : isActive ? '#451390' : '#e6e6e6'};
     border-color: ${({ disabled, isActive }) =>
-      disabled ? '#e0e0e0' : isActive ? '#451390' : '#451390'};
+      disabled ? '#e0e0e0' : isActive ? '#451390' : '#ccc'};
   }
 `;
