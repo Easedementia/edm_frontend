@@ -308,11 +308,11 @@ export const PaginationWrapper = styled.div`
 
 export const PaginationButton = styled.div`
   background-color: ${({ disabled, isActive }) =>
-    disabled ? '#e0e0e0' : isActive ? '#007BFF' : '#f5f5f5'};
-  color: ${({ disabled, isActive }) => 
+    disabled ? '#e0e0e0' : isActive ? '#5517A8' : '#f5f5f5'};
+  color: ${({ disabled, isActive }) =>
     disabled ? '#9e9e9e' : isActive ? '#fff' : '#000'};
   border: 1px solid ${({ disabled, isActive }) =>
-    disabled ? '#e0e0e0' : isActive ? '#007BFF' : '#ddd'};
+    disabled ? '#e0e0e0' : isActive ? '#5517A8' : '#ddd'};
   border-radius: 5px;
   padding: 8px 16px;
   font-size: 14px;
@@ -322,15 +322,8 @@ export const PaginationButton = styled.div`
 
   &:hover {
     background-color: ${({ disabled, isActive }) =>
-      disabled ? '#e0e0e0' : isActive ? '#0056b3' : '#e6e6e6'};
+      disabled ? '#e0e0e0' : isActive ? '#451390' : '#e6e6e6'};
     border-color: ${({ disabled, isActive }) =>
-      disabled ? '#e0e0e0' : isActive ? '#0056b3' : '#ccc'};
+      disabled ? '#e0e0e0' : isActive ? '#451390' : '#ccc'};
   }
-`;
-
-export const PaginationInfo = styled.span`
-  font-size: 14px;
-  font-weight: 500;
-  color: #555;
-  margin: 0 8px;
 `;
