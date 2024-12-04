@@ -156,6 +156,8 @@ export const Button = styled.button`
     height: 58px;
     filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
 
+    
+
     @media (max-width: 480px) {
       width: 48px;
       height: 48px;
