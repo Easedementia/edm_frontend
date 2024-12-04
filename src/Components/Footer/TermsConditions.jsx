@@ -1,4 +1,4 @@
-import { Container, Title, InstructionsList, InstructionItem } from '../../Styles/AssessmentStyle/FirstPersonInstructionsStyle'
+import { Container, Title, InstructionsList, InstructionItem, Subtitle } from '../../Styles/AssessmentStyle/Terms&ConditionsStyle'
 import UserNavbar from '../Navbar/UserNavbar'
 import Footer from './Footer'
 
@@ -9,7 +9,8 @@ const TermsConditions = () => {
     <UserNavbar/>
     <Container>
         <Title>Terms & Conditions</Title>
-        {/* <Subtitle>Instructions</Subtitle> */}
+        <Subtitle>Welcome to Easedementia Technologies Pvt Ltd
+        </Subtitle>
         <InstructionsList>
         <InstructionItem>
             Lorem ipsum praesent ac massa at ligula reet est iaculis. Vidffffffff vamus est mist
