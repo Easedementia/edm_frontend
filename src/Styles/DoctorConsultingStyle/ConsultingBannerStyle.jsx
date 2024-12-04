@@ -165,7 +165,7 @@ export const ContactButton = styled(Link)`
     text-decoration: none;
     transition: background-color 0.3s ease;
     height: 40px; 
-    width: 235px; 
+    width: 245px; 
     align-self: flex-start;
     margin-top: 15px;
     white-space: nowrap; 
