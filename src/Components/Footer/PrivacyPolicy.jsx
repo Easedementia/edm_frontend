@@ -24,9 +24,9 @@ const PrivacyPolicy = () => {
         <InstructionItem>
             
         </InstructionItem>
-            <b>How we use your information</b>: 
-            We use the information we collect in various ways, including to:
-
+        <b>How we use your information</b>: 
+        We use the information we collect in various ways, including to:
+        <br />
             Provide, operate, and maintain our website
             Improve, personalize, and expand our website
             Understand and analyze how you use our website
@@ -34,7 +34,7 @@ const PrivacyPolicy = () => {
             Communicate with you, either directly or through one of our partners, including for customer service, to provide you with updates and other information relating to the website, and for marketing and promotional purposes
             Send you emails
             Find and prevent fraud
-            Log Files
+            Log Files <br />
             www.easedementia.com follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services’ analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users’ movement on the website, and gathering demographic information.
 
         <InstructionItem>
