@@ -1,4 +1,4 @@
-import { Container, Title, InstructionsList, InstructionItem, Subtitle } from '../../Styles/AssessmentStyle/Terms&ConditionsStyle'
+import { Container, Title, InstructionsList, InstructionItem, Subtitle } from '../../Styles/Terms&ConditionsStyle/Terms&ConditionsStyle'
 import UserNavbar from '../Navbar/UserNavbar'
 import Footer from './Footer'
 
