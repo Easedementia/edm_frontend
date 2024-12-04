@@ -23,8 +23,7 @@ const PrivacyPolicy = () => {
         </InstructionItem>
         <InstructionItem>
             
-        </InstructionItem>
-        <b>How we use your information</b>: 
+        </InstructionItem><b>How we use your information</b>: 
         We use the information we collect in various ways, including to:
         <br />
             Provide, operate, and maintain our website
