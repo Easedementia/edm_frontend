@@ -4,27 +4,21 @@ import FAQ from "../Components/ContactUs/FAQ"
 import SocialMediaLinks from "../Components/ContactUs/SocialMediaLinks"
 import Footer from "../Components/Footer/Footer"
 import UserNavbar from "../Components/Navbar/UserNavbar"
-import GlobalStyle from "../Styles/GlobalStyles"
-import { useRef } from "react"
+import GlobalStyle from "../Styles/GlobalStyles"  
 
 
 const ContactUsPage = () => {
-  const faqRef = useRef(null);
-
-  const scrollToFAQ = () => {
-    faqRef.current?.scrollIntoView({ behavior: 'smooth'})
-  }
   return (
     <>
     <GlobalStyle/>
     <UserNavbar/>
     <ContactUsBanner/>
     <Address/>
-    <div ref={faqRef}>
+    <div id="faq-section">
       <FAQ />
     </div>
     <SocialMediaLinks/>
-    <Footer scrollToFAQ={scrollToFAQ} />
+    <Footer/>
     </>
   )
 }

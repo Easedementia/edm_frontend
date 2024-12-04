@@ -10,7 +10,7 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import footerelement1 from '../../assets/images/footerelement1.svg'
 
 
-const Footer = ({ scrollToFAQ }) => {
+const Footer = () => {
     const [email, setEmail] = useState('');
     
 
@@ -85,7 +85,7 @@ const Footer = ({ scrollToFAQ }) => {
                 <LinkItem as={Link} to='/services'>Services</LinkItem>
                 <LinkItem as={Link} to='/assessment'>Assessment</LinkItem>
                 <LinkItem as={Link} to='/privacy-policy'>Privacy Policy</LinkItem>
-                <LinkItem as="button" onClick={scrollToFAQ} >FAQ</LinkItem>
+                <LinkItem as={Link} to='#faq-section'>FAQ</LinkItem>
                 <LinkItem as={Link} to='/contact'>Contact Us</LinkItem>
                 <LinkItem as={Link} to='/careers'>Careers</LinkItem>
                 <HeartIcon src={footerelement1} alt="Heart Icon" />
