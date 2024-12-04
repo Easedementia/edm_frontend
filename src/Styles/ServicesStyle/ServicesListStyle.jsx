@@ -61,7 +61,7 @@ export const Description = styled.p`
   font-size: 17px;
   color: #000;
   text-align: left;
-  font-weight: 300;
+  font-weight: 400;
 
 
   @media (max-width: 768px) {
