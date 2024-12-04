@@ -61,7 +61,7 @@ export const Description = styled.p`
   font-size: 17px;
   color: #000;
   text-align: left;
-  font-weight: 400;
+  font-weight: 300;
 
 
   @media (max-width: 768px) {
@@ -144,7 +144,7 @@ export const ServiceDescription = styled.p`
   font-size: 14px;
   margin-bottom: 20px;
   color: #2f2e2e;
-  font-weight: 380;
+  font-weight: 450;
 
 
   @media (max-width: 480px) {
