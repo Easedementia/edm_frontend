@@ -144,7 +144,7 @@ export const ServiceDescription = styled.p`
   font-size: 14px;
   margin-bottom: 20px;
   color: #2f2e2e;
-  font-weight: 450;
+  font-weight: 410;
 
 
   @media (max-width: 480px) {
