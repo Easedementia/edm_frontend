@@ -29,8 +29,7 @@ export const ConnectText = styled.p`
   margin-bottom: 0; 
   color: #000;
   margin-right: 20px; 
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 45px;
 
 
   @media (max-width: 768px) {
@@ -41,7 +40,7 @@ export const ConnectText = styled.p`
 
   @media (max-width: 480px) {
     font-size: 20px;
-    margin-right: 10px;
+    margin-right: 0;
     margin-bottom: 10px;
   }
 `;
@@ -67,7 +66,7 @@ export const IconLink = styled.a`
 
   @media (max-width: 480px) {
     font-size: 22px;
-    margin: 0 8px;
+    margin: 5px 0;
   }
 `;
 
