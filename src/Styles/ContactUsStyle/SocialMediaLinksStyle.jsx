@@ -29,7 +29,8 @@ export const ConnectText = styled.p`
   margin-bottom: 0; 
   color: #000;
   margin-right: 20px; 
-  margin-top: 45px;
+  margin-top: 0;
+  margin-bottom: 0;
 
 
   @media (max-width: 768px) {
