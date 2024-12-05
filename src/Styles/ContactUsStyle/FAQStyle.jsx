@@ -85,6 +85,7 @@ export const Answer = styled.div`
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
     color: #000;
+    text-align: left;
 
 
     @media (max-width: 768px) {
