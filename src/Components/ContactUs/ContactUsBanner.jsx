@@ -105,7 +105,7 @@ const ContactUsBanner = () => {
     <PageWrapper>
         <LeftSide>
             <InfoSection>
-                <Title>Get in touch!</Title>
+                <Title>Get in touch with us!</Title>
                 <Description>
                 Reach out to us for enquiries and more information.
                 </Description>
