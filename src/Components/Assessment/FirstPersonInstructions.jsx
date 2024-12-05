@@ -4,6 +4,8 @@ import UserNavbar from '../Navbar/UserNavbar';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import arrow from '../../assets/images/arrow.svg'
+import CallButton from '../CallUs/CallButton';
+import WhatsappButton from '../WhatsappChat/WhatsappButton';
 
 const FirstPersonInstructions = () => {
     const [isChecked, setIsChecked] = useState(false);
@@ -64,6 +66,8 @@ const FirstPersonInstructions = () => {
         <ArrowIcon src={arrow} alt="arrow icon" disabled={!isChecked} />
         </Button>
     </Container>
+    <CallButton/>
+    <WhatsappButton/>
     <Footer/>
     </>
     

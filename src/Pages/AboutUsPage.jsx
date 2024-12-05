@@ -3,8 +3,10 @@ import AboutUsBannerImage from "../Components/AboutUs/AboutUsBannerImage"
 import MeetOurTeam from "../Components/AboutUs/MeetOurTeam"
 import OurValues from "../Components/AboutUs/OurValues"
 import VisionMission from "../Components/AboutUs/VisionMission"
+import CallButton from "../Components/CallUs/CallButton"
 import Footer from "../Components/Footer/Footer"
 import UserNavbar from "../Components/Navbar/UserNavbar"
+import WhatsappButton from "../Components/WhatsappChat/WhatsappButton"
 import GlobalStyle from "../Styles/GlobalStyles"
 
 
@@ -18,6 +20,8 @@ const AboutUsPage = () => {
     <VisionMission/>
     <OurValues/>
     <MeetOurTeam/>
+    <CallButton/>
+    <WhatsappButton/>
     <Footer/>
     </>
   )

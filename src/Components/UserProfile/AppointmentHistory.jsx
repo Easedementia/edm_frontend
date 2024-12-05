@@ -10,6 +10,8 @@ import Footer from "../Footer/Footer";
 import arrow from '../../assets/images/arrow.svg'
 import edit_icon from '../../assets/images/edit_icon.svg'
 import { clearAuth } from '../../Redux/UserSlice'
+import CallButton from "../CallUs/CallButton";
+import WhatsappButton from "../WhatsappChat/WhatsappButton";
 
 
 const AppointmentHistory = () => {
@@ -212,6 +214,8 @@ const AppointmentHistory = () => {
       </TableContainer>
     </SummaryContainer>
     </ProfileContainer>
+    <CallButton/>
+    <WhatsappButton/>
     <Footer/>
 
     </>

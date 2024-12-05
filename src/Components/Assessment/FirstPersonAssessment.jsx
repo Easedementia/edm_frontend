@@ -7,6 +7,8 @@ import axios from "axios";
 import { baseURL } from "../../api/api";
 import { useLocation, useNavigate } from "react-router-dom";
 import arrow from '../../assets/images/arrow.svg'
+import CallButton from "../CallUs/CallButton";
+import WhatsappButton from "../WhatsappChat/WhatsappButton";
 
 
 
@@ -225,6 +227,8 @@ const FirstPersonAssessment = () => {
           )}
         </Container>
       </Wrapper>
+      <CallButton/>
+      <WhatsappButton/>
       <Footer />
     </>
   )

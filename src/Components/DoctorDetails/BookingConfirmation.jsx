@@ -8,6 +8,8 @@ import { baseURL } from "../../api/api";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../Footer/Footer";
+import CallButton from "../CallUs/CallButton";
+import WhatsappButton from "../WhatsappChat/WhatsappButton";
 
 
 
@@ -204,6 +206,8 @@ const BookingConfirmation = () => {
         <ConfirmButton onClick={showRazorpay}>MAKE PAYMENT</ConfirmButton>
       </ButtonContainer>
     </Container>
+    <CallButton/>
+    <WhatsappButton/>
     <Footer/>
     </>
     

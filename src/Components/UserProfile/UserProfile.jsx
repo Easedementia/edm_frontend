@@ -16,6 +16,8 @@ import { baseURL } from "../../api/api"
 import { useSelector, useDispatch } from "react-redux"
 import { toast } from "react-toastify"
 import { clearAuth } from '../../Redux/UserSlice'
+import CallButton from "../CallUs/CallButton"
+import WhatsappButton from "../WhatsappChat/WhatsappButton"
 
 
 const UserProfile = () => {
@@ -142,6 +144,8 @@ const UserProfile = () => {
           <SummaryImage src={user_profile_right_side} alt="Profile Summary" />
         </SummaryContainer>
       </ProfileContainer>
+      <CallButton/>
+      <WhatsappButton/>
       <Footer />
     </>
   )

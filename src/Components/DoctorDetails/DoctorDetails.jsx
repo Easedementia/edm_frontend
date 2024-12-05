@@ -13,6 +13,8 @@ import { toast } from 'react-toastify';
 import doctordetailsicon4 from '../../assets/images/doctordetailsicon4.svg'
 import doctordetailsicon5 from '../../assets/images/doctordetailsicon5.svg'
 import doctordetailsicon6 from '../../assets/images/doctordetailsicon6.svg'
+import CallButton from '../CallUs/CallButton';
+import WhatsappButton from '../WhatsappChat/WhatsappButton';
 
 
 
@@ -190,6 +192,8 @@ const DoctorDetails = () => {
           </ButtonContainer>
       </WorkingHours>
     </Container>
+    <CallButton/>
+    <WhatsappButton/>
     <Footer/>
     </>
   )

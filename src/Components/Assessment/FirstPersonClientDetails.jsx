@@ -7,6 +7,8 @@ import { toast } from "react-toastify";
 import Footer from "../Footer/Footer";
 import { useNavigate } from "react-router-dom";
 import HashLoader from "react-spinners/HashLoader";
+import CallButton from "../CallUs/CallButton";
+import WhatsappButton from "../WhatsappChat/WhatsappButton";
 
 
 const FirstPersonClientDetails = () => {
@@ -173,6 +175,8 @@ const FirstPersonClientDetails = () => {
                 
             )}
         </PageWrapper>
+        <CallButton/>
+        <WhatsappButton/>
     <Footer/>
     </>
   )

@@ -7,6 +7,8 @@ import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { baseURL } from '../../api/api';
 import axios from 'axios';
+import CallButton from '../CallUs/CallButton';
+import WhatsappButton from '../WhatsappChat/WhatsappButton';
 
 
 export const ButtonWrapper = styled.div`
@@ -93,6 +95,8 @@ const FirstPersonAssessmentResults = () => {
         </ButtonWrapper>
       </ResultContainer>
     </Container>
+    <CallButton/>
+    <WhatsappButton/>
     <Footer/>
     </>
   );

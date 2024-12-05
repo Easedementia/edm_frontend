@@ -5,6 +5,8 @@ import ServicesBanner from "../Components/Services/ServicesBanner"
 import ServicesBannerImage from "../Components/Services/ServicesBannerImage"
 import ServicesList from "../Components/Services/ServicesList"
 import ServiceListing from '../Components/UserHomePage/ServiceListing'
+import CallButton from "../Components/CallUs/CallButton"
+import WhatsappButton from "../Components/WhatsappChat/WhatsappButton"
 
 const ServicesPage = () => {
   return (
@@ -15,6 +17,8 @@ const ServicesPage = () => {
     <ServicesBannerImage/>
     <ServicesList/>
     <ServiceListing/>
+    <CallButton/>
+    <WhatsappButton/>
     <Footer/>
     </>
     

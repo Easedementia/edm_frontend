@@ -1,5 +1,7 @@
 import { Container, Title, InstructionsList, InstructionItem } from '../../Styles/AssessmentStyle/FirstPersonInstructionsStyle'
+import CallButton from '../CallUs/CallButton'
 import UserNavbar from "../Navbar/UserNavbar"
+import WhatsappButton from '../WhatsappChat/WhatsappButton'
 import Footer from "./Footer"
 
 
@@ -69,6 +71,8 @@ const PrivacyPolicy = () => {
         </InstructionItem>
         </InstructionsList>
     </Container>
+    <CallButton/>
+    <WhatsappButton/>
     <Footer/>
     </>
   )

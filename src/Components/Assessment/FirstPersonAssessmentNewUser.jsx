@@ -7,6 +7,8 @@ import { toast } from "react-toastify"
 import axios from "axios"
 import { baseURL } from "../../api/api"
 import HashLoader from "react-spinners/HashLoader"
+import CallButton from "../CallUs/CallButton"
+import WhatsappButton from "../WhatsappChat/WhatsappButton"
 
 
 
@@ -111,6 +113,8 @@ const FirstPersonAssessmentNewUser = () => {
         </>
         )}
     </PageWrapper>
+    <CallButton/>
+    <WhatsappButton/>
     <Footer/>
     </>
   )

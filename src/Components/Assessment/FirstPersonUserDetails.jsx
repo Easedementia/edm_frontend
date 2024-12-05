@@ -6,6 +6,8 @@ import Footer from '../Footer/Footer';
 import axios from 'axios';
 import { baseURL } from '../../api/api';
 import HashLoader from "react-spinners/HashLoader";
+import CallButton from '../CallUs/CallButton';
+import WhatsappButton from '../WhatsappChat/WhatsappButton';
 
 const FirstPersonUserDetails = () => {
     const [name, setName] = useState('');
@@ -135,6 +137,8 @@ const FirstPersonUserDetails = () => {
         </>
         )}
     </PageWrapper>
+    <CallButton/>
+    <WhatsappButton/>
     <Footer/>
     </>
   )

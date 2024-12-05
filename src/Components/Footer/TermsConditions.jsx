@@ -1,5 +1,7 @@
 import { Container, Title, InstructionsList, InstructionItem } from '../../Styles/Terms&ConditionsStyle/Terms&ConditionsStyle'
+import CallButton from '../CallUs/CallButton'
 import UserNavbar from '../Navbar/UserNavbar'
+import WhatsappButton from '../WhatsappChat/WhatsappButton'
 import Footer from './Footer'
 
 
@@ -121,6 +123,8 @@ const TermsConditions = () => {
     
         </InstructionsList>
     </Container>
+    <CallButton/>
+    <WhatsappButton/>
     <Footer/>
     </>
   )

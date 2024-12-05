@@ -10,6 +10,8 @@ import axios from 'axios'
 import edit_icon from '../../assets/images/edit_icon.svg'
 import arrow from '../../assets/images/arrow.svg'
 import { clearAuth } from '../../Redux/UserSlice'
+import CallButton from '../CallUs/CallButton'
+import WhatsappButton from '../WhatsappChat/WhatsappButton'
 
 
 const AssessmentHistory = () => {
@@ -172,6 +174,8 @@ const AssessmentHistory = () => {
           </PaginationWrapper>
       </SummaryContainer>
     </ProfileContainer>
+    <CallButton/>
+    <WhatsappButton/>
     <Footer/>
     </>
   )

@@ -5,6 +5,8 @@ import DoctorsList from "../Components/DoctorConsulting/DoctorsList"
 import Footer from "../Components/Footer/Footer"
 import UserNavbar from "../Components/Navbar/UserNavbar"
 import GlobalStyle from "../Styles/GlobalStyles"
+import CallButton from "../Components/CallUs/CallButton"
+import WhatsappButton from "../Components/WhatsappChat/WhatsappButton"
 
 
 const DoctorConsulting = () => {
@@ -24,6 +26,8 @@ const DoctorConsulting = () => {
     <div ref={doctorsListRef} >
       <DoctorsList/>
     </div>
+    <CallButton/>
+    <WhatsappButton/>
     <Footer/>
     </>
   )
