@@ -23,6 +23,8 @@ const ContactUsBanner = () => {
     const [mobileError, setMobileError] = useState('');
     const [messageError, setMessageError] = useState('');
 
+    const phoneNumber = "8156900195"
+
 
     const changeFullname = (event) =>{
         setFullname(event.target.value);
@@ -108,10 +110,11 @@ const ContactUsBanner = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </Description>
 
-                <Button>
-                    Call Now <ArrowIcon src={arrow} alt="arrow-icon" />
-                    
-                </Button>
+                <a href={`tel:${phoneNumber}`} style={{ textDecoration: 'none' }}>
+                    <Button>
+                        Call Now <ArrowIcon src={arrow} alt="arrow-icon" />
+                    </Button>
+                </a>
             </InfoSection>
         </LeftSide>
         
