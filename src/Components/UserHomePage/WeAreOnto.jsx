@@ -26,7 +26,7 @@ const WeAreOnto = () => {
                 <CardImage src={dementiaclinic} alt="Day Care Center" />
                 <CardTitle>Dementia Clinic</CardTitle>
                 <CardDescription>
-                Our dedicated team provides compassionate and comprehensive care for individuals with dementia and their families.  From diagnostic evaluations to cognitive therapy, support groups, and educational resources, we empower patients and caregivers with the tools and support necessary to navigate dementia’s challenges and improve overall quality of life.
+                Our dedicated team provides compassionate and comprehensive care for individuals with dementia and their families. From diagnostic evaluations to cognitive therapy, support groups, and educational resources, we empower patients and caregivers  to navigate dementia’s challenges and improve overall quality of life.
                 </CardDescription>
                 <CardButton>
                     Explore More

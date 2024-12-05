@@ -11,12 +11,16 @@ const FAQ = () => {
 
     const faqs = [
         {
-            question: 'What all services does Easedementia Provide?',
-            answer: 'Whether you are a caregiver, someone living with memory loss, or a compassionate community member, the Memory Cafe warmly welcomes you. Together, we can create a supportive and inclusive space where memories are shared, friendships are formed, and lives are fulfilled.',
+            question: 'Do you offer personalised care plans?',
+            answer: 'Yes we conduct thorough assessments to develop individualised care plans tailored to each clients physical, emotional and lifestyle needs.',
           },
           {
-            question: 'What is dementia, and how do you provide specialized care for individuals with dementia?',
-            answer: 'Dementia is a general term for a decline in cognitive function severe enough to interfere with daily life. Our specialized care includes personalized care plans, memory-enhancing activities, and support for families and caregivers.',
+            question: 'What type of services do you offer?',
+            answer: 'We provide home based interventions for our clients by focussing on the individual care plans,providing physical and cognitive care.',
+          },
+          {
+            question: 'How do you improve the quality of life of your clients?',
+            answer: 'We deliver personalised care by promoting  physical, emotional and cognitive well-being through engagement activities and social interaction. We provide emotional support for both clients and their caregivers throughout their journey with us.',
           },
     ];
 
