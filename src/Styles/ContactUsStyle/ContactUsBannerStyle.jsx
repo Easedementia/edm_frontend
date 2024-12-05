@@ -9,7 +9,7 @@ export const PageWrapper = styled.div`
     padding: 0;
     margin: 0;
     background-color: #f9fafb;
-    margin-top: 0;
+    margin-top: 80px;
     font-family: 'Poppins', sans-serif;
 
 
