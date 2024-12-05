@@ -42,7 +42,6 @@ export const ConnectText = styled.p`
     font-size: 20px;
     margin-right: 0;
     margin-bottom: 10px;
-    gap: 20px;
   }
 `;
 
