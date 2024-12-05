@@ -28,7 +28,7 @@ const WhatsappButton = () => {
         fontSize: '24px',
       }}
     >
-      <i className="fa fa-whatsapp" />
+      <i className="fab fa-whatsapp"></i>
     </a>
   )
 }
