@@ -10,7 +10,7 @@ export const AddressContainer = styled.div`
 
 
     @media (max-width: 1024px) {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     text-align: left;
     margin-top: 60px;
@@ -39,6 +39,8 @@ export const ContactInfo = styled.div`
 
   @media (max-width: 768px) {
     padding: 0 10px;
+    flex-direction: column;
+    text-align: left;
   }
 `;
     
@@ -48,7 +50,7 @@ export const MapContainer = styled.div`
 
 
     @media (max-width: 1024px) {
-    flex-direction: row;
+    flex-direction: column;
     max-width: 100%;
   }
 
@@ -74,10 +76,12 @@ export const Heading = styled.h2`
 
     @media (max-width: 768px) {
     font-size: 1.2rem;
+    text-align: left;
   }
 
   @media (max-width: 480px) {
     font-size: 1rem;
+    text-align: left;
   }
 `;
 
@@ -89,9 +93,11 @@ export const Paragraph = styled.p`
 
     @media (max-width: 768px) {
     font-size: 0.9rem;
+    text-align: left;
   }
 
   @media (max-width: 480px) {
     font-size: 0.85rem;
+    text-align: left;
   }
 `;
