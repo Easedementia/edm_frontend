@@ -67,6 +67,7 @@ export const IconLink = styled.a`
   @media (max-width: 480px) {
     font-size: 22px;
     margin: 5px 0;
+    flex-wrap: nowrap;
   }
 `;
 
