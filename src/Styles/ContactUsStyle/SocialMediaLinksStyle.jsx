@@ -73,5 +73,10 @@ export const IconLink = styled.a`
 
 export const Icon = styled.div`
   transition: color 0.3s;
+
+
+  @media (max-width: 480px) {
+    flex-wrap: nowrap;
+  }
   
 `;
