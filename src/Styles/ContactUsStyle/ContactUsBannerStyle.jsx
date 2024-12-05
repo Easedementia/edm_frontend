@@ -12,8 +12,8 @@ export const PageWrapper = styled.div`
 
 
     @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    text-align: left;
     padding: 40px;
   }
 
