@@ -5,9 +5,11 @@ export const PageWrapper = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 80vh;
+    height: 100%;
+    padding: 0;
+    margin: 0;
     background-color: #f9fafb;
-    margin-top: 80px;
+    margin-top: 0;
     font-family: 'Poppins', sans-serif;
 
 
