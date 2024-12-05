@@ -6,24 +6,24 @@ export const AddressContainer = styled.div`
     align-items: flex-start;
     padding: 20px;
     text-align: left;
-    margin-top: 150px;
+    margin-top: 80px;
 
 
     @media (max-width: 1024px) {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
-    margin-top: 100px;
+    text-align: left;
+    margin-top: 60px;
   }
 
   @media (max-width: 768px) {
     padding: 15px;
-    margin-top: 80px;
+    margin-top: 50px;
   }
 
   @media (max-width: 480px) {
     padding: 10px;
-    margin-top: 50px;
+    margin-top: 40px;
   }
 `;
 
@@ -48,6 +48,7 @@ export const MapContainer = styled.div`
 
 
     @media (max-width: 1024px) {
+    flex-direction: row;
     max-width: 100%;
   }
 
