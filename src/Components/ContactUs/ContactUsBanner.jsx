@@ -105,9 +105,9 @@ const ContactUsBanner = () => {
     <PageWrapper>
         <LeftSide>
             <InfoSection>
-                <Title>New Dawn for Dementia Care</Title>
+                <Title>Get in touch</Title>
                 <Description>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Reach out to us for enquiries and more information.
                 </Description>
 
                 <a href={`tel:${phoneNumber}`} style={{ textDecoration: 'none' }}>
