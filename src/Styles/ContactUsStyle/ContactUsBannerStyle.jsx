@@ -139,6 +139,14 @@ export const Subtitle = styled.p`
   @media (max-width: 1024px) {
     text-align: left;
   }
+
+  @media (max-width: 768px) {
+    text-align: left;
+  }
+
+  @media (max-width: 480px) {
+    text-align: left;
+  }
 `;
 
 
