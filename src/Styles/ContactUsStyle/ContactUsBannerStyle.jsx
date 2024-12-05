@@ -14,24 +14,23 @@ export const PageWrapper = styled.div`
     @media (max-width: 1024px) {
     flex-direction: row;
     text-align: left;
-    padding: 40px;
+    padding: 20px;
   }
 
   @media (max-width: 768px) {
-    padding: 20px;
+    padding: 10px;
   }
 
   @media (max-width: 480px) {
     min-height: auto;
-    padding: 10px;
+    padding: 5px;
   }
 `;
 
 
 export const LeftSide = styled.div`
   flex: 1;
-  padding: 9rem;
-  padding-left: 3rem;
+  padding: 6rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,17 +39,17 @@ export const LeftSide = styled.div`
 
 
   @media (max-width: 1024px) {
-    padding: 3rem;
+    padding: 2rem;
     align-items: center;
     text-align: left;
   }
 
   @media (max-width: 768px) {
-    padding: 2rem;
+    padding: 1rem;
   }
 
   @media (max-width: 480px) {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 `;
 
@@ -59,13 +58,22 @@ export const RightSide = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
-  margin-right: 20px;
+  margin-top: 20px;
+  margin-right: 0;
 
 
   @media (max-width: 1024px) {
-    margin: 30px 0;
+    margin: 20px 0;
     width: 100%;
+  }
+
+
+  @media (max-width: 768px) {
+    margin: 15px 0;
+  }
+
+  @media (max-width: 480px) {
+    margin: 10px 0;
   }
 `;
 
