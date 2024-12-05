@@ -1,3 +1,4 @@
+import CallButton from "../Components/CallUs/CallButton"
 import Footer from "../Components/Footer/Footer"
 import UserNavbar from "../Components/Navbar/UserNavbar"
 import AssessmentLink from "../Components/UserHomePage/AssessmentLink"
@@ -27,6 +28,7 @@ const UserHomePage = () => {
     <WeAreOnto/>
     <MontessoriApproach/>
     <Testimonials/>
+    <CallButton/>
     <WhatsappButton/>
     <Footer/>
     </>
