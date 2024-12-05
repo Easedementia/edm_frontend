@@ -21,6 +21,7 @@ const CallButton = () => {
         zIndex: 1000,
         textDecoration: 'none',
         fontSize: '32px',
+        transition: 'background-color 0.3s ease',
       }}
     >
       <i className="fa fa-phone"></i>
