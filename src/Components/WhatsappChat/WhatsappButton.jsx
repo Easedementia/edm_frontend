@@ -25,7 +25,7 @@ const WhatsappButton = () => {
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
         zIndex: 1000,
         textDecoration: 'none',
-        fontSize: '24px',
+        fontSize: '32px',
       }}
     >
       <i className="fab fa-whatsapp"></i>
