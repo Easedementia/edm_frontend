@@ -42,7 +42,7 @@ export const LeftSide = styled.div`
   @media (max-width: 1024px) {
     padding: 3rem;
     align-items: center;
-    text-align: center;
+    text-align: left;
   }
 
   @media (max-width: 768px) {
@@ -96,6 +96,7 @@ export const Title = styled.h1`
 
     @media (max-width: 1024px) {
     font-size: 2.5rem;
+    text-align: left;
   }
 
   @media (max-width: 768px) {
@@ -121,6 +122,11 @@ export const Subtitle = styled.p`
       text-decoration: underline;
     }
   }
+
+
+  @media (max-width: 1024px) {
+    text-align: left;
+  }
 `;
 
 
@@ -129,6 +135,10 @@ export const Description = styled.p`
     color: #2f2e2e;
     margin-bottom: 1.5rem;
 
+
+    @media (max-width: 1024px) {
+    text-align: left;
+  }
 
     @media (max-width: 768px) {
     font-size: 0.9rem;
@@ -186,8 +196,8 @@ export const ArrowIcon = styled.img`
 
 
     @media (max-width: 480px) {
-    width: 18px;
-    height: 18px;
+    width: 40px;
+    height: 40px;
   }
 `;
 
