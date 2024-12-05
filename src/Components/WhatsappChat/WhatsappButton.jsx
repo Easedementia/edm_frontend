@@ -28,6 +28,8 @@ const WhatsappButton = () => {
         fontSize: '32px',
         transition: 'background-color 0.3s ease',
       }}
+      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#1DA851')}
+      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#25D366')}
     >
       <i className="fab fa-whatsapp"></i>
     </a>

@@ -23,6 +23,8 @@ const CallButton = () => {
         fontSize: '32px',
         transition: 'background-color 0.3s ease',
       }}
+      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#0056b3')}
+      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#007BFF')}
     >
       <i className="fa fa-phone"></i>
     </a>
