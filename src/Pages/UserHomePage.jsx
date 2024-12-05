@@ -9,6 +9,7 @@ import ServiceListing from "../Components/UserHomePage/ServiceListing"
 import Specialities from "../Components/UserHomePage/Specialities"
 import Testimonials from "../Components/UserHomePage/Testimonials"
 import WeAreOnto from "../Components/UserHomePage/WeAreOnto"
+import WhatsappButton from "../Components/WhatsappChat/WhatsappButton"
 import GlobalStyle from "../Styles/GlobalStyles"
 
 
@@ -26,6 +27,7 @@ const UserHomePage = () => {
     <WeAreOnto/>
     <MontessoriApproach/>
     <Testimonials/>
+    <WhatsappButton/>
     <Footer/>
     </>
     
