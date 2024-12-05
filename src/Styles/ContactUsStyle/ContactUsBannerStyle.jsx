@@ -111,10 +111,12 @@ export const Title = styled.h1`
 
   @media (max-width: 768px) {
     font-size: 2rem;
+    text-align: left;
   }
 
   @media (max-width: 480px) {
     font-size: 1.8rem;
+    text-align: left;
   }
 `;
 
