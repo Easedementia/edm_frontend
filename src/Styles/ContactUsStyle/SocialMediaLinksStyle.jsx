@@ -13,7 +13,7 @@ export const SocialMediaContainer = styled.div`
   @media (max-width: 768px) {
     margin-top: 40px;
     margin-bottom: 80px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   @media (max-width: 480px) {
@@ -67,16 +67,10 @@ export const IconLink = styled.a`
   @media (max-width: 480px) {
     font-size: 22px;
     margin: 5px 0;
-    flex-wrap: nowrap;
   }
 `;
 
 export const Icon = styled.div`
   transition: color 0.3s;
-
-
-  @media (max-width: 480px) {
-    flex-wrap: nowrap;
-  }
   
 `;
