@@ -166,7 +166,7 @@ export const BookButton = styled.button`
     text-decoration: none;
     transition: background-color 0.3s ease;
     height: 40px; 
-    width: 180px; 
+    width: 170px; 
     align-self: flex-start;
     margin-top: 15px;
     margin-right: 375px;
