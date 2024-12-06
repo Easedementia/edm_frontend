@@ -47,6 +47,7 @@ export const TestimonialsContainer = styled.div`
 
     @media (max-width: 768px) {
         gap: 15px;
+        flex-wrap: nowrap;
     }
 
     @media (max-width: 480px) {
