@@ -85,22 +85,28 @@ export const HamburgerIcon = styled.div`
     cursor: pointer;
     
     @media (max-width: ${breakpoints.tablet}) {
-    display: none;
+    display: block;
     flex-direction: column;
     width: 100%;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 20px;
-    position: absolute;
+    position: relative;
     top: 100%;
     left: 0;
     background-color: white;
     padding: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 
     &.active {
       display: flex;
     }
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
   }
 
   @media (max-width: ${breakpoints.mobileL}) {
