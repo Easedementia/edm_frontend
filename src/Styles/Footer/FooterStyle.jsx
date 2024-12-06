@@ -64,8 +64,8 @@ export const NewsletterContainer = styled.div`
 
 
   @media (max-width: 768px) {
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    text-align: center;
   }
 `;
 
@@ -76,7 +76,6 @@ export const NewsletterText = styled.p`
 
   @media (max-width: 480px) {
     font-size: 14px;
-    text-align: left;
   }
 `;
 
@@ -181,7 +180,6 @@ export const ContactItem = styled.p`
 
   @media (max-width: 480px) {
     font-size: 14px;
-    text-align: left;
   }
 `;
 
