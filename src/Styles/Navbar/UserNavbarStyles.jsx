@@ -89,7 +89,6 @@ export const HamburgerIcon = styled.div`
     
     @media (max-width: ${breakpoints.tablet}) {
     display: block;
-    margin-top: 30px;
     z-index: 1000;
 
     &.active {
