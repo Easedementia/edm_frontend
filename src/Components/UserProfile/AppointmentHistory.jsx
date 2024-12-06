@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { baseURL } from "../../api/api";
 import { toast } from "react-toastify";
-import { ProfileContainer, ProfileDetails, AvatarWrapper, Avatar, UserName, UserContact, ButtonsContainer, Button, SummaryContainer ,SummaryTitle, TableContainer, Table, TableHeader, TableRow, TableData, Status, MeetingLink, EditIcon } from '../../Styles/UserProfileStyle/UserProfileStyle'
+import { ProfileContainer, ProfileDetails, AvatarWrapper, Avatar, UserName, UserContact, ButtonsContainer, Button, SummaryContainer ,SummaryTitle, TableContainer, Table, TableHeader, TableRow, TableData, Status, MeetingLink, EditIcon, PaginationWrapper, PaginationButton, PaginationInfo } from '../../Styles/UserProfileStyle/UserProfileStyle'
 import Footer from "../Footer/Footer";
 import arrow from '../../assets/images/arrow.svg'
 import edit_icon from '../../assets/images/edit_icon.svg'
@@ -20,11 +20,13 @@ const AppointmentHistory = () => {
     const [avatarPreview, setAvatarPreview] = useState(null);
     const [appointments, setAppointments] = useState([]);
     console.log("APPOINTMENTS:", appointments)
+    const [currentPage, setCurrentPage] = useState(1);
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const userID = useSelector((state) => state.user.user.user.id);
     console.log("UserID:", userID);
+    const entriesPerPage = 8;
 
     useEffect(() => {
         const fetchUserDetails = async () => {
@@ -119,6 +121,26 @@ const AppointmentHistory = () => {
     };
 
 
+    // Pagination logic
+  const totalPages = Math.ceil(appointments.length / entriesPerPage);
+  const currentEntries = appointments
+    .slice()
+    .reverse()
+    .slice((currentPage - 1) * entriesPerPage, currentPage * entriesPerPage);
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage((prevPage) => prevPage + 1);
+    }
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prevPage) => prevPage - 1);
+    }
+  };
+
+
       
 
   return (
@@ -170,48 +192,55 @@ const AppointmentHistory = () => {
             </tr>
           </thead>
           <tbody>
-            {appointments.length > 0 ? (
-              appointments
-              .slice()
-              .reverse()
-              .map((appointment) => (
-                <TableRow key={appointment.id}>
-                  <TableData>{appointment.doctor_name}</TableData>
-                  <TableData>
-                    {new Date(appointment.time_slot_date).toLocaleDateString('en-GB', {
+          {currentEntries.length > 0 ? (
+            currentEntries.map((appointment) => (
+              <TableRow key={appointment.id}>
+                <TableData>{appointment.doctor_name}</TableData>
+                <TableData>
+                  {new Date(appointment.time_slot_date).toLocaleDateString('en-GB', {
                     day: '2-digit',
                     month: '2-digit',
                     year: 'numeric',
-                    })}
+                  })}
                 </TableData>
-                  <TableData>
-                    {appointment.time_slot_date && appointment.time_slot_start_time ? (
+                <TableData>
+                  {appointment.time_slot_date && appointment.time_slot_start_time ? (
                     new Date(`${appointment.time_slot_date}T${appointment.time_slot_start_time}`).toLocaleTimeString([], {
-                        hour: '2-digit',
-                        minute: '2-digit',
+                      hour: '2-digit',
+                      minute: '2-digit',
                     })
-                    ) : (
+                  ) : (
                     'N/A'
-                    )}
+                  )}
                 </TableData>
-                  <TableData>
-                    <Status status={appointment.status}>{appointment.status}</Status>
-                  </TableData>
-                  <TableData>
-                    <MeetingLink>
-                    {renderMeetingLink(appointment)}
-                    </MeetingLink>
-                  </TableData>
-                </TableRow>
-              ))
-            ) : (
-              <TableRow>
-                <TableData colSpan="5">No appointments found.</TableData>
+                <TableData>
+                  <Status status={appointment.status}>{appointment.status}</Status>
+                </TableData>
+                <TableData>
+                  <MeetingLink>{renderMeetingLink(appointment)}</MeetingLink>
+                </TableData>
               </TableRow>
-            )}
-          </tbody>
+            ))
+          ) : (
+            <TableRow>
+              <TableData colSpan="5">No appointments found.</TableData>
+            </TableRow>
+          )}
+        </tbody>
+
         </Table>
       </TableContainer>
+      <PaginationWrapper>
+        <PaginationButton onClick={handlePreviousPage} disabled={currentPage === 1}>
+          Previous
+        </PaginationButton>
+        <PaginationInfo>
+          Page {currentPage} of {totalPages}
+        </PaginationInfo>
+        <PaginationButton onClick={handleNextPage} disabled={currentPage === totalPages}>
+          Next
+        </PaginationButton>
+      </PaginationWrapper>
     </SummaryContainer>
     </ProfileContainer>
     <CallButton/>
