@@ -175,6 +175,7 @@ export const BookButton = styled.button`
     &:hover {
         background-color: #6d22d1;
         color: #fff;
+        transition: background-color 0.3s ease;
     }
 
 
