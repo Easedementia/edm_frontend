@@ -43,7 +43,7 @@ const ServicesList = () => {
                 <ServiceTitle>{service.title}</ServiceTitle>
                 <ServiceDescription>{service.description}</ServiceDescription>
                 <BookButton>
-                  Book an Appointment
+                  Explore More
                   <ArrowIcon src={arrow} alt="arrow icon" />
                 </BookButton>
               </ServiceContent>
@@ -60,7 +60,7 @@ const ServicesList = () => {
                 <ServiceTitle>{service.title}</ServiceTitle>
                 <ServiceDescription>{service.description}</ServiceDescription>
                 <BookButton>
-                  Book an Appointment
+                  Explore More
                   <ArrowIcon src={arrow} alt="arrow icon" />
                 </BookButton>
               </ServiceContent>
