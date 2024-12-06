@@ -261,7 +261,7 @@ export const SocialMediaIconsContainer = styled.div`
 
   @media (max-width: 768px) {
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
 `;
 
