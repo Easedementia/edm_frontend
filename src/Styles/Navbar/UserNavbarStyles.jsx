@@ -94,7 +94,6 @@ export const HamburgerIcon = styled.div`
     position: relative;
     top: 100%;
     left: 0;
-    background-color: white;
     padding: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -107,6 +106,9 @@ export const HamburgerIcon = styled.div`
   img {
     width: 30px;
     height: 30px;
+    background: none;
+    padding: 0;
+    margin: 0;
   }
 
   @media (max-width: ${breakpoints.mobileL}) {
