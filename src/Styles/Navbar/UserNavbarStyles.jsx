@@ -83,6 +83,9 @@ export const Logo = styled.img`
 export const HamburgerIcon = styled.div`
     display: none;
     cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
     
     @media (max-width: ${breakpoints.tablet}) {
     display: block;
@@ -103,8 +106,8 @@ export const HamburgerIcon = styled.div`
   }
 
   @media (max-width: ${breakpoints.mobileL}) {
-    gap: 15px;
-    padding: 15px;
+    top: 15px;
+    right: 15px;
   }
 `;
 
