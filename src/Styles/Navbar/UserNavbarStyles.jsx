@@ -97,8 +97,8 @@ export const HamburgerIcon = styled.div`
   }
 
   img {
-    width: 30px;
-    height: 30px;
+    width: 80px;
+    height: 80px;
     background: none;
     padding: 0;
     margin: 0;
