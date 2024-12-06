@@ -22,7 +22,7 @@ const AssessmentHistory = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const userID = useSelector((state) => state.user.user.user.id);
-  const entriesPerPage = 8;
+  const entriesPerPage = 6;
 
   useEffect(() => {
     const fetchUserDetails = async () => {

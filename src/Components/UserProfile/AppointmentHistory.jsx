@@ -26,7 +26,7 @@ const AppointmentHistory = () => {
     const dispatch = useDispatch();
     const userID = useSelector((state) => state.user.user.user.id);
     console.log("UserID:", userID);
-    const entriesPerPage = 6;
+    const entriesPerPage = 5;
 
     useEffect(() => {
         const fetchUserDetails = async () => {
