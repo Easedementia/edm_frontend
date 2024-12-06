@@ -8,11 +8,36 @@ export const BannerContainer = styled.div`
     justify-content: space-between;
     padding: 50px;
     background-color: #f9fafb;
+
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 1.5rem;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 1rem;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
 `
 
 
 export const TextContainer = styled.div`
     max-width: 50%;
+
+
+    @media (max-width: 768px) {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    @media (max-width: 480px) {
+        margin-bottom: 1.5rem;
+    }
 `
 
 
@@ -23,6 +48,16 @@ export const Title = styled.h1`
     color: #000;
     padding-top: 30px;
     text-align: left;
+
+
+    @media (max-width: 768px) {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1.8rem;
+    }
 `
 
 
@@ -33,6 +68,16 @@ export const Subtitle = styled.p`
     margin-top: 20px;
     line-height: 1.5;
     text-align: left;
+
+
+    @media (max-width: 768px) {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 0.9rem;
+    }
 `
 
 
@@ -60,6 +105,22 @@ export const ContactButton = styled(Link)`
         background-color: #6d22d1;
         color: #fff;
     }
+
+
+    @media (max-width: 768px) {
+    width: 140px; 
+    font-size: 14px;
+    padding: 10px 14px;
+    margin-right: 200px; /* Adjusted for smaller screen alignment */
+  }
+
+  @media (max-width: 480px) {
+    width: 120px;
+    font-size: 12px;
+    padding: 8px 12px;
+    margin-right: 0; /* Center aligned for smaller screens */
+    align-self: center;
+  }
 `;
 
 export const ArrowIcon = styled.img`
@@ -72,6 +133,19 @@ export const ArrowIcon = styled.img`
     &:hover {
         transform: scale(1.2); 
     }
+
+
+    @media (max-width: 768px) {
+    width: 50px;
+    height: 50px; 
+    margin-left: 8px;
+  }
+
+  @media (max-width: 480px) {
+    width: 40px;
+    height: 40px; 
+    margin-left: 5px;
+  }
 `;
 
 
@@ -79,11 +153,30 @@ export const ArrowIcon = styled.img`
 
 export const ImageContainer = styled.div`
     max-width: 50%;
+
+
+    @media (max-width: 768px) {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    @media (max-width: 480px) {
+        max-width: 100%;
+    }
 `
 
 
 export const BannerImage = styled.img`
     max-width: 100%;
     height: auto;
+
+
+    @media (max-width: 768px) {
+        width: 90%;
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+    }
 `;
 
