@@ -30,27 +30,19 @@ const FirstPersonInstructions = () => {
         <Subtitle>Instructions</Subtitle>
         <InstructionsList>
         <InstructionItem>
-            Lorem ipsum praesent ac massa at ligula reet est iaculis. Vidffffffff vamus est mist
-            aliquet elit ac nisl. hjvwdy dgwh hb were hwbdgdwhd wh. djwdwd uhwuhs dwu. is a do. uhuw.
-            wudhwudh hdwhd hbdwhdbbhb uu. ertiga honda wdui hiijknknnn hhh
+        Provide accurate and detailed responses based on direct, firsthand observations of the client.
         </InstructionItem>
         <InstructionItem>
-            djwbdhwg wjdjhw qs hq weyw jnsj wd nbfeyfg hfb hb 37 d 3ueh3u r. 2. e2. 2. jhsuhc. e
-            fguef bfhewfjskbcihewjd
+        Maintain confidentiality and do not discuss your responses with the client during or after the interview.
         </InstructionItem>
         <InstructionItem>
-            Instructions : Lorem ipsum praesent ac massa at ligula reet est iaculis. Vidffffffff vamus
-            est mist aliquet elit ac nisl. hjvwdy dgwh hb were hwbdgdwhd wh. djwdwd uhwuhs dwu. is a
-            do. uhuw. wudhwudh hdwhd hbdwhdbbhb uu. ertiga honda wdui hiijknknnn hhh
+        Stick to factual observations rather than personal opinions or interpretations.
         </InstructionItem>
         <InstructionItem>
-            djwbdhwg wjdjhw qs hq weyw jnsj wd nbfeyfg hfb hb 37 d 3ueh3u r. 2. e2. 2. jhsuhc. e
-            fguef bfhewfjskbcihewjd
+        Ensure the interview is conducted in a private, uninterrupted setting to foster candid feedback.
         </InstructionItem>
         <InstructionItem>
-            Lorem ipsum praesent ac massa at ligula reet est iaculis. Vidffffffff vamus est mist
-            aliquet elit ac nisl. hjvwdy dgwh hb were hwbdgdwhd wh. djwdwd uhwuhs dwu. is a do. uhuw.
-            wudhwudh hdwhd hbdwhdbbhb uu. ertiga honda wdui hiijknknnn hhh
+        Make sure the assessment is completed within the allotted time, ensuring all questions are answered properly.
         </InstructionItem>
         </InstructionsList>
 
