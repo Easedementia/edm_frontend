@@ -37,6 +37,7 @@ import DoctorSignupPage from './Pages/DoctorSignupPage';
 import TermsConditions from './Components/Footer/TermsConditions';
 import PrivacyPolicy from './Components/Footer/PrivacyPolicy';
 import Clock from './Components/Assessment/Clock';
+import ScrollToTop from './Components/ScrollToTop';
 
 
 
@@ -58,6 +59,7 @@ function App() {
     theme="colored"
     />
       <Router>
+        <ScrollToTop/>
         <Routes>
           <Route path='/' element={<UserHomePage/>} />
           <Route path='/signup' element={<UserSignupPage/>} />
