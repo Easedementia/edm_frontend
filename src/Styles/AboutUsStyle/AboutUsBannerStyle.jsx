@@ -54,13 +54,13 @@ export const SubHeading = styled.h2`
 
     @media (max-width: 768px) {
         font-size: 1.2rem;
-        text-align: left;
+        text-align: center;
     }
 
 
     @media (max-width: 480px) {
         font-size: 1.1rem;
-        text-align: left;
+        text-align: center;
     }
 `;
 
