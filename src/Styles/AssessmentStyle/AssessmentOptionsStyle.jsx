@@ -69,9 +69,17 @@ export const OptionTitle = styled.h3`
     margin-top: -10px;
 
 
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
         font-size: 18px; /* Adjust font size for mobile */
         margin: 0.8rem 0;
+        flex-wrap: nowrap;
+    }
+
+
+    @media (max-width: 480px) {
+        font-size: 16px; /* Adjust font size for mobile */
+        margin: 0.8rem 0;
+        flex-wrap: nowrap;
     }
 `;
 
