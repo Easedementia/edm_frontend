@@ -150,7 +150,7 @@ export const ContactButton = styled(Link)`
     display: flex; 
     align-items: center;
     justify-content: center;
-    padding: 12px 16px; /* Adjust padding */
+    padding: 12px 16px; 
     background-color: #5517A8;
     color: white;
     border: none;
@@ -173,7 +173,7 @@ export const ContactButton = styled(Link)`
 
 
     @media (max-width: 768px) {
-    align-self: flex-start;
+    align-self: center;
     font-size: 14px;
     padding: 10px 14px;
     width: fit-content;
@@ -184,7 +184,7 @@ export const ContactButton = styled(Link)`
     font-size: 12px;
     padding: 8px 12px;
     margin: 8px 0 0;
-    align-self: flex-start;
+    align-self: center;
   }
 `
 
