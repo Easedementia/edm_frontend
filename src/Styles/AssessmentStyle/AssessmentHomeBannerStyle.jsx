@@ -145,15 +145,16 @@ export const AssessmentButton = styled(Link)`
 
 
     @media (max-width: 768px) {
-        align-self: center;
-        margin-right: 0;
+        width: 260px; /* Adjust width for medium screens */
+        font-size: 15px; 
+        margin: 15px auto; /* Center horizontally */
     }
 
-
     @media (max-width: 480px) {
-        width: 240px;
-        font-size: 14px;
-        padding: 10px 12px;
+        width: 240px; /* Adjust width for small screens */
+        font-size: 14px; 
+        padding: 10px 12px; 
+        margin: 10px auto; /* Center horizontally */
     }
 `;
 
@@ -194,6 +195,6 @@ export const ImageContainer = styled.div`
 
 
 export const StyledImage = styled.img`
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: auto;
 `;
