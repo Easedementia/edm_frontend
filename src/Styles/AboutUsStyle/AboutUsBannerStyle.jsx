@@ -13,14 +13,14 @@ export const AboutUsContainer = styled.div`
 
 
     @media (max-width: 768px) {
-        flex-direction: row;
-        align-items: flex-start;
+        flex-direction: column;
+        align-items: center;
         padding: 1rem;
     }
 
 
     @media (max-width: 480px) {
-        flex-direction: row;
+        flex-direction: column;
         padding: 0.5rem;
         margin-top: 80px;
     }
@@ -33,13 +33,13 @@ export const HeadingContainer = styled.div`
 
     @media (max-width: 768px) {
         max-width: 100%;
-        text-align: left;
+        text-align: center;
     }
 
 
     @media (max-width: 480px) {
-        text-align: left;
-        max-width: 50%;
+        text-align: center;
+        max-width: 100%;
         padding: 0 0.5rem;
     }
 `;
@@ -75,13 +75,13 @@ export const MainHeading = styled.h1`
 
     @media (max-width: 768px) {
         font-size: 2rem;
-        text-align: left;
+        text-align: center;
     }
 
 
     @media (max-width: 480px) {
         font-size: 1.8rem;
-        text-align: left;
+        text-align: center;
     }
 `;
 
@@ -94,13 +94,13 @@ export const Description = styled.p`
 
     @media (max-width: 768px) {
         font-size: 14px;
-        text-align: left;
+        text-align: center;
     }
 
 
     @media (max-width: 480px) {
         font-size: 13px;
-        text-align: left;
+        text-align: center;
         
     }
 `;
@@ -111,14 +111,14 @@ export const ImageContainer = styled.div`
 
 
     @media (max-width: 768px) {
-        max-width: 50%;
-        /* margin-top: 20px; */
+        max-width: 100%;
+        margin-top: 20px;
     }
 
 
     @media (max-width: 480px) {
         margin-top: 15px;
-        /* max-width: 50%; */
+        max-width: 100%;
     }
 `;
 
@@ -131,15 +131,15 @@ export const StyledImage = styled.img`
 
 
     @media (max-width: 768px) {
-        /* margin-left: 0; */
-        /* margin-bottom: 30px; */
+        margin-left: 0;
+        margin-bottom: 30px;
         width: 100%;
     }
 
 
     @media (max-width: 480px) {
-        /* margin-left: 0;
-        margin-bottom: 20px; */
+        margin-left: 0;
+        margin-bottom: 20px;
         width: 100%;
     }
 `;

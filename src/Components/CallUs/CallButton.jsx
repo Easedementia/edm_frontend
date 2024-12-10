@@ -7,7 +7,7 @@ const CallButton = () => {
       href={`tel:${phoneNumber}`}
       style={{
         position: 'fixed',
-        bottom: '20px', // Adjust position relative to other floating buttons
+        bottom: '20px',
         right: '90px',
         backgroundColor: '#007BFF',
         color: '#fff',
