@@ -183,17 +183,17 @@ export const ImageContainer = styled.div`
 
     @media (max-width: 768px) {
         max-width: 100%;
-        margin-top: 20px;
+        margin-top: 40px;
     }
 
 
     @media (max-width: 480px) {
-        margin-top: 15px;
+        margin-top: 40px;
     }
 `;
 
 
 export const StyledImage = styled.img`
-    width: 100%;
-    height: auto;
+    width: 80%;
+    height: 80%;
 `;
