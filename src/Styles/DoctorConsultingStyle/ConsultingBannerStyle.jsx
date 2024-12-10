@@ -13,8 +13,8 @@ export const ConsultingContainer = styled.div`
 
 
     @media (max-width: 768px) {
-        flex-direction: row;
-        align-items: flex-start;
+        flex-direction: column;
+        align-items: center;
         padding: 1rem;
         justify-content: center;
         gap: 1rem;
@@ -22,7 +22,7 @@ export const ConsultingContainer = styled.div`
 
 
     @media (max-width: 480px) {
-        flex-direction: row;
+        flex-direction: column;
         padding: 0.5rem;
         margin-top: 80px;
         gap: 0.5rem;
@@ -36,15 +36,15 @@ export const HeadingContainer = styled.div`
 
 
     @media (max-width: 768px) {
-      max-width: 50%; /* Retain 50% width for horizontal layout */
-        margin-top: 0; /* Remove extra margin for alignment */
-        text-align: left;
+      max-width: 100%; 
+        margin-top: 0;
+        text-align: center;
     }
 
 
     @media (max-width: 480px) {
-        max-width: 50%;
-        text-align: left;
+        max-width: 100%;
+        text-align: center;
         padding: 0 0.5rem;
     }
 
@@ -60,13 +60,13 @@ export const SubHeading = styled.h2`
 
     @media (max-width: 768px) {
         font-size: 1.2rem;
-        text-align: left;
+        text-align: center;
     }
 
 
     @media (max-width: 480px) {
         font-size: 1.1rem;
-        text-align: left;
+        text-align: center;
     }
 `;
 
@@ -82,12 +82,12 @@ export const MainHeading = styled.h1`
 
     @media (max-width: 768px) {
     font-size: 2.5rem;
-    text-align: left;
+    text-align: center;
   }
 
   @media (max-width: 480px) {
     font-size: 2rem;
-    text-align: left;
+    text-align: center;
   }
 `;
 
@@ -101,12 +101,11 @@ export const Description = styled.p`
     @media (max-width: 768px) {
     font-size: 1rem;
     text-align: center;
-    text-align: left;
   }
 
   @media (max-width: 480px) {
     font-size: 0.9rem;
-    text-align: left;
+    text-align: center;
   }
 `;
 
@@ -116,14 +115,14 @@ export const ImageContainer = styled.div`
 
 
     @media (max-width: 768px) {
-        max-width: 50%; 
-        margin-top: 0; 
-        text-align: right; 
+        max-width: 100%; 
+        margin-top: 20px; 
+        text-align: center; 
     }
 
     @media (max-width: 480px) {
-        max-width: 50%; 
-        margin-top: 0;
+        max-width: 100%; 
+        margin-top: 15px;
     }
 `;
 
@@ -136,15 +135,11 @@ export const StyledImage = styled.img`
 
 
     @media (max-width: 768px) {
-        /* margin-left: 0; */
-        /* margin-bottom: 30px; */
         width: 100%;
     }
 
 
     @media (max-width: 480px) {
-        /* margin-left: 0;
-        margin-bottom: 20px; */
         width: 100%;
     }
 `;
