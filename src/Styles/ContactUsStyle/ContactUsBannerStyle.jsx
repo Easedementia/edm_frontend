@@ -210,7 +210,7 @@ export const Button = styled.button`
 
     @media (max-width: 768px) {
       align-self: center;
-      margin-right: 0;
+      margin-left: 100px;
     }
 
 
