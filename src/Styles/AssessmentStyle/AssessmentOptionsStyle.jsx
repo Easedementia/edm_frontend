@@ -72,14 +72,12 @@ export const OptionTitle = styled.h3`
     @media (max-width: 768px) {
         font-size: 18px; /* Adjust font size for mobile */
         margin: 0.8rem 0;
-        flex-wrap: nowrap;
     }
 
 
     @media (max-width: 480px) {
         font-size: 16px; /* Adjust font size for mobile */
         margin: 0.8rem 0;
-        flex-wrap: nowrap;
     }
 `;
 
@@ -136,8 +134,15 @@ export const OptionLink = styled(Link)`
     }
 
 
+    @media (max-width: 768px) {
+        font-size: 13px;
+        padding: 8px 16px;
+        margin: 0.5rem auto 0; /* Ensure proper spacing for smaller screens */
+    }
+
     @media (max-width: 480px) {
         font-size: 13px;
-        padding: 8px 16px; /* Reduce padding for smaller screens */
+        padding: 8px 16px;
+        margin: 0.5rem auto 0;
     }
 `;
