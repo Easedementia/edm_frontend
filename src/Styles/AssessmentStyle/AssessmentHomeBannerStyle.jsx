@@ -172,14 +172,14 @@ export const Icon = styled.img`
 
 
     @media (max-width: 768px) {
-        margin-left: -4px;
+        margin-left: -5px;
         width: 50px;
         height: 50px;
     }
 
 
     @media (max-width: 480px) {
-        margin-left: 4px;
+        margin-left: -10px;
         width: 50px;
         height: 50px;
     }
