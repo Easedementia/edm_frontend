@@ -27,21 +27,25 @@ export const OptionCard = styled.div`
     border-radius: 16px;
     padding: 2rem;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     max-width: 300px;
+    width: 100%; /* Allow the card to take full width of its container */
     cursor: pointer;
-    height: 305px;
-
+    height: auto; /* Adjust height for responsiveness */
+    display: flex;
+    flex-direction: column; /* Ensure proper layout of children */
+    justify-content: space-between; /* Maintain proper spacing */
+    position: relative; /* Ensure contained positioning */
 
     @media (max-width: 768px) {
-        max-width: 250px; /* Slightly reduce card width */
+        max-width: 250px;
     }
 
     @media (max-width: 480px) {
         max-width: 100%; /* Full width on mobile */
         padding: 1.5rem;
     }
-`;  
+`;
 
 
 export const OptionImage = styled.img`
