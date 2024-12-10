@@ -170,11 +170,17 @@ export const Icon = styled.img`
         transform: scale(1.2); 
     }
 
+    @media (max-width: 480px) {
+        width: 65px;
+        height: 65px;
+        margin-right: 50px;
+    }
+
 
     @media (max-width: 480px) {
         width: 50px;
         height: 50px;
-        margin-right: 20px;
+        margin-right: 50px;
     }
 `;
 
