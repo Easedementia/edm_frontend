@@ -216,7 +216,7 @@ export const Button = styled.button`
 
     @media (max-width: 480px) {
     align-items: center;
-    margin-right: 0;
+    margin-left: 100px;
     font-size: 14px;
     padding: 10px 14px;
   }
@@ -242,8 +242,8 @@ export const ArrowIcon = styled.img`
 
 
     @media (max-width: 480px) {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 `;
 
