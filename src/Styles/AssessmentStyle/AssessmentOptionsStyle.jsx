@@ -8,6 +8,17 @@ export const OptionsContainer = styled.div`
     padding: 2rem;
     gap: 2rem;
     background-color: #f9fafb;
+
+
+    @media (max-width: 768px) {
+        gap: 1.5rem; /* Reduce gap between cards */
+    }
+
+    @media (max-width: 480px) {
+        flex-direction: column; /* Stack the cards vertically */
+        gap: 1rem;
+        padding: 1rem;
+    }
 `;
 
 
@@ -20,6 +31,16 @@ export const OptionCard = styled.div`
     max-width: 300px;
     cursor: pointer;
     height: 305px;
+
+
+    @media (max-width: 768px) {
+        max-width: 250px; /* Slightly reduce card width */
+    }
+
+    @media (max-width: 480px) {
+        max-width: 100%; /* Full width on mobile */
+        padding: 1.5rem;
+    }
 `;  
 
 
@@ -30,6 +51,13 @@ export const OptionImage = styled.img`
     margin-top: -40px;
     align-items: center;
     margin-left: 60px;
+
+
+    @media (max-width: 480px) {
+        width: 100px;
+        height: 100px;
+        margin: -30px auto 8px;
+    }
 `;
 
 
@@ -39,6 +67,12 @@ export const OptionTitle = styled.h3`
     margin: 1rem 0;
     color: black;
     margin-top: -10px;
+
+
+    @media (max-width: 480px) {
+        font-size: 18px; /* Adjust font size for mobile */
+        margin: 0.8rem 0;
+    }
 `;
 
 
@@ -47,6 +81,13 @@ export const OptionDescription = styled.p`
     color: #2f2e2e;
     margin: 1rem 0;
     text-align: left;
+
+
+    @media (max-width: 480px) {
+        font-size: 13px; /* Slightly smaller font on mobile */
+        margin: 0.8rem 0;
+        text-align: center; /* Center text for mobile */
+    }
 `;
 
 
@@ -79,5 +120,16 @@ export const OptionLink = styled(Link)`
     img {
         width: 56px;
         height: 56px;
+
+        @media (max-width: 480px) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+
+    @media (max-width: 480px) {
+        font-size: 13px;
+        padding: 8px 16px; /* Reduce padding for smaller screens */
     }
 `;
