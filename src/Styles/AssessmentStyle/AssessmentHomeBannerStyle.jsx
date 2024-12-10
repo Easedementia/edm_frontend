@@ -154,7 +154,7 @@ export const AssessmentButton = styled(Link)`
         width: 240px; /* Adjust width for small screens */
         font-size: 14px; 
         padding: 10px 12px; 
-        margin: 10px auto; /* Center horizontally */
+        margin: 10px auto; 
     }
 `;
 
@@ -174,6 +174,7 @@ export const Icon = styled.img`
     @media (max-width: 480px) {
         width: 50px;
         height: 50px;
+        margin-right: 20px;
     }
 `;
 
