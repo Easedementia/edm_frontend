@@ -136,13 +136,11 @@ export const StyledImage = styled.img`
 
     @media (max-width: 768px) {
         width: 100%;
-        align-items: center;
     }
 
 
     @media (max-width: 480px) {
         width: 100%;
-        align-items: center;
     }
 `;
 
