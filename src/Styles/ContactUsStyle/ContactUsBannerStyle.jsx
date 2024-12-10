@@ -14,17 +14,18 @@ export const PageWrapper = styled.div`
 
 
     @media (max-width: 1024px) {
-    flex-direction: row;
+    flex-direction: column;
     text-align: left;
     padding: 20px;
   }
 
   @media (max-width: 768px) {
+    flex-direction: column;
     padding: 10px;
+    text-align: center;
   }
 
   @media (max-width: 480px) {
-    min-height: auto;
     padding: 5px;
   }
 `;
@@ -48,10 +49,14 @@ export const LeftSide = styled.div`
 
   @media (max-width: 768px) {
     padding: 1rem;
+    align-items: center;
+    text-align: center;
   }
 
   @media (max-width: 480px) {
     padding: 1rem;
+    align-items: center;
+    text-align: center;
   }
 `;
 
@@ -72,10 +77,14 @@ export const RightSide = styled.div`
 
   @media (max-width: 768px) {
     margin: 15px 0;
+    width: 100%;
+    justify-content: center;
   }
 
   @media (max-width: 480px) {
     margin: 10px 0;
+    width: 100%;
+    justify-content: center;
   }
 `;
 
@@ -91,6 +100,7 @@ export const InfoSection = styled.div`
 
   @media (max-width: 768px) {
     max-width: 100%;
+    text-align: center;
   }
 `;
 
@@ -111,12 +121,12 @@ export const Title = styled.h1`
 
   @media (max-width: 768px) {
     font-size: 2rem;
-    text-align: left;
+    text-align: center;
   }
 
   @media (max-width: 480px) {
     font-size: 1.8rem;
-    text-align: left;
+    text-align: center;
   }
 `;
 
@@ -141,11 +151,11 @@ export const Subtitle = styled.p`
   }
 
   @media (max-width: 768px) {
-    text-align: left;
+    text-align: center;
   }
 
   @media (max-width: 480px) {
-    text-align: left;
+    text-align: center;
   }
 `;
 
@@ -162,10 +172,12 @@ export const Description = styled.p`
 
     @media (max-width: 768px) {
     font-size: 0.9rem;
+    text-align: center;
   }
 
   @media (max-width: 480px) {
     font-size: 0.85rem;
+    text-align: center;
   }
 `;
 
@@ -239,10 +251,12 @@ export const FormWrapper = styled.div`
 
   @media (max-width: 768px) {
     padding: 1.5rem;
+    margin-top: 1.5rem;
   }
 
   @media (max-width: 480px) {
     padding: 1rem;
+    margin-top: 1rem;
   }
 `;
 
