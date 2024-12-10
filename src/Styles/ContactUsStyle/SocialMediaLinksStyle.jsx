@@ -17,7 +17,7 @@ export const SocialMediaContainer = styled.div`
   }
 
   @media (max-width: 480px) {
-    flex-direction: column;
+    flex-direction: row;
     margin-top: 30px;
     margin-bottom: 50px;
   }
