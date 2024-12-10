@@ -17,7 +17,7 @@ export const SocialMediaContainer = styled.div`
   }
 
   @media (max-width: 480px) {
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 30px;
     margin-bottom: 50px;
   }
@@ -62,11 +62,13 @@ export const IconLink = styled.a`
   @media (max-width: 768px) {
     font-size: 25px;
     margin: 0 8px;
+    flex-wrap: nowrap;
   }
 
   @media (max-width: 480px) {
     font-size: 22px;
     margin: 5px 0;
+    flex-wrap: nowrap;
   }
 `;
 
