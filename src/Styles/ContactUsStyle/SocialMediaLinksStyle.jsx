@@ -35,7 +35,6 @@ export const ConnectText = styled.p`
   @media (max-width: 768px) {
     font-size: 24px;
     margin-right: 15px;
-    margin-top: 0;
   }
 
   @media (max-width: 480px) {
