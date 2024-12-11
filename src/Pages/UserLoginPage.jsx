@@ -12,6 +12,7 @@ import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import Cookies from 'js-cookie';
 import { Link } from 'react-router-dom';
 import arrow from '../assets/images/arrow.svg'
+import UserNavbar from '../Components/Navbar/UserNavbar';
 
 
 export const UserLoginPage = () => {
@@ -108,6 +109,7 @@ export const UserLoginPage = () => {
 
   return (
     <>
+    <UserNavbar/>
     <PageWrapper>
         <LeftSide>
             <InfoSection>
