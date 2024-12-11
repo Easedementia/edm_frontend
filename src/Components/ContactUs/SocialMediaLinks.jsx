@@ -1,5 +1,8 @@
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import { SocialMediaContainer, ConnectText, IconLink, Icon } from '../../Styles/ContactUsStyle/SocialMediaLinksStyle'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
+
 
 const SocialMediaLinks = () => {
   return (
@@ -15,7 +18,7 @@ const SocialMediaLinks = () => {
         <Icon as={FaLinkedinIn} />
       </IconLink>
       <IconLink href="https://x.com/easedementia" target="_blank" rel="noopener noreferrer">
-        <Icon as={FaTwitter} />
+          <Icon as={FontAwesomeIcon} icon={faXTwitter} />
       </IconLink>
     </SocialMediaContainer>
   )

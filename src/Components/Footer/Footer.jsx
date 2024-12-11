@@ -6,7 +6,9 @@ import axios from 'axios'
 import { baseURL } from '../../api/api'
 import { toast } from 'react-toastify'
 import arrow from '../../assets/images/arrow.svg'
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import footerelement1 from '../../assets/images/footerelement1.svg'
 
 
@@ -60,7 +62,7 @@ const Footer = () => {
                             <FaLinkedinIn />
                         </SocialMediaIconLink>
                         <SocialMediaIconLink href="https://x.com/easedementia" target="_blank" rel="noopener noreferrer">
-                            <FaTwitter/>
+                            <FontAwesomeIcon icon={faXTwitter} />
                         </SocialMediaIconLink>
                     </SocialMediaIconsContainer>
                 </NewsletterContainer>
