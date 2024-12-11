@@ -29,8 +29,7 @@ export const ConnectText = styled.p`
   font-weight: bold;
   margin-bottom: 0; 
   color: #000;
-  margin-right: 20px; 
-  margin-top: 0;
+  margin: 0 20px 0 0;
 
 
   @media (max-width: 768px) {
@@ -41,9 +40,7 @@ export const ConnectText = styled.p`
 
   @media (max-width: 480px) {
     font-size: 20px;
-    margin-right: 0;
-    margin-bottom: 10px;
-    margin-top: 0;
+    margin: 0 0 10px 0;
   }
 `;
 
