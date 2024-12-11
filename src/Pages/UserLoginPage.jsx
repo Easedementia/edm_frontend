@@ -13,6 +13,7 @@ import Cookies from 'js-cookie';
 import { Link } from 'react-router-dom';
 import arrow from '../assets/images/arrow.svg'
 import UserNavbar from '../Components/Navbar/UserNavbar';
+import Footer from '../Components/Footer/Footer';
 
 
 export const UserLoginPage = () => {
@@ -208,7 +209,7 @@ export const UserLoginPage = () => {
         </RightSide>
         
     </PageWrapper>
-    
+    <Footer/>
     </>
     
     
