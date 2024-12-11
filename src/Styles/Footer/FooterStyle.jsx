@@ -256,8 +256,8 @@ export const SocialMediaIconsContainer = styled.div`
   margin-top: 120px;
 
   & > span {
-    margin-right: 12px;
-    font-size: 24px;
+    margin-right: 14px;
+    font-size: 22px;
   }
 
 
