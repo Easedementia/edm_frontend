@@ -35,7 +35,7 @@ const Specialities = () => {
         <SpecialityCard area="card6">
           <SpecialityImage src={dementia_bro} alt="Award Trophy" />
           <HighlightedText>#1</HighlightedText>
-          <SubTitle>Kerala’s best Healthcare startup Award 2023</SubTitle>
+          <SubTitle>Best Healthcare startup Award 2023</SubTitle>
         </SpecialityCard>
 
         <SpecialityCard area="card7">
