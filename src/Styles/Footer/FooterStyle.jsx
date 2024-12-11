@@ -251,14 +251,13 @@ export const FooterBottomText = styled.p`
 
 export const SocialMediaIconsContainer = styled.div`
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: flex-start;
   margin-top: 120px;
 
   & > span {
     margin-right: 14px;
     font-size: 18px;
-    margin-bottom: 15px;
   }
 
 
