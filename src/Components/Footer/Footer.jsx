@@ -98,7 +98,7 @@ const Footer = () => {
         </RightContainer>
         </TopSection>
         <BottomSection>
-            <FooterBottomText>© All Rights Reserved 2024</FooterBottomText>
+            <FooterBottomText>© All Rights Reserved 2025</FooterBottomText>
             <FooterWrapper>
                 <Link to="/terms-conditions">
                     <FooterBottomText>Terms & Conditions</FooterBottomText>

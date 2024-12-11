@@ -7,6 +7,7 @@ import { useState } from 'react'
 import arrow from '../assets/images/arrow.svg'
 import UserNavbar from '../Components/Navbar/UserNavbar'
 import Footer from '../Components/Footer/Footer'
+import { toast } from 'react-toastify'
 
 const UserSignupPage = () => {
   const navigator = useNavigate();
@@ -82,21 +83,27 @@ const UserSignupPage = () => {
     if (fullname.trim()==='' || email.trim()==='' || mobile.trim()==='' || password.trim()==='' || confirmPassword.trim()==='') {
       if (fullname.trim() === ''){
         setFullnameError('Full name is required');
+        toast.error('Full name is required')
       }
       if (email.trim() === ''){
         setEmailError('Email is required');
+        toast.error('Email is required')
       }
       if (mobile.trim() === ''){
         setMobileError('Mobile is required');
+        toast.error('Mobile is required')
       }
       if (password.trim() === ''){
         setPasswordError('Password is required');
+        toast.error('Password is required')
       }
       if (confirmPassword.trim() === ''){
         setConfirmPasswordError('Confirm password is required');
+        toast.error('Please confirm the password')
       }
     } else if (password != confirmPassword) {
       setConfirmPasswordError('Password do not match');
+      toast.error('Password do not match!')
     }
     else {
       axios.post(`${baseURL}/signup/`, {
@@ -146,25 +153,21 @@ const UserSignupPage = () => {
             <Label htmlFor="fullName">FULL NAME</Label>
             <Input label='Full Name' id="fullName" type="text" placeholder="full name" value={fullname}
             onChange={changeFullname} className={fullnameError ? 'error':''} />
-            {fullnameError && <p className={'error-message'}>{fullnameError}</p>}
             
 
             <Label htmlFor="email">EMAIL</Label>
             <Input label='Email' id="email" type="email" placeholder="email" value={email}
             onChange={changeEmail} className={emailError ? 'error':''} />
-            {emailError && <p className={'error-message'}>{emailError}</p>}
             
 
             <Label htmlFor="mobileNo">MOBILE NO</Label>
             <Input label='Mobile' id="mobileNo" type="text" placeholder="mobile No" value={mobile}
             onChange={changeMobile} className={mobileError ? 'error':''} />
-            {mobileError && <p className={'error-message'}>{mobileError}</p>}
             
 
             <Label htmlFor="password">PASSWORD</Label>
             <Input label='Password' id="password" type="password" placeholder="password" value={password}
             onChange={changePassword} className={passwordError ? 'error':''} />
-            {passwordError && <p className={'error-message'}>{passwordError}</p>}
             
             <Label htmlFor="confirmPassword">CONFIRM PASSWORD</Label>
             <Input label='confirmPassword' id="confirmPassword" type="password" placeholder="confirm password" value={confirmPassword}
