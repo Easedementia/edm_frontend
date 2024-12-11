@@ -6,7 +6,6 @@ import {baseURL} from '../api/api'
 import { useState } from 'react'
 import arrow from '../assets/images/arrow.svg'
 import UserNavbar from '../Components/Navbar/UserNavbar'
-import Footer from '../Components/Footer/Footer'
 import { toast } from 'react-toastify'
 
 const UserSignupPage = () => {
@@ -182,7 +181,6 @@ const UserSignupPage = () => {
         </FormWrapper>
         </RightSide>
     </Container>
-    <Footer/>
     </>
   )
 }
