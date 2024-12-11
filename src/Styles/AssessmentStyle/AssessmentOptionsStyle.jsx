@@ -11,11 +11,11 @@ export const OptionsContainer = styled.div`
 
 
     @media (max-width: 768px) {
-        gap: 1.5rem; /* Reduce gap between cards */
+        gap: 1.5rem; 
     }
 
     @media (max-width: 480px) {
-        flex-direction: column; /* Stack the cards vertically */
+        flex-direction: column; 
         gap: 1rem;
         padding: 1rem;
     }
@@ -29,20 +29,20 @@ export const OptionCard = styled.div`
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     max-width: 300px;
-    width: 100%; /* Allow the card to take full width of its container */
+    width: 100%;
     cursor: pointer;
-    height: auto; /* Adjust height for responsiveness */
+    height: auto; 
     display: flex;
-    flex-direction: column; /* Ensure proper layout of children */
-    justify-content: space-between; /* Maintain proper spacing */
-    position: relative; /* Ensure contained positioning */
+    flex-direction: column; 
+    justify-content: space-between; 
+    position: relative; 
 
     @media (max-width: 768px) {
         max-width: 250px;
     }
 
     @media (max-width: 480px) {
-        max-width: 100%; /* Full width on mobile */
+        max-width: 100%;
         padding: 1.5rem;
     }
 `;
@@ -74,13 +74,13 @@ export const OptionTitle = styled.h3`
 
 
     @media (max-width: 768px) {
-        font-size: 18px; /* Adjust font size for mobile */
+        font-size: 18px;
         margin: 0.8rem 0;
     }
 
 
     @media (max-width: 480px) {
-        font-size: 16px; /* Adjust font size for mobile */
+        font-size: 16px;
         margin: 0.8rem 0;
     }
 `;
@@ -94,9 +94,9 @@ export const OptionDescription = styled.p`
 
 
     @media (max-width: 480px) {
-        font-size: 13px; /* Slightly smaller font on mobile */
+        font-size: 13px; 
         margin: 0.8rem 0;
-        text-align: center; /* Center text for mobile */
+        text-align: center;
     }
 `;
 
@@ -141,7 +141,7 @@ export const OptionLink = styled(Link)`
     @media (max-width: 768px) {
         font-size: 13px;
         padding: 8px 16px;
-        margin: 0.5rem auto 0; /* Ensure proper spacing for smaller screens */
+        margin: 0.5rem auto 0; 
     }
 
     @media (max-width: 480px) {

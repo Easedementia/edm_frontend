@@ -12,7 +12,7 @@ const AssessmentOptions = () => {
                 Lorem ipsum dolor sit amet consectetur. jscnsds Convallis est urna adipiscing fringilla nulla diam.
             </OptionDescription>
             <OptionLink to='/assessment/self-assessment'>
-                Assessment Portal
+                Begin Assessment
                 <img src={arrow} alt="Arrow Icon" />
             </OptionLink>
         </OptionCard>
@@ -24,7 +24,7 @@ const AssessmentOptions = () => {
                 Lorem ipsum dolor sit amet consectetur. jscnsds Convallis est urna adipiscing fringilla nulla diam.
             </OptionDescription>
             <OptionLink to='/assessment/first-person-assessment-instructions'>
-                Assessment Portal
+                Begin Assessment
                 <img src={arrow} alt="Arrow Icon" />
             </OptionLink>
         </OptionCard>

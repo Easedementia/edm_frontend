@@ -6,10 +6,10 @@ const AssessmentHomeBanner = () => {
   return (
     <AssessmentContainer>
         <HeadingContainer>
-            <SubHeading>jcbduc</SubHeading>
+            <SubHeading>Welcome to</SubHeading>
             <MainHeading>Assessment</MainHeading>
             <Description>
-                Having someone to assess ncewu hfbhe hrebrghgebfy drbfu hhj for your vintage valuables just like you do is now a reality with us.
+            Here we provide a comprehensive assessment for evaluating the cognitive health of individuals which includes both first person assessment  where family members or caregivers can take the assessment in lieu of the client and self-assessments, which allow individuals to reflect on their own cognitive changes.
             </Description>
             <ButtonContainer>
                 <AssessmentButton to='/assessment'>
