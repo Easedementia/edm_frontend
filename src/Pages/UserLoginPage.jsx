@@ -55,9 +55,11 @@ export const UserLoginPage = () => {
         if (email.trim() === '' || password.trim() === '') {
             if (email.trim() === '') {
                 setEmailError('Email is required');
+                toast.error('Email is required!')
             }
             if (password.trim() === '') {
                 setPasswordError('Password is required');
+                toast.error('Password is required')
             }
         } else {
             axios.post(`${baseURL}/login/`, {
@@ -102,7 +104,7 @@ export const UserLoginPage = () => {
                     toast.error("Invalid email or password!")
                 } else {
                     console.error('Login error', error);
-                    toast.error("Please provide the correct credentials!")
+                    toast.error("Please check your email & password!")
                 }
             });
         }
@@ -194,13 +196,11 @@ export const UserLoginPage = () => {
                     <Label htmlFor='email' >Email Id</Label>
                     <Input label='Email Address' type='email' id='email' name='email' value={email}
                     onChange={changeEmail} className={emailError ? 'error' : ''} />
-                    {emailError && <p className={'error-message'}>{emailError}</p>}
 
 
                     <Label htmlFor='password'>Password</Label>
                     <Input label='Password' type='password' id='password' name='password' value={password}
                     onChange={changePassword} className={passwordError ? 'error' : ''} />
-                    {passwordError && <p className={'error-message'}>{passwordError}</p>}
                     <ButtonContainer>
                         <FormButton type='submit' onClick={handleLogin} >Login</FormButton>
                     </ButtonContainer>
