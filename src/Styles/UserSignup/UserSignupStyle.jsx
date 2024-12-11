@@ -205,7 +205,7 @@ export const FormWrapper = styled.div`
   justify-content: space-between;
   overflow: visible;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 80px;
 
 
   @media (min-width: 1024px) {
