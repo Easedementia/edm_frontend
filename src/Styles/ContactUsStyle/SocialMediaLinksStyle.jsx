@@ -14,6 +14,7 @@ export const SocialMediaContainer = styled.div`
     margin-top: 40px;
     margin-bottom: 80px;
     flex-wrap: nowrap;
+    align-items: center;
   }
 
   @media (max-width: 480px) {
@@ -29,19 +30,20 @@ export const ConnectText = styled.p`
   margin-bottom: 0; 
   color: #000;
   margin-right: 20px; 
-  margin-top: 45px;
+  margin-top: 0;
 
 
   @media (max-width: 768px) {
     font-size: 24px;
     margin-right: 15px;
-    margin-top: 30px;
+    margin-top: 0;
   }
 
   @media (max-width: 480px) {
     font-size: 20px;
     margin-right: 0;
     margin-bottom: 10px;
+    margin-top: 0;
   }
 `;
 
@@ -62,13 +64,11 @@ export const IconLink = styled.a`
   @media (max-width: 768px) {
     font-size: 25px;
     margin: 0 8px;
-    flex-wrap: nowrap;
   }
 
   @media (max-width: 480px) {
     font-size: 22px;
     margin: 5px 0;
-    flex-wrap: nowrap;
   }
 `;
 
