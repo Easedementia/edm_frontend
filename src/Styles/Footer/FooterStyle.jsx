@@ -251,7 +251,6 @@ export const FooterBottomText = styled.p`
 
 export const SocialMediaIconsContainer = styled.div`
   display: flex;
-  /* justify-content: flex-start; */
   align-items: baseline;
   margin-top: 120px;
 
@@ -263,6 +262,8 @@ export const SocialMediaIconsContainer = styled.div`
   @media (max-width: 768px) {
     justify-content: center;
     margin-bottom: 90px;
+    align-items: center;
+    flex-wrap: nowrap;
   }
 `;
 
