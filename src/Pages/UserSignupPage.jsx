@@ -5,6 +5,8 @@ import {useNavigate} from 'react-router-dom'
 import {baseURL} from '../api/api'
 import { useState } from 'react'
 import arrow from '../assets/images/arrow.svg'
+import UserNavbar from '../Components/Navbar/UserNavbar'
+import Footer from '../Components/Footer/Footer'
 
 const UserSignupPage = () => {
   const navigator = useNavigate();
@@ -119,6 +121,8 @@ const UserSignupPage = () => {
 
 
   return (
+    <>
+    <UserNavbar/>
     <Container>
         <LeftSide>
         <MainTitle>
@@ -175,6 +179,8 @@ const UserSignupPage = () => {
         </FormWrapper>
         </RightSide>
     </Container>
+    <Footer/>
+    </>
   )
 }
 
