@@ -257,7 +257,7 @@ export const SocialMediaIconsContainer = styled.div`
 
   & > span {
     margin-right: 14px;
-    font-size: 22px;
+    font-size: 18px;
   }
 
 
