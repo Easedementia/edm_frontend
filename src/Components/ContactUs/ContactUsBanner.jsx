@@ -53,26 +53,53 @@ const ContactUsBanner = () => {
 
     const validateForm = () => {
         let valid = true;
-
+    
+        // Validate Full Name
+        const nameRegex = /^[a-zA-Z\s]+$/; // Allows letters and spaces only
         if (fullname.trim() === '') {
             setFullnameError('Full name is required');
+            toast.error('Full name is required')
+            valid = false;
+        } else if (!nameRegex.test(fullname)) {
+            setFullnameError('Full name must contain only letters and spaces');
+            toast.error('Full name must contain only letters and spaces')
             valid = false;
         }
-
-        if (email.trim() === ''){
-            setEmailError("Email is required");
+    
+        // Validate Email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email format
+        if (email.trim() === '') {
+            setEmailError('Email is required');
+            toast.error('Email is required')
+            valid = false;
+        } else if (!emailRegex.test(email)) {
+            setEmailError('Please enter a valid email address');
+            toast.error('Please enter a valid email address')
             valid = false;
         }
-
-        if (mobile.trim() === ''){
-            setMobileError("Mobile number is required");
+    
+        // Validate Mobile
+        const mobileRegex = /^[0-9]{10}$/; // Allows only 10 digits
+        if (mobile.trim() === '') {
+            setMobileError('Mobile number is required');
+            toast.error('Mobile number is required')
+            valid = false;
+        } else if (!mobileRegex.test(mobile)) {
+            setMobileError('Please enter a valid 10-digit mobile number');
+            toast.error('Please enter a valid 10-digit mobile number')
             valid = false;
         }
-
-        if (message.trim() === ''){
-            setMessageError("Message is required");
+    
+        // Validate Message
+        if (message.trim() === '') {
+            setMessageError('Message is required');
+            valid = false;
+        } else if (message.trim().length < 5) {
+            setMessageError('Message must be at least 5 characters long');
+            toast.error('Message must be at least 5 characters long')
             valid = false;
         }
+    
         return valid;
     };
 
