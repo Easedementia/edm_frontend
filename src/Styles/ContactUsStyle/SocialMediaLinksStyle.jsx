@@ -49,7 +49,6 @@ export const ConnectText = styled.p`
 
 export const IconLink = styled.a`
   margin: 0 10px;
-  margin-top: 40px;
   color: black;
   text-decoration: none;
   font-size: 30px;
