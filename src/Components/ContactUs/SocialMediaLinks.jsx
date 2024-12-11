@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import { SocialMediaContainer, ConnectText, IconLink, Icon } from '../../Styles/ContactUsStyle/SocialMediaLinksStyle'
 
 const SocialMediaLinks = () => {
@@ -13,6 +13,9 @@ const SocialMediaLinks = () => {
       </IconLink>
       <IconLink href="https://www.linkedin.com/company/ease-dementia/" target="_blank" rel="noopener noreferrer">
         <Icon as={FaLinkedinIn} />
+      </IconLink>
+      <IconLink href="https://x.com/easedementia" target="_blank" rel="noopener noreferrer">
+        <Icon as={FaTwitter} />
       </IconLink>
     </SocialMediaContainer>
   )
