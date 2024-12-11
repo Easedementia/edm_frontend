@@ -251,7 +251,8 @@ export const FooterBottomText = styled.p`
 
 export const SocialMediaIconsContainer = styled.div`
   display: flex;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
+  align-items: baseline;
   margin-top: 120px;
 
   & > span {
@@ -271,10 +272,15 @@ export const SocialMediaIconLink = styled.a`
   font-size: 24px;
   color: #000;
   transition: transform 0.2s;
+  display: inline-block;
 
   &:hover {
     transform: scale(1.2);
     color: #5517A8;
+  }
+
+  svg {
+    display: block; /* Ensures the icon inside aligns properly */
   }
 
 

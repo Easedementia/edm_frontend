@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { SocialMediaContainer, ConnectText, IconLink, Icon } from '../../Styles/ContactUsStyle/SocialMediaLinksStyle'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXTwitter } from '@fortawesome/free-brands-svg-icons';

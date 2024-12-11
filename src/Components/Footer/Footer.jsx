@@ -27,7 +27,7 @@ const Footer = () => {
             if (response.status === 201 || response.status === 200) {
                 setEmail('');
             }
-            toast.success("Subscribed to the news letter successfully");
+            toast.success("Thanks for subscribing to Easedementia Newsletter");
         } catch (error) {
             toast.error('An error occurred. Please try again.');
         }
