@@ -90,7 +90,7 @@ const Footer = () => {
                 <LinkItem as={Link} to='/services'>Services</LinkItem>
                 <LinkItem as={Link} to='/assessment'>Assessment</LinkItem>
                 <LinkItem as={Link} to='/privacy-policy'>Privacy Policy</LinkItem>
-                <LinkItem as={Link} to='#faq-section'>FAQ</LinkItem>
+                <LinkItem as={Link} to='/contact#faq'>FAQ</LinkItem>
                 <LinkItem as={Link} to='/contact'>Contact Us</LinkItem>
                 <LinkItem as={Link} to='/careers'>Careers</LinkItem>
                 <HeartIcon src={footerelement1} alt="Heart Icon" />

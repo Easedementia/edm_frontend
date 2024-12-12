@@ -16,9 +16,7 @@ const ContactUsPage = () => {
     <UserNavbar/>
     <ContactUsBanner/>
     <Address/>
-    <div id="faq-section">
-      <FAQ />
-    </div>
+    <FAQ />
     <SocialMediaLinks/>
     <CallButton/>
     <WhatsappButton/>
