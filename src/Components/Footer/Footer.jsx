@@ -80,7 +80,7 @@ const Footer = () => {
                 <ContactItem>support@easedementia.com</ContactItem>
             </ContactDetails>
             <ContactDetails>
-                <ContactItem><strong>Phone Number</strong></ContactItem>
+                <ContactItem><strong>Phone Numbers</strong></ContactItem>
                 <ContactItem>+91 79077 40698</ContactItem>
                 <ContactItem>+91 90616 60079</ContactItem>
             </ContactDetails>
