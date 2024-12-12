@@ -1,7 +1,7 @@
 
 
 const CallButton = () => {
-    const phoneNumber = "+917907740698"
+    const phoneNumber = "+919946744402"
   return (
     <a
       href={`tel:${phoneNumber}`}
