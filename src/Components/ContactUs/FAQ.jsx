@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { FAQContainer, FAQTitle, QuestionContainer, Question, Answer, ArrowIcon } from '../../Styles/ContactUsStyle/FAQStyle'
 import arrow from '../../assets/images/arrow.svg'
 
 const FAQ = () => {
     const [activeIndex, setActiveIndex] = useState(null);
+    const faqRef = useRef(null);
 
     const toggleFAQ = (index) =>{
         setActiveIndex(activeIndex === index ? null: index);
@@ -24,8 +25,16 @@ const FAQ = () => {
           },
     ];
 
+
+    useEffect(() => {
+      if (window.location.hash === "#faq") {
+        faqRef.current?.scrollIntoView({ behavior: "smooth" });
+      }
+    }, []);
+
+
   return (
-    <FAQContainer>
+    <FAQContainer id="faq" ref={faqRef}>
         <FAQTitle>Frequently asked questions</FAQTitle>
         {faqs.map((faq, index) => (
             <QuestionContainer key={index} >
