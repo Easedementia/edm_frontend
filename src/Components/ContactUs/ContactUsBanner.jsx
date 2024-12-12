@@ -67,7 +67,7 @@ const ContactUsBanner = () => {
         }
     
         // Validate Email
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
         if (email.trim() === '') {
             setEmailError('Email is required');
             toast.error('Email is required')
@@ -79,7 +79,7 @@ const ContactUsBanner = () => {
         }
     
         // Validate Mobile
-        const mobileRegex = /^[0-9]{10}$/; // Allows only 10 digits
+        const mobileRegex = /^[0-9]{10}$/; 
         if (mobile.trim() === '') {
             setMobileError('Mobile number is required');
             toast.error('Mobile number is required')
