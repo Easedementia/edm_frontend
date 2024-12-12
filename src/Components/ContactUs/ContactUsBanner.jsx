@@ -23,7 +23,7 @@ const ContactUsBanner = () => {
     const [mobileError, setMobileError] = useState('');
     const [messageError, setMessageError] = useState('');
 
-    const phoneNumber = "7907740698"
+    const phoneNumber = "+917907740698"
 
 
     const changeFullname = (event) =>{
