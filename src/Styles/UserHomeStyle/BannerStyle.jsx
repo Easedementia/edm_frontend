@@ -80,7 +80,7 @@ export const Subtitle = styled.p`
         font-size: 14px;
         text-align: center;
         margin-top: 15px;
-        max-width: 90%; /* Ensures the text wraps within 90% of the container width */
+        max-width: 60%; /* Ensures the text wraps within 90% of the container width */
         margin-left: auto; 
         margin-right: auto;
     }
