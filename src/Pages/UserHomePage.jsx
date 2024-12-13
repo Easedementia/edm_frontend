@@ -3,7 +3,6 @@ import Footer from "../Components/Footer/Footer"
 import UserNavbar from "../Components/Navbar/UserNavbar"
 import AssessmentLink from "../Components/UserHomePage/AssessmentLink"
 import Banner from "../Components/UserHomePage/Banner"
-import BannerImage from "../Components/UserHomePage/BannerImage"
 import MontessoriApproach from "../Components/UserHomePage/MontessoriApproach"
 import PartnershipLogos from "../Components/UserHomePage/PartnershipLogos"
 import ServiceListing from "../Components/UserHomePage/ServiceListing"
@@ -23,7 +22,6 @@ const UserHomePage = () => {
     <AssessmentLink/>
     <PartnershipLogos/>
     <ServiceListing/>
-    <BannerImage/>
     <Specialities/>
     <WeAreOnto/>
     <MontessoriApproach/>
