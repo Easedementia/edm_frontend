@@ -21,6 +21,7 @@ export const PartnershipLogosWrapper = styled.div`
     padding: 10px;
     max-width: 70%;
     margin-left: 145px;
+    margin-top: 70px;
   }
 
   @media (max-width: 480px) {
@@ -28,6 +29,7 @@ export const PartnershipLogosWrapper = styled.div`
     padding: 5px;
     max-width: 60%;
     margin-left: 170px;
+    margin-top: 80px;
   }
 `;
 

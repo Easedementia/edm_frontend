@@ -6,15 +6,15 @@ export const ServiceListingWrapper = styled.div`
   background-color: white;
   text-align: center;
   border-radius: 20px;
-  margin-top: 50px;
+  margin-top: 100px;
   width: 100%;
   position: relative;
   box-sizing: border-box;
 
 
   @media (max-width: 480px) {
-    width: 80%;
-    margin-left: 80px;
+    width: 85%;
+    margin-left: 70px;
   }
 
   h2 {
@@ -107,7 +107,7 @@ export const ServiceIcon = styled.img`
   @media (max-width: 480px) {
     height: 70px;
     align-items: center;
-    margin-left: 200px;
+    margin-left: 155px;
   }
 `;
 
@@ -183,18 +183,18 @@ export const ServiceLink = styled.a`
     height: 48px;
 
     @media (max-width: 1024px) {
-      width: 28px;
-      height: 28px;
+      width: 40px;
+      height: 40px;
     }
 
     @media (max-width: 768px) {
-      width: 25px;
-      height: 25px;
+      width: 40px;
+      height: 40px;
     }
 
     @media (max-width: 480px) {
-      width: 20px;
-      height: 20px;
+      width: 35px;
+      height: 35px;
     }
   }
 
