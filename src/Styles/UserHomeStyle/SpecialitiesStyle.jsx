@@ -6,6 +6,7 @@ export const SpecialitiesContainer = styled.div`
   align-items: center;
   padding: 50px 0;
   background-color: #f9fafb;
+  margin-top: 100px;
 
   @media (max-width: 1024px) {
     padding: 40px 0;
@@ -49,7 +50,8 @@ export const GridWrapper = styled.div`
       "card3 card4"
       "card5 card6"
       "card7 card8";
-    grid-gap: 15px;
+    grid-gap: 30px;
+    width: 75%;
   }
 
   @media (max-width: 480px) {
@@ -63,8 +65,8 @@ export const GridWrapper = styled.div`
       "card6"
       "card7"
       "card8";
-    grid-gap: 10px;
-    width: 90%;
+    grid-gap: 30px;
+    width: 50%;
   }
 `;
 
@@ -152,6 +154,8 @@ export const SubTitle = styled.p`
 
   @media (max-width: 480px) {
     font-size: 11px;
+    max-width: 50%;
+    text-align: center;
   }
 `;
 
