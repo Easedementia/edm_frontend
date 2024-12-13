@@ -9,10 +9,25 @@ export const PartnershipLogosWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
+  @media (max-width: 1024px) {
+    max-width: 80%;
+    margin: 60px 0;
+    padding: 15px;
+    margin-left: 110px;
+  }
+
   @media (max-width: 768px) {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin: 40px 0;
     padding: 10px;
+    max-width: 70%;
+    margin-left: 145px;
+  }
+
+  @media (max-width: 480px) {
+    margin: 20px 0;
+    padding: 5px;
+    max-width: 60%;
+    margin-left: 170px;
   }
 `;
 
@@ -24,12 +39,20 @@ export const LogosContainer = styled.div`
   width: 100%;
   max-width: 900px;
   background-color: #f9fafb;
-  flex-wrap: nowrap; /* Allow logos to wrap on smaller screens */
+  flex-wrap: nowrap;
+
+  @media (max-width: 1024px) {
+    gap: 15px;
+    max-width: 750px;
+  }
 
   @media (max-width: 768px) {
-    padding-top: 10px;
+    gap: 10px;
     max-width: 100%;
-    flex-wrap: wrap;
+  }
+
+  @media (max-width: 480px) {
+    gap: 5px;
   }
 `;
 
@@ -47,16 +70,13 @@ export const LogoImage = styled.img`
 
   @media (max-width: 1024px) {
     max-height: 70px;
-    margin: 0 8px;
   }
 
   @media (max-width: 768px) {
     max-height: 60px;
-    margin: 0 5px;
   }
 
   @media (max-width: 480px) {
     max-height: 50px;
-    margin: 5px;
   }
 `;
