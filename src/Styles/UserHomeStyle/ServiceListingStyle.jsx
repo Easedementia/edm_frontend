@@ -11,6 +11,12 @@ export const ServiceListingWrapper = styled.div`
   position: relative;
   box-sizing: border-box;
 
+
+  @media (max-width: 480px) {
+    width: 80%;
+    margin-left: 80px;
+  }
+
   h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 36px;
