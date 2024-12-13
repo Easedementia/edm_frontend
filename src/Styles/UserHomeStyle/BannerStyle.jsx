@@ -8,11 +8,38 @@ export const BannerContainer = styled.div`
     justify-content: space-between;
     padding: 50px;
     background-color: #f9fafb;
+
+
+    @media (max-width: 1024px) {
+        padding: 40px;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 30px;
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    @media (max-width: 480px) {
+        padding: 20px;
+    }
 `
 
 
 export const TextContainer = styled.div`
     max-width: 50%;
+
+
+    @media (max-width: 768px) {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 480px) {
+        margin-bottom: 15px;
+    }
 `
 
 
@@ -23,6 +50,19 @@ export const Title = styled.h1`
     color: #000;
     padding-top: 30px;
     text-align: left;
+
+
+    @media (max-width: 768px) {
+        font-size: 36px;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 28px;
+        padding-top: 15px;
+        text-align: center;
+    }
 `
 
 
@@ -33,7 +73,29 @@ export const Subtitle = styled.p`
     margin-top: 20px;
     line-height: 1.5;
     text-align: left;
-`
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 15px;
+        max-width: 90%; /* Ensures the text wraps within 90% of the container width */
+        margin-left: auto; 
+        margin-right: auto;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 12px;
+        max-width: 60%; /* Constrains the text further for smaller screens */
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        word-wrap: break-word;
+        margin-bottom: 30px;
+    }
+`;
+
 
 
 export const ContactButton = styled(Link)`
@@ -60,6 +122,20 @@ export const ContactButton = styled(Link)`
         background-color: #6d22d1;
         color: #fff;
     }
+
+
+    @media (max-width: 768px) {
+        align-self: center;
+        margin-left: 300px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 14px;
+        height: 35px;
+        width: 140px;
+        align-items: center;
+        margin-left: 300px;
+    }
 `;
 
 export const ArrowIcon = styled.img`
@@ -72,6 +148,17 @@ export const ArrowIcon = styled.img`
     &:hover {
         transform: scale(1.2); 
     }
+
+
+    @media (max-width: 768px) {
+        width: 50px;
+        height: 50px;
+    }
+
+    @media (max-width: 480px) {
+        width: 40px;
+        height: 40px;
+    }
 `;
 
 
@@ -79,11 +166,34 @@ export const ArrowIcon = styled.img`
 
 export const ImageContainer = styled.div`
     max-width: 50%;
+
+
+    @media (max-width: 768px) {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    @media (max-width: 480px) {
+        max-width: 100%;
+    }
 `
 
 
 export const BannerImage = styled.img`
     max-width: 100%;
     height: auto;
+
+
+    @media (max-width: 768px) {
+        width: 70%;
+        margin-left: 120px;
+        margin-top: -60px;
+    }
+
+    @media (max-width: 480px) {
+        width: 50%;
+        margin-left: 170px;
+        margin-bottom: -70px;
+    }
 `;
 
