@@ -40,7 +40,7 @@ export const GridWrapper = styled.div`
       "card1 card2 card3"
       "card4 card5 card6"
       "card7 card8 card6";
-    grid-gap: 18px;
+    grid-gap: 30px;
   }
 
   @media (max-width: 768px) {
@@ -51,7 +51,7 @@ export const GridWrapper = styled.div`
       "card5 card6"
       "card7 card8";
     grid-gap: 30px;
-    width: 75%;
+    width: 80%;
   }
 
   @media (max-width: 480px) {
@@ -66,7 +66,7 @@ export const GridWrapper = styled.div`
       "card7"
       "card8";
     grid-gap: 30px;
-    width: 50%;
+    width: 80%;
   }
 `;
 
