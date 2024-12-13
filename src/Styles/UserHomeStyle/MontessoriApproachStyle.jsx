@@ -6,17 +6,17 @@ export const MontessoriApproachContainer = styled.div`
     background-color: #f9fafb;
     text-align: center;
     border-radius: 25px;
-    margin-top: 40px;
+    margin-top: 60px;
 
 
     @media (max-width: 768px) {
     padding: 40px 15px;
-    margin-top: 30px;
+    margin-top: 60px;
   }
 
   @media (max-width: 480px) {
     padding: 30px 10px;
-    margin-top: 20px;
+    margin-top: 60px;
   }
 `;
 

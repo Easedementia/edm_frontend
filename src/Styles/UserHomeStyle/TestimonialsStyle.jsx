@@ -32,6 +32,7 @@ export const Title = styled.h2`
     @media (max-width: 480px) {
         font-size: 24px;
         margin-bottom: 20px;
+        margin-top: 50px;
     }
 `;
 
@@ -51,7 +52,9 @@ export const TestimonialsContainer = styled.div`
     }
 
     @media (max-width: 480px) {
-        gap: 10px;
+        gap: 50px;
+        flex-direction: column;
+        align-items: center;
     }
 `;
 
@@ -72,7 +75,7 @@ export const TestimonialCard = styled.div`
     }
 
     @media (max-width: 480px) {
-        width: 220px;
+        width: 320px;
         padding: 10px;
     }
 `;
@@ -90,6 +93,7 @@ export const TestimonialText = styled.p`
     @media (max-width: 480px) {
         font-size: 12px;
         margin-bottom: 15px;
+        margin-top: 5px;
     }
 `;
 
@@ -108,6 +112,7 @@ export const Stars = styled.div`
     @media (max-width: 480px) {
         height: 30px;
         margin-bottom: 15px;
+        margin-left: 120px;
     }
 `;
 
