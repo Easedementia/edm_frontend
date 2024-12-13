@@ -41,7 +41,10 @@ export const CardContainer = styled.div`
     }
 
     @media (max-width: 480px) {
-        gap: 20px;
+        flex-direction: column;
+        width: 70%;
+        margin-left: 120px;
+        gap: 50px;
     }
 `;
 
