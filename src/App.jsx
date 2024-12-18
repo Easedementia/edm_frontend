@@ -38,6 +38,7 @@ import TermsConditions from './Components/Footer/TermsConditions';
 import PrivacyPolicy from './Components/Footer/PrivacyPolicy';
 import Clock from './Components/Assessment/Clock';
 import ScrollToTop from './Components/ScrollToTop';
+import Careers from './Components/Careers/Careers';
 
 
 
@@ -85,6 +86,7 @@ function App() {
           <Route path='/assessment/first-person-assessment-new-user' element={<FirstPersonAssessmentNewUser/>} />
           <Route path='/terms-conditions' element={<TermsConditions/>} />
           <Route path='/privacy-policy' element={<PrivacyPolicy/>} />
+          <Route path='/careers' element={<Careers/>} />
           <Route path='/clock' element={<Clock/>} />
 
           

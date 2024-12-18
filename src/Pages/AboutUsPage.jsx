@@ -1,5 +1,6 @@
 import AboutUsBanner from "../Components/AboutUs/AboutUsBanner"
 import AboutUsBannerImage from "../Components/AboutUs/AboutUsBannerImage"
+import Gallery from "../Components/AboutUs/Gallery"
 import MeetOurTeam from "../Components/AboutUs/MeetOurTeam"
 import OurValues from "../Components/AboutUs/OurValues"
 import VisionMission from "../Components/AboutUs/VisionMission"
@@ -20,6 +21,7 @@ const AboutUsPage = () => {
     <VisionMission/>
     <OurValues/>
     <MeetOurTeam/>
+    <Gallery/>
     <CallButton/>
     <WhatsappButton/>
     <Footer/>
