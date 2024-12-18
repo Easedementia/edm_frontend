@@ -1,12 +1,17 @@
 import { GalleryContainer, Caption, ImageGrid, ImageItem, SocialMediaContainer, SocialMediaText, SocialMediaIcons } from '../../Styles/AboutUsStyle/GalleryStyle'
 import gallery1 from '../../assets/images/gallery1.jpg'
 import gallery2 from '../../assets/images/gallery2.jpg'
+import gallery3 from '../../assets/images/gallery3.jpg'
+import gallery4 from '../../assets/images/gallery4.jpg'
+import gallery5 from '../../assets/images/gallery5.jpg'
+import gallery6 from '../../assets/images/gallery6.jpg'
+import gallery7 from '../../assets/images/gallery7.jpg'
 import { FaInstagram, FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Gallery = () => {
-    const images = [gallery1, gallery2, gallery1, gallery2, gallery1, gallery2, gallery1, gallery2, gallery1, gallery2]
+    const images = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery2, gallery1, gallery2]
     const socialMediaLinks = {
         instagram: 'https://www.instagram.com/easedementia__/?igshid=MzRlODBiNWFlZA%3D%3D',
         facebook: 'https://www.facebook.com/people/Easedementia/61550949666708/?mibextid=LQQJ4d',

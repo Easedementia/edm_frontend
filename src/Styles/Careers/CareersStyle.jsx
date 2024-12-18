@@ -11,6 +11,11 @@ export const CareersContainer = styled.div`
     margin-top: 150px;
     box-sizing: border-box;
     width: 100%;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        margin-top: 80px;
+    }
 `;
 
 
@@ -20,6 +25,25 @@ export const LeftSection = styled.div`
     margin-top: 50px;
     flex-shrink: 0;
     box-sizing: border-box;
+
+
+    @media (max-width: 1024px) {
+        max-width: 100%;
+        margin-right: 0;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        margin-top: 10px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 0 1rem;
+    }
 `;
 
 
@@ -35,6 +59,23 @@ export const CareersHeader = styled.h2`
     b {
         font-weight: bold;
     }
+
+
+    @media (max-width: 1024px) {
+        text-align: center;
+    }
+
+
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+
+    @media (max-width: 480px) {
+        font-size: 1.2rem;
+        text-align: center;
+    }
 `;
 
 
@@ -44,6 +85,17 @@ export const CareersDescription = styled.p`
     margin-bottom: 1.5rem;
     font-family: 'Poppins', sans-serif;
     text-align: left;
+
+
+    @media (max-width: 768px) {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 0.7rem;
+        text-align: center;
+    }
 `;
 
 
@@ -60,22 +112,20 @@ export const ContactInfo = styled.div`
         font-size: 1rem;
         color: #444;
     }
+
+
+    @media (max-width: 1024px) {
+        align-items: center; /* Center the contact info */
+    }
+
+    @media (max-width: 480px) {
+        gap: 1rem; /* Increase gap for better readability */
+        div {
+            justify-content: center; /* Center each row */
+        }
+    }
 `;
 
-
-export const EmailIcon = styled.span`
-  display: inline-flex; 
-  align-items: center;
-  justify-content: center;
-  height: 48px;
-  width: 48px;
-
-  img {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
-  }
-`;
 
 
 export const Icon = styled.div`
@@ -102,21 +152,27 @@ export const Icon = styled.div`
 
 
 
-export const PhoneIcon = styled.span`
-    color: #7c3aed;
-    font-size: 1.2rem;
-`;
-
 
 export const JobContainer = styled.div`
     flex-basis: 55%;
     padding: 20px;
     background-color: #f9fafb;
     border-radius: 8px;
-    max-width: 600px; /* Fixed max width */
+    max-width: 600px;
     margin: 0 auto;
     margin-top: 20px;
     box-sizing: border-box;
+
+
+    @media (max-width: 1024px) {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 15px;
+    }
 `;
 
 export const JobTitle = styled.h2`
@@ -125,11 +181,21 @@ export const JobTitle = styled.h2`
     margin-bottom: 20px;
     color: #000;
     font-weight: 700;
+
+
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+    }
 `;
 
 
 export const JobItemContainer = styled.div`
     margin-bottom: 10px;
+
+
+    @media (max-width: 480px) {
+        margin-bottom: 15px;
+    }
 `;
 
 
@@ -150,6 +216,12 @@ export const JobItem = styled.div`
 
     &:hover {
         background: #f1f1f1;
+    }
+
+
+    @media (max-width: 480px) {
+        padding: 10px;
+        font-size: 0.8rem;
     }
 `;
 
@@ -175,6 +247,11 @@ export const JobDetails = styled.div`
     strong {
         display: block;
         margin-bottom: 10px;
+    }
+
+
+    @media (max-width: 480px) {
+        padding: 10px;
     }
 `;
 
@@ -208,4 +285,12 @@ export const ArrowIcon = styled.img`
     &:hover {
         transform: scale(1.2); 
     }
+
+
+    @media (max-width: 480px) {
+        height: 40px;
+        width: 40px;
+    }
 `;
+
+
