@@ -109,7 +109,7 @@ const UserSignupPage = () => {
         fullname: fullname,
         email: email,
         mobile: mobile,
-        password: password
+        password: password,
       }).then((response) => {
         const usermail = response.data.email;
         localStorage.setItem('usermail', usermail)

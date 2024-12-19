@@ -177,7 +177,7 @@ export const JobContainer = styled.div`
 
 export const JobTitle = styled.h2`
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin-bottom: 20px;
     color: #000;
     font-weight: 700;

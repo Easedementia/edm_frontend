@@ -134,22 +134,24 @@ export const UserLoginPage = () => {
                                 onSuccess={credentialResponse => {
                                     const decoded = jwtDecode(credentialResponse.credential);
                                     console.log(decoded);
-                                    const fullName = decoded.name;
-                                    const spaceIndex = fullName.indexOf(' ');
+                                    const fullname = decoded.name;
+                                    console.log("Fullname:", fullname)
+                                    const spaceIndex = fullname.indexOf(' ');
                                     
                                     let firstName, lastName;
                                     
                                     if (spaceIndex !== -1) {
-                                    firstName = fullName.substring(0, spaceIndex);
-                                    lastName = fullName.substring(spaceIndex + 1);
+                                    firstName = fullname.substring(0, spaceIndex);
+                                    lastName = fullname.substring(spaceIndex + 1);
                                     } else {
-                                    firstName = fullName;
+                                    firstName = fullname;
                                     lastName = ''; 
                                     }
 
                                     axios
                     .post(`${baseURL}/user-google-auth/`, {
                         email: decoded.email,
+                        fullname: decoded.name,
                         first_name: firstName,
                         last_name: lastName,
                     }, { withCredentials: true })
