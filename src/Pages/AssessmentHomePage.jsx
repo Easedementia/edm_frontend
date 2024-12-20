@@ -9,7 +9,7 @@ import GlobalStyle from "../Styles/GlobalStyles"
 
 const AssessmentHomePage = () => {
   return (
-    <div style={{ backgroundColor: '#f9f9f9'}}>
+    <div>
     <GlobalStyle/>
     <UserNavbar />
     <AssessmentHomeBanner />

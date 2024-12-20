@@ -27,6 +27,7 @@ const UserProfile = () => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
   const userID = useSelector((state) => state.user.user.user.id);
   console.log("UserID:", userID);
 

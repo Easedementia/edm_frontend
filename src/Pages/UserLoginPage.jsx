@@ -159,9 +159,11 @@ export const UserLoginPage = () => {
                         localStorage.setItem('accessToken', response.data.access);
                         localStorage.setItem('refreshToken', response.data.refresh);
                         console.log("response.data", response.data);
-                        console.log(response.data);
+                        console.log("RESPONSE DATA USER:", response.data.user);
                         dispatch(setAccessToken(response.data.data));
-                        dispatch(setUser(response.data.user));
+                        dispatch(setUser({
+                            user: response.data.user
+                        }));
                         
 
                         // Redirect to the desired page after successful login
