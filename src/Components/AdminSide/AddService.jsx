@@ -17,6 +17,9 @@ const AddService = () => {
   const [currentServiceId, setCurrentServiceId] = useState(null);
 
 
+  const maxFileSize = 10 * 1024 * 1024;
+
+
   useEffect(() =>{
     fetchServices();
   }, []);
@@ -67,6 +70,19 @@ const AddService = () => {
     setTitle('');
     setDescription('');
     setImage(null);
+  };
+
+
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+
+    if (file && file.size > maxFileSize) {
+      toast.error('File size exceeds 10 MB. Please choose a smaller file.');
+      setImage(null);
+    } else {
+      setImage(file);
+    }
   };
 
   
@@ -163,7 +179,7 @@ const AddService = () => {
             type="file"
             id="image"
             accept=".svg"
-            onChange={(e) => setImage(e.target.files[0])}
+            onChange={handleFileChange}
             required
           />
         </FormField>
