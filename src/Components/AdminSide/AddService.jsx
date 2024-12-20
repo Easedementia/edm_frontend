@@ -85,6 +85,7 @@ const AddService = () => {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
+        withCredentials: true,
       });
       toast.success('Service added successfully');
       setShowForm(false);
