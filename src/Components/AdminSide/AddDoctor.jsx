@@ -133,6 +133,7 @@ const AddDoctor = () => {
               headers: {
                 'Content-Type': 'multipart/form-data',
               },
+              withCredentials: true,
             });
             console.log('Doctor added successfully', response.data);
             toast.success('Doctor added successfully');
