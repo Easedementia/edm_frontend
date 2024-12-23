@@ -9,11 +9,9 @@ export const AssessmentContainer = styled.div`
     padding: 30px;
     background-color: white;
     border-radius: 15px;
-    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-top: 30px;
-    max-width: 85%;
-    margin-left: 78px;
+    margin: 20px auto;
+    max-width: 90%; 
 
 
     @media (max-width: 1024px) {
@@ -44,7 +42,7 @@ export const AssessmentContainer = styled.div`
         margin-left: auto;
         margin-right: auto;
         max-width: 85%;
-        margin-top: 50px;
+        margin-top: 10px;
     }
 `;
 
@@ -58,7 +56,7 @@ export const TextContainer = styled.div`
     }
 
     @media (max-width: 768px) {
-        max-width: 90%;
+        max-width: 100%;
     }
 
     @media (max-width: 480px) {
@@ -145,9 +143,8 @@ export const AssessmentButton = styled(Link)`
     transition: background-color 0.3s ease;
     height: 40px; 
     width: 165px; 
-    align-self: flex-start;
-    margin-top: 15px;
-    margin-right: 375px;
+    align-self: center;
+    margin: 15px auto;
     white-space: nowrap; 
 
     &:hover {
@@ -156,34 +153,28 @@ export const AssessmentButton = styled(Link)`
     }
 
     @media (max-width: 1024px) {
-        align-self: center;
-        margin: 18px 0;
+        margin: 15px auto;
         font-size: 14px;
-        margin-top: 10px;
     }
 
-
     @media (max-width: 768px) {
-        align-self: center;
         margin: 10px auto;
         font-size: 14px;
     }
 
     @media (max-width: 480px) {
-        align-self: center;
-        width: 165px;
+        margin: 10px auto;
         padding: 10px;
         font-size: 12px;
-        margin-top: 14px;
-        text-align: center;
+        width: 170px;
     }
 `;
 
 
 export const ArrowIcon = styled.img`
-    margin-left: 1px;
-    width: 65px;
-    height: 65px; 
+    margin-left: 8px;
+    width: 55px;
+    height: 55px; 
     transition: transform 0.2s ease;
     cursor: pointer;
 
@@ -201,7 +192,7 @@ export const ArrowIcon = styled.img`
     @media (max-width: 480px) {
         width: 50px;
         height: 50px;
-        margin-left: 28px;
+        margin-left: 38px;
     }
 `;
 
@@ -215,7 +206,7 @@ export const DetailsContainer = styled.div`
     }
 
     @media (max-width: 768px) {
-        max-width: 90%;
+        max-width: 100%;
     }
 
     @media (max-width: 480px) {

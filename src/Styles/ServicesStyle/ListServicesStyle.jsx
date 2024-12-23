@@ -6,28 +6,15 @@ export const ServiceListingWrapper = styled.div`
   background-color: white;
   text-align: center;
   border-radius: 20px;
-  margin: 100px auto;
+  margin-top: 100px;
   width: 100%;
   position: relative;
   box-sizing: border-box;
 
 
-  @media (max-width: 1024px) {
-    width: 95%; /* Slightly smaller width for tablets and smaller laptops */
-    padding: 40px; /* Reduce padding */
-    margin: 80px auto;
-  }
-
-  @media (max-width: 768px) {
-    width: 90%; /* Narrower for tablets and larger phones */
-    padding: 30px; /* Further reduce padding */
-    margin: 60px auto;
-  }
-
   @media (max-width: 480px) {
-    width: 90%; /* Ensure it fits within small screens */
-    padding: 20px; /* Minimal padding for small devices */
-    margin: 40px auto;
+    width: 85%;
+    margin-left: 35px;
   }
 
   h2 {
@@ -52,8 +39,6 @@ export const ServiceListingWrapper = styled.div`
   }
 `;
 
-
-
 export const ServiceContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
@@ -65,12 +50,12 @@ export const ServiceContainer = styled.div`
   }
 
   @media (max-width: 768px) {
-    gap: 15px;
+    gap: 20px;
   }
 
   @media (max-width: 480px) {
-    gap: 10px;
-    
+    gap: 50px;
+    justify-content: center;
   }
 `;
 
@@ -80,8 +65,7 @@ export const ServiceCard = styled.div`
   border-radius: 15px;
   padding: 20px;
   text-align: center;
-  width: calc(100% - 40px); /* Adjust width to fit smaller screens */
-  max-width: 240px;
+  width: 200px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 
@@ -90,27 +74,27 @@ export const ServiceCard = styled.div`
   }
 
   @media (max-width: 1024px) {
-    width: calc(50% - 20px); /* 2 cards in a row for medium screens */
+    width: 200px;
     padding: 15px;
   }
 
   @media (max-width: 768px) {
-    width: calc(50% - 20px); /* Ensure 2 cards per row for tablets */
+    width: calc(50% - 10px);
+    padding: 10px;
   }
 
   @media (max-width: 480px) {
-    width: 100%; /* Full width for small screens */
+    width: 70%;
     padding: 8px;
   }
 `;
 
 
-
 export const ServiceIcon = styled.img`
   height: 80px;
   margin-bottom: 20px;
-  margin-left: 20px;
-  
+  align-items: center;
+  margin-left: 9px;
 
   @media (max-width: 1024px) {
     height: 90px;
@@ -122,8 +106,8 @@ export const ServiceIcon = styled.img`
 
   @media (max-width: 480px) {
     height: 70px;
-    margin: 10px auto; /* Center the icon */
-    display: block;
+    align-items: center;
+    margin-left: 20px;
   }
 `;
 
@@ -145,6 +129,7 @@ export const ServiceTitle = styled.h3`
 
   @media (max-width: 480px) {
     font-size: 14px;
+    text-align: center;
   }
 `;
 
@@ -155,8 +140,7 @@ export const ServiceDescription = styled.p`
   font-size: 12px;
   color: #2e2e2e;
   margin-bottom: 20px;
-  text-align: center;
-  max-width: 100%;
+  text-align: left;
 
   @media (max-width: 1024px) {
     font-size: 13px;
@@ -171,6 +155,9 @@ export const ServiceDescription = styled.p`
   @media (max-width: 480px) {
     font-size: 11px;
     margin-bottom: 8px;
+    text-align: left;
+    max-width: 60%;
+    margin-left: 20px;
   }
 `;
 

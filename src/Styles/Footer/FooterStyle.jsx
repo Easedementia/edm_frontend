@@ -9,6 +9,8 @@ export const FooterContainer = styled.footer`
   align-items: center;
   font-family: 'Poppins', sans-serif;
   margin-top: 50px;
+  width: 100%;
+  box-sizing: border-box;
 
 
   @media (max-width: 768px) {
@@ -26,11 +28,20 @@ export const TopSection = styled.div`
   width: 100%;
   max-width: 1200px;
   margin-bottom: 20px;
+  
 
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+  }
+
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; /* Add padding if needed */
+    margin-bottom: 10px; /* Reduce margin for tighter spacing */
   }
 `;
 
@@ -38,7 +49,8 @@ export const LeftContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 60%;
+  width: 100%;
+  margin-left: 0;
 
 
   @media (max-width: 768px) {
@@ -67,6 +79,9 @@ export const NewsletterContainer = styled.div`
     align-items: center;
     text-align: center;
   }
+
+
+  
 `;
 
 export const NewsletterText = styled.p`
@@ -161,6 +176,8 @@ export const RightContainer = styled.div`
     text-align: center;
     margin-left: 0;
   }
+
+  
 `;
 
 export const ContactDetails = styled.div`
@@ -253,7 +270,7 @@ export const SocialMediaIconsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 120px;
+  margin-top: 100px;
 
   & > span {
     margin-right: 14px;

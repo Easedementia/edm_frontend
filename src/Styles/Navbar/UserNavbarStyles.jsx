@@ -35,9 +35,12 @@ export const NavbarContainer = styled.nav`
     padding: 15px 30px;
   }
 
+  
+
   @media (max-width: ${breakpoints.tablet}) {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     padding: 10px 20px;
     height: auto;
   }
@@ -45,7 +48,15 @@ export const NavbarContainer = styled.nav`
   @media (max-width: ${breakpoints.mobileL}) {
     padding: 10px 15px;
   }
-`
+
+
+  @media (max-width: 820px) {
+        padding: 10px 25px; 
+        height: auto;
+        gap: 15px; 
+        flex-direction: row; /* Ensure single-row layout */
+    }
+`;
 
 
 export const LogoContainer = styled.div`
@@ -60,7 +71,7 @@ export const LogoContainer = styled.div`
     height: 45px;
   }
 
-`
+`;
 
 
 export const Logo = styled.img`
@@ -86,6 +97,12 @@ export const HamburgerIcon = styled.div`
     position: absolute;
     top: 20px;
     right: 20px;
+
+
+    @media (max-width: 820px) {
+        display: block; 
+        z-index: 1000;
+    }
     
     @media (max-width: ${breakpoints.tablet}) {
     display: block;
@@ -116,6 +133,19 @@ export const NavItems = styled.div`
     align-items: center;
     gap: 30px;
     flex-wrap: nowrap;
+    justify-content: center;
+
+    @media (max-width: 1024px) {
+        gap: 20px;
+    }
+
+
+    @media (max-width: 820px) {
+        display: none; /* Hide NavItems */
+    }
+
+
+    
 
     @media (max-width: 768px) {
         display: none; 
@@ -183,6 +213,11 @@ export const UserIconContainer = styled.div`
   overflow: hidden;
   cursor: pointer;
 
+
+  @media (max-width: 820px) {
+        margin-left: auto; /* Push to the far right */
+    }
+
   @media (max-width: ${breakpoints.mobileL}) {
     height: 35px;
     width: 35px;
@@ -204,6 +239,12 @@ export const UserIcon = styled.img`
     height: 50px;
     width: 50px;
   }
+
+
+  @media (max-width: 820px) {
+        height: 50px;
+        width: 50px;
+    }
 `;
 
 export const Dropdown = styled.div`

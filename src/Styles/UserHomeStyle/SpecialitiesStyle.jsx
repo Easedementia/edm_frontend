@@ -7,6 +7,8 @@ export const SpecialitiesContainer = styled.div`
   padding: 50px 0;
   background-color: #f9fafb;
   margin-top: 100px;
+  box-sizing: border-box;
+
 
   @media (max-width: 1024px) {
     padding: 40px 0;
@@ -27,6 +29,7 @@ export const GridWrapper = styled.div`
   grid-template-rows: auto;
   grid-gap: 20px;
   width: 80%;
+  max-width: 1200px;
 
   /* Define grid areas to customize the layout */
   grid-template-areas:
@@ -105,6 +108,7 @@ export const SpecialityImage = styled.img`
   width: 100px;
   height: auto;
   margin-top: 10px;
+  max-width: 100%;
 
   @media (max-width: 1024px) {
     width: 90px;
@@ -154,7 +158,7 @@ export const SubTitle = styled.p`
 
   @media (max-width: 480px) {
     font-size: 11px;
-    max-width: 50%;
+    max-width: 100%;
     text-align: center;
   }
 `;

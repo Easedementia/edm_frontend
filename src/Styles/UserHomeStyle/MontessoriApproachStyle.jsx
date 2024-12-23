@@ -65,6 +65,8 @@ export const ApproachContainer = styled.div`
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
 
 
     @media (max-width: 768px) {
@@ -87,14 +89,14 @@ export const ApproachCard = styled.div`
 
 
     @media (max-width: 768px) {
-    padding: 15px;
-    width: 100px;
-  }
+        width: calc(33.33% - 20px);
+        text-align: left;
+    }
 
-  @media (max-width: 480px) {
-    padding: 10px;
-    width: 80px;
-  }
+    @media (max-width: 480px) {
+        width: calc(50% - 15px);
+        text-align: left;
+    }
 `;
 
 

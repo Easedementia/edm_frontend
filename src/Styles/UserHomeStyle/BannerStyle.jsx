@@ -80,17 +80,13 @@ export const Subtitle = styled.p`
         font-size: 14px;
         text-align: center;
         margin-top: 15px;
-        max-width: 60%; /* Ensures the text wraps within 90% of the container width */
-        margin-left: auto; 
-        margin-right: auto;
+        width: 90%;
     }
 
     @media (max-width: 480px) {
         font-size: 12px;
-        max-width: 60%; /* Constrains the text further for smaller screens */
+        width: 90%;
         text-align: center;
-        margin-left: auto;
-        margin-right: auto;
         word-wrap: break-word;
         margin-bottom: 30px;
     }
@@ -101,8 +97,8 @@ export const Subtitle = styled.p`
 export const ContactButton = styled(Link)`
     display: flex; 
     align-items: center;
-    justify-content: space-between;
-    padding: 12px 16px; /* Adjust padding */
+    justify-content: center;
+    padding: 12px 58px;
     background-color: #5517A8;
     color: white;
     border: none;
@@ -112,36 +108,36 @@ export const ContactButton = styled(Link)`
     text-decoration: none;
     transition: background-color 0.3s ease;
     height: 40px; 
-    width: 165px; 
-    align-self: flex-start;
-    margin-top: 15px;
-    margin-right: 375px;
-    white-space: nowrap; 
+    width: 170px; /* Auto width to fit content */
+    margin: 15px 0; /* Ensure centered placement */
+    align-self: center; /* Center inside its container */
+    white-space: nowrap;
 
     &:hover {
         background-color: #6d22d1;
         color: #fff;
     }
 
-
     @media (max-width: 768px) {
-        align-self: center;
-        margin-left: 300px;
+        font-size: 14px;
+        padding: 10px 40px;
+        height: 35px;
+        margin: 10px auto; /* Center the button */
     }
 
     @media (max-width: 480px) {
         font-size: 14px;
+        padding: 8px 30px;
         height: 35px;
-        width: 140px;
-        align-items: center;
-        margin-left: 300px;
+        margin: 10px auto; /* Center the button */
     }
 `;
 
+
+
 export const ArrowIcon = styled.img`
-    margin-left: 10px;
-    width: 65px;
-    height: 65px; 
+    width: 75px;
+    height: 75px; 
     transition: transform 0.2s ease;
     cursor: pointer;
 
@@ -182,18 +178,18 @@ export const ImageContainer = styled.div`
 export const BannerImage = styled.img`
     max-width: 100%;
     height: auto;
+    margin: 0 auto;
+    display: block;
 
 
     @media (max-width: 768px) {
         width: 70%;
-        margin-left: 120px;
-        margin-top: -60px;
+        margin: 20px auto;
     }
 
     @media (max-width: 480px) {
         width: 50%;
-        margin-left: 170px;
-        margin-bottom: -70px;
+        margin: 20px auto;
     }
 `;
 

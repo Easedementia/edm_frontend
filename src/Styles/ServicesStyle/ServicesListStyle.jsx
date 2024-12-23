@@ -14,6 +14,8 @@ export const ServicesContainer = styled.div`
     flex-direction: column;
     margin-top: 100px;
   }
+
+  
 `;
 
 export const HeadingContainer = styled.div`
@@ -146,9 +148,18 @@ export const ServiceDescription = styled.p`
   color: #2f2e2e;
   font-weight: 400;
 
+  @media (max-width: 768px) {
+    font-size: 13px;
+    text-align: left;
+    margin-top: 15px;
+  }
+  
+
 
   @media (max-width: 480px) {
     font-size: 13px;
+    text-align: left;
+    margin-top: 15px;
   }
 `;
 
@@ -180,12 +191,13 @@ export const BookButton = styled.button`
 
     @media (max-width: 768px) {
     align-self: center;
-    margin-right: 0;
+    margin-left: 0px;
   }
 
   @media (max-width: 480px) {
-    width: 200px;
+    width: 140px;
     font-size: 14px;
+    margin-left: 0;
   }
 `;
 
@@ -197,11 +209,26 @@ export const StyledImage = styled.img`
   margin-left: 80px;
 
 
-  @media (max-width: 768px) {
-    margin-left: 0;
+  @media (max-width: 1024px) {
+    margin-left: 60px;
     margin-top: 1rem;
+    width: 120px;
+    height: 120px;
+  }
+
+
+  @media (max-width: 768px) {
+    margin-left: 310px;
+    margin-top: 0.5rem;
     width: 100px;
     height: 100px;
+  }
+
+  @media (max-width: 480px) {
+    margin-left: 480px;
+    margin-top: 1rem;
+    width: 80px;
+    height: 80px;
   }
 `;
 
@@ -237,5 +264,6 @@ export const ArrowIcon = styled.img`
     @media (max-width: 480px) {
     width: 40px;
     height: 40px;
+    
   }
 `;

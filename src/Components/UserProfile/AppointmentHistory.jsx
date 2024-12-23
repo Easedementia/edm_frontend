@@ -179,7 +179,7 @@ const AppointmentHistory = () => {
           </ButtonsContainer>
         </ProfileDetails>
         <SummaryContainer>
-      <SummaryTitle>Summary</SummaryTitle>
+      <SummaryTitle>Appointment History</SummaryTitle>
       <TableContainer>
         <Table>
           <thead>

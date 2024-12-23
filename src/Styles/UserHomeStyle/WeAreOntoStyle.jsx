@@ -34,7 +34,9 @@ export const CardContainer = styled.div`
     display: flex;
     justify-content: center;
     gap: 50px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    width: 100%; 
+    margin: 0 auto;
 
     @media (max-width: 768px) {
         gap: 30px;
@@ -42,9 +44,7 @@ export const CardContainer = styled.div`
 
     @media (max-width: 480px) {
         flex-direction: column;
-        width: 70%;
-        margin-left: 120px;
-        gap: 50px;
+        gap: 30px;
     }
 `;
 
@@ -53,32 +53,32 @@ export const Card = styled.div`
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 480px;
-    height: 360px;
+    width: 100%; /* Responsive width */
+    max-width: 480px; /* Constrain to 480px */
+    height: auto;
     text-align: center;
 
     @media (max-width: 768px) {
-        width: 90%;
-        height: auto;
+        
         padding: 15px;
     }
 
     @media (max-width: 480px) {
-        width: 100%;
         padding: 10px;
     }
 `;
 
 export const CardImage = styled.img`
     width: 130px;
-    height: 70px;
+    max-width: 100%;
+    height: auto;
     margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
 
     @media (max-width: 768px) {
         width: 110px;
-        height: auto;
+        
     }
 
     @media (max-width: 480px) {

@@ -4,9 +4,9 @@ import GlobalStyle from "../Styles/GlobalStyles"
 import ServicesBanner from "../Components/Services/ServicesBanner"
 import ServicesBannerImage from "../Components/Services/ServicesBannerImage"
 import ServicesList from "../Components/Services/ServicesList"
-import ServiceListing from '../Components/UserHomePage/ServiceListing'
 import CallButton from "../Components/CallUs/CallButton"
 import WhatsappButton from "../Components/WhatsappChat/WhatsappButton"
+import ListServices from "../Components/Services/ListServices"
 
 const ServicesPage = () => {
   return (
@@ -16,7 +16,7 @@ const ServicesPage = () => {
     <ServicesBanner/>
     <ServicesBannerImage/>
     <ServicesList/>
-    <ServiceListing/>
+    <ListServices/>
     <CallButton/>
     <WhatsappButton/>
     <Footer/>

@@ -63,7 +63,8 @@ export const TestimonialCard = styled.div`
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -112,7 +113,7 @@ export const Stars = styled.div`
     @media (max-width: 480px) {
         height: 30px;
         margin-bottom: 15px;
-        margin-left: 120px;
+        margin-left: 100px;
     }
 `;
 
