@@ -188,7 +188,7 @@ export const BannerImage = styled.img`
     }
 
     @media (max-width: 480px) {
-        width: 50%;
+        width: 80%;
         margin: 20px auto;
     }
 `;
