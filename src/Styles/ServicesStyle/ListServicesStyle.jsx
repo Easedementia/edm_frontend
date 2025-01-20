@@ -84,7 +84,7 @@ export const ServiceCard = styled.div`
   }
 
   @media (max-width: 480px) {
-    width: 70%;
+    width: 100%;
     padding: 8px;
   }
 `;
