@@ -76,6 +76,7 @@ export const ServiceWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 2rem;
   background-color: #f9fafb;
   font-family: 'Poppins', sans-serif;
@@ -165,23 +166,22 @@ export const ServiceDescription = styled.p`
 
 export const BookButton = styled.button`
   display: flex; 
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 16px; /* Adjust padding */
-    background-color: #5517A8;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    height: 40px; 
-    width: 170px; 
-    align-self: flex-start;
-    margin-top: 15px;
-    margin-right: 375px;
-    white-space: nowrap; 
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px; 
+  background-color: #5517A8;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  height: 40px; 
+  width: 170px; 
+  align-self: flex-start;
+  margin-top: 15px;
+  white-space: nowrap;
 
     &:hover {
         background-color: #6d22d1;
@@ -190,52 +190,44 @@ export const BookButton = styled.button`
 
 
     @media (max-width: 768px) {
-    align-self: center;
-    margin-left: 0px;
-  }
+        align-self: center;
+    }
 
-  @media (max-width: 480px) {
-    width: 140px;
-    font-size: 14px;
-    margin-left: 0;
-  }
+    @media (max-width: 480px) {
+        width: 140px;
+        font-size: 14px;
+    }
 `;
 
 export const StyledImage = styled.img`
-  width: 30%;
-  height: 150px;
   width: 150px;
+  height: 150px;
   object-fit: cover;
-  margin-left: 80px;
+  margin-left: auto;
+  margin-right: auto;
 
 
   @media (max-width: 1024px) {
-    margin-left: 60px;
-    margin-top: 1rem;
-    width: 120px;
-    height: 120px;
-  }
+        width: 120px;
+        height: 120px;
+    }
 
+    @media (max-width: 768px) {
+        width: 100px;
+        height: 100px;
+    }
 
-  @media (max-width: 768px) {
-    margin-left: 310px;
-    margin-top: 0.5rem;
-    width: 100px;
-    height: 100px;
-  }
-
-  @media (max-width: 480px) {
-    margin-left: 480px;
-    margin-top: 1rem;
-    width: 80px;
-    height: 80px;
-  }
+    @media (max-width: 480px) {
+        width: 80px;
+        height: 80px;
+    }
 `;
 
 export const FirstRow = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 2rem;
   background-color: #f9fafb;
   font-family: 'Poppins', sans-serif;

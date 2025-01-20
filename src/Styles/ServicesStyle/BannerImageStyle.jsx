@@ -12,6 +12,7 @@ export const BannerContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
 
     @media (max-width: 768px) {
@@ -31,6 +32,7 @@ export const Overlay = styled.div`
     right: 0;
     bottom: 0;
     background: linear-gradient(rgba(157, 180, 255, 0.5), rgba(98, 0, 255, 0.5));
+    overflow: hidden;
 `;
 
 
@@ -52,9 +54,7 @@ export const TextContainer = styled.div`
     @media (max-width: 480px) {
         padding: 1.5rem;
         text-align: center;
-        max-width: 100%;
-        overflow-wrap: break-word;
-        word-break: break-word;
+        max-width: 95%;
     }
 `;
 
@@ -67,13 +67,12 @@ export const TextParagraph = styled.p`
 
     @media (max-width: 768px) {
         font-size: 0.9rem;
-        line-height: 1;
         text-align: left;
     }
 
     @media (max-width: 480px) {
-        font-size: 0.6rem;
-        line-height: 1;
+        font-size: 0.75rem; 
+        line-height: 1.1;
         margin: 0.3rem 0;
         text-align: left;
     }

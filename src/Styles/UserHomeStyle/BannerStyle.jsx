@@ -129,7 +129,7 @@ export const ContactButton = styled(Link)`
         font-size: 14px;
         padding: 8px 30px;
         height: 35px;
-        margin: 10px auto; /* Center the button */
+        margin: 10px auto; 
     }
 `;
 

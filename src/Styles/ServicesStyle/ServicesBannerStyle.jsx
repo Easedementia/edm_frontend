@@ -6,24 +6,24 @@ export const ServicesContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 50px;
     background-color: #f9fafb;
-    font-family: 'Poppins', sans-serif;
-    margin-top: 90px;
-    margin-bottom: 90px;
+    margin: 80px auto;
 
+
+    @media (max-width: 1024px) {
+        padding: 40px;
+    }
 
     @media (max-width: 768px) {
         flex-direction: column;
-        padding: 1.5rem;
+        padding: 30px;
         margin-top: 60px;
-        margin-bottom: 60px;
+        text-align: center;
     }
 
     @media (max-width: 480px) {
-        padding: 1rem;
-        margin-top: 50px;
-        margin-bottom: 50px;
+        padding: 20px;
     }
 `;
 
@@ -35,11 +35,11 @@ export const HeadingContainer = styled.div`
     @media (max-width: 768px) {
         max-width: 100%;
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 20px;
     }
 
     @media (max-width: 480px) {
-        margin-bottom: 1.5rem;
+        margin-bottom: 15px;
     }
 `;
 
@@ -52,49 +52,60 @@ export const SubHeading = styled.h2`
 
 
     @media (max-width: 768px) {
-        font-size: 1.3rem;
+        font-size: 24px;
         text-align: center;
     }
 
     @media (max-width: 480px) {
-        font-size: 1.1rem;
+        font-size: 18px;
     }
 `;
 
 
 export const MainHeading = styled.h1`
-    font-size: 3rem;
-    color: black;
-    margin: 0.5rem 0;
-    text-align: left;
     font-family: 'Poppins', sans-serif;
+    font-size: 48px;
     font-weight: 700;
+    color: #000;
+    text-align: left;
 
 
     @media (max-width: 768px) {
-        font-size: 2.2rem;
+        font-size: 36px;
         text-align: center;
     }
 
     @media (max-width: 480px) {
-        font-size: 1.8rem;
+        font-size: 28px;
+        text-align: center;
     }
 `;
 
 
 export const Description = styled.p`
-    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
     color: #2f2e2e;
+    margin-top: 20px;
+    line-height: 1.5;
     text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 
 
     @media (max-width: 768px) {
-        font-size: 1rem;
+        font-size: 14px;
         text-align: center;
+        margin-top: 15px;
+        width: 90%;
     }
 
     @media (max-width: 480px) {
-        font-size: 0.9rem;
+        font-size: 12px;
+        width: 90%;
+        text-align: center;
+        word-wrap: break-word;
+        margin-bottom: 30px;
     }
 `;
 
@@ -115,16 +126,20 @@ export const ImageContainer = styled.div`
 
 
 export const StyledImage = styled.img`
-    width: 100%;
+    max-width: 100%;
     height: auto;
+    margin: 0 auto;
+    display: block;
 
 
     @media (max-width: 768px) {
-        width: 90%;
+        width: 70%;
+        margin: 20px auto;
     }
 
     @media (max-width: 480px) {
-        width: 100%;
+        width: 80%;
+        margin: 20px auto;
     }
 `;
 
