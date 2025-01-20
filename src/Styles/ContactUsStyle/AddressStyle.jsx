@@ -12,7 +12,6 @@ export const AddressContainer = styled.div`
     @media (max-width: 1024px) {
     flex-direction: column;
     align-items: center;
-    text-align: left;
     margin-top: 60px;
   }
 
@@ -29,7 +28,8 @@ export const AddressContainer = styled.div`
 
 
 export const ContactInfo = styled.div`
-    max-width: 50%;
+    flex: 1;
+    margin-right: 20px;
 
 
     @media (max-width: 1024px) {
@@ -39,32 +39,35 @@ export const ContactInfo = styled.div`
 
   @media (max-width: 768px) {
     padding: 0 10px;
-    flex-direction: column;
-    text-align: left;
+    margin-right: 0;
   }
 `;
     
 
 export const MapContainer = styled.div`
-    max-width: 50%;
-
+    flex: 1;
+    
+    iframe {
+        width: 100%; /* Make iframe responsive */
+        height: 330px;
+        border: none;
+    }
 
     @media (max-width: 1024px) {
-    flex-direction: column;
     max-width: 100%;
   }
 
   @media (max-width: 768px) {
-    iframe {
-      height: 250px;
+        iframe {
+            height: 250px;
+        }
     }
-  }
 
-  @media (max-width: 480px) {
-    iframe {
-      height: 200px;
+    @media (max-width: 480px) {
+        iframe {
+            height: 200px;
+        }
     }
-  }
 `;
 
 
@@ -75,14 +78,14 @@ export const Heading = styled.h2`
 
 
     @media (max-width: 768px) {
-    font-size: 1.2rem;
-    text-align: left;
-  }
+        font-size: 1rem;
+        text-align: center;
+    }
 
-  @media (max-width: 480px) {
-    font-size: 1rem;
-    text-align: left;
-  }
+    @media (max-width: 480px) {
+        font-size: 0.9rem;
+        text-align: center;
+    }
 `;
 
 
@@ -93,11 +96,11 @@ export const Paragraph = styled.p`
 
     @media (max-width: 768px) {
     font-size: 0.9rem;
-    text-align: left;
+    text-align: center;
   }
 
   @media (max-width: 480px) {
     font-size: 0.85rem;
-    text-align: left;
+    text-align: center;
   }
 `;

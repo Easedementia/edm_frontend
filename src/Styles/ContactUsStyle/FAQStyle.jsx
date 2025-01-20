@@ -4,7 +4,7 @@ export const FAQContainer = styled.div`
     padding: 20px;
     background-color: #f9fafb;
     border-radius: 8px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 70px;
 
@@ -103,8 +103,10 @@ export const ArrowIcon = styled.img`
     transition: transform 0.3s ease;
     transform: rotate(${props => props.rotate}deg);
     transform-origin: center;
-    height: 50px;
-    width: 50px;
+    max-height: 100%; /* Scale within its container */
+    max-width: 100%;
+    height: 55px;
+    width: 55px;
     transition: transform 0.2s ease;
 
     &:hover {

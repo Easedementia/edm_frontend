@@ -11,6 +11,7 @@ export const PageWrapper = styled.div`
     background-color: #f9fafb;
     margin-top: 80px;
     font-family: 'Poppins', sans-serif;
+    flex-wrap: wrap;
 
 
     @media (max-width: 1024px) {
@@ -48,13 +49,13 @@ export const LeftSide = styled.div`
   }
 
   @media (max-width: 768px) {
-    padding: 1rem;
+    padding: 2rem 1rem;
     align-items: center;
     text-align: center;
   }
 
   @media (max-width: 480px) {
-    padding: 1rem;
+    padding: 1rem 0.5rem;
     align-items: center;
     text-align: center;
   }
@@ -77,8 +78,6 @@ export const RightSide = styled.div`
 
   @media (max-width: 768px) {
     margin: 15px 0;
-    width: 100%;
-    justify-content: center;
   }
 
   @media (max-width: 480px) {
@@ -183,9 +182,9 @@ export const Description = styled.p`
 
 
 export const Button = styled.button`
-    display: flex; 
+    display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 12px 16px; /* Adjust padding */
     background-color: #5517A8;
     color: white;
@@ -194,32 +193,31 @@ export const Button = styled.button`
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     height: 40px; 
-    width: 138px; 
-    align-self: flex-start;
+    width: 170px; 
+    white-space: nowrap;
+    text-align: center;
+
+    /* Remove fixed margin-right and ensure responsive alignment */
     margin-top: 15px;
-    margin-right: 375px;
-    white-space: nowrap; 
 
     &:hover {
         background-color: #6d22d1;
         color: #fff;
+        transform: scale(1.05); /* Slight hover effect */
     }
-
 
     @media (max-width: 768px) {
-      align-self: center;
-      margin-right: 0;
+      margin: 10px auto; 
+      text-align: center;
     }
 
-
     @media (max-width: 480px) {
-    align-items: center;
-    margin-left: 100px;
-    font-size: 14px;
-    padding: 10px 14px;
-  }
+        margin: 10px auto; /* Center the button fully on very small screens */
+        font-size: 14px;
+        padding: 10px 14px;
+    }
 `;
 
 
@@ -235,7 +233,7 @@ export const ArrowIcon = styled.img`
     }
 
 
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
     width: 50px;
     height: 50px;
   }
@@ -269,9 +267,9 @@ export const FormWrapper = styled.div`
   }
 
   @media (max-width: 480px) {
-    padding: 1rem;
-    margin-top: 1rem;
-  }
+    width: 100%;
+}
+
 `;
 
 
