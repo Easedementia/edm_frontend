@@ -7,6 +7,7 @@ export const Container = styled.div`
     padding: 20px;
     margin-top: 100px;
     font-family: 'Poppins', sans-serif;
+    flex-wrap: wrap;
 
 
     @media (max-width: 1024px) {
@@ -27,7 +28,8 @@ export const Card = styled.div`
     background-color: #fff;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 310px;
+    width: 90%; /* Ensure it adapts to smaller screens */
+    max-width: 310px;
     text-align: left;
     padding: 20px;
     display: flex;
@@ -49,24 +51,25 @@ export const Card = styled.div`
 
 
 export const Image = styled.img`
-    width: 280px;
-    height: 280px;
+    width: 100%; /* Scale based on the parent width */
+    max-width: 280px; /* Prevents exceeding parent container */
+    height: 100%; /* Maintain aspect ratio */
     border-radius: 25px;
     object-fit: cover;
     margin-bottom: 15px;
-    align-items: center;
-    margin-top: -18px;
 
 
     @media (max-width: 1024px) {
     width: 250px;
     height: 250px;
+    border-radius: 25px;
   }
 
   @media (max-width: 768px) {
     width: 100%;
     max-width: 350px;
     height: auto;
+    border-radius: 25px;
   }
 `;
 
@@ -125,9 +128,8 @@ export const ExploreMore = styled.button`
     cursor: pointer;
     white-space: nowrap;
     transition: transform 0.3s;
-    margin-left: 110px;
-    margin-top: -40px;
-    gap: -10px;
+    margin: auto;
+    
 
     &:hover {
         transform: scale(1.05);
@@ -135,8 +137,8 @@ export const ExploreMore = styled.button`
     }
 
     img {
-        width: 56px; /* Smaller size to fit well */
-        height: 56px;
+        width: 35px; /* Smaller size to fit well */
+        height: 35px;
 
 
         @media (max-width: 768px) {
@@ -145,8 +147,11 @@ export const ExploreMore = styled.button`
     }
 
     @media (max-width: 480px) {
-      width: 30px;
-      height: 30px;
+        font-size: 12px;
+        img {
+            width: 30px;
+            height: 30px;
+        }
     }
     }
 `;

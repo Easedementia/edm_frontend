@@ -65,8 +65,8 @@ export const CardsWrapper = styled.div`
 `;
 
 export const Card = styled.div`
-  flex: 1 1 calc(50% - 20px);  /* Take up 50% of the row minus the gap, ensuring 2 cards per row */
-  max-width: calc(50% - 20px);
+  flex: 1 1 calc(50% - 10px);
+  max-width: calc(50% - 10px);
   margin: 10px 0;  /* Adjust margin to fit within the row */
   padding: 20px;
   border-radius: 10px;
@@ -77,8 +77,8 @@ export const Card = styled.div`
   cursor: pointer;
 
   @media (max-width: 768px) {
-    flex: 1 1 calc(100% - 20px);
-    max-width: calc(100% - 20px);
+    flex: 1 1 calc(100% - 10px);
+    max-width: calc(100% - 10px);
     padding: 15px;
   }
 
@@ -102,23 +102,23 @@ export const TopRow = styled.div`
 
 export const ImageWrapper = styled.div`
   flex: 0 0 80px;
+
   img {
-    width: 80px;
-    height: 80px;
+    width: 100%;
+    max-width: 80px;
+    height: auto;
     border-radius: 50%;
 
-
     @media (max-width: 768px) {
-      width: 70px;
-      height: 70px;
+      max-width: 70px;
     }
 
     @media (max-width: 480px) {
-      width: 60px;
-      height: 60px;
+      max-width: 60px;
     }
   }
 `;
+
 
 export const DoctorInfo = styled.div`
   margin-left: 15px;
@@ -168,7 +168,7 @@ export const DetailsRow = styled.div`
   display: flex;
   align-items: center;
   margin-top: 5px;
-  white-space: nowrap;
+  flex-wrap: wrap;
 
 
   @media (max-width: 480px) {
@@ -246,7 +246,7 @@ export const ExploreMore = styled.div`
     border: none;
     border-radius: 20px;
     padding: 10px 20px;
-    margin-left: 330px;
+    margin: auto;
     font-weight: 300;
     cursor: pointer;
     

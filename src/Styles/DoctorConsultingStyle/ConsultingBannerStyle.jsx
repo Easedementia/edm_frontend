@@ -6,46 +6,40 @@ export const ConsultingContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 50px;
     background-color: #f9fafb;
-    font-family: 'Poppins', sans-serif;
-    margin-top: 80px;
+    margin: 50px auto;
 
+
+    @media (max-width: 1024px) {
+        padding: 40px;
+    }
 
     @media (max-width: 768px) {
         flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-        justify-content: center;
-        gap: 1rem;
+        padding: 30px;
+        margin-top: 60px;
+        text-align: center;
     }
 
-
     @media (max-width: 480px) {
-        flex-direction: column;
-        padding: 0.5rem;
-        margin-top: 80px;
-        gap: 0.5rem;
+        padding: 20px;
     }
 `;
 
 
 export const HeadingContainer = styled.div`
     max-width: 50%;
-    margin-top: 70px;
 
 
     @media (max-width: 768px) {
-      max-width: 100%; 
-        margin-top: 0;
-        text-align: center;
-    }
-
-
-    @media (max-width: 480px) {
         max-width: 100%;
         text-align: center;
-        padding: 0 0.5rem;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 480px) {
+        margin-bottom: 15px;
     }
 
 `;
@@ -59,88 +53,96 @@ export const SubHeading = styled.h2`
 
 
     @media (max-width: 768px) {
-        font-size: 1.2rem;
+        font-size: 24px;
         text-align: center;
     }
 
-
     @media (max-width: 480px) {
-        font-size: 1.1rem;
-        text-align: center;
+        font-size: 18px;
     }
 `;
 
 
 export const MainHeading = styled.h1`
-    font-size: 3rem;
-    color: black;
-    margin: 0.5rem 0;
-    text-align: left;
     font-family: 'Poppins', sans-serif;
+    font-size: 48px;
     font-weight: 700;
+    color: #000;
+    text-align: left;
 
 
     @media (max-width: 768px) {
-    font-size: 2.5rem;
-    text-align: center;
-  }
+        font-size: 36px;
+        text-align: center;
+        padding-top: 20px;
+    }
 
-  @media (max-width: 480px) {
-    font-size: 2rem;
-    text-align: center;
-  }
+    @media (max-width: 480px) {
+        font-size: 28px;
+        padding-top: 15px;
+        text-align: center;
+    }
 `;
 
 
 export const Description = styled.p`
-    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
     color: #2f2e2e;
+    margin-top: 20px;
+    line-height: 1.5;
     text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 
 
     @media (max-width: 768px) {
-    font-size: 1rem;
-    text-align: center;
-  }
+        font-size: 14px;
+        text-align: center;
+        margin-top: 15px;
+        width: 90%;
+    }
 
-  @media (max-width: 480px) {
-    font-size: 0.9rem;
-    text-align: center;
-  }
+    @media (max-width: 480px) {
+        font-size: 12px;
+        width: 90%;
+        text-align: center;
+        word-wrap: break-word;
+        margin-bottom: 30px;
+    }
 `;
 
 
 export const ImageContainer = styled.div`
-    max-width: 68%;
+    max-width: 50%;
 
 
     @media (max-width: 768px) {
-        max-width: 100%; 
-        margin-top: 20px; 
-        text-align: center; 
+        max-width: 100%;
+        text-align: center;
     }
 
     @media (max-width: 480px) {
-        max-width: 100%; 
-        margin-top: 15px;
+        max-width: 100%;
     }
 `;
 
 
 export const StyledImage = styled.img`
-    width: 120%;
+    max-width: 100%;
     height: auto;
-    object-fit: cover;
-    margin-left: 50px;
+    margin: 0 auto;
+    display: block;
 
 
     @media (max-width: 768px) {
-        width: 100%;
+        width: 70%;
+        margin: 20px auto;
     }
 
-
     @media (max-width: 480px) {
-        width: 100%;
+        width: 80%;
+        margin: 20px auto;
     }
 `;
 
@@ -150,7 +152,7 @@ export const ContactButton = styled(Link)`
     display: flex; 
     align-items: center;
     justify-content: center;
-    padding: 12px 16px; /* Adjust padding */
+    padding: 12px 58px;
     background-color: #5517A8;
     color: white;
     border: none;
@@ -160,11 +162,10 @@ export const ContactButton = styled(Link)`
     text-decoration: none;
     transition: background-color 0.3s ease;
     height: 40px; 
-    width: fit-content; 
-    align-self: flex-start;
-    margin-top: 15px;
-    white-space: nowrap; 
-    align-self: flex-start;
+    width: 270px; /* Auto width to fit content */
+    margin: 15px 0; /* Ensure centered placement */
+    align-self: center; /* Center inside its container */
+    white-space: nowrap;
 
     &:hover {
         background-color: #6d22d1;
@@ -173,17 +174,20 @@ export const ContactButton = styled(Link)`
 
 
     @media (max-width: 768px) {
-    font-size: 14px;
-    padding: 10px 14px;
-    margin: 10px auto;
-    display: flex;
-  }
+        font-size: 14px;
+        padding: 10px 40px;
+        height: 35px;
+        margin: 10px auto; /* Center the button */
+        width: 235px;
+    }
 
-  @media (max-width: 480px) {
-    font-size: 12px;
-    padding: 8px 12px;
-    margin: 8px auto;
-  }
+    @media (max-width: 480px) {
+        font-size: 14px;
+        padding: 8px 30px;
+        height: 35px;
+        margin: 10px auto;
+        width: 220px;
+    }
 `
 
 
