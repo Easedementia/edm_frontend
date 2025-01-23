@@ -234,15 +234,20 @@ export const SummaryImage = styled.img`
 // Table container
 export const TableContainer = styled.div`
   width: 100%;
-  border-collapse: collapse;
+  /* border-collapse: collapse; */
   overflow-x: auto;
+  display: block;
 `;
 
 export const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
+  table-layout: auto;
+  font-size: 14px;
 
   @media (max-width: 480px) {
+    table-layout: fixed;
+    word-wrap: break-word;
     font-size: 12px;
   }
 `;
@@ -255,7 +260,7 @@ export const TableHeader = styled.th`
   text-align: center;
 
   @media (max-width: 480px) {
-    font-size: 14px;
+    font-size: 10px;
   }
 `;
 
@@ -267,6 +272,7 @@ export const TableData = styled.td`
   padding: 12px;
   font-size: 14px;
   white-space: nowrap;
+  word-wrap: break-word;
   text-align: center;
   color: #000;
   font-family: 'Poppins', sans-serif;
