@@ -247,31 +247,40 @@ export const Table = styled.table`
 
   @media (max-width: 480px) {
     table-layout: fixed;
-    word-wrap: break-word;
     font-size: 12px;
   }
 `;
 
 export const TableHeader = styled.th`
-  text-align: left;
-  padding: 12px;
-  font-size: 16px;
-  color: #000;
   text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  color: #000;
+  white-space: normal;
+  word-wrap: break-word;
 
   @media (max-width: 480px) {
-    font-size: 10px;
+    font-size: 12px;
+    padding: 4px;
   }
 `;
 
 export const TableRow = styled.tr`
   border-bottom: 1px solid #eaeaea;
+
+  &:last-child {
+    border-bottom: none; /* Remove border for the last row */
+  }
+
+  @media (max-width: 480px) {
+    display: table-row; /* Maintain table structure */
+  }
 `;
 
 export const TableData = styled.td`
-  padding: 12px;
+  padding: 8px;
   font-size: 14px;
-  white-space: nowrap;
+  white-space: normal;
   word-wrap: break-word;
   text-align: center;
   color: #000;
@@ -280,6 +289,7 @@ export const TableData = styled.td`
 
   @media (max-width: 480px) {
     font-size: 12px;
+    padding: 4px;
   }
 `;
 
@@ -356,3 +366,35 @@ export const PaginationInfo = styled.span`
   color: #555;
   margin: 0 8px;
 `;
+
+
+
+@media (max-width: 480px) {
+  export const TableContainer = styled.div`
+    display: block;
+    width: 100%;
+    overflow-x: auto; /* Retains scrollability for narrow screens */
+  `;
+
+  export const TableRow = styled.tr`
+    display: block;
+    margin-bottom: 8px; /* Add spacing between rows */
+  `;
+
+  export const TableHeader = styled.th`
+    display: none; /* Hide headers in mobile stacked view */
+  `;
+
+  export const TableData = styled.td`
+    display: block;
+    text-align: left;
+    padding: 8px 16px;
+    font-size: 12px;
+
+    &::before {
+      content: attr(data-label); /* Display header name */
+      font-weight: bold;
+      margin-right: 8px;
+    }
+  `;
+}
