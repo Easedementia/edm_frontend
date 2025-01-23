@@ -18,11 +18,13 @@ export const ProfileContainer = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
   }
 
   @media (max-width: 480px) {
     padding: 10px;
     margin-top: 50px;
+    gap: 10px;
   }
 `;
 
@@ -124,6 +126,7 @@ export const ButtonsContainer = styled.div`
 
   @media (max-width: 480px) {
     margin-top: 30px;
+    padding: 0 10px;
   }
 `;
 
@@ -134,14 +137,15 @@ export const Button = styled.button`
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   padding: 12px;
-  width: 100%;
+  width: calc(100% - 30px);
+  max-width: 100%;
   height: 50px;
   border: 1px solid #eaeaea;
   border-radius: 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin: 20px auto;
   cursor: pointer;
   transition: background-color 0.3s ease;
 
@@ -170,7 +174,7 @@ export const Button = styled.button`
 
 // Summary section on the right side
 export const SummaryContainer = styled.div`
-  width: 75%;
+  width: 50%;
   padding: 20px;
   background-color: #fff;
   border-radius: 12px;
@@ -178,13 +182,19 @@ export const SummaryContainer = styled.div`
   margin-right: 40px;
 
 
-  @media (max-width: 768px) {
-    width: 90%;
+  @media (max-width: 1024px) {
+    width: 60%;
     margin-right: 0;
   }
 
 
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+
+
   @media (max-width: 480px) {
+    width: 100%;
     padding: 15px;
   }
 `;
@@ -206,20 +216,18 @@ export const SummaryTitle = styled.h3`
 
 
 export const SummaryImage = styled.img`
-  width: 400px;
-  height: 400px;
+  max-width: 100%;
+  height: auto;
   align-items: center;
   border-radius: 12px;
 
 
   @media (max-width: 768px) {
-    width: 300px;
-    height: 300px;
+    max-width: 300px;
   }
 
   @media (max-width: 480px) {
-    width: 250px;
-    height: 250px;
+    max-width: 250px;
   }
 `;
 
@@ -227,6 +235,7 @@ export const SummaryImage = styled.img`
 export const TableContainer = styled.div`
   width: 100%;
   border-collapse: collapse;
+  overflow-x: auto;
 `;
 
 export const Table = styled.table`
