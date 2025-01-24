@@ -136,7 +136,7 @@ const UserSignupPage = () => {
           <TitleSpan>New Account</TitleSpan>
         </MainTitle>
         <Subtitle>Already Registered? <a href="/login">Login</a></Subtitle>
-        <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Aenean semper mauris.</Description>
+        <Description>Join us today to access personalized care and innovative solutions designed to support your journey toward better well-being!</Description>
         <KnowMoreButton>
             Know More
             <ArrowIcon src={arrow} alt="Arrow Icon" />

@@ -369,32 +369,3 @@ export const PaginationInfo = styled.span`
 
 
 
-@media (max-width: 480px) {
-  export const TableContainer = styled.div`
-    display: block;
-    width: 100%;
-    overflow-x: auto; /* Retains scrollability for narrow screens */
-  `;
-
-  export const TableRow = styled.tr`
-    display: block;
-    margin-bottom: 8px; /* Add spacing between rows */
-  `;
-
-  export const TableHeader = styled.th`
-    display: none; /* Hide headers in mobile stacked view */
-  `;
-
-  export const TableData = styled.td`
-    display: block;
-    text-align: left;
-    padding: 8px 16px;
-    font-size: 12px;
-
-    &::before {
-      content: attr(data-label); /* Display header name */
-      font-weight: bold;
-      margin-right: 8px;
-    }
-  `;
-}

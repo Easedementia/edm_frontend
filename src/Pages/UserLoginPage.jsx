@@ -121,7 +121,7 @@ export const UserLoginPage = () => {
                     Not Registered yet? <Link to="/signup">Sign Up</Link>
                 </Subtitle>
                 <Description>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Welcome to Easedementia, where we combine compassionate care and innovation to enhance well-being and quality of life.
                 </Description>
 
                 <Button>
