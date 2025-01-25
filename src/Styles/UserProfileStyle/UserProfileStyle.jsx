@@ -118,9 +118,31 @@ export const UserContact = styled.div`
   }
 `;
 
+
+export const EditProfileButton = styled.button`
+  background-color: #5517A8;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 20px;
+  margin: 15px auto;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #3a0f75;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 4px 2px #a381d1;
+  }
+`;
+
 // Buttons container
 export const ButtonsContainer = styled.div`
-  margin-top: 40px;
+  margin-top: 30px;
   width: 100%;
 
 

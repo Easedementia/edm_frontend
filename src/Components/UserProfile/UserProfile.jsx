@@ -1,5 +1,5 @@
 import UserNavbar from "../Navbar/UserNavbar"
-import { ProfileContainer, ProfileDetails, AvatarWrapper, Avatar, UserName, UserContact, ButtonsContainer, Button, SummaryContainer, SummaryImage, EditIcon} from '../../Styles/UserProfileStyle/UserProfileStyle'
+import { ProfileContainer, ProfileDetails, AvatarWrapper, Avatar, UserName, UserContact, EditProfileButton, ButtonsContainer, Button, SummaryContainer, SummaryImage, EditIcon} from '../../Styles/UserProfileStyle/UserProfileStyle'
 import user_profile_right_side from '../../assets/images/user_profile_right_side.svg'
 import arrow from '../../assets/images/arrow.svg'
 import edit_icon from '../../assets/images/edit_icon.svg'
@@ -18,12 +18,14 @@ import { toast } from "react-toastify"
 import { clearAuth } from '../../Redux/UserSlice'
 import CallButton from "../CallUs/CallButton"
 import WhatsappButton from "../WhatsappChat/WhatsappButton"
+import EditProfileModal from "./EditProfileModal"
 
 
 const UserProfile = () => {
   const [userDetails, setUserDetails] = useState({});
   console.log("User Details:", userDetails);
   const [avatarPreview, setAvatarPreview] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -127,6 +129,13 @@ const UserProfile = () => {
             <div>{userDetails.mobile || 'Phone Number'}</div>
             <div>{userDetails.email || 'Email Address'}</div>
           </UserContact>
+          <EditProfileButton onClick={() => setIsModalOpen(true)}>Edit Profile</EditProfileButton>
+          <EditProfileModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            userDetails={userDetails}
+            setUserDetails={setUserDetails}
+          />
           <ButtonsContainer>
             <Button onClick={() => handleNavigate('/user-profile/assessment-history')}>
               Assessment History <img src={arrow} alt="Arrow Icon" />
