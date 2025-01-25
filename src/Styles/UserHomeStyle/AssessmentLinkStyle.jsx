@@ -145,7 +145,8 @@ export const AssessmentButton = styled(Link)`
     width: 165px; 
     align-self: center;
     margin: 15px auto;
-    white-space: nowrap; 
+    white-space: nowrap;
+    margin-left: 0; /* Align the button to the left */
 
     &:hover {
         background-color: #6d22d1;

@@ -7,8 +7,9 @@ const Address = () => {
         <ContactInfo>
             <Heading>Address</Heading>
             <Paragraph>Ease Dementia Technologies pvt. ltd</Paragraph>
-            <Paragraph>DS7, Heavenly Plaza</Paragraph>
-            <Paragraph>Civil Line Road, Chembumukku, Vazhakkala, Kakkanad, Kochi, Kerala 682021</Paragraph>
+            <Paragraph>Thykoodam Metro Station</Paragraph>
+            <Paragraph>X86H+J2M, SH15, Thykoodam, Vyttila,</Paragraph>
+            <Paragraph>Ernakulam, Kerala, 682019</Paragraph>
 
             <Heading>Email Address</Heading>
             <Paragraph>support@easedementia.com</Paragraph>

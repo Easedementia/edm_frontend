@@ -63,8 +63,8 @@ const UserNavbar = () => {
             <NavItems className={isNavOpen ? 'active' : ''}>
                 <NavItem as={Link} to="/about" style={{ color: isActive('/about') ? '#5517A8' : 'black' }} >About Us</NavItem>
                 <NavItem as={Link} to="/services" style={{ color: isActive('/services') ? '#5517A8' : 'black' }} >Services</NavItem>
-                <NavItem as={Link} to="/doctor-consulting" style={{ color: isActive('/doctor-consulting') ? '#5517A8' : 'black' }} >Doctor Consulting</NavItem>
                 <NavItem as={Link} to="/assessment" style={{ color: isActive('/assessment') ? '#5517A8' : 'black' }} >Assessment</NavItem>
+                <NavItem as={Link} to="/doctor-consulting" style={{ color: isActive('/doctor-consulting') ? '#5517A8' : 'black' }} >Doctor Consulting</NavItem>
                 <NavItem as={Link} to="/contact" style={{ color: isActive('/contact') ? '#5517A8' : 'black' }} >Contact Us</NavItem>
 
                 <UserIcon onClick={handleUserIconClick} src={user_icon} alt="User Icon" />

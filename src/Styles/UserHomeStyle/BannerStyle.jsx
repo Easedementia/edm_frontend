@@ -108,9 +108,9 @@ export const ContactButton = styled(Link)`
     text-decoration: none;
     transition: background-color 0.3s ease;
     height: 40px; 
-    width: 170px; /* Auto width to fit content */
-    margin: 15px 0; /* Ensure centered placement */
-    align-self: center; /* Center inside its container */
+    width: 170px; 
+    margin: 15px 0; 
+    align-self: center; 
     white-space: nowrap;
 
     &:hover {
@@ -122,7 +122,7 @@ export const ContactButton = styled(Link)`
         font-size: 14px;
         padding: 10px 40px;
         height: 35px;
-        margin: 10px auto; /* Center the button */
+        margin: 10px auto; 
     }
 
     @media (max-width: 480px) {

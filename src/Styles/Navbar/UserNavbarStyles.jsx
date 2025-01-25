@@ -75,7 +75,7 @@ export const LogoContainer = styled.div`
 
 
 export const Logo = styled.img`
-    height: 60px;
+    height: 80px;
     margin-left: 25px;
     cursor: pointer;
 
@@ -179,7 +179,7 @@ export const NavItems = styled.div`
 export const NavItem = styled.a`
     text-decoration: none;
     color: black;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     letter-spacing: 0.5px;
     cursor: pointer;

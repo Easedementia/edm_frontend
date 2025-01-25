@@ -10,7 +10,7 @@ import Culnary from '../../assets/images/Culnary.png'
 const MontessoriApproach = () => {
   return (
     <MontessoriApproachContainer>
-        <Title>Our Montessori Approach</Title>
+        <Title>Our Six Bucket Approach</Title>
         <ApproachContainer>
             <ApproachCard>
                 <ApproachImage src={Alzheimer_amico} alt='Cognitive Training' />

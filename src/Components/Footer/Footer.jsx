@@ -71,9 +71,9 @@ const Footer = () => {
             <ContactDetails>
                 <ContactItem><strong>Address</strong></ContactItem>
                 <ContactItem>Ease Dementia Technologies pvt. ltd</ContactItem>
-                <ContactItem>DS7, Heavenly Plaza</ContactItem>
-                <ContactItem>Civil Line Road, Chembumukku</ContactItem>
-                <ContactItem>Vazhakkala, Kakkanad, Kochi, Kerala 682021</ContactItem>
+                <ContactItem>Thykoodam Metro Station</ContactItem>
+                <ContactItem>X86H+J2M, SH15, Thykoodam, Vyttila,</ContactItem>
+                <ContactItem>Ernakulam, Kerala 682019</ContactItem>
             </ContactDetails>
             <ContactDetails>
                 <ContactItem><strong>Email Address</strong></ContactItem>

@@ -1,5 +1,5 @@
 import AboutUsBanner from "../Components/AboutUs/AboutUsBanner"
-import AboutUsBannerImage from "../Components/AboutUs/AboutUsBannerImage"
+// import AboutUsBannerImage from "../Components/AboutUs/AboutUsBannerImage"
 import Gallery from "../Components/AboutUs/Gallery"
 import MeetOurTeam from "../Components/AboutUs/MeetOurTeam"
 import OurValues from "../Components/AboutUs/OurValues"
@@ -17,7 +17,7 @@ const AboutUsPage = () => {
     <GlobalStyle/>
     <UserNavbar/>
     <AboutUsBanner/>
-    <AboutUsBannerImage/>
+    {/* <AboutUsBannerImage/> */}
     <VisionMission/>
     <OurValues/>
     <MeetOurTeam/>
