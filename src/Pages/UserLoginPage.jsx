@@ -187,7 +187,6 @@ export const UserLoginPage = () => {
                                 />
 
                     </div>
-                            
                         </GoogleOAuthProvider>     
         </LeftSide>
         

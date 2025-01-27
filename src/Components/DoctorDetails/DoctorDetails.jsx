@@ -28,6 +28,7 @@ const DoctorDetails = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [filteredTimeSlots, setFilteredTimeSlots] = useState([]);
   const [selectedSlot, setSelectedSlot] = useState(null);
+  const [bookedTimeSlots, setBookedTimeSlots] = useState([]);
   const today = new Date();
   const userID = user.user.id;
   const user_name = user.user.fullname;
@@ -60,10 +61,30 @@ const DoctorDetails = () => {
 
 
     useEffect(() => {
-      const dayOfWeek = moment(selectedDate).format('dddd'); 
-      const filteredSlots = timeSlots.filter(slot => slot.day === dayOfWeek);
+      if (!doctor || !doctor.id) return; // Ensure doctor and doctor.id are available
+    
+      const formattedDate = moment(selectedDate).format('YYYY-MM-DD');
+      console.log("Doctor ID***:", doctor.id);
+    
+      axios
+        .get(`${baseURL}/selected-slots/`, {
+          params: { doctor_id: doctor.id, date: formattedDate },
+        })
+        .then((response) => {
+          toast.success("success", response.data);
+          setBookedTimeSlots(response.data.appointments);
+          console.log( response.data);
+          console.log("Booked:", bookedTimeSlots);
+        })
+        .catch((error) => {
+          console.error("failed", error);
+        });
+    
+      const dayOfWeek = moment(selectedDate).format('dddd');
+      const filteredSlots = timeSlots.filter((slot) => slot.day === dayOfWeek);
       setFilteredTimeSlots(filteredSlots);
-    }, [selectedDate, timeSlots]);
+    }, [selectedDate, timeSlots, doctor, doctor?.id]); // Use optional chaining to avoid errors
+    
 
 
     const handleSlotClick = (slot) => {
@@ -110,20 +131,26 @@ const DoctorDetails = () => {
       axios.post(`${baseURL}/create-appointment/`, appointmentData)
       .then(response => {
         const { appointment_id, details } = response.data;
-        navigate('/doctor-consulting/booking-confirmation/', {
-          state: {
-            appointmentId: appointment_id,
-            username: user.fullname,
-            email: user.email,
-            phone: user.mobile,
-            doctor_id: doctor.id,
-            doctorName: doctor.doctor_name,
-            consultingFee: doctor.consulting_fee,
-            selectedDate: moment(selectedDate).format('MMMM D, YYYY'),
-            selectedSlot: filteredTimeSlots.find(slot => slot.id === selectedSlot),
-            ...details
-          }
-        });
+        console.log("appointment response data:", response.data)
+        if (response.data.status == "not available") {
+          toast.error(response.data.message)
+        } else {
+          navigate('/doctor-consulting/booking-confirmation/', {
+            state: {
+              appointmentId: appointment_id,
+              username: user.fullname,
+              email: user.email,
+              phone: user.mobile,
+              doctor_id: doctor.id,
+              doctorName: doctor.doctor_name,
+              consultingFee: doctor.consulting_fee,
+              selectedDate: moment(selectedDate).format('MMMM D, YYYY'),
+              selectedSlot: filteredTimeSlots.find(slot => slot.id === selectedSlot),
+              ...details
+            }
+          });
+        }
+        
       })
       .catch(error => {
         console.error("There was an error booking the appointment!", error);
@@ -177,16 +204,39 @@ const DoctorDetails = () => {
           </TodayDate>
         </WorkingHoursHeader>
         <Hours>
-            {filteredTimeSlots.length > 0 ? (
-              filteredTimeSlots.map(slot => (
-                <TimeSlot key={slot.id} available={!slot.is_booked} selected={selectedSlot === slot.id} onClick={()=>handleSlotClick(slot)} >
-                  {moment(slot.start_time, 'HH:mm:ss').format('h:mm A')}
+          {filteredTimeSlots.length > 0 ? (
+            filteredTimeSlots.map((slot) => {
+              const isBooked = bookedTimeSlots.includes(slot.id); // Check if the slot is booked
+              return isBooked ? (
+                <TimeSlot
+                  disabled
+                  key={slot.id}
+                  available={slot.is_booked}
+                  selected={selectedSlot === slot.id}
+                  onClick={() => handleSlotClick(slot)}
+                >
+                  {moment(slot.start_time, "HH:mm:ss").format("h:mm A")}
                 </TimeSlot>
-              ))
-            ) : (
-              <div style={{ textAlign: 'center', width: '100%', marginTop:'30px' }}>No time slots available for the selected date.</div>
-            )}
-          </Hours>
+              ) : (
+                <TimeSlot
+                  key={slot.id}
+                  available={!slot.is_booked}
+                  selected={selectedSlot === slot.id}
+                  onClick={() => handleSlotClick(slot)}
+                >
+                  {moment(slot.start_time, "HH:mm:ss").format("h:mm A")}
+                </TimeSlot>
+              );
+            })
+          ) : (
+            <div
+              style={{ textAlign: "center", width: "100%", marginTop: "30px" }}
+            >
+              No time slots available for the selected date.
+            </div>
+          )}
+        </Hours>;
+
           <ButtonContainer>
             <BookButton onClick={handleBookAppointment} disabled={filteredTimeSlots.length === 0}>Book an Appointment</BookButton>
           </ButtonContainer>

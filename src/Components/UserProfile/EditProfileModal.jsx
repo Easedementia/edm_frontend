@@ -5,9 +5,12 @@ import PropTypes from 'prop-types';
 import { baseURL } from "../../api/api";
 import { refreshAccessToken } from '../../utils/authUtils'
 import { ModalWrapper, ModalContent, Form, Label, Input, ButtonContainer, SaveButton, CancelButton } from '../../Styles/UserProfileStyle/EditProfileModalStyle'
+import { useDispatch } from 'react-redux'
+import { setUser } from '../../Redux/UserSlice'
 
 
 const EditProfileModal = ({ isOpen, onClose, userDetails, setUserDetails }) => {
+  const dispatch = useDispatch();
     const [formData, setFormData] = useState({
         fullname: '',
         mobile: '',
@@ -45,11 +48,16 @@ const EditProfileModal = ({ isOpen, onClose, userDetails, setUserDetails }) => {
             });
     
             if (response.status === 200) {
+                console.log("PROFILE UPDATE DATA:", response.data);
                 toast.success('Profile updated successfully');
                 setUserDetails((prev) => ({
                     ...prev,
                     fullname: formData.fullname,
                     mobile: formData.mobile,
+                }));
+
+                dispatch(setUser({
+                    user: response.data.user
                 }));
                 onClose(); // Close modal
             }
