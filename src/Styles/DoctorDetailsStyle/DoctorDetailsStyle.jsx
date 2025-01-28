@@ -202,20 +202,24 @@ export const Hours = styled.div`
 `;
 
 export const TimeSlot = styled.div`
-  background: ${({ selected, available }) => (selected ? 'green' : available ? '#f0f0f0' : '#e0e0e0')};
-  color: ${({ selected, available }) => (selected ? 'white' : available ? 'green' : 'gray')};
-  padding: 10px 20px;
-  border-radius: 5px;
+  background: ${({ selected, available }) => 
+    !available ? '#e0e0e0' : selected ? 'green' : '#f0f0f0'};
+  color: ${({ selected, available }) => 
+    selected ? 'white' : !available ? 'gray' : 'green'};
   cursor: ${({ available }) => (available ? 'pointer' : 'not-allowed')};
   user-select: none;
+  padding: 10px 20px;
+  border-radius: 5px;
   margin-top: 8px;
-
+  font-weight: 500;
 
   @media (max-width: 480px) {
     padding: 8px 15px;
     font-size: 14px;
   }
 `;
+
+
 
 
 export const TodayDate = styled.div`

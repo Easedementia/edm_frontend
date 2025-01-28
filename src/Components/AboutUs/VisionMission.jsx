@@ -22,7 +22,7 @@ const VisionMission = () => {
               <CardIcon src={vision} alt="Lightbulb Icon" />
             </CardIconContainer>
             <CardDescription>
-              Whether you are a caregiver, someone living with memory loss, or a compassionate community member, the Memory Cafe warmly welcomes you.
+              We believe that every person deserves to live with dignity and be supported in their journey.
             </CardDescription>
           </Card>
           <Card>
@@ -31,7 +31,8 @@ const VisionMission = () => {
               <CardIcon src={mission} alt="Target Icon" />
             </CardIconContainer>
             <CardDescription>
-              Whether you are a caregiver, someone living with memory loss, or a compassionate community member, the Memory Cafe warmly welcomes you.
+              Here we strive to redefine dementia care, empower individuals to thrive, and inculcate a sense of
+              belongingness!
             </CardDescription>
           </Card>
         </CardsContainer>

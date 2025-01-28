@@ -71,10 +71,9 @@ const DoctorDetails = () => {
           params: { doctor_id: doctor.id, date: formattedDate },
         })
         .then((response) => {
-          toast.success("success", response.data);
           setBookedTimeSlots(response.data.appointments);
-          console.log( response.data);
-          console.log("Booked:", bookedTimeSlots);
+          // console.log( response.data);
+          // console.log("Booked:", bookedTimeSlots);
         })
         .catch((error) => {
           console.error("failed", error);
@@ -83,7 +82,7 @@ const DoctorDetails = () => {
       const dayOfWeek = moment(selectedDate).format('dddd');
       const filteredSlots = timeSlots.filter((slot) => slot.day === dayOfWeek);
       setFilteredTimeSlots(filteredSlots);
-    }, [selectedDate, timeSlots, doctor, doctor?.id]); // Use optional chaining to avoid errors
+    }, [selectedDate, timeSlots, doctor, doctor?.id]);
     
 
 
@@ -207,22 +206,13 @@ const DoctorDetails = () => {
           {filteredTimeSlots.length > 0 ? (
             filteredTimeSlots.map((slot) => {
               const isBooked = bookedTimeSlots.includes(slot.id); // Check if the slot is booked
-              return isBooked ? (
-                <TimeSlot
-                  disabled
-                  key={slot.id}
-                  available={slot.is_booked}
-                  selected={selectedSlot === slot.id}
-                  onClick={() => handleSlotClick(slot)}
-                >
-                  {moment(slot.start_time, "HH:mm:ss").format("h:mm A")}
-                </TimeSlot>
-              ) : (
+
+              return (
                 <TimeSlot
                   key={slot.id}
-                  available={!slot.is_booked}
-                  selected={selectedSlot === slot.id}
-                  onClick={() => handleSlotClick(slot)}
+                  available={!isBooked} // Only unbooked slots are selectable
+                  selected={selectedSlot === slot.id && !isBooked} // Prevent selecting booked slots
+                  onClick={() => !isBooked && handleSlotClick(slot)} // Prevent clicking booked slots
                 >
                   {moment(slot.start_time, "HH:mm:ss").format("h:mm A")}
                 </TimeSlot>
@@ -235,7 +225,8 @@ const DoctorDetails = () => {
               No time slots available for the selected date.
             </div>
           )}
-        </Hours>;
+        </Hours>
+
 
           <ButtonContainer>
             <BookButton onClick={handleBookAppointment} disabled={filteredTimeSlots.length === 0}>Book an Appointment</BookButton>
