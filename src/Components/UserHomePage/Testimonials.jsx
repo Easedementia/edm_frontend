@@ -14,7 +14,7 @@ const testimonials = [
 
     {
         text: "Good work team! Our experiences with Ease Dementia was excellent. Especially the intervention specialist who was handling the interactive sessions was very patient and dedicated.",
-        name: "Reena",
+        name: "Reena George",
         title: "Aluva",
         image: testimonial_1
     },
