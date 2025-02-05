@@ -9,7 +9,7 @@ const AssessmentOptions = () => {
             <OptionImage src={assessment_icon} alt='self-assessment' />
             <OptionTitle>Self Assessment</OptionTitle>
             <OptionDescription>
-                Lorem ipsum dolor sit amet consectetur. jscnsds Convallis est urna adipiscing fringilla nulla diam.
+            Evaluate your cognitive health with a quick self-assessment.
             </OptionDescription>
             <OptionLink to='/assessment/self-assessment-instructions'>
                 Begin Assessment
@@ -21,7 +21,7 @@ const AssessmentOptions = () => {
             <OptionImage src={assessment_icon} alt='first-person' />
             <OptionTitle>Informant Interview</OptionTitle>
             <OptionDescription>
-                Lorem ipsum dolor sit amet consectetur. jscnsds Convallis est urna adipiscing fringilla nulla diam.
+            Assess your loved one’s cognitive well-being with this guided interview.
             </OptionDescription>
             <OptionLink to='/assessment/first-person-assessment-instructions'>
                 Begin Assessment

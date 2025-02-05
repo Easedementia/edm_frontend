@@ -1,3 +1,4 @@
+import { useRef } from "react"
 import AssessmentHomeBanner from "../Components/Assessment/AssessmentHomeBanner"
 import AssessmentOptions from "../Components/Assessment/AssessmentOptions"
 import CallButton from "../Components/CallUs/CallButton"
@@ -8,12 +9,20 @@ import GlobalStyle from "../Styles/GlobalStyles"
 
 
 const AssessmentHomePage = () => {
+  const optionsRef = useRef(null);
+
+  const scrollToOptions = () => {
+    if (optionsRef.current) {
+      optionsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div>
     <GlobalStyle/>
     <UserNavbar />
-    <AssessmentHomeBanner />
-    <AssessmentOptions />
+    <AssessmentHomeBanner scrollToOptions={scrollToOptions} />
+    <AssessmentOptions ref={optionsRef} />
     <CallButton/>
     <WhatsappButton/>
     <Footer />
