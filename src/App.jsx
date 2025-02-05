@@ -2,6 +2,7 @@ import './App.css'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import ReactGA from 'react-ga4';
 import UserHomePage from './Pages/UserHomePage'
 import AboutUsPage from './Pages/AboutUsPage'
 import UserSignupPage from './Pages/UserSignupPage'
@@ -39,12 +40,23 @@ import PrivacyPolicy from './Components/Footer/PrivacyPolicy';
 import Clock from './Components/Assessment/Clock';
 import ScrollToTop from './Components/ScrollToTop';
 import Careers from './Components/Careers/Careers';
+import SelfAssessmentInstructions from './Components/Assessment/SelfAssessmentInstructions';
+import SelfAssessment from './Components/Assessment/SelfAssessment';
+import { useEffect } from 'react';
 
 
 
 
 
 function App() {
+  
+  useEffect(() => {
+    ReactGA.initialize("G-B7HR5N788W");
+    ReactGA.send({ 
+      hitType: "pageview", 
+      page: window.location.pathname, 
+      title: "App.jsx" });
+  }, [])
   return (
     <div>
     <ToastContainer
@@ -78,6 +90,8 @@ function App() {
           <Route path='/user-profile/appointments-history' element={<AppointmentHistory/>} />
           <Route path='/user-profile/assessment-history' element={<AssessmentHistory/>} />
           <Route path='/assessment' element={<AssessmentHomePage/>} />
+          <Route path='/assessment/self-assessment' element={<SelfAssessment/>} />
+          <Route path='/assessment/self-assessment-instructions' element={<SelfAssessmentInstructions/>} />
           <Route path='/assessment/first-person-assessment' element={<FirstPersonAssessment/>} />
           <Route path='/assessment/first-person-assessment-instructions' element={<FirstPersonInstructions/>} />
           <Route path='/assessment/first-person-assessment-client-details' element={<FirstPersonClientDetails/>} />

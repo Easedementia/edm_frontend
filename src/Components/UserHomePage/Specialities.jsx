@@ -1,5 +1,9 @@
 import { SpecialitiesContainer, GridWrapper, SpecialityCard, SpecialityImage, Title, SubTitle, HighlightedText } from '../../Styles/UserHomeStyle/SpecialitiesStyle'
-import dementia_bro from '../../assets/images/dementia_bro.png'
+import forbes from '../../assets/images/forbes.svg'
+import vr from '../../assets/images/vr.svg'
+import hospex from '../../assets/images/hospex.svg'
+import brain from '../../assets/images/brain.svg'
+import care from '../../assets/images/care.svg'
 
 const Specialities = () => {
   return (
@@ -7,8 +11,8 @@ const Specialities = () => {
       <GridWrapper>
         <SpecialityCard area="card1">
           <HighlightedText>#1</HighlightedText>
-          <SubTitle>Kerala’s first elder care startup focusing on Dementia Care</SubTitle>
-          <SpecialityImage src={dementia_bro} alt="Doctor and Patient" />
+          <SubTitle>Kerala’s first elder care startup focusing on non-pharmacological interventions for dementia.</SubTitle>
+          <SpecialityImage src={brain} alt="Doctor and Patient" />
         </SpecialityCard>
 
         <SpecialityCard area="card2">
@@ -17,35 +21,40 @@ const Specialities = () => {
         </SpecialityCard>
 
         <SpecialityCard area="card3">
-          <HighlightedText>43+</HighlightedText>
+          <HighlightedText>30+</HighlightedText>
           <SubTitle>Satisfied employees dedicated to extending exceptional support , delivering highest quality of service</SubTitle>
         </SpecialityCard>
 
         <SpecialityCard area="card4">
           <HighlightedText>#1</HighlightedText>
+          <SpecialityImage src={vr} alt="VR Headset" />
           <SubTitle>India’s first Virtual Reality supported Dementia Care.</SubTitle>
-          <SpecialityImage src={dementia_bro} alt="VR Headset" />
         </SpecialityCard>
 
         <SpecialityCard area="card5">
-          <SubTitle>Range of Geriatricians, Neurologists, Psychologists...</SubTitle>
-          <SpecialityImage src={dementia_bro} alt="Heart Icon" />
+        <HighlightedText>#1</HighlightedText>
+          <SubTitle>Best Healthcare Startup Award 2023 - IMA Hospex</SubTitle>
+          <SpecialityImage src={hospex} alt="Heart Icon" />
         </SpecialityCard>
 
         <SpecialityCard area="card6">
-          <SpecialityImage src={dementia_bro} alt="Award Trophy" />
-          <HighlightedText>#1</HighlightedText>
-          <SubTitle>Best Healthcare startup Award 2023</SubTitle>
+          <SpecialityImage src={forbes} alt="Award Trophy" />
+          <SubTitle style={{marginTop:'-40px'}} >We’re recognized as one of the Select 200 companies with Global Business Potential
+          by</SubTitle>
+          <Title  style={{marginBottom:'110px'}}>Forbes India DGEMS 2024.</Title>
         </SpecialityCard>
 
         <SpecialityCard area="card7">
-          <HighlightedText>4.9</HighlightedText>
-          <SubTitle>Satisfaction Score</SubTitle>
+          <HighlightedText style={{marginTop:'60px'}}  >4.9</HighlightedText>
+          <SubTitle style={{marginBottom:'60px'}} >Satisfaction Score</SubTitle>
         </SpecialityCard>
 
         <SpecialityCard area="card8">
-          <Title>easemy60</Title>
+          <SubTitle>Range of Geriatricians, Neurologists, Psychologists...</SubTitle>
+          <SpecialityImage src={care} alt='care' />
         </SpecialityCard>
+
+        
       </GridWrapper>
     </SpecialitiesContainer>
   )

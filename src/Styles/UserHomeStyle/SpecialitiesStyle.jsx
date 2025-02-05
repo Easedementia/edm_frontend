@@ -105,7 +105,7 @@ export const SpecialityCard = styled.div`
 `;
 
 export const SpecialityImage = styled.img`
-  width: 100px;
+  width: 400px;
   height: auto;
   margin-top: 10px;
   max-width: 100%;
@@ -146,7 +146,7 @@ export const SubTitle = styled.p`
   font-size: 14px;
   color: #333;
   font-family: 'Poppins', sans-serif;
-  margin: 10px 0;
+  margin: 0;
 
   @media (max-width: 1024px) {
     font-size: 13px;
