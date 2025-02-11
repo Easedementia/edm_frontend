@@ -37,7 +37,7 @@ const AdminNavbar = () => {
                         <NavItem as={Link} to="/admin-dashboard/user-list">Users</NavItem>
                         <NavItem as={Link} to="/admin-dashboard/admin-services">Services</NavItem>
                         <NavItem as={Link} to="/admin-dashboard/doctor-consulting">Doctor Consulting</NavItem>
-                        <NavItem as={Link} to="/admin-assessment">Assessment</NavItem>
+                        <NavItem as={Link} to="/admin-dashboard/assessment-details">Assessment</NavItem>
                         <NavItem as={Link} to="/admin-dashboard/appointment-details">Appointments</NavItem>
                         <UserIcon src={user_icon} onClick={handleLogout} alt="User Icon" />
                     </>

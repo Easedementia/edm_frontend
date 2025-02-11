@@ -96,6 +96,17 @@ export const UserLoginPage = () => {
                 } else {
                     navigator(redirectTo, { replace: true }); // Default navigation
                 }
+
+                const pendingScore = localStorage.getItem("pendingScore");
+                console.log("Score:", pendingScore)
+                if (pendingScore) {
+                    console.log("///Score///:", pendingScore)
+                    
+                    navigator('/assessment/self-assessment', { state: { pendingScore: Number(pendingScore) }, replace: true });
+                } else {
+                    navigator(redirectTo, { replace: true }); // Default navigation
+                }
+                
             })
             .catch((error) => {
                 if (error.response && error.response.status === 401) {

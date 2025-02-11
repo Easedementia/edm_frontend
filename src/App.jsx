@@ -43,6 +43,7 @@ import Careers from './Components/Careers/Careers';
 import SelfAssessmentInstructions from './Components/Assessment/SelfAssessmentInstructions';
 import SelfAssessment from './Components/Assessment/SelfAssessment';
 import { useEffect } from 'react';
+import AdminAssessmentDetails from './Pages/AdminAssessmentDetails';
 
 
 
@@ -114,6 +115,7 @@ function App() {
           <Route path='/admin-dashboard/edit-doctor/:id' element={<EditDoctor/>} />
           <Route path='/admin-dashboard/add-timeslot' element={<AddTimeslot/>} />
           <Route path='/admin-dashboard/appointment-details' element={<AdminAppointmentDetails/>} />
+          <Route path='/admin-dashboard/assessment-details' element={<AdminAssessmentDetails/>} />
 
           <Route path='/doctor-signup' element={<DoctorSignupPage/>} />
         </Routes>

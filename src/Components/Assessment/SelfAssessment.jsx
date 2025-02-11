@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import cat from '../../assets/self-assessment/cat.png';
@@ -8,14 +8,27 @@ import car from '../../assets/self-assessment/car.png'
 import bus from '../../assets/self-assessment/bus.png'
 import fish from '../../assets/self-assessment/fish.png'
 import cycle from '../../assets/self-assessment/cycle.png'
+import apple from '../../assets/self-assessment/apple.png'
+import banana from '../../assets/self-assessment/banana.png'
+import chair from '../../assets/self-assessment/chair.png'
+import orange from '../../assets/self-assessment/orange.png'
 import clock1 from '../../assets/self-assessment/clock1.gif'
 import clock2 from '../../assets/self-assessment/clock2.gif'
 import clock3 from '../../assets/self-assessment/clock3.gif'
 import clock4 from '../../assets/self-assessment/clock4.gif'
+import appletree from '../../assets/self-assessment/appletree.svg'
+import dog_puzzle from '../../assets/self-assessment/dog_puzzle.png'
+import puzzle1 from '../../assets/self-assessment/puzzle1.png'
+import puzzle2 from '../../assets/self-assessment/puzzle2.png'
+import puzzle3 from '../../assets/self-assessment/puzzle3.png'
+import puzzle4 from '../../assets/self-assessment/puzzle4.png'
 
 import {AssessmentContainer, QuestionText, InputField, OptionsContainer, StyledImageInput, ImageOption, ButtonContainer, NavigationButton } from '../../Styles/AssessmentStyle/SelfAssessmentStyle'
 import UserNavbar from "../Navbar/UserNavbar";
 import Footer from "../Footer/Footer";
+import { useSelector } from "react-redux";
+// import axios from "axios";
+import { baseURL } from "../../api/api";
 
 
 const selfAssessmentQuestions = [
@@ -61,18 +74,76 @@ const selfAssessmentQuestions = [
       ],
       correctAnswer: "9"
     },
-    { id: 9, type: "text", question: "Recall the three items mentioned earlier." },
+    { 
+      id: 9, 
+      type: "multiple-choice", 
+      question: "Can you count how many apples are in the picture?", 
+      image: appletree,
+      options: [
+        { label: "12" },
+        { label: "19" },
+        { label: "22" },
+        { label: "17" }
+      ],
+      correctAnswer: "19"
+    },
+    {
+      id: 10,
+      type: "multiple-choice",
+      question: "Mittu is a dog, but he has lost one piece of his puzzle. Can you find the missing piece from the options below?",
+      puzzleImage: dog_puzzle,
+      options: [
+        { image: puzzle1, label: "Puzzle 1" },
+        { image: puzzle2, label: "Puzzle 2" },
+        { image: puzzle3, label: "Puzzle 3" },
+        { image: puzzle4, label: "Puzzle 4" }
+      ],
+      correctAnswer: "Puzzle 2" // puzzle2 is the correct answer
+    },   
+    { 
+      id: 11, 
+      type: "multiple-choice", 
+      question: "Select the item that doesn't belong to the group:", 
+      options: [
+        { image: chair, label: "Chair" },
+        { image: apple, label: "Apple" },
+        { image: banana, label: "Banana" }, 
+        { image: orange, label: "Orange" }
+      ],
+      correctAnswer: "Chair"
+    },
   ];
 
   
 
 const SelfAssessment = () => {
+    const user = useSelector((state) => state.user);
+    console.log("::USER::", user)
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [answers, setAnswers] = useState({});
     const [score, setScore] = useState(0);
+    const [isAssessmentComplete, setIsAssessmentComplete] = useState(false);
     console.log("SCORE:", score);
     const [selectedOption, setSelectedOption] = useState(null);
     const navigate = useNavigate();
+
+
+    
+
+
+  
+    useEffect(() => {
+      const pendingScore = localStorage.getItem("pendingScore");
+      if (user && pendingScore) {
+        setScore(Number(pendingScore));
+        setIsAssessmentComplete(true); // Now show the results after login
+        localStorage.removeItem("pendingScore");
+      }
+    }, [user]);
+    
+  
+
+
 
     const handleAnswerChange = (value) => {
         setAnswers({ ...answers, [currentQuestionIndex]: value });
@@ -159,7 +230,7 @@ const SelfAssessment = () => {
 
 
       //Question No: 5, 7, 8
-      if (currentQuestion.id === 5 || currentQuestion.id === 7 || currentQuestion.id === 8) {
+      if ([5, 7, 8, 9, 11].includes(currentQuestion.id)) {
         const selectedAnswer = answers[currentQuestionIndex];  
         if (selectedAnswer === currentQuestion.correctAnswer) {
             console.log("Correct", selectedAnswer);
@@ -167,27 +238,134 @@ const SelfAssessment = () => {
         } else {
             console.log("Wrong answer", selectedAnswer);
         }
-      }    
+      }
+      
+      
+
+      //Question No: 10
+      if (currentQuestion.id === 10) {
+        const selectedAnswer = answers[currentQuestionIndex];
+        if (selectedAnswer === currentQuestion.correctAnswer) {
+          console.log("Correct");
+          setScore((prevScore) => prevScore + 1); // Increment the score if correct
+        } else {
+          console.log("Wrong answer", selectedAnswer);
+        }
+      }      
     };
 
 
+
+
+    const handleConsultationClick = () => {
+      navigate('/doctor-consulting');
+  }
     
+
+
+  useEffect(() => {
+    const storedScore = localStorage.getItem("pendingScore");
     
+    if (storedScore) {
+      setScore(Number(storedScore));
+      setIsAssessmentComplete(true);
+      localStorage.removeItem("pendingScore"); // Clear it after using
+    }
+  }, []);
 
 
 
-    const handleNext = () => {
-        if (answers[currentQuestionIndex] !== undefined || selfAssessmentQuestions[currentQuestionIndex].type === "instruction") {
-          validateAnswer();
-        if (currentQuestionIndex < selfAssessmentQuestions.length - 1) {
-            setCurrentQuestionIndex(currentQuestionIndex + 1);
-        } else {
-            navigate("/assessment/self-assessment-results", { state: { answers } });
-        }
-        } else {
-        toast.warning("Please answer the question before proceeding.");
-        }
+  // useEffect(() => {
+  //   if (score > 0 && user) {  
+  //     const assessmentDetails = {
+  //       fullname: user.fullname, 
+  //       email: user.email,
+  //       mobile: user.mobile, 
+  //       user_id: user.id, 
+  //       date: new Date().toISOString(), 
+  //       score: score, 
+  //     };
+  //     console.log("assessment details:", assessmentDetails)
+  
+  //     // Send to backend
+  //     axios.post(`${baseURL}/save-assessment/`, assessmentDetails, { withCredentials: true })
+  //       .then(response => {
+  //         console.log("Assessment saved successfully:", response.data);
+  //       })
+  //       .catch(error => {
+  //         console.error("Error saving assessment:", error);
+  //       });
+  //   }
+  // }, [score, user]);  // Run effect when score or user changes
+
+
+
+
+  const saveAssessmentDetails = async () => {
+    if (!user || !user.user) {
+      console.error("User details are missing");
+      return;
+    }
+
+    const assessmentData = {
+      fullname: user.user.user.fullname,
+      email: user.user.user.email,
+      mobile: user.user.user.mobile,
+      user_id: user.user.user.id,
+      date: new Date().toISOString(), 
+      score: score,
     };
+    console.log("assessment data:", assessmentData)
+  
+    try {
+      const response = await fetch(`${baseURL}/save-assessment/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(assessmentData),
+      });
+  
+      const data = await response.json();
+      if (response.ok) {
+        console.log("Assessment saved:", data.message);
+      } else {
+        console.error("Error saving assessment:", data.error);
+      }
+    } catch (error) {
+      console.error("Network error:", error);
+    }
+  };
+  
+  
+  
+    
+
+
+
+  const handleNext = async () => {
+    if (answers[currentQuestionIndex] !== undefined || selfAssessmentQuestions[currentQuestionIndex].type === "instruction") {
+      validateAnswer();
+      if (currentQuestionIndex < selfAssessmentQuestions.length - 1) {
+        setCurrentQuestionIndex(currentQuestionIndex + 1);
+      } else {
+        // If the user is not logged in, store score and navigate to login
+        if (!user || !user.isAuthenticated) {
+          console.log("Pending score:", score)
+          localStorage.setItem("pendingScore", score);
+          navigate("/login");
+          
+        } else {
+          await saveAssessmentDetails();
+          setIsAssessmentComplete(true);
+        }
+      }
+    } else {
+      toast.warning("Please answer the question before proceeding.");
+    }
+  };
+  
+
 
     const handlePrevious = () => {
         if (currentQuestionIndex > 0) {
@@ -202,129 +380,215 @@ const SelfAssessment = () => {
 
   return (
     <>
-    <UserNavbar/>
-    <h2 style={{marginTop:'80px'}} >Self-Assessment</h2>
-    <AssessmentContainer>
-      <QuestionText>{currentQuestion.question}</QuestionText>
+    <UserNavbar />
+    <h2 style={{ marginTop: "80px" }}>Self-Assessment</h2>
 
-      {/* Render Input Based on Type */}
-      {currentQuestion.type === "text" && (
-        <InputField
-          type="text"
-          value={answers[currentQuestionIndex] || ""}
-          onChange={(e) => handleAnswerChange(e.target.value)}
-          placeholder={currentQuestion.id === 1 ? "dd/mm/yyyy" : "Enter your answer"}
-        />
-      )}
+    {/* Check if assessment is completed */}
+    {isAssessmentComplete ? (
+        user ? (
+          <AssessmentContainer>
+            <QuestionText>Assessment Completed</QuestionText>
+            <p>Your Score: <strong>{score} / 10</strong></p>
 
-
-      {currentQuestion.type === "fill-in-the-blanks" && (
-        <div>
-          {currentQuestion.blanks.map((num, index) => (
-            num !== "" ? ( // If the number is given (like 100, 94), display it as static text
-              <span key={index} style={{ margin: "5px", fontWeight: "bold" }}>{num}</span>
+            {score >= 8 ? (
+              <p style={{ color: "green", fontWeight: "bold" }}>
+                You seem to have normal cognitive function. No signs of cognitive decline detected.
+              </p>
             ) : (
-              <input
+              <p style={{ color: "red", fontWeight: "bold" }}>
+                There may be a chance of cognitive decline. We recommend consulting a doctor.
+                <ButtonContainer>
+                  <NavigationButton style={{marginLeft:'125px'}} onClick={handleConsultationClick}>
+                    Doctor Consultation
+                  </NavigationButton>
+                </ButtonContainer>
+              </p>
+            )}
+
+            <ButtonContainer>
+              <NavigationButton style={{marginLeft:'125px'}} onClick={() => window.location.reload()}>
+                Retake Assessment
+              </NavigationButton>
+            </ButtonContainer>
+          </AssessmentContainer>
+        ) : null
+      ) : (
+      // Render the current question
+      <AssessmentContainer>
+        <QuestionText>{currentQuestion.question}</QuestionText>
+
+        {/* Render input based on type */}
+        {currentQuestion.type === "text" && (
+          <InputField
+            type="text"
+            value={answers[currentQuestionIndex] || ""}
+            onChange={(e) => handleAnswerChange(e.target.value)}
+            placeholder={currentQuestion.id === 1 ? "dd/mm/yyyy" : "Enter your answer"}
+          />
+        )}
+
+        {currentQuestion.type === "fill-in-the-blanks" && (
+          <div>
+            {currentQuestion.blanks.map((num, index) =>
+              num !== "" ? (
+                <span key={index} style={{ margin: "5px", fontWeight: "bold" }}>{num}</span>
+              ) : (
+                <input
+                  key={index}
+                  type="text"
+                  value={answers[currentQuestionIndex]?.[index] || ""}
+                  onChange={(e) => {
+                    const updatedAnswers = answers[currentQuestionIndex] ? [...answers[currentQuestionIndex]] : ["", "", "", "", ""];
+                    updatedAnswers[index] = e.target.value;
+                    setAnswers({ ...answers, [currentQuestionIndex]: updatedAnswers });
+                  }}
+                  style={{ width: "50px", margin: "5px", textAlign: "center" }}
+                />
+              )
+            )}
+          </div>
+        )}
+
+        {/* Image Naming Question */}
+        {currentQuestion.id === 4 && (
+          <OptionsContainer>
+            {currentQuestion.imageUrls.map((imageUrl, index) => (
+              <StyledImageInput key={index}>
+                <img src={imageUrl} alt={`Animal ${index + 1}`} />
+                <InputField
+                  type="text"
+                  value={answers[currentQuestionIndex]?.[index] || ""}
+                  onChange={(e) => {
+                    const updatedAnswers = answers[currentQuestionIndex] ? [...answers[currentQuestionIndex]] : ["", "", ""];
+                    updatedAnswers[index] = e.target.value;
+                    setAnswers({ ...answers, [currentQuestionIndex]: updatedAnswers });
+                  }}
+                  placeholder="answer"
+                />
+              </StyledImageInput>
+            ))}
+          </OptionsContainer>
+        )}
+
+        {/* Multiple Choice Questions */}
+        {(currentQuestion.id === 5 || currentQuestion.id === 7 || currentQuestion.id === 11) && (
+          <OptionsContainer>
+            {currentQuestion.options.map((option, index) => (
+              <ImageOption
                 key={index}
-                type="text"
-                value={answers[currentQuestionIndex]?.[index] || ""}
-                onChange={(e) => {
-                  const updatedAnswers = answers[currentQuestionIndex] ? [...answers[currentQuestionIndex]] : ["", "", "", "", ""];
-                  updatedAnswers[index] = e.target.value;
-                  setAnswers({ ...answers, [currentQuestionIndex]: updatedAnswers });
-                }}
-                style={{ width: "50px", margin: "5px", textAlign: "center" }}
+                src={option.image}
+                alt={option.label}
+                isSelected={selectedOption === option.label}
+                onClick={() => handleOptionSelect(option.label)}
               />
-            )
-          ))}
-        </div>
-      )}
+            ))}
+          </OptionsContainer>
+        )}
 
+        {/* Number Counting Question */}
+        {currentQuestion.id === 8 && (
+          <div style={{ textAlign: "center" }}>
+            <p style={{ fontSize: "18px", fontWeight: "bold" }}>{currentQuestion.numberSequence}</p>
+            <div style={{ display: "flex", justifyContent: "center", gap: "15px", marginTop: "10px" }}>
+              {currentQuestion.options.map((option, index) => (
+                <button
+                  key={index}
+                  style={{
+                    padding: "10px 20px",
+                    border: selectedOption === option.label ? "3px solid #5517A8" : "1px solid #ccc",
+                    borderRadius: "8px",
+                    background: selectedOption === option.label ? "#e0d4f7" : "#fff",
+                    cursor: "pointer",
+                    fontSize: "16px"
+                  }}
+                  onClick={() => handleOptionSelect(option.label)}
+                >
+                  {option.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
 
-
-{currentQuestion.id === 4 && (
-        <OptionsContainer>
-          {currentQuestion.imageUrls.map((imageUrl, index) => (
-            <StyledImageInput key={index}>
-              <img src={imageUrl} alt={`Animal ${index + 1}`} />
-              <InputField
-                type="text"
-                value={answers[currentQuestionIndex]?.[index] || ""}
-                onChange={(e) => {
-                  const updatedAnswers = answers[currentQuestionIndex]
-                    ? [...answers[currentQuestionIndex]]
-                    : ["", "", ""];
-                  updatedAnswers[index] = e.target.value;
-                  setAnswers({ ...answers, [currentQuestionIndex]: updatedAnswers });
-                }}
-                placeholder="answer"
+        {/* Apple Counting Question */}
+        {currentQuestion.id === 9 && (
+          <div style={{ textAlign: "center" }}>
+            <div style={{ display: "flex", justifyContent: "center", marginBottom: "10px", marginTop: '-70px' }}>
+              <img 
+                src={currentQuestion.image} 
+                alt="Count the apples" 
+                style={{ width: "200px", height: "auto" }} 
               />
-            </StyledImageInput>
-          ))}
-        </OptionsContainer>
-      )}
+            </div>
+            <div style={{ display: "flex", justifyContent: "center", gap: "15px", marginTop: "10px" }}>
+              {currentQuestion.options.map((option, index) => (
+                <button
+                  key={index}
+                  style={{
+                    padding: "10px 20px",
+                    border: selectedOption === option.label ? "3px solid #5517A8" : "1px solid #ccc",
+                    borderRadius: "8px",
+                    background: selectedOption === option.label ? "#e0d4f7" : "#fff",
+                    cursor: "pointer",
+                    fontSize: "16px"
+                  }}
+                  onClick={() => handleOptionSelect(option.label)}
+                >
+                  {option.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
 
+        {/* Puzzle Question */}
+        {currentQuestion.id === 10 && (
+          <div style={{ textAlign: "center" }}>
+            <div style={{ marginBottom: "20px" }}>
+              <img 
+                src={currentQuestion.puzzleImage} 
+                alt="Dog puzzle" 
+                style={{ width: "450px", height: "auto", border: "2px solid #ccc", borderRadius: "10px" }} 
+              />
+            </div>
+            <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+              {currentQuestion.options.map((option, index) => (
+                <div key={index} style={{ textAlign: "center" }}>
+                  <img 
+                    src={option.image} 
+                    alt={option.label} 
+                    style={{
+                      width: "110px",
+                      height: "100px",
+                      objectFit: "cover",
+                      cursor: "pointer",
+                      border: selectedOption === option.label ? "3px solid #5517A8" : "1px solid #ccc",
+                      borderRadius: "8px",
+                      transition: "border 0.3s ease"
+                    }}
+                    onClick={() => handleOptionSelect(option.label)}
+                  />
+                  <p>{option.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
-
-      
-      
-
-
-    {(currentQuestion.id === 5 || currentQuestion.id === 7) && (
-      <OptionsContainer>
-      {currentQuestion.options.map((option, index) => (
-        <ImageOption
-          key={index}
-          src={option.image}
-          alt={option.label}
-          isSelected={selectedOption === option.label}
-          onClick={() => handleOptionSelect(option.label)}
-        />
-      ))}
-    </OptionsContainer>
+        {/* Navigation Buttons */}
+        <ButtonContainer>
+          <NavigationButton onClick={handlePrevious} disabled={currentQuestionIndex === 0}>
+            Previous
+          </NavigationButton>
+          <NavigationButton onClick={handleNext}>
+            {currentQuestionIndex === selfAssessmentQuestions.length - 1 ? "Finish" : "Next"}
+          </NavigationButton>
+        </ButtonContainer>
+      </AssessmentContainer>
     )}
 
-
-
-    {currentQuestion.id === 8 && (
-      <div style={{ textAlign: "center" }}>
-        <p style={{ fontSize: "18px", fontWeight: "bold" }}>{currentQuestion.numberSequence}</p>
-        <div style={{ display: "flex", justifyContent: "center", gap: "15px", marginTop: "10px" }}>
-          {currentQuestion.options.map((option, index) => (
-            <button
-              key={index}
-              style={{
-                padding: "10px 20px",
-                border: selectedOption === option.label ? "3px solid #5517A8" : "1px solid #ccc",
-                borderRadius: "8px",
-                background: selectedOption === option.label ? "#e0d4f7" : "#fff",
-                cursor: "pointer",
-                fontSize: "16px"
-              }}
-              onClick={() => handleOptionSelect(option.label)}
-            >
-              {option.label}
-            </button>
-          ))}
-        </div>
-      </div>
-    )}
-
-
-
-
-      <ButtonContainer>
-        <NavigationButton onClick={handlePrevious} disabled={currentQuestionIndex === 0}>
-          Previous
-        </NavigationButton>
-        <NavigationButton onClick={handleNext}>
-          {currentQuestionIndex === selfAssessmentQuestions.length - 1 ? "Finish" : "Next"}
-        </NavigationButton>
-      </ButtonContainer>
-
-    </AssessmentContainer>
-    <Footer/>
-    </>
+    <Footer />
+  </>
     
   );
 }
