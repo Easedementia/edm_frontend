@@ -167,3 +167,74 @@ export const SocialMediaIcons = styled.div`
     gap: 8px;
   }
 `;
+
+
+
+
+
+export const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+`;
+
+export const ModalContent = styled.div`
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+  }
+`;
+
+export const CloseButton = styled.button`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    color: #5517A8;
+  }
+`;
+
+
+
+
+
+export const NavigationButton = styled.button`
+  position: absolute;
+  top: 50%;
+  ${(props) => (props.left ? "left: 10px;" : "right: 10px;")}
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: background 0.3s;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+`;

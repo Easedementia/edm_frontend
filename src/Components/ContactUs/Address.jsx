@@ -8,7 +8,7 @@ const Address = () => {
             <Heading>Address</Heading>
             <Paragraph>Ease Dementia Technologies pvt. ltd</Paragraph>
             <Paragraph>Thykoodam Metro Station</Paragraph>
-            <Paragraph>X86H+J2M, SH15, Thykoodam, Vyttila,</Paragraph>
+            <Paragraph>Metro Pillar No : D, TKDM, Thykoodam, Vyttila,</Paragraph>
             <Paragraph>Ernakulam, Kerala, 682019</Paragraph>
 
             <Heading>Email Address</Heading>
