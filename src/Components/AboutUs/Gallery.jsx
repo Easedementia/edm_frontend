@@ -7,8 +7,6 @@ import gallery5 from '../../assets/images/gallery5.jpg'
 import gallery6 from '../../assets/images/gallery6.jpg'
 import gallery7 from '../../assets/images/gallery7.jpg'
 import gallery8 from '../../assets/images/gallery8.jpg'
-import gallery9 from '../../assets/images/gallery9.jpg'
-import gallery10 from '../../assets/images/gallery10.jpg'
 import gallery11 from '../../assets/images/gallery11.jpg'
 import { FaInstagram, FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
