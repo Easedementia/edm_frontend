@@ -4,6 +4,7 @@ import { baseURL } from '../../api/api'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import arrow from '../../assets/images/arrow.svg'
+import LazyLoad from 'react-lazyload'
 
 
 
@@ -47,7 +48,9 @@ const ServicesList = () => {
                   <ArrowIcon src={arrow} alt="arrow icon" />
                 </BookButton>
               </ServiceContent>
+              <LazyLoad height={300} offset={100}>
               <StyledImage src={getFullImageUrl(service.image)} alt='Service Image' />
+              </LazyLoad>
             </ServiceCard>
           </CardContainer>
         ))}

@@ -29,6 +29,9 @@ const FirstPersonUserDetails = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         let valid = true;
+
+
+        
     
         // Validate name input
         if (name.trim() === '') {
@@ -89,6 +92,19 @@ const FirstPersonUserDetails = () => {
             }, 3000); 
         }
     };
+
+
+    const handleNameChange = (e) => {
+        const value = e.target.value;
+        const regex = /^[A-Za-z\s]+$/;
+
+        if (value === '' || regex.test(value)){
+            setName(value);
+            setNameError('');
+        } else {
+            setNameError('Only letters are allowed');
+        }
+    };
     
 
   return (
@@ -112,7 +128,7 @@ const FirstPersonUserDetails = () => {
                         id="userName"
                         type="text"
                         value={name}
-                        onChange={(e) => setName(e.target.value)}
+                        onChange={handleNameChange}
                         required
                         placeholder="Enter your name"
                     />

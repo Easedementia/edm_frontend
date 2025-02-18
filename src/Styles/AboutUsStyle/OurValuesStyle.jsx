@@ -83,7 +83,7 @@ export const ValuesHeading = styled.h3`
 `;
 
 export const ValuesDescription = styled.p`
-  font-size: 13px;
+  font-size: 15px;
   color: #2f2e2e;
 
 

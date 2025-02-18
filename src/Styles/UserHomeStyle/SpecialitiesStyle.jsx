@@ -143,21 +143,21 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.p`
-  font-size: 14px;
+  font-size: 16px;
   color: #333;
   font-family: 'Poppins', sans-serif;
   margin: 0;
 
   @media (max-width: 1024px) {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   @media (max-width: 768px) {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   @media (max-width: 480px) {
-    font-size: 11px;
+    font-size: 12px;
     max-width: 100%;
     text-align: center;
   }

@@ -11,7 +11,7 @@ import jolly from '../../assets/images/jolly.png'
 import praveen1 from '../../assets/images/praveen1.png'
 import snijo1 from '../../assets/images/snijo1.png'
 import jino1 from '../../assets/images/jino1.png'
-
+import LazyLoad from 'react-lazyload'
 
 
 const teamMembers = [
@@ -63,7 +63,9 @@ const MeetOurTeam = () => {
             <TeamGrid>
             {teamMembers.map((member, index) => (
                 <TeamMemberCard key={index}>
+                <LazyLoad height={300} offset={100}>
                 <TeamMemberImage src={member.image} alt={member.name} />
+                </LazyLoad>
                 <TeamMemberName>{member.name}</TeamMemberName>
                 <TeamMemberRole>{member.role}</TeamMemberRole>
                 </TeamMemberCard>

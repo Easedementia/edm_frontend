@@ -3,6 +3,7 @@ import compassion from '../../assets/images/compassion.svg'
 import progress from '../../assets/images/progress.svg'
 import accountability from '../../assets/images/accountability.svg'
 import integrity from '../../assets/images/integrity.svg'
+import LazyLoad from 'react-lazyload'
 
 
 const valuesData = [
@@ -47,7 +48,9 @@ const OurValues = () => {
         <SingleCardContainer>
         {valuesData.map((value, index) => (
             <ValuesContent key={index}>
+            <LazyLoad height={300} offset={100}>
             <ValuesIcon src={value.icon} alt={`${value.heading} Icon`} />
+            </LazyLoad>
             <div>
                 <ValuesHeading>{value.heading}</ValuesHeading>
                 <ValuesDescription>{value.description}</ValuesDescription>

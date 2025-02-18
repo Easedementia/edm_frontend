@@ -88,14 +88,14 @@ export const Title = styled.h1`
 
 export const Subtitle = styled.h2`
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     color: #5517A8 ;
     text-align: left;
 
 
     @media (max-width: 768px) {
-        font-size: 14px;
+        font-size: 16px;
         text-align: center;
     }
 
@@ -109,19 +109,19 @@ export const Subtitle = styled.h2`
 
 export const Description = styled.p`
     font-family: 'Poppins', sans-serif;
-    font-size: 14.5px;
+    font-size: 18px;
     color: #252323;
     line-height: 1.5;
     text-align: left;
 
 
     @media (max-width: 768px) {
-        font-size: 13px;
+        font-size: 16px;
         text-align: center;
     }
 
     @media (max-width: 480px) {
-        font-size: 12px;
+        font-size: 14px;
         text-align: center;
         margin-top: 12px;
     }

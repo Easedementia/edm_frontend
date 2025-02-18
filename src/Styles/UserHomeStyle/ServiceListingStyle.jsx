@@ -130,7 +130,7 @@ export const ServiceIcon = styled.img`
 
 export const ServiceTitle = styled.h3`
   font-family: 'Poppins', sans-serif;
-  font-size: 16.9px;
+  font-size: 18px;
   color: #000;
   margin-bottom: 15px;
   font-weight: 700;
@@ -152,7 +152,7 @@ export const ServiceTitle = styled.h3`
 
 export const ServiceDescription = styled.p`
   font-family: 'Poppins', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   color: #2e2e2e;
   margin-bottom: 20px;
   text-align: center;
@@ -164,12 +164,12 @@ export const ServiceDescription = styled.p`
   }
 
   @media (max-width: 768px) {
-    font-size: 12px;
+    font-size: 13px;
     margin-bottom: 10px;
   }
 
   @media (max-width: 480px) {
-    font-size: 11px;
+    font-size: 12px;
     margin-bottom: 8px;
   }
 `;

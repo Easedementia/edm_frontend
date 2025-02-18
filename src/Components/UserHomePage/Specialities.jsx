@@ -4,6 +4,7 @@ import vr from '../../assets/images/vr.svg'
 import hospex from '../../assets/images/hospex.svg'
 import brain from '../../assets/images/brain.svg'
 import care from '../../assets/images/care.svg'
+import LazyLoad from 'react-lazyload'
 
 const Specialities = () => {
   return (
@@ -12,7 +13,9 @@ const Specialities = () => {
         <SpecialityCard area="card1">
           <HighlightedText>#1</HighlightedText>
           <SubTitle>Kerala’s first elder care startup focusing on non-pharmacological interventions for dementia.</SubTitle>
+          <LazyLoad height={300} offset={100}>
           <SpecialityImage src={brain} alt="Doctor and Patient" />
+          </LazyLoad>
         </SpecialityCard>
 
         <SpecialityCard area="card2">
@@ -27,18 +30,24 @@ const Specialities = () => {
 
         <SpecialityCard area="card4">
           <HighlightedText>#1</HighlightedText>
+          <LazyLoad height={300} offset={100}>
           <SpecialityImage src={vr} alt="VR Headset" />
+          </LazyLoad>
           <SubTitle>India’s first Virtual Reality supported Dementia Care.</SubTitle>
         </SpecialityCard>
 
         <SpecialityCard area="card5">
         <HighlightedText>#1</HighlightedText>
           <SubTitle>Best Healthcare Startup Award 2023 - IMA Hospex</SubTitle>
+          <LazyLoad height={300} offset={100}>
           <SpecialityImage src={hospex} alt="Heart Icon" />
+          </LazyLoad>
         </SpecialityCard>
 
         <SpecialityCard area="card6">
+          <LazyLoad height={300} offset={100}>
           <SpecialityImage src={forbes} alt="Award Trophy" />
+          </LazyLoad>
           <SubTitle style={{marginTop:'-40px'}} >We’re recognized as one of the Select 200 companies with Global Business Potential
           by</SubTitle>
           <Title  style={{marginBottom:'110px'}}>Forbes India DGEMS 2024.</Title>
@@ -51,7 +60,9 @@ const Specialities = () => {
 
         <SpecialityCard area="card8">
           <SubTitle>Range of Geriatricians, Neurologists, Psychologists...</SubTitle>
+          <LazyLoad height={300} offset={100}>
           <SpecialityImage src={care} alt='care' />
+          </LazyLoad>
         </SpecialityCard>
 
         

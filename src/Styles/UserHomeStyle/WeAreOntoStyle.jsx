@@ -88,29 +88,29 @@ export const CardImage = styled.img`
 
 export const CardTitle = styled.h3`
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 24px;
     color: #000;
     margin-bottom: 15px;
     font-weight: 700;
 
     @media (max-width: 768px) {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     @media (max-width: 480px) {
-        font-size: 16px;
+        font-size: 18px;
     }
 `;
 
 export const CardDescription = styled.p`
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+    font-size: 17px;
     color: #282626;
     margin-bottom: 20px;
     text-align: left;
 
     @media (max-width: 768px) {
-        font-size: 13px;
+        font-size: 14px;
         margin-bottom: 15px;
     }
 

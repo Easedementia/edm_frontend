@@ -33,7 +33,17 @@ import { baseURL } from "../../api/api";
 
 const selfAssessmentQuestions = [
     { id: 1, type: "text", question: "What is today’s date? (dd/mm/yyyy)" },
-    { id: 2, type: "instruction", question: "Please read and remember these items: TOMATO, RICE, APPLE. Repeat this list three times and keep it in mind, as you may be asked about it later." },
+    {
+      id: 2,
+      type: "instruction",
+      question: (
+        <>
+          Please read and remember these items:{" "}
+          <strong>TOMATO, RICE, APPLE</strong>. Repeat this list three times and keep it in mind, as you may be asked about it later.
+        </>
+      ),
+    },
+    
     { id: 3, type: "fill-in-the-blanks", question: "Write numbers backward by six:", blanks: [100, 94, "", "", "", "", ""] },
     { id: 4, type: "image", question: "Name each of these animals:", imageUrls: [cat, elephant, hen] },
     { 
@@ -586,10 +596,8 @@ const SelfAssessment = () => {
         </ButtonContainer>
       </AssessmentContainer>
     )}
-
     <Footer />
   </>
-    
   );
 }
 

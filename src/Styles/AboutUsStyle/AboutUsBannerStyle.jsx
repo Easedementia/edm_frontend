@@ -87,19 +87,19 @@ export const MainHeading = styled.h1`
 
 
 export const Description = styled.p`
-    font-size: 16px;
+    font-size: 20px;
     color: #2f2e2e;
     text-align: left;
 
 
     @media (max-width: 768px) {
-        font-size: 14px;
+        font-size: 16px;
         text-align: center;
     }
 
 
     @media (max-width: 480px) {
-        font-size: 13px;
+        font-size: 14px;
         text-align: center;
         
     }

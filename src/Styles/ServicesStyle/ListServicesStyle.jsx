@@ -137,7 +137,7 @@ export const ServiceTitle = styled.h3`
 
 export const ServiceDescription = styled.p`
   font-family: 'Poppins', sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   color: #2e2e2e;
   margin-bottom: 20px;
   text-align: left;

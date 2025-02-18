@@ -1,5 +1,7 @@
 import { AboutUsContainer, HeadingContainer, SubHeading, MainHeading, Description, ImageContainer, StyledImage } from '../../Styles/AboutUsStyle/AboutUsBannerStyle'
 import aboutusbanner from '../../assets/images/aboutusbanner.svg'
+import LazyLoad from "react-lazyload";
+
 
 
 const AboutUsBanner = () => {
@@ -14,7 +16,9 @@ const AboutUsBanner = () => {
             </Description>
         </HeadingContainer>
         <ImageContainer>
-            <StyledImage src={aboutusbanner} alt='Puzzle Hands' />
+          <LazyLoad height={300} offset={100}>
+          <StyledImage src={aboutusbanner} alt='Puzzle Hands' />
+          </LazyLoad>
         </ImageContainer>
     </AboutUsContainer>
   )

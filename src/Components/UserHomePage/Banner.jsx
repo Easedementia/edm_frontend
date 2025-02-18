@@ -1,6 +1,8 @@
 import { BannerContainer, TextContainer, Title, Subtitle, ContactButton, ArrowIcon, ImageContainer, BannerImage } from '../../Styles/UserHomeStyle/BannerStyle'
 import brain from '../../assets/images/brain.svg'
 import arrow from '../../assets/images/arrow.svg'
+import LazyLoad from "react-lazyload";
+
 
 // import { Link } from 'react-router-dom'
 
@@ -16,7 +18,9 @@ const Banner = () => {
         </ContactButton> 
       </TextContainer>
       <ImageContainer>
+        <LazyLoad height={300} offset={100}>
         <BannerImage src={brain} alt='banner-image' />
+        </LazyLoad>
       </ImageContainer>
     </BannerContainer>
   )

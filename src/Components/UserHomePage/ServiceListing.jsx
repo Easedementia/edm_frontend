@@ -8,6 +8,7 @@ import screening1 from '../../assets/images/screening1.svg'
 import teleconsulting1 from '../../assets/images/teleconsulting1.svg'
 import intervention1 from '../../assets/images/intervention1.svg'
 import caregiver1 from '../../assets/images/caregiver1.svg'
+import LazyLoad from 'react-lazyload';
 
 
 
@@ -51,12 +52,16 @@ const ServiceListing = () => {
         <ServiceContainer>
             {services.map((service, index) => (
                 <ServiceCard key={index}>
+                    <LazyLoad>
                     <ServiceIcon src={service.icon} alt={service.title} />
+                    </LazyLoad>
                     <ServiceTitle>{service.title}</ServiceTitle>
                     <ServiceDescription>{service.description}</ServiceDescription>
                     <ServiceLink href={service.link}>
                     Explore More
+                    <LazyLoad>
                     <img src={arrow} alt="Arrow Icon" />
+                    </LazyLoad>
                     </ServiceLink>
                 </ServiceCard>
             ))}

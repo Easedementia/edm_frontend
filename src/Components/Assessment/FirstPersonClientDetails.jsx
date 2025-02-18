@@ -53,6 +53,19 @@ const FirstPersonClientDetails = () => {
     }
 
 
+    const handleNameChange = (e) => {
+        const value = e.target.value;
+        const regex = /^[A-Za-z\s]+$/;
+
+        if (value === '' || regex.test(value)){
+            setName(value);
+            setNameError('');
+        } else {
+            setNameError('Only letters are allowed');
+        }
+    };
+
+
     // const [fullname, setFullname] = useState('');
     // const [age, setAge] = useState('');
     // const [mobile, setMobile] = useState('');
@@ -163,7 +176,7 @@ const FirstPersonClientDetails = () => {
                             id="clientName"
                             type="text"
                             value={name}
-                            onChange={e => setName(e.target.value)}
+                            onChange={handleNameChange}
                             required
                             placeholder="Enter the name"
                         />

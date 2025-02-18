@@ -1,9 +1,11 @@
 import { PropTypes } from 'prop-types'
-import { ConsultingContainer, HeadingContainer, SubHeading, MainHeading, Description, ImageContainer, StyledImage, ContactButton, ArrowIcon } from '../../Styles/DoctorConsultingStyle/ConsultingBannerStyle'
+import { ConsultingContainer, HeadingContainer, SubHeading, MainHeading, Description, ImageContainer, StyledImage } from '../../Styles/DoctorConsultingStyle/ConsultingBannerStyle'
 import doctorconsultingbanner from '../../assets/images/doctorconsultingbanner.svg'
-import arrow from '../../assets/images/arrow.svg'
 
-const ConsultingBanner = ({scrollToDoctorsList}) => {
+import LazyLoad from "react-lazyload";
+
+
+const ConsultingBanner = () => {
   return (
     <ConsultingContainer>
         <HeadingContainer>
@@ -13,13 +15,12 @@ const ConsultingBanner = ({scrollToDoctorsList}) => {
                 Here we strive to redefine dementia care, empower individuals to
                 thrive, and inculcate a sense of belongingness!
             </Description>
-            <ContactButton onClick={scrollToDoctorsList}>
-              Book an appointment
-              <ArrowIcon src={arrow} alt='arrow icon' />
-            </ContactButton>
+            
         </HeadingContainer>
         <ImageContainer>
-            <StyledImage src={doctorconsultingbanner} alt='Puzzle Hands' />
+          <LazyLoad height={300} offset={100} once >
+          <StyledImage src={doctorconsultingbanner} alt='Puzzle Hands' />
+          </LazyLoad>
         </ImageContainer>
     </ConsultingContainer>
   )

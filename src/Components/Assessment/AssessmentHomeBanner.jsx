@@ -1,9 +1,9 @@
-import { AssessmentContainer, HeadingContainer, MainHeading, SubHeading, Description, ButtonContainer, AssessmentButton, Icon, ImageContainer, StyledImage } from '../../Styles/AssessmentStyle/AssessmentHomeBannerStyle'
-import arrow from '../../assets/images/arrow.svg'
+import { AssessmentContainer, HeadingContainer, MainHeading, SubHeading, Description, ImageContainer, StyledImage } from '../../Styles/AssessmentStyle/AssessmentHomeBannerStyle'
 import assessmentpage_banner from '../../assets/images/assessmentpage_banner.svg'
 import PropTypes from "prop-types";
+import LazyLoad from 'react-lazyload';
 
-const AssessmentHomeBanner = ({ scrollToOptions }) => {
+const AssessmentHomeBanner = () => {
   return (
     <AssessmentContainer>
         <HeadingContainer>
@@ -12,15 +12,17 @@ const AssessmentHomeBanner = ({ scrollToOptions }) => {
             <Description>
             Here we provide a comprehensive assessment for evaluating the cognitive health of individuals which includes both first person assessment  where family members or caregivers can take the assessment in lieu of the client and self-assessments, which allow individuals to reflect on their own cognitive changes.
             </Description>
-            <ButtonContainer>
+            {/* <ButtonContainer>
                 <AssessmentButton onClick={scrollToOptions}>
                     Take me to the Assessment
                     <Icon src={arrow} alt="Arrow Icon" />
                 </AssessmentButton>
-            </ButtonContainer>
+            </ButtonContainer> */}
         </HeadingContainer>
         <ImageContainer>
-            <StyledImage src={assessmentpage_banner} alt="Assessment Illustration"  />
+          <LazyLoad>
+          <StyledImage src={assessmentpage_banner} alt="Assessment Illustration"  />
+          </LazyLoad>
         </ImageContainer>
     </AssessmentContainer>
   )

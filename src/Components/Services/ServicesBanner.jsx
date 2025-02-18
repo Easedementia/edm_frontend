@@ -1,5 +1,6 @@
 import { ServicesContainer, HeadingContainer, SubHeading, MainHeading, Description, ImageContainer, StyledImage } from '../../Styles/ServicesStyle/ServicesBannerStyle'
 import servicesbannerimage from '../../assets/images/servicesbannerimage.svg'
+import LazyLoad from 'react-lazyload'
 
 
 const ServicesBanner = () => {
@@ -13,7 +14,9 @@ const ServicesBanner = () => {
             </Description>
         </HeadingContainer>
         <ImageContainer>
-            <StyledImage src={servicesbannerimage} alt='Puzzle Hands' />
+          <LazyLoad height={300} offset={100}>
+          <StyledImage src={servicesbannerimage} alt='Puzzle Hands' />
+          </LazyLoad>
         </ImageContainer>
     </ServicesContainer>
   )

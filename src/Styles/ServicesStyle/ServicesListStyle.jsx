@@ -60,7 +60,7 @@ export const MainHeading = styled.h1`
 `;
 
 export const Description = styled.p`
-  font-size: 17px;
+  font-size: 19px;
   color: #000;
   text-align: left;
   font-weight: 300;

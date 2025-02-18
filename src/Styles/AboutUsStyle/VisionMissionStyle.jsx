@@ -144,7 +144,7 @@ export const CardHeading = styled.h3`
 
 
 export const CardDescription = styled.p`
-  font-size: 15px;
+  font-size: 16px;
   color: #2f2e2e;
   text-align: left;
   margin-top: -10px;
@@ -194,7 +194,7 @@ export const SubHeading = styled.h1`
 `;
 
 export const Description = styled.p`
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #2f2e2e;
   margin-bottom: 2rem;
 
