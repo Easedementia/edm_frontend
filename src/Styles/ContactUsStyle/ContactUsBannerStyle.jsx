@@ -160,7 +160,7 @@ export const Subtitle = styled.p`
 
 
 export const Description = styled.p`
-    font-size: 1rem;
+    font-size: 20px;
     color: #2f2e2e;
     margin-bottom: 1.5rem;
 

@@ -87,7 +87,7 @@ export const MainHeading = styled.h1`
 
 export const Description = styled.p`
     font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     color: #2f2e2e;
     margin-top: 20px;
     line-height: 1.5;
