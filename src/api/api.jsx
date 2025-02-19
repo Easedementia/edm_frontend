@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // const baseURL = 'http://localhost:8000';
-const baseURL = 'https://www.easedementia.in';
+const baseURL = 'https://api.easedementia.in';
 
 // const imageBaseUrl = 'http://localhost:8000'
 
