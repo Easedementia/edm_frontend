@@ -72,7 +72,7 @@ const Footer = () => {
                 <ContactItem><strong>Address</strong></ContactItem>
                 <ContactItem>Ease Dementia Technologies pvt. ltd</ContactItem>
                 <ContactItem>Thykoodam Metro Station</ContactItem>
-                <ContactItem>X86H+J2M, SH15, Thykoodam, Vyttila,</ContactItem>
+                <ContactItem>Metro Pillar No : D, TKDM, Thykoodam, Vyttila,</ContactItem>
                 <ContactItem>Ernakulam, Kerala 682019</ContactItem>
             </ContactDetails>
             <ContactDetails>
