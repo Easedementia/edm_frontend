@@ -17,14 +17,14 @@ const testimonials = [
     {
         text: "Good work team! Our experiences with Ease Dementia was excellent. Especially the intervention specialist who was handling the interactive sessions was very patient and dedicated.",
         name: "Reena George",
-        title: "Aluva",
+        title: "Kochi",
         image: testimonial2
     },
 
     {
         text: "Thank you easedementia. You have made a difference in the life of our father . The calm demeanor empathy of the intervention specialist has encouraged father to develop a sense of purposefulness.",
         name: "Rani Antony",
-        title: "Kacherippady",
+        title: "Kochi",
         image: testimonial3
     }
 ];

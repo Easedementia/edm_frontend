@@ -37,7 +37,6 @@ import FirstPersonAssessmentNewUser from './Components/Assessment/FirstPersonAss
 import DoctorSignupPage from './Pages/DoctorSignupPage';
 import TermsConditions from './Components/Footer/TermsConditions';
 import PrivacyPolicy from './Components/Footer/PrivacyPolicy';
-import Clock from './Components/Assessment/Clock';
 import ScrollToTop from './Components/ScrollToTop';
 import Careers from './Components/Careers/Careers';
 import SelfAssessmentInstructions from './Components/Assessment/SelfAssessmentInstructions';
@@ -102,7 +101,7 @@ function App() {
           <Route path='/terms-conditions' element={<TermsConditions/>} />
           <Route path='/privacy-policy' element={<PrivacyPolicy/>} />
           <Route path='/careers' element={<Careers/>} />
-          <Route path='/clock' element={<Clock/>} />
+          
 
           
 

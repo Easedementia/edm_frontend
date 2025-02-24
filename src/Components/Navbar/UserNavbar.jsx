@@ -18,8 +18,8 @@ const UserNavbar = () => {
     const dispatch = useDispatch();
     const location = useLocation();
 
-    const { isAuthenticated, user } = useSelector(state => state.user);
-    console.log("***User***", user);
+    const { isAuthenticated } = useSelector(state => state.user);
+    // console.log("***User***", user);
 
     const handleDropdownToggle = () => setDropdownOpen(prev => !prev);
 
