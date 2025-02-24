@@ -19,7 +19,7 @@ const UserNavbar = () => {
     const location = useLocation();
 
     const { isAuthenticated } = useSelector(state => state.user);
-    // console.log("***User***", user);
+    
 
     const handleDropdownToggle = () => setDropdownOpen(prev => !prev);
 

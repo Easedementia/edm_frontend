@@ -49,8 +49,6 @@ export const UserLoginPage = () => {
 
     const handleLogin = (event) => {
         event.preventDefault();
-        // console.log("Email:", email);
-        // console.log("Password:", password);
 
         if (email.trim() === '' || password.trim() === '') {
             if (email.trim() === '') {
@@ -67,7 +65,7 @@ export const UserLoginPage = () => {
                 password: password,
             }, { withCredentials: true })
             .then((response) => {
-                // console.log('RESPONSE DATA:', response.data);
+                
 
                 const accessToken = response.data.data.access;
                 const refreshToken = response.data.data.refresh;
@@ -98,9 +96,9 @@ export const UserLoginPage = () => {
                 }
 
                 const pendingScore = localStorage.getItem("pendingScore");
-                // console.log("Score:", pendingScore)
+                
                 if (pendingScore) {
-                    // console.log("///Score///:", pendingScore)
+                    
                     
                     navigator('/assessment/self-assessment', { state: { pendingScore: Number(pendingScore) }, replace: true });
                 } else {
@@ -144,9 +142,9 @@ export const UserLoginPage = () => {
                     <GoogleLogin
                                 onSuccess={credentialResponse => {
                                     const decoded = jwtDecode(credentialResponse.credential);
-                                    // console.log(decoded);
+                                    
                                     const fullname = decoded.name;
-                                    // console.log("Fullname:", fullname)
+                                    
                                     const spaceIndex = fullname.indexOf(' ');
                                     
                                     let firstName, lastName;
@@ -169,8 +167,7 @@ export const UserLoginPage = () => {
                     .then((response) => {
                         localStorage.setItem('accessToken', response.data.access);
                         localStorage.setItem('refreshToken', response.data.refresh);
-                        // console.log("response.data", response.data);
-                        // console.log("RESPONSE DATA USER:", response.data.user);
+                        
                         dispatch(setAccessToken(response.data.data));
                         dispatch(setUser({
                             user: response.data.user
