@@ -4,6 +4,7 @@ import vr from '../../assets/images/vr.svg'
 import hospex from '../../assets/images/hospex.svg'
 import brain from '../../assets/images/brain.svg'
 import care from '../../assets/images/care.svg'
+import brain_png from '../../assets/images/brain_png.png'
 import LazyLoad from 'react-lazyload'
 
 const Specialities = () => {

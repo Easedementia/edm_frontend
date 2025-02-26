@@ -178,7 +178,7 @@ export const ImageContainer = styled.div`
 export const BannerImage = styled.img`
     max-width: 100%;
     height: auto;
-    margin: 0 auto;
+    margin: 50px auto;
     display: block;
 
 
