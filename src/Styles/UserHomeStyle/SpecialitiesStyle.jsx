@@ -107,7 +107,6 @@ export const SpecialityCard = styled.div`
 export const SpecialityImage = styled.img`
   width: 400px;
   height: auto;
-  margin-top: 10px;
   max-width: 100%;
 
   @media (max-width: 1024px) {

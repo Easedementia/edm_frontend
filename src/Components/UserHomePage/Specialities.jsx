@@ -1,9 +1,14 @@
 import { SpecialitiesContainer, GridWrapper, SpecialityCard, SpecialityImage, Title, SubTitle, HighlightedText } from '../../Styles/UserHomeStyle/SpecialitiesStyle'
-import forbes from '../../assets/images/forbes.svg'
-import vr from '../../assets/images/vr.svg'
-import hospex from '../../assets/images/hospex.svg'
-import brain from '../../assets/images/brain.svg'
-import care from '../../assets/images/care.svg'
+// import forbes from '../../assets/images/forbes.svg'
+// import vr from '../../assets/images/vr.svg'
+// import hospex from '../../assets/images/hospex.svg'
+// import brain from '../../assets/images/brain.svg'
+// import care from '../../assets/images/care.svg'
+import specialities_brain from '../../assets/images/specialities_brain.png'
+import specialities_care from '../../assets/images/specialities_care.png'
+import specialities_forbes from '../../assets/images/specialities_forbes.png'
+import specialities_hospex from '../../assets/images/specialities_hospex.png'
+import specialities_vr from '../../assets/images/specialities_vr.png'
 import LazyLoad from 'react-lazyload'
 
 const Specialities = () => {
@@ -14,7 +19,7 @@ const Specialities = () => {
           <HighlightedText>#1</HighlightedText>
           <SubTitle>Kerala’s first elder care startup focusing on non-pharmacological interventions for dementia.</SubTitle>
           <LazyLoad height={300} offset={100}>
-          <SpecialityImage src={brain} alt="Doctor and Patient" />
+          <SpecialityImage src={specialities_brain} alt="Doctor and Patient" />
           </LazyLoad>
         </SpecialityCard>
 
@@ -31,7 +36,7 @@ const Specialities = () => {
         <SpecialityCard area="card4">
           <HighlightedText>#1</HighlightedText>
           <LazyLoad height={300} offset={100}>
-          <SpecialityImage src={vr} alt="VR Headset" />
+          <SpecialityImage src={specialities_vr} alt="VR Headset" />
           </LazyLoad>
           <SubTitle>India’s first Virtual Reality supported Dementia Care.</SubTitle>
         </SpecialityCard>
@@ -40,13 +45,13 @@ const Specialities = () => {
         <HighlightedText>#1</HighlightedText>
           <SubTitle>Best Healthcare Startup Award 2023 - IMA Hospex</SubTitle>
           <LazyLoad height={300} offset={100}>
-          <SpecialityImage src={hospex} alt="Heart Icon" />
+          <SpecialityImage src={specialities_hospex} alt="Heart Icon" />
           </LazyLoad>
         </SpecialityCard>
 
         <SpecialityCard area="card6">
           <LazyLoad height={300} offset={100}>
-          <SpecialityImage src={forbes} alt="Award Trophy" />
+          <SpecialityImage src={specialities_forbes} alt="Award Trophy" />
           </LazyLoad>
           <SubTitle style={{marginTop:'-40px'}} >We’re recognized as one of the Select 200 companies with Global Business Potential
           by</SubTitle>
@@ -61,7 +66,7 @@ const Specialities = () => {
         <SpecialityCard area="card8">
           <SubTitle>Range of Geriatricians, Neurologists, Psychologists...</SubTitle>
           <LazyLoad height={300} offset={100}>
-          <SpecialityImage src={care} alt='care' />
+          <SpecialityImage src={specialities_care} alt='care' />
           </LazyLoad>
         </SpecialityCard>
 
