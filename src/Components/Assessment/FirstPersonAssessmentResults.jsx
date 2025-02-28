@@ -52,11 +52,11 @@ const FirstPersonAssessmentResults = () => {
     const interpretation = location.state?.interpretation || '';
     console.log("INTERPRETATION:", interpretation);
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
-    const handleConsultationClick = () => {
-        navigate('/doctor-consulting');
-    }
+    // const handleConsultationClick = () => {
+    //     navigate('/doctor-consulting');
+    // }
 
     useEffect(() => {
       const data = {
@@ -89,9 +89,9 @@ const FirstPersonAssessmentResults = () => {
       <h2>Your Total Score: {score}</h2>
       <p>{interpretation}</p>
       <ButtonWrapper>
-            <StyledButton onClick={handleConsultationClick}>
+            {/* <StyledButton onClick={handleConsultationClick}>
             Go to Doctor Consultation
-            </StyledButton>
+            </StyledButton> */}
         </ButtonWrapper>
       </ResultContainer>
     </Container>

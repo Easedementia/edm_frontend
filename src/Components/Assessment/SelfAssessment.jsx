@@ -408,9 +408,9 @@ const SelfAssessment = () => {
               <p style={{ color: "red", fontWeight: "bold" }}>
                 There may be a chance of cognitive decline. We recommend consulting a doctor.
                 <ButtonContainer>
-                  <NavigationButton style={{marginLeft:'125px'}} onClick={handleConsultationClick}>
+                  {/* <NavigationButton style={{marginLeft:'125px'}} onClick={handleConsultationClick}>
                     Doctor Consultation
-                  </NavigationButton>
+                  </NavigationButton> */}
                 </ButtonContainer>
               </p>
             )}
