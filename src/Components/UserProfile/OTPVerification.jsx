@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Container, FormWrapper, FormTitle, Icon, Form, Label, Input, ButtonContainer, Button, Message } from '../../Styles/UserProfileStyle/OTPVerificationStyle';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import email_icon from '../../assets/images/email_icon.png'
+// import email_icon from '../../assets/images/email_icon.png'
 import {baseURL} from '../../api/api';
 import { toast } from 'react-toastify';
 
@@ -47,7 +47,7 @@ const OTPVerification = () => {
       <FormWrapper>
         <FormTitle>
           Verify OTP
-          <Icon src={email_icon} alt="User Icon" />
+          <Icon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/email_icon.png" alt="User Icon" />
         </FormTitle>
         <Form>
           <Label htmlFor="email">EMAIL</Label>

@@ -1,15 +1,15 @@
 import { useState } from 'react'
 import { FooterContainer, TopSection, LeftContainer, Logo, NewsletterContainer, NewsletterText, EmailInput, ArrowIcon, InputWrapper, RightContainer, ContactDetails, ContactItem, LinksContainer, LinkItem, BottomSection, FooterWrapper, FooterBottomText, SocialMediaIconsContainer, SocialMediaIconLink, HeartIcon } from '../../Styles/Footer/FooterStyle'
-import easedementia_logo from '../../assets/images/easedementia_logo.png'
+// import easedementia_logo from '../../assets/images/easedementia_logo.png'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 import { baseURL } from '../../api/api'
 import { toast } from 'react-toastify'
-import arrow from '../../assets/images/arrow.svg'
+// import arrow from '../../assets/images/arrow.svg'
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
-import footerelement1 from '../../assets/images/footerelement1.svg'
+// import footerelement1 from '../../assets/images/footerelement1.svg'
 
 
 const Footer = () => {
@@ -37,7 +37,7 @@ const Footer = () => {
     <FooterContainer>
         <TopSection>
             <LeftContainer>
-                <Logo src={easedementia_logo} alt='easedementia-logo' />
+                <Logo src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/easedementia_logo.png" alt='easedementia-logo' />
                 <NewsletterContainer>
                     <NewsletterText>Stay in the loop and sign up for the newsletter:</NewsletterText>
                     <InputWrapper>
@@ -47,7 +47,7 @@ const Footer = () => {
                         value={email}
                         onChange={handleEmailChange}
                     />
-                    <ArrowIcon src={arrow} alt="Submit" onClick={handleSubscribe} />
+                    <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Submit" onClick={handleSubscribe} />
                     
                     </InputWrapper>
                     <SocialMediaIconsContainer>
@@ -93,7 +93,7 @@ const Footer = () => {
                 <LinkItem as={Link} to='/contact#faq'>FAQ</LinkItem>
                 <LinkItem as={Link} to='/contact'>Contact Us</LinkItem>
                 <LinkItem as={Link} to='/careers'>Careers</LinkItem>
-                <HeartIcon src={footerelement1} alt="Heart Icon" />
+                <HeartIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/footerelement1.svg" alt="Heart Icon" />
             </LinksContainer>
         </RightContainer>
         </TopSection>

@@ -7,8 +7,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { toast } from 'react-toastify'
 import { baseURL } from '../../api/api'
 import axios from 'axios'
-import edit_icon from '../../assets/images/edit_icon.svg'
-import arrow from '../../assets/images/arrow.svg'
+// import edit_icon from '../../assets/images/edit_icon.svg'
+// import arrow from '../../assets/images/arrow.svg'
 import { clearAuth } from '../../Redux/UserSlice'
 import CallButton from '../CallUs/CallButton'
 import WhatsappButton from '../WhatsappChat/WhatsappButton'
@@ -105,7 +105,7 @@ const AssessmentHistory = () => {
       <ProfileDetails>
         <AvatarWrapper>
           <Avatar src={avatarPreview || `${baseURL}/media/default-avatar.png`} alt="User Avatar" />
-          <EditIcon src={edit_icon} alt="Edit Icon" />
+          <EditIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/edit_icon.svg" alt="Edit Icon" />
         </AvatarWrapper>
         <UserName>{userDetails.fullname || 'User Name'}</UserName>
         <UserContact>
@@ -114,13 +114,13 @@ const AssessmentHistory = () => {
         </UserContact>
         <ButtonsContainer>
           <Button selected={true} onClick={() => handleNavigate('/user-profile/assessment-history')} >
-            Assessment History <img src={arrow} alt="Arrow Icon" />
+            Assessment History <img src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow Icon" />
           </Button>
           <Button selected={false} onClick={() => handleNavigate('/user-profile/appointments-history')} >
-            Appointment History <img src={arrow} alt="Arrow Icon" />
+            Appointment History <img src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow Icon" />
           </Button>
           <Button onClick={handleLogout}>
-              Log Out <img src={arrow} alt="Arrow Icon" />
+              Log Out <img src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow Icon" />
             </Button>
         </ButtonsContainer>
       </ProfileDetails>

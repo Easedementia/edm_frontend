@@ -10,9 +10,9 @@ import axios from 'axios';
 import moment from 'moment';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import doctordetailsicon4 from '../../assets/images/doctordetailsicon4.svg'
-import doctordetailsicon5 from '../../assets/images/doctordetailsicon5.svg'
-import doctordetailsicon6 from '../../assets/images/doctordetailsicon6.svg'
+// import doctordetailsicon4 from '../../assets/images/doctordetailsicon4.svg'
+// import doctordetailsicon5 from '../../assets/images/doctordetailsicon5.svg'
+// import doctordetailsicon6 from '../../assets/images/doctordetailsicon6.svg'
 import CallButton from '../CallUs/CallButton';
 import WhatsappButton from '../WhatsappChat/WhatsappButton';
 
@@ -174,13 +174,13 @@ const DoctorDetails = () => {
         </DoctorInfo>
         <IconGroup>
           <Icon>
-            <img src={doctordetailsicon4} alt="Comment Icon" />
+            <img src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/doctordetailsicon4.svg" alt="Comment Icon" />
           </Icon>
           <Icon>
-            <img src={doctordetailsicon5} alt="Phone Icon" />
+            <img src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/doctordetailsicon5.svg" alt="Phone Icon" />
           </Icon>
           <Icon>
-            <img src={doctordetailsicon6} alt="Video Icon" />
+            <img src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/doctordetailsicon6.svg" alt="Video Icon" />
           </Icon>
         </IconGroup>
       </Header>

@@ -1,10 +1,10 @@
 import { Container, LeftSide, RightSide, MainTitle, TitleSpan, Subtitle, Description, FormWrapper, FormTitle, Icon, KnowMoreButton, Form, Label, Input, ButtonContainer, Button, ArrowIcon } from '../Styles/UserSignup/UserSignupStyle'
-import user_icon from '../assets/images/user_icon.svg'
+// import user_icon from '../assets/images/user_icon.svg'
 import axios from 'axios' 
 import {useNavigate} from 'react-router-dom'
 import {baseURL} from '../api/api'
 import { useState } from 'react'
-import arrow from '../assets/images/arrow.svg'
+// import arrow from '../assets/images/arrow.svg'
 import UserNavbar from '../Components/Navbar/UserNavbar'
 import { toast } from 'react-toastify'
 
@@ -139,14 +139,14 @@ const UserSignupPage = () => {
         <Description>Join us today to access personalized care and innovative solutions designed to support your journey toward better well-being!</Description>
         <KnowMoreButton>
             Know More
-            <ArrowIcon src={arrow} alt="Arrow Icon" />
+            <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow Icon" />
         </KnowMoreButton>
         </LeftSide>
         <RightSide>
         <FormWrapper>
             <FormTitle>
             Sign Up
-            <Icon src={user_icon} alt="User Icon" />
+            <Icon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/user_icon.svg" alt="User Icon" />
             </FormTitle>
             <Form>
             <Label htmlFor="fullName">FULL NAME</Label>

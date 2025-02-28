@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { FAQContainer, FAQTitle, QuestionContainer, Question, Answer, ArrowIcon } from '../../Styles/ContactUsStyle/FAQStyle'
-import arrow from '../../assets/images/arrow.svg'
+// import arrow from '../../assets/images/arrow.svg'
 
 const FAQ = () => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -41,7 +41,7 @@ const FAQ = () => {
                 <Question onClick={() => toggleFAQ(index)} >
                     {faq.question}
                     
-                    <ArrowIcon src={arrow} alt="Arrow-Icon" rotate={activeIndex == index ? 90:270} />
+                    <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow-Icon" rotate={activeIndex == index ? 90:270} />
                 </Question>
                 {activeIndex === index && <Answer> {faq.answer} </Answer>}
             </QuestionContainer>

@@ -1,5 +1,5 @@
 import { PageWrapper, LeftSide, RightSide, InfoSection, Title, Subtitle, Description, Button, ArrowIcon, FormWrapper, FormTitle, Icon, Form, Label, Input, ButtonContainer, FormButton } from '../Styles/UserLogin/UserLoginStyle'
-import user_icon from '../assets/images/user_icon.svg';
+// import user_icon from '../assets/images/user_icon.svg';
 import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode'
@@ -11,7 +11,7 @@ import { toast } from 'react-toastify';
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import Cookies from 'js-cookie';
 import { Link } from 'react-router-dom';
-import arrow from '../assets/images/arrow.svg'
+// import arrow from '../assets/images/arrow.svg'
 import UserNavbar from '../Components/Navbar/UserNavbar';
 
 
@@ -134,7 +134,7 @@ export const UserLoginPage = () => {
                 </Description>
 
                 <Button>
-                    Know More <ArrowIcon src={arrow} alt="Arrow Icon" />
+                    Know More <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow Icon" />
                 </Button>
             </InfoSection>
                 <GoogleOAuthProvider clientId="983196844931-f4h8h0ckn48vrmn01adl89k0csqmrrv1.apps.googleusercontent.com">
@@ -201,7 +201,7 @@ export const UserLoginPage = () => {
         <RightSide>
             <FormWrapper>
                 <FormTitle>
-                    Login <Icon src={user_icon} alt='User-Icon' />
+                    Login <Icon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/user_icon.svg" alt='User-Icon' />
                 </FormTitle>
                 <Form>
                     <Label htmlFor='email' >Email Id</Label>

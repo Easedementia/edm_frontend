@@ -3,7 +3,7 @@ import { HeadingContainer, SubHeading, MainHeading, Description, CardContainer, 
 import { baseURL } from '../../api/api'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import arrow from '../../assets/images/arrow.svg'
+// import arrow from '../../assets/images/arrow.svg'
 import LazyLoad from 'react-lazyload'
 
 
@@ -45,7 +45,7 @@ const ServicesList = () => {
                 <ServiceDescription>{service.description}</ServiceDescription>
                 <BookButton>
                   Explore More
-                  <ArrowIcon src={arrow} alt="arrow icon" />
+                  <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="arrow icon" />
                 </BookButton>
               </ServiceContent>
               <LazyLoad height={300} offset={100}>
@@ -64,7 +64,7 @@ const ServicesList = () => {
                 <ServiceDescription>{service.description}</ServiceDescription>
                 <BookButton>
                   Explore More
-                  <ArrowIcon src={arrow} alt="arrow icon" />
+                  <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="arrow icon" />
                 </BookButton>
               </ServiceContent>
               <StyledImage src={getFullImageUrl(service.image)} alt='Service Image' />

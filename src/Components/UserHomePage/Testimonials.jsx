@@ -1,7 +1,7 @@
 import { TestimonialsWrapper, Title, TestimonialsContainer, TestimonialCard, TestimonialText, Stars, Profile, ProfileImage, ProfileInfo, ProfileName, ProfileTitle } from '../../Styles/UserHomeStyle/TestimonialsStyle'
-import testimonial_1 from '../../assets/images/testimonial_1.jpg'
-import testimonial2 from '../../assets/images/testimonial2.jpg'
-import testimonial3 from '../../assets/images/testimonial3.jpg'
+// import testimonial_1 from '../../assets/images/testimonial_1.jpg'
+// import testimonial2 from '../../assets/images/testimonial2.jpg'
+// import testimonial3 from '../../assets/images/testimonial3.jpg'
 
 
 
@@ -11,21 +11,21 @@ const testimonials = [
         text: "Awesome team! I see a good change in my father. The activities calm him and help him focus. The team is doing a wonderful job. Your excellent interventions is making us hope he can cross 100 in flying colors.",
         name: "Saira George",
         title: "Kochi",
-        image: testimonial_1
+        image: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/testimonial_1.jpg"
     },
 
     {
         text: "Good work team! Our experiences with Ease Dementia was excellent. Especially the intervention specialist who was handling the interactive sessions was very patient and dedicated.",
         name: "Reena George",
         title: "Kochi",
-        image: testimonial2
+        image: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/testimonial2.jpg"
     },
 
     {
         text: "Thank you easedementia. You have made a difference in the life of our father . The calm demeanor empathy of the intervention specialist has encouraged father to develop a sense of purposefulness.",
         name: "Rani Antony",
         title: "Kochi",
-        image: testimonial3
+        image: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/testimonial3.jpg"
     }
 ];
 

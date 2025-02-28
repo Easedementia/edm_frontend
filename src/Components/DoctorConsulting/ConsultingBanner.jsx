@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types'
 import { ConsultingContainer, HeadingContainer, SubHeading, MainHeading, Description, ImageContainer, StyledImage } from '../../Styles/DoctorConsultingStyle/ConsultingBannerStyle'
-import doctorconsultingbanner from '../../assets/images/doctorconsultingbanner.svg'
+// import doctorconsultingbanner from '../../assets/images/doctorconsultingbanner.svg'
 
 import LazyLoad from "react-lazyload";
 
@@ -19,7 +19,7 @@ const ConsultingBanner = () => {
         </HeadingContainer>
         <ImageContainer>
           <LazyLoad height={300} offset={100} once >
-          <StyledImage src={doctorconsultingbanner} alt='Puzzle Hands' />
+          <StyledImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/doctorconsultingbanner.svg" alt='Puzzle Hands' />
           </LazyLoad>
         </ImageContainer>
     </ConsultingContainer>

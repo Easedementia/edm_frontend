@@ -1,7 +1,7 @@
 import { WeAreOntoWrapper, CardContainer, Card, CardImage, CardTitle, CardDescription, CardButton } from '../../Styles/UserHomeStyle/WeAreOntoStyle'
 import arrow from '../../assets/images/arrow.svg'
-import memorycafe from '../../assets/images/memorycafe.png'
-import dementiaclinic from '../../assets/images/dementiaclinic.png'
+// import memorycafe from '../../assets/images/memorycafe.png'
+// import dementiaclinic from '../../assets/images/dementiaclinic.png'
 import LazyLoad from 'react-lazyload'
 
 
@@ -13,7 +13,7 @@ const WeAreOnto = () => {
         <CardContainer>
             <Card>
                 <LazyLoad height={300} offset={100}>
-                <CardImage src={memorycafe} alt="Memory Cafe" />
+                <CardImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/memorycafe.png" alt="Memory Cafe" />
                 </LazyLoad>
                 <CardTitle>Active Ageing Center</CardTitle>
                 <CardDescription>
@@ -27,7 +27,7 @@ const WeAreOnto = () => {
 
             <Card>
                 <LazyLoad height={300} offset={100}>
-                <CardImage src={dementiaclinic} alt="Day Care Center" />
+                <CardImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/dementiaclinic.png" alt="Day Care Center" />
                 </LazyLoad>
                 <CardTitle>Dementia Clinic</CardTitle>
                 <CardDescription>

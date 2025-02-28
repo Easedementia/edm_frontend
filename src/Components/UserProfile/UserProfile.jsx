@@ -1,8 +1,8 @@
 import UserNavbar from "../Navbar/UserNavbar"
 import { ProfileContainer, ProfileDetails, AvatarWrapper, Avatar, UserName, UserContact, EditProfileButton, ButtonsContainer, Button, SummaryContainer, SummaryImage, EditIcon} from '../../Styles/UserProfileStyle/UserProfileStyle'
-import user_profile_right_side from '../../assets/images/user_profile_right_side.svg'
-import arrow from '../../assets/images/arrow.svg'
-import edit_icon from '../../assets/images/edit_icon.svg'
+// import user_profile_right_side from '../../assets/images/user_profile_right_side.svg'
+// import arrow from '../../assets/images/arrow.svg'
+// import edit_icon from '../../assets/images/edit_icon.svg'
 
 // import user_profile from '../../assets/images/user_profile.svg'
 // import { FiArrowRight } from 'react-icons/fi';
@@ -115,7 +115,7 @@ const UserProfile = () => {
               src={avatarPreview || `${baseURL}/media/default-avatar.png`} // Fallback to a default avatar if no image is selected
               alt="User Avatar"
             />
-            <EditIcon src={edit_icon} alt="Edit Icon" />
+            <EditIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/edit_icon.svg" alt="Edit Icon" />
           </AvatarWrapper>
           <input
             type="file"
@@ -138,20 +138,20 @@ const UserProfile = () => {
           />
           <ButtonsContainer>
             <Button onClick={() => handleNavigate('/user-profile/assessment-history')}>
-              Assessment History <img src={arrow} alt="Arrow Icon" />
+              Assessment History <img src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow Icon" />
             </Button>
             <Button onClick={() => handleNavigate('/user-profile/appointments-history')}>
-              Appointment History <img src={arrow} alt="Arrow Icon" />
+              Appointment History <img src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow Icon" />
             </Button>
             <Button onClick={handleLogout}>
-              Log Out <img src={arrow} alt="Arrow Icon" />
+              Log Out <img src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow Icon" />
             </Button>
           </ButtonsContainer>
 
         </ProfileDetails>
 
         <SummaryContainer>
-          <SummaryImage src={user_profile_right_side} alt="Profile Summary" />
+          <SummaryImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/user_profile_right_side.svg" alt="Profile Summary" />
         </SummaryContainer>
       </ProfileContainer>
       <CallButton/>

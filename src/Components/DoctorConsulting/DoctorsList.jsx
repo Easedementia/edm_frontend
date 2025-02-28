@@ -5,7 +5,7 @@ import { baseURL } from '../../api/api';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import arrow from '../../assets/images/arrow.svg'
+// import arrow from '../../assets/images/arrow.svg'
 
 const doctorsRating = [
   { rating: 4.8 },
@@ -90,7 +90,7 @@ const DoctorsList = () => {
               <Description>{doctor.details}</Description>
               <ExploreMore>
                 Explore More
-                <img src={arrow} alt="Arrow Icon" />
+                <img src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow Icon" />
               </ExploreMore>
             </Card>
           ))}
@@ -121,7 +121,7 @@ const DoctorsList = () => {
               <Description>{counselor.details}</Description>
               <ExploreMore>
                 Explore More
-                <img src={arrow} alt="Arrow Icon" />
+                <img src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow Icon" />
               </ExploreMore>
             </Card>
           ))}

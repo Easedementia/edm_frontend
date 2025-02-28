@@ -1,5 +1,5 @@
 import { AssessmentContainer, HeadingContainer, MainHeading, SubHeading, Description, ImageContainer, StyledImage } from '../../Styles/AssessmentStyle/AssessmentHomeBannerStyle'
-import assessmentpage_banner from '../../assets/images/assessmentpage_banner.svg'
+// import assessmentpage_banner from '../../assets/images/assessmentpage_banner.svg'
 import PropTypes from "prop-types";
 import LazyLoad from 'react-lazyload';
 
@@ -21,7 +21,7 @@ const AssessmentHomeBanner = () => {
         </HeadingContainer>
         <ImageContainer>
           <LazyLoad>
-          <StyledImage src={assessmentpage_banner} alt="Assessment Illustration"  />
+          <StyledImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/assessmentpage_banner.svg" alt="Assessment Illustration"  />
           </LazyLoad>
         </ImageContainer>
     </AssessmentContainer>

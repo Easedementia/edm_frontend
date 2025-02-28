@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import starrating_new from '../../assets/images/starrating_new.png'
+// import starrating_new from '../../assets/images/starrating_new.png'
 
 export const TestimonialsWrapper = styled.div`
     padding: 50px 20px;
@@ -101,7 +101,7 @@ export const TestimonialText = styled.p`
 export const Stars = styled.div`
     width: 80%;
     height: 50px;
-    background-image: url(${starrating_new});
+    background-image: url("https://d2mzeyyrjif26w.cloudfront.net/assets/images/starrating_new.png");
     background-size: contain;
     background-repeat: no-repeat;
     margin-bottom: 20px;

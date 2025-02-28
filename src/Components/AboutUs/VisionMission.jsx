@@ -1,6 +1,6 @@
 import { VisionMissionContainer, LeftContainer, RightContainer, Heading, SubHeading, Description, CardsContainer, Card, CardIconContainer, CardIcon, CardHeading, CardDescription } from '../../Styles/AboutUsStyle/VisionMissionStyle'
-import vision from '../../assets/images/vision.svg'
-import mission from '../../assets/images/mission.svg'
+// import vision from '../../assets/images/vision.svg'
+// import mission from '../../assets/images/mission.svg'
 import LazyLoad from "react-lazyload";
 
 
@@ -21,7 +21,7 @@ const VisionMission = () => {
             <CardIconContainer>
               <CardHeading>Our Vision</CardHeading>
               <LazyLoad height={300} offset={100} >
-              <CardIcon src={vision} alt="Lightbulb Icon" />
+              <CardIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/vision.svg" alt="Lightbulb Icon" />
               </LazyLoad>
             </CardIconContainer>
             <CardDescription>
@@ -32,7 +32,7 @@ const VisionMission = () => {
             <CardIconContainer>
               <CardHeading>Our Mission</CardHeading>
               <LazyLoad height={300} offset={100} >
-              <CardIcon src={mission} alt="Target Icon" />
+              <CardIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/mission.svg" alt="Target Icon" />
               </LazyLoad>
             </CardIconContainer>
             <CardDescription>

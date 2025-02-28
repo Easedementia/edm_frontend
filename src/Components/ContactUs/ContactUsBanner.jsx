@@ -5,7 +5,7 @@ import { PageWrapper, LeftSide, RightSide, InfoSection, Title, Description, Butt
 import axios from 'axios';
 import { baseURL } from '../../api/api';
 import { toast } from 'react-toastify';
-import arrow from '../../assets/images/arrow.svg'
+// import arrow from '../../assets/images/arrow.svg'
 
 
 const ContactUsBanner = () => {
@@ -139,7 +139,7 @@ const ContactUsBanner = () => {
 
                 <a href={`tel:${phoneNumber}`} style={{ textDecoration: 'none' }}>
                     <Button>
-                        Call Now <ArrowIcon src={arrow} alt="arrow-icon" />
+                        Call Now <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="arrow-icon" />
                     </Button>
                 </a>
             </InfoSection>

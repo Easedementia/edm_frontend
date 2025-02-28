@@ -7,8 +7,8 @@ import { baseURL } from "../../api/api";
 import { toast } from "react-toastify";
 import { ProfileContainer, ProfileDetails, AvatarWrapper, Avatar, UserName, UserContact, ButtonsContainer, Button, SummaryContainer ,SummaryTitle, TableContainer, Table, TableHeader, TableRow, TableData, Status, MeetingLink, EditIcon, PaginationWrapper, PaginationButton, PaginationInfo } from '../../Styles/UserProfileStyle/UserProfileStyle'
 import Footer from "../Footer/Footer";
-import arrow from '../../assets/images/arrow.svg'
-import edit_icon from '../../assets/images/edit_icon.svg'
+// import arrow from '../../assets/images/arrow.svg'
+// import edit_icon from '../../assets/images/edit_icon.svg'
 import { clearAuth } from '../../Redux/UserSlice'
 import CallButton from "../CallUs/CallButton";
 import WhatsappButton from "../WhatsappChat/WhatsappButton";
@@ -153,7 +153,7 @@ const AppointmentHistory = () => {
               src={avatarPreview || `${baseURL}/media/default-avatar.png`} // Fallback to a default avatar if no image is selected
               alt="User Avatar"
             />
-            <EditIcon src={edit_icon} alt="Edit Icon" />
+            <EditIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/edit_icon.svg" alt="Edit Icon" />
           </AvatarWrapper>
           <input
             type="file"
@@ -168,13 +168,13 @@ const AppointmentHistory = () => {
           </UserContact>
           <ButtonsContainer>
             <Button selected={false} onClick={() => handleNavigate('/user-profile/assessment-history')}>
-              Assessment History <img src={arrow} alt="Arrow Icon" />
+              Assessment History <img src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow Icon" />
             </Button>
             <Button selected={true} onClick={() => handleNavigate('/user-profile/appointments-history')}>
-              Appointment History <img src={arrow} alt="Arrow Icon" />
+              Appointment History <img src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow Icon" />
             </Button>
             <Button onClick={handleLogout}>
-              Log Out <img src={arrow} alt="Arrow Icon" />
+              Log Out <img src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow Icon" />
             </Button>
           </ButtonsContainer>
         </ProfileDetails>
