@@ -6,12 +6,12 @@ import {PartnershipLogosWrapper, LogosContainer, LogoImage  } from '../../Styles
 // import sunriselogo from '../../assets/images/sunriselogo.png'
 // import tatalogo from '../../assets/images/tatalogo.png'
 
-import iimcalicutnew from '../../assets/images/iimcalicutnew.svg'
-import inestnew from '../../assets/images/inestnew.svg'
-import marsleevanew from '../../assets/images/marsleevanew.svg'
-import mthnew from '../../assets/images/mthnew.svg'
-import sunrisenew from '../../assets/images/sunrisenew.svg'
-import tatanew from '../../assets/images/tatanew.svg'
+// import iimcalicutnew from '../../assets/images/iimcalicutnew.svg'
+// import inestnew from '../../assets/images/inestnew.svg'
+// import marsleevanew from '../../assets/images/marsleevanew.svg'
+// import mthnew from '../../assets/images/mthnew.svg'
+// import sunrisenew from '../../assets/images/sunrisenew.svg'
+// import tatanew from '../../assets/images/tatanew.svg'
 
 
 
@@ -20,12 +20,12 @@ const PartnershipLogos = () => {
   return (
     <PartnershipLogosWrapper>
         <LogosContainer>
-            <LogoImage src={mthnew} alt='Medical Trust Hospital' />
-            <LogoImage src={iimcalicutnew} alt='IIM Kozhikode' />
-            <LogoImage src={marsleevanew} alt='Mar Sleeva' />
-            <LogoImage src={inestnew} alt='Dr Moopens INEST' />
-            <LogoImage src={sunrisenew} alt='Sunrise Hospital' />
-            <LogoImage src={tatanew} alt='TATA 1mg' />
+            <LogoImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/mthnew.svg" alt='Medical Trust Hospital' />
+            <LogoImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/iimcalicutnew.svg" alt='IIM Kozhikode' />
+            <LogoImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/marsleevanew.svg" alt='Mar Sleeva' />
+            <LogoImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/inestnew.svg" alt='Dr Moopens INEST' />
+            <LogoImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/sunrisenew.svg" alt='Sunrise Hospital' />
+            <LogoImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/tatanew.svg" alt='TATA 1mg' />
         </LogosContainer>
     </PartnershipLogosWrapper>
   )
