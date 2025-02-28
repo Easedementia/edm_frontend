@@ -20,7 +20,7 @@ const Banner = () => {
       </TextContainer>
       <ImageContainer>
         <LazyLoad height={300} offset={100}>
-        <BannerImage src={brain_png} alt='banner-image' />
+        <BannerImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/brain.svg" alt='banner-image' />
         </LazyLoad>
       </ImageContainer>
     </BannerContainer>
