@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Container, Title, Subtitle, InstructionsList, InstructionItem, CheckboxWrapper, Button, ArrowIcon } from '../../Styles/AssessmentStyle/FirstPersonInstructionsStyle'
 import UserNavbar from '../Navbar/UserNavbar';
 import Footer from '../Footer/Footer';
-import arrow from '../../assets/images/arrow.svg'
+// import arrow from '../../assets/images/arrow.svg'
 import CallButton from '../CallUs/CallButton';
 import WhatsappButton from '../WhatsappChat/WhatsappButton';
 
@@ -57,7 +57,7 @@ const SelfAssessmentInstructions = () => {
 
         <Button disabled={!isChecked} onClick={handleProceedClick}>
         Proceed
-        <ArrowIcon src={arrow} alt="arrow icon" disabled={!isChecked} />
+        <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="arrow icon" disabled={!isChecked} />
         </Button>
     </Container>
     <CallButton/>

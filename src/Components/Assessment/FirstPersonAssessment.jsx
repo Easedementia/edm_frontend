@@ -6,7 +6,7 @@ import Footer from "../Footer/Footer";
 import axios from "axios";
 import { baseURL } from "../../api/api";
 import { useLocation, useNavigate } from "react-router-dom";
-import arrow from '../../assets/images/arrow.svg'
+// import arrow from '../../assets/images/arrow.svg'
 import CallButton from "../CallUs/CallButton";
 import WhatsappButton from "../WhatsappChat/WhatsappButton";
 
@@ -210,12 +210,12 @@ const FirstPersonAssessment = () => {
 
               <NavButtonContainer>
                 <NavButton onClick={handlePrevious} disabled={currentQuestionIndex === 0}>
-                    <ArrowIcon src={arrow} alt="Arrow Icon" rotate={180} disabled={currentQuestionIndex === 0} />
+                    <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow Icon" rotate={180} disabled={currentQuestionIndex === 0} />
                     Previous
                 </NavButton>
                 <NavButton onClick={handleNext} disabled={answers[currentQuestionIndex] === null}>
                     {currentQuestionIndex === questions.length - 1 ? 'Finish' : 'Next'}
-                    <ArrowIcon src={arrow} alt="Arrow Icon" disabled={answers[currentQuestionIndex] === null} />
+                    <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow Icon" disabled={answers[currentQuestionIndex] === null} />
                 </NavButton>
             </NavButtonContainer>
             </>

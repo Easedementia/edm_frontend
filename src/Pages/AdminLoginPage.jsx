@@ -1,14 +1,14 @@
 import { PageWrapper, LeftSide, RightSide, InfoSection, Title, Description, Button, ArrowIcon, FormWrapper, FormTitle, Icon, Form, Label, Input, ButtonContainer, FormButton } from '../Styles/UserLogin/UserLoginStyle'
-import user_icon from '../assets/images/user_icon.svg';
+// import user_icon from '../assets/images/user_icon.svg';
 import { useState } from 'react';
 import axios from 'axios';
-import {useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import { baseURL } from '../api/api'
 import {setAdminAccessToken, setAdminUser} from '../Redux/AdminSlice'
 import Cookies from 'js-cookie';
-import arrow from '../assets/images/arrow.svg'
+// import arrow from '../assets/images/arrow.svg'
 
 const AdminLoginPage = () => {
     const navigator = useNavigate();
@@ -91,7 +91,7 @@ const AdminLoginPage = () => {
                 </Description>
 
                 <Button>
-                    Know More <ArrowIcon src={arrow} alt="Arrow Icon" />    
+                    Know More <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow Icon" />    
                 </Button>
             </InfoSection>
         </LeftSide>
@@ -99,7 +99,7 @@ const AdminLoginPage = () => {
         <RightSide>
             <FormWrapper>
             <FormTitle>
-                Admin Login <Icon src={user_icon} alt='User-Icon' />
+                Admin Login <Icon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/user_icon.svg" alt='User-Icon' />
             </FormTitle>
                 <Form>
                     <Label htmlFor='email' >Email Id</Label>

@@ -1,27 +1,27 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import cat from '../../assets/self-assessment/cat.png';
-import elephant from '../../assets/self-assessment/elephant.png';
-import hen from '../../assets/self-assessment/hen.png';
-import car from '../../assets/self-assessment/car.png'
-import bus from '../../assets/self-assessment/bus.png'
-import fish from '../../assets/self-assessment/fish.png'
-import cycle from '../../assets/self-assessment/cycle.png'
-import apple from '../../assets/self-assessment/apple.png'
-import banana from '../../assets/self-assessment/banana.png'
-import chair from '../../assets/self-assessment/chair.png'
-import orange from '../../assets/self-assessment/orange.png'
-import clock1 from '../../assets/self-assessment/clock1.gif'
-import clock2 from '../../assets/self-assessment/clock2.gif'
-import clock3 from '../../assets/self-assessment/clock3.gif'
-import clock4 from '../../assets/self-assessment/clock4.gif'
-import appletree from '../../assets/self-assessment/appletree.svg'
-import dog_puzzle from '../../assets/self-assessment/dog_puzzle.png'
-import puzzle1 from '../../assets/self-assessment/puzzle1.png'
-import puzzle2 from '../../assets/self-assessment/puzzle2.png'
-import puzzle3 from '../../assets/self-assessment/puzzle3.png'
-import puzzle4 from '../../assets/self-assessment/puzzle4.png'
+// import cat from '../../assets/self-assessment/cat.png';
+// import elephant from '../../assets/self-assessment/elephant.png';
+// import hen from '../../assets/self-assessment/hen.png';
+// import car from '../../assets/self-assessment/car.png'
+// import bus from '../../assets/self-assessment/bus.png'
+// import fish from '../../assets/self-assessment/fish.png'
+// import cycle from '../../assets/self-assessment/cycle.png'
+// import apple from '../../assets/self-assessment/apple.png'
+// import banana from '../../assets/self-assessment/banana.png'
+// import chair from '../../assets/self-assessment/chair.png'
+// import orange from '../../assets/self-assessment/orange.png'
+// import clock1 from '../../assets/self-assessment/clock1.gif'
+// import clock2 from '../../assets/self-assessment/clock2.gif'
+// import clock3 from '../../assets/self-assessment/clock3.gif'
+// import clock4 from '../../assets/self-assessment/clock4.gif'
+// import appletree from '../../assets/self-assessment/appletree.svg'
+// import dog_puzzle from '../../assets/self-assessment/dog_puzzle.png'
+// import puzzle1 from '../../assets/self-assessment/puzzle1.png'
+// import puzzle2 from '../../assets/self-assessment/puzzle2.png'
+// import puzzle3 from '../../assets/self-assessment/puzzle3.png'
+// import puzzle4 from '../../assets/self-assessment/puzzle4.png'
 
 import {AssessmentContainer, QuestionText, InputField, OptionsContainer, StyledImageInput, ImageOption, ButtonContainer, NavigationButton } from '../../Styles/AssessmentStyle/SelfAssessmentStyle'
 import UserNavbar from "../Navbar/UserNavbar";
@@ -45,16 +45,16 @@ const selfAssessmentQuestions = [
     },
     
     { id: 3, type: "fill-in-the-blanks", question: "Write numbers backward by six:", blanks: [100, 94, "", "", "", "", ""] },
-    { id: 4, type: "image", question: "Name each of these animals:", imageUrls: [cat, elephant, hen] },
+    { id: 4, type: "image", question: "Name each of these animals:", imageUrls: ["https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/cat.png", "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/elephant.png", "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/hen.png"] },
     { 
       id: 5, 
       type: "multiple-choice", 
       question: "Select the item that doesn't belong to the group:", 
       options: [
-        { image: car, label: "Car" },
-        { image: bus, label: "Bus" },
-        { image: fish, label: "Fish" }, 
-        { image: cycle, label: "Bicycle" }
+        { image: "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/car.png", label: "Car" },
+        { image: "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/bus.png", label: "Bus" },
+        { image: "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/fish.png", label: "Fish" }, 
+        { image: "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/cycle.png", label: "Bicycle" }
       ],
       correctAnswer: "Fish"
     },
@@ -64,10 +64,10 @@ const selfAssessmentQuestions = [
       type: "multiple-choice", 
       question: "Select the image of the clock which shows 8:05 PM?", 
       options: [
-        { image: clock1, label: "Clock 1" },
-        { image: clock2, label: "Clock 2" },
-        { image: clock3, label: "Clock 3" },
-        { image: clock4, label: "Clock 4" }
+        { image: "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/clock1.gif", label: "Clock 1" },
+        { image: "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/clock2.gif", label: "Clock 2" },
+        { image: "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/clock3.gif", label: "Clock 3" },
+        { image: "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/clock4.gif", label: "Clock 4" }
       ],
       correctAnswer: "Clock 4"
     },
@@ -88,7 +88,7 @@ const selfAssessmentQuestions = [
       id: 9, 
       type: "multiple-choice", 
       question: "Can you count how many apples are in the picture?", 
-      image: appletree,
+      image: "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/appletree.svg",
       options: [
         { label: "12" },
         { label: "19" },
@@ -101,12 +101,12 @@ const selfAssessmentQuestions = [
       id: 10,
       type: "multiple-choice",
       question: "Mittu is a dog, but he has lost one piece of his puzzle. Can you find the missing piece from the options below?",
-      puzzleImage: dog_puzzle,
+      puzzleImage: "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/dog_puzzle.png",
       options: [
-        { image: puzzle1, label: "Puzzle 1" },
-        { image: puzzle2, label: "Puzzle 2" },
-        { image: puzzle3, label: "Puzzle 3" },
-        { image: puzzle4, label: "Puzzle 4" }
+        { image: "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/puzzle1.png", label: "Puzzle 1" },
+        { image: "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/puzzle2.png", label: "Puzzle 2" },
+        { image: "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/puzzle3.png", label: "Puzzle 3" },
+        { image: "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/puzzle4.png", label: "Puzzle 4" }
       ],
       correctAnswer: "Puzzle 2" // puzzle2 is the correct answer
     },   
@@ -115,10 +115,10 @@ const selfAssessmentQuestions = [
       type: "multiple-choice", 
       question: "Select the item that doesn't belong to the group:", 
       options: [
-        { image: chair, label: "Chair" },
-        { image: apple, label: "Apple" },
-        { image: banana, label: "Banana" }, 
-        { image: orange, label: "Orange" }
+        { image: "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/chair.png", label: "Chair" },
+        { image: "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/apple.png", label: "Apple" },
+        { image: "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/banana.png", label: "Banana" }, 
+        { image: "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/orange.png", label: "Orange" }
       ],
       correctAnswer: "Chair"
     },
@@ -267,9 +267,9 @@ const SelfAssessment = () => {
 
 
 
-    const handleConsultationClick = () => {
-      navigate('/doctor-consulting');
-  }
+  //   const handleConsultationClick = () => {
+  //     navigate('/doctor-consulting');
+  // }
     
 
 

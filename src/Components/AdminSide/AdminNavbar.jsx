@@ -1,7 +1,7 @@
 import { NavbarContainer, Logo, NavItems, NavItem, UserIcon, LogoContainer} from '../../Styles/AdminSideStyle/AdminNavbarStyle'
 import {Link, useNavigate} from 'react-router-dom'
-import easedementia_logo from '../../assets/images/easedementia_logo.png'
-import user_icon from '../../assets/images/user_icon.svg'
+// import easedementia_logo from '../../assets/images/easedementia_logo.png'
+// import user_icon from '../../assets/images/user_icon.svg'
 import {useDispatch, useSelector} from 'react-redux'
 import Cookies from 'js-cookie';
 import { clearAdminAuth } from '../../Redux/AdminSlice'
@@ -27,7 +27,7 @@ const AdminNavbar = () => {
         <NavbarContainer>
             <LogoContainer>
                 <Link to='/admin-dashboard' >
-                    <Logo src= {easedementia_logo} alt='Easedementia Logo' />
+                    <Logo src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/easedementia_logo.png" alt='Easedementia Logo' />
                 </Link>
             </LogoContainer>
             
@@ -39,7 +39,7 @@ const AdminNavbar = () => {
                         <NavItem as={Link} to="/admin-dashboard/doctor-consulting">Doctor Consulting</NavItem>
                         <NavItem as={Link} to="/admin-dashboard/assessment-details">Assessment</NavItem>
                         <NavItem as={Link} to="/admin-dashboard/appointment-details">Appointments</NavItem>
-                        <UserIcon src={user_icon} onClick={handleLogout} alt="User Icon" />
+                        <UserIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/user_icon.svg" onClick={handleLogout} alt="User Icon" />
                     </>
                 ) : (
                     // Optionally redirect or display a login prompt for unauthenticated users

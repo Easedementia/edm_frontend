@@ -1,6 +1,6 @@
 import UserNavbar from "../Navbar/UserNavbar"
 import { CareersContainer, LeftSection, CareersHeader, CareersDescription, ContactInfo, Icon, JobContainer, JobTitle, JobItemContainer, JobItem, JobDetails, ArrowIcon } from '../../Styles/Careers/CareersStyle'
-import arrow from '../../assets/images/arrow.svg'
+// import arrow from '../../assets/images/arrow.svg'
 import { useState } from "react";
 import Footer from "../Footer/Footer";
 import email from '../../assets/images/email.svg'
@@ -59,7 +59,7 @@ const Careers = () => {
                 {job.title}
 
                 <ArrowIcon
-                  src={arrow}
+                  src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg"
                   alt="Arrow-Icon"
                   rotate={activeIndex === index ? 90 : 270}
                 />
