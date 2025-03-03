@@ -17,7 +17,7 @@ const Specialities = () => {
       <GridWrapper>
         <SpecialityCard area="card1">
           <HighlightedText>#1</HighlightedText>
-          <SubTitle>Kerala’s first elder care startup focusing on non-pharmacological interventions for dementia.</SubTitle>
+          <SubTitle>Kerala's first health and mental wellness support service dedicated to dementia care and comprehensive caregiver assistance.</SubTitle>
           <LazyLoad height={300} offset={100}>
           <SpecialityImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/brain.svg" alt="Doctor and Patient" />
           </LazyLoad>
