@@ -184,8 +184,10 @@ export const Description = styled.p`
 export const Button = styled.button`
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 12px 16px; /* Adjust padding */
+    justify-content: space-between;
+    position: relative;
+    gap: 8px;
+    padding: 12px 20px; /* Adjust padding */
     background-color: #5517A8;
     color: white;
     border: none;
@@ -195,9 +197,9 @@ export const Button = styled.button`
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
     height: 40px; 
-    width: 170px; 
+    width: 140px; 
     white-space: nowrap;
-    text-align: center;
+    text-align: left;
 
     /* Remove fixed margin-right and ensure responsive alignment */
     margin-top: 15px;
@@ -211,6 +213,7 @@ export const Button = styled.button`
     @media (max-width: 768px) {
       margin: 10px auto; 
       text-align: center;
+      width: 140px;
     }
 
     @media (max-width: 480px) {
@@ -222,9 +225,11 @@ export const Button = styled.button`
 
 
 export const ArrowIcon = styled.img`
-    margin-right: 20px;
-    width: 65px;
-    height: 65px; 
+    margin-left: 68px;
+    width: 70px;
+    height: 70px; 
+    flex-shrink: 0; 
+    position: absolute;
     transition: transform 0.2s ease;
     cursor: pointer;
 
