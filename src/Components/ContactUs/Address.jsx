@@ -16,7 +16,7 @@ const Address = () => {
 
             <Heading>Phone Number</Heading>
             <Paragraph>+91 79077 40698</Paragraph>
-            <Paragraph>+91 90616 60079</Paragraph>
+            <Paragraph>+91 99467 44402</Paragraph>
         </ContactInfo>
 
         <MapContainer>

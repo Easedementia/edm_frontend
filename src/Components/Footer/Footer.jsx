@@ -82,7 +82,7 @@ const Footer = () => {
             <ContactDetails>
                 <ContactItem><strong>Phone Numbers</strong></ContactItem>
                 <ContactItem>+91 79077 40698</ContactItem>
-                <ContactItem>+91 90616 60079</ContactItem>
+                <ContactItem>+91 99467 44402</ContactItem>
             </ContactDetails>
             <LinksContainer>
                 <LinkItem as={Link} to='/'>Home</LinkItem>

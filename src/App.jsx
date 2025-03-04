@@ -43,6 +43,8 @@ import SelfAssessmentInstructions from './Components/Assessment/SelfAssessmentIn
 import SelfAssessment from './Components/Assessment/SelfAssessment';
 import { useEffect } from 'react';
 import AdminAssessmentDetails from './Pages/AdminAssessmentDetails';
+import { HelmetProvider } from "react-helmet-async";
+
 
 
 
@@ -58,6 +60,7 @@ function App() {
       title: "App.jsx" });
   }, [])
   return (
+    <HelmetProvider> 
     <div>
     <ToastContainer
     position="top-right"
@@ -120,6 +123,8 @@ function App() {
         </Routes>
       </Router>
     </div>
+    </HelmetProvider>
+    
   )
 }
 
