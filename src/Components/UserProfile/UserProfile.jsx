@@ -115,7 +115,7 @@ const UserProfile = () => {
               src={avatarPreview || `${baseURL}/media/default-avatar.png`} // Fallback to a default avatar if no image is selected
               alt="User Avatar"
             />
-            <EditIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/edit_icon.svg" alt="Edit Icon" />
+            <EditIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/edit_icon_compressed.png" alt="Edit Icon" />
           </AvatarWrapper>
           <input
             type="file"
