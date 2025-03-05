@@ -151,7 +151,7 @@ const UserProfile = () => {
         </ProfileDetails>
 
         <SummaryContainer>
-          <SummaryImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/user_profile_right_side.svg" alt="Profile Summary" />
+          <SummaryImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/user_profile_right_side_compressed.png" alt="Profile Summary" />
         </SummaryContainer>
       </ProfileContainer>
       <CallButton/>
