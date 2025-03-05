@@ -94,7 +94,7 @@ export const ServiceIcon = styled.img`
   height: 80px;
   margin-bottom: 20px;
   align-items: center;
-  margin-left: 9px;
+  margin-left: 38px;
 
   @media (max-width: 1024px) {
     height: 90px;
@@ -102,12 +102,13 @@ export const ServiceIcon = styled.img`
 
   @media (max-width: 768px) {
     height: 80px;
+    margin-left: 80px;
   }
 
   @media (max-width: 480px) {
     height: 70px;
     align-items: center;
-    margin-left: 20px;
+    margin-left: 75px;
   }
 `;
 
@@ -137,7 +138,7 @@ export const ServiceTitle = styled.h3`
 
 export const ServiceDescription = styled.p`
   font-family: 'Poppins', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   color: #2e2e2e;
   margin-bottom: 20px;
   text-align: left;
@@ -155,9 +156,9 @@ export const ServiceDescription = styled.p`
   @media (max-width: 480px) {
     font-size: 11px;
     margin-bottom: 8px;
-    text-align: left;
+    text-align: center;
     max-width: 60%;
-    margin-left: 20px;
+    margin-left: 40px;
   }
 `;
 

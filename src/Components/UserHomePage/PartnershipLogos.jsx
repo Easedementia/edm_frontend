@@ -20,12 +20,12 @@ const PartnershipLogos = () => {
   return (
     <PartnershipLogosWrapper>
         <LogosContainer>
-            <LogoImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/mthnew.svg" alt='Medical Trust Hospital' />
-            <LogoImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/iimcalicutnew.svg" alt='IIM Kozhikode' />
+            <LogoImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/partnership_logos_new.png" alt='Medical Trust Hospital' />
+            {/* <LogoImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/iimcalicutnew.svg" alt='IIM Kozhikode' />
             <LogoImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/marsleevanew.svg" alt='Mar Sleeva' />
             <LogoImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/inestnew.svg" alt='Dr Moopens INEST' />
             <LogoImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/sunrisenew.svg" alt='Sunrise Hospital' />
-            <LogoImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/tatanew.svg" alt='TATA 1mg' />
+            <LogoImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/tatanew.svg" alt='TATA 1mg' /> */}
         </LogosContainer>
     </PartnershipLogosWrapper>
   )

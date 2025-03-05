@@ -225,8 +225,8 @@ export const UserIconContainer = styled.div`
 `;
 
 export const UserIcon = styled.img`
-  height: 75px;
-  width: 75px;
+  height: 55px;
+  width: 55px;
   margin-right: 5px;
   cursor: pointer;
   transition: transform 0.2s ease;

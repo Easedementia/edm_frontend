@@ -1,7 +1,7 @@
 import { NavbarContainer, Logo, NavItems, NavItem, UserIcon, LogoContainer, Dropdown, DropdownItem, HamburgerIcon} from '../../Styles/Navbar/UserNavbarStyles'
 import {Link, useLocation, useNavigate} from 'react-router-dom'
 import easedementia_logo from '../../assets/images/easedementia_logo.png'
-import user_icon from '../../assets/images/user_icon.svg'
+// import user_icon from '../../assets/images/user_icon.svg'
 import { useState } from 'react'
 import Cookies from 'js-cookie';
 import {useDispatch, useSelector} from 'react-redux'
@@ -67,7 +67,7 @@ const UserNavbar = () => {
                 {/* <NavItem as={Link} to="/doctor-consulting" style={{ color: isActive('/doctor-consulting') ? '#5517A8' : 'black' }} >Doctor Consulting</NavItem> */}
                 <NavItem as={Link} to="/contact" style={{ color: isActive('/contact') ? '#5517A8' : 'black' }} >Contact Us</NavItem>
 
-                <UserIcon onClick={handleUserIconClick} src={user_icon} alt="User Icon" />
+                <UserIcon onClick={handleUserIconClick} src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/user_icon_compressed.png" alt="User Icon" />
                 {isAuthenticated && dropdownOpen && (
                     <Dropdown>
                         <DropdownItem as={Link} to="/user-profile">User Profile</DropdownItem>

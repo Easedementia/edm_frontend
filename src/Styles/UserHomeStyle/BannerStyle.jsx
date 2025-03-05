@@ -123,14 +123,15 @@ export const ContactButton = styled(Link)`
 
     @media (max-width: 768px) {
         font-size: 14px;
-        padding: 10px 40px;
+        padding: 10px 8px;
         height: 35px;
         margin: 10px auto; 
+        width: 120px; 
     }
 
     @media (max-width: 480px) {
         font-size: 14px;
-        padding: 8px 30px;
+        padding: 8px 12px;
         height: 35px;
         margin: 10px auto; 
     }
@@ -153,13 +154,19 @@ export const ArrowIcon = styled.img`
 
 
     @media (max-width: 768px) {
-        width: 50px;
-        height: 50px;
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0; 
+        position: absolute;
+        margin-left: 80px;
     }
 
     @media (max-width: 480px) {
-        width: 40px;
-        height: 40px;
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0; 
+        position: absolute;
+        margin-left: 80px;
     }
 `;
 

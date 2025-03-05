@@ -21,7 +21,7 @@ const AssessmentHomeBanner = () => {
         </HeadingContainer>
         <ImageContainer>
           <LazyLoad>
-          <StyledImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/assessmentpage_banner.svg" alt="Assessment Illustration"  />
+          <StyledImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/assessmentpage_banner_compressed.png" alt="Assessment Illustration"  />
           </LazyLoad>
         </ImageContainer>
     </AssessmentContainer>

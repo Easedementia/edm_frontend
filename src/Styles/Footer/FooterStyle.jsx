@@ -144,8 +144,14 @@ export const ArrowIcon = styled.img`
 
 
   @media (max-width: 480px) {
-    width: 50px;
-    height: 50px;
+    width: 28px;
+    height: 28px;
+  }
+
+
+  @media (max-width: 480px) {
+    width: 24px;
+    height: 24px;
   }
 `;
 
@@ -311,7 +317,7 @@ export const SocialMediaIconLink = styled.a`
 
 export const HeartIcon = styled.img`
   position: relative;
-  top: 20px;
+  top: 18px;
   left: 25px;
   width: 130px;
   height: 75px;
@@ -323,7 +329,13 @@ export const HeartIcon = styled.img`
 
 
   @media (max-width: 480px) {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 50px;
+  } 
+
+
+  @media (max-width: 480px) {
+    width: 60px;
+    height: 40px;
   } 
 `;

@@ -6,10 +6,10 @@ export const AssessmentContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 10px;
     background-color: #f9fafb;
     font-family: 'Poppins', sans-serif;
-    margin-top: 140px;
+    margin-top: 120px;
 
 
     @media (max-width: 768px) {
@@ -203,6 +203,19 @@ export const ImageContainer = styled.div`
 
 
 export const StyledImage = styled.img`
-    width: 100%;
+    width: 70%;
     height: auto;
+    margin-left: 50px;
+
+
+    @media (max-width: 768px) {
+        width: 40%;
+        margin-left: 200px;
+    }
+
+
+    @media (max-width: 480px) {
+        width: 40%;
+        margin-left: 115px;
+    }
 `;

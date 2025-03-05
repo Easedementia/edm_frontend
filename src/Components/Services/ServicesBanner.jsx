@@ -15,7 +15,7 @@ const ServicesBanner = () => {
         </HeadingContainer>
         <ImageContainer>
           <LazyLoad height={300} offset={100}>
-          <StyledImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/servicesbannerimage.svg" alt='Puzzle Hands' />
+          <StyledImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/servicesbannerimage_compressed.png" alt='Puzzle Hands' />
           </LazyLoad>
         </ImageContainer>
     </ServicesContainer>

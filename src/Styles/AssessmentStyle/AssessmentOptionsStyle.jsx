@@ -52,15 +52,22 @@ export const OptionImage = styled.img`
     width: 120px;
     height: 120px;
     margin-bottom: 1px;
-    margin-top: -40px;
+    margin-top: 0;
     align-items: center;
     margin-left: 60px;
 
 
+    @media (max-width: 768px) {
+        width: 90px;
+        height: 90px;
+        margin: 10px auto 8px;
+    }
+
+
     @media (max-width: 480px) {
-        width: 100px;
-        height: 100px;
-        margin: -30px auto 8px;
+        width: 80px;
+        height: 80px;
+        margin: 10px auto 8px;
     }
 `;
 

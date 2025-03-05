@@ -60,7 +60,7 @@ export const MainHeading = styled.h1`
 `;
 
 export const Description = styled.p`
-  font-size: 19px;
+  font-size: 20px;
   color: #000;
   text-align: left;
   font-weight: 300;
@@ -132,7 +132,7 @@ export const ServiceContent = styled.div`
 `;
 
 export const ServiceTitle = styled.h2`
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 10px;
   color: #000;
@@ -144,7 +144,7 @@ export const ServiceTitle = styled.h2`
 `;
 
 export const ServiceDescription = styled.p`
-  font-size: 14px;
+  font-size: 20px;
   margin-bottom: 20px;
   color: #2f2e2e;
   font-weight: 400;
@@ -242,9 +242,9 @@ export const FirstRow = styled.div`
 
 
 export const ArrowIcon = styled.img`
-    margin-left: 0;
-    width: 65px;
-    height: 65px;
+    margin-left: 15px;
+    width: 35px;
+    height: 35px;
     transition: transform 0.2s ease;
     cursor: pointer;
 
@@ -254,8 +254,9 @@ export const ArrowIcon = styled.img`
 
 
     @media (max-width: 480px) {
-    width: 40px;
-    height: 40px;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
     
   }
 `;

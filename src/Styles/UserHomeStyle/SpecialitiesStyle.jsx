@@ -118,7 +118,9 @@ export const SpecialityImage = styled.img`
   }
 
   @media (max-width: 480px) {
-    width: 70px;
+    width: 70%;
+    height: auto;
+    margin-left: 50px;
   }
 `;
 

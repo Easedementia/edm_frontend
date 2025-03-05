@@ -112,13 +112,15 @@ export const CardIcon = styled.img`
 
 
   @media (max-width: 768px) {
-    width: 100px;
-    height: 100px;
+    width: 65px;
+    height: 65px;
   }
 
   @media (max-width: 480px) {
-    width: 80px;
-    height: 80px;
+    width:60px;
+    height: 60px;
+    margin-bottom: 30px;
+
   }
 `;
 

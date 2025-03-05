@@ -53,7 +53,8 @@ export const LogosContainer = styled.div`
 `;
 
 export const LogoImage = styled.img`
-  max-height: 90px;
+  width: 100%;
+  height: auto;
   margin: 5px;
   filter: grayscale(100%);
   transition: transform 0.3s, filter 0.3s;
@@ -65,14 +66,14 @@ export const LogoImage = styled.img`
   }
 
   @media (max-width: 1024px) {
-    max-height: 70px;
+    height: auto;
   }
 
   @media (max-width: 768px) {
-    max-height: 60px;
+    height: auto;
   }
 
   @media (max-width: 480px) {
-    max-height: 50px;
+    height: auto;
   }
 `;

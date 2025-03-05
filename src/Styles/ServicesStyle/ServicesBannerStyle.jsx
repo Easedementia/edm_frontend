@@ -6,7 +6,7 @@ export const ServicesContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px;
+    padding: 10px;
     background-color: #f9fafb;
     margin: 80px auto;
 
@@ -126,7 +126,7 @@ export const ImageContainer = styled.div`
 
 
 export const StyledImage = styled.img`
-    max-width: 100%;
+    max-width: 75%;
     height: auto;
     margin: 0 auto;
     display: block;

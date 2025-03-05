@@ -225,9 +225,9 @@ export const Button = styled.button`
 
 
 export const ArrowIcon = styled.img`
-    margin-left: 68px;
-    width: 70px;
-    height: 70px; 
+    margin-left: 85px;
+    width: 32px;
+    height: 32px; 
     flex-shrink: 0; 
     position: absolute;
     transition: transform 0.2s ease;
@@ -239,14 +239,14 @@ export const ArrowIcon = styled.img`
 
 
     @media (max-width: 768px) {
-    width: 50px;
-    height: 50px;
+    width: 32px;
+    height: 32px;
   }
 
 
     @media (max-width: 480px) {
-    width: 50px;
-    height: 50px;
+    width: 32px;
+    height: 32px;
   }
 `;
 

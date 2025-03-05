@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ValuesContainer = styled.div`
-  padding: 2rem;
+  padding: 10px;
   background-color: #f9fafb;
   text-align: center;
   margin-top: 50px;
@@ -89,6 +89,6 @@ export const ValuesDescription = styled.p`
 
   @media (max-width: 768px) {
     font-size: 12px;
-    text-align: left;
+    text-align: center;
   }
 `;

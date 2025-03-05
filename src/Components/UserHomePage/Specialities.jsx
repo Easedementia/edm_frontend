@@ -51,11 +51,11 @@ const Specialities = () => {
 
         <SpecialityCard area="card6">
           <LazyLoad height={300} offset={100}>
-          <SpecialityImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/forbes_compressed.png" alt="Award Trophy" />
+          <SpecialityImage style={{marginTop:'100px'}} src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/forbes_compressed.png" alt="Award Trophy" />
           </LazyLoad>
-          <SubTitle style={{marginTop:'-40px'}} >We’re recognized as one of the Select 200 companies with Global Business Potential
+          <SubTitle style={{marginTop:'10px'}} >We’re recognized as one of the Select 200 companies with Global Business Potential
           by</SubTitle>
-          <Title  style={{marginBottom:'110px'}}>Forbes India DGEMS 2024.</Title>
+          <Title  style={{marginBottom:'250px'}}>Forbes India DGEMS 2024.</Title>
         </SpecialityCard>
 
         <SpecialityCard area="card7">

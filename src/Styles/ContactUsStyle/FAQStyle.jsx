@@ -105,8 +105,8 @@ export const ArrowIcon = styled.img`
     transform-origin: center;
     max-height: 100%; /* Scale within its container */
     max-width: 100%;
-    height: 55px;
-    width: 55px;
+    height: 32px;
+    width: 32px;
     transition: transform 0.2s ease;
 
     &:hover {
@@ -115,12 +115,12 @@ export const ArrowIcon = styled.img`
 
 
     @media (max-width: 768px) {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
   }
 
   @media (max-width: 480px) {
-    height: 35px;
-    width: 35px;
+    height: 20px;
+    width: 20px;
   }
 `;

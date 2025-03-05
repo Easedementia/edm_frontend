@@ -142,9 +142,9 @@ export const Button = styled.button`
 
 
 export const ArrowIcon = styled.img`
-    margin-left: 10px;
-    width: 65px;
-    height: 65px; 
+    margin-left: 26px;
+    width: 32px;
+    height: 32px; 
     transition: transform 0.2s ease;
     cursor: pointer;
 
@@ -200,8 +200,8 @@ export const Icon = styled.img`
     font-size: 1rem;
     margin-right: 0.5rem;
     color: #5517A8;
-    height: 80px;
-    width: 80px;
+    height: 50px;
+    width: 50px;
 
 
     @media (max-width: 768px) {

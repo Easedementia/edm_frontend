@@ -138,13 +138,13 @@ const UserProfile = () => {
           />
           <ButtonsContainer>
             <Button onClick={() => handleNavigate('/user-profile/assessment-history')}>
-              Assessment History <img src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow Icon" />
+              Assessment History <img style={{width:'32px', height:'32px'}} src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow_compressed.png" alt="Arrow Icon" />
             </Button>
             <Button onClick={() => handleNavigate('/user-profile/appointments-history')}>
-              Appointment History <img src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow Icon" />
+              Appointment History <img style={{width:'32px', height:'32px'}} src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow_compressed.png" alt="Arrow Icon" />
             </Button>
             <Button onClick={handleLogout}>
-              Log Out <img src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow Icon" />
+              Log Out <img style={{width:'32px', height:'32px'}} src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow_compressed.png" alt="Arrow Icon" />
             </Button>
           </ButtonsContainer>
 

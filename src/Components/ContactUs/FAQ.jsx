@@ -41,7 +41,7 @@ const FAQ = () => {
                 <Question onClick={() => toggleFAQ(index)} >
                     {faq.question}
                     
-                    <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow-Icon" rotate={activeIndex == index ? 90:270} />
+                    <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow_compressed.png" alt="Arrow-Icon" rotate={activeIndex == index ? 90:270} />
                 </Question>
                 {activeIndex === index && <Answer> {faq.answer} </Answer>}
             </QuestionContainer>

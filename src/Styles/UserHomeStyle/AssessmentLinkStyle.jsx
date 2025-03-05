@@ -185,15 +185,15 @@ export const ArrowIcon = styled.img`
 
 
     @media (max-width: 768px) {
-        width: 50px;
-        height: 50px;
-        margin-left: 18px;
+        width: 28px;
+        height: 28px;
+        margin-left: 32px;
     }
 
     @media (max-width: 480px) {
-        width: 50px;
-        height: 50px;
-        margin-left: 38px;
+        width: 24px;
+        height: 24px;
+        margin-left: 59px;
     }
 `;
 
