@@ -1,5 +1,5 @@
 import { WeAreOntoWrapper, CardContainer, Card, CardImage, CardTitle, CardDescription, CardButton } from '../../Styles/UserHomeStyle/WeAreOntoStyle'
-import arrow from '../../assets/images/arrow.svg'
+// import arrow from '../../assets/images/arrow.svg'
 // import memorycafe from '../../assets/images/memorycafe.png'
 // import dementiaclinic from '../../assets/images/dementiaclinic.png'
 import LazyLoad from 'react-lazyload'
@@ -21,7 +21,7 @@ const WeAreOnto = () => {
                 </CardDescription>
                 <CardButton>
                     Explore More
-                    <img src={arrow} alt="Arrow Icon" />
+                    <img style={{width:'24px', height:'24px', marginLeft:'10px'}} src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow_compressed.png" alt="Arrow Icon" />
                 </CardButton>  
             </Card>
 
@@ -35,7 +35,7 @@ const WeAreOnto = () => {
                 </CardDescription>
                 <CardButton>
                     Explore More
-                    <img src={arrow} alt="Arrow Icon" />
+                    <img style={{width:'24px', height:'24px', marginLeft:'10px'}} src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow_compressed.png" alt="Arrow Icon" />
                 </CardButton>                                                                                       
             </Card>
         </CardContainer>

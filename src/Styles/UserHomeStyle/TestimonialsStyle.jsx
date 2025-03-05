@@ -101,7 +101,7 @@ export const TestimonialText = styled.p`
 export const Stars = styled.div`
     width: 80%;
     height: 50px;
-    background-image: url("https://d2mzeyyrjif26w.cloudfront.net/assets/images/starrating_new.png");
+    background-image: url("https://d2mzeyyrjif26w.cloudfront.net/assets/images/starrating_new_compressed.png");
     background-size: contain;
     background-repeat: no-repeat;
     margin-bottom: 20px;

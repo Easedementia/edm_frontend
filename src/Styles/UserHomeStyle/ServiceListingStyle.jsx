@@ -109,7 +109,7 @@ export const ServiceCard = styled.div`
 export const ServiceIcon = styled.img`
   height: 80px;
   margin-bottom: 20px;
-  margin-left: 20px;
+  margin-left: 57px;
   
 
   @media (max-width: 1024px) {

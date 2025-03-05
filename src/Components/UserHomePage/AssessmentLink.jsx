@@ -7,7 +7,7 @@ const AssessmentLink = () => {
         <TextContainer>
             <Subtitle>Assessment Portal</Subtitle>
             <Title>Start your evaluation : Navigate to our assessment page</Title>
-            <AssessmentButton to="/assessment">Assessment <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="arrow icon" /></AssessmentButton>
+            <AssessmentButton to="/assessment">Assessment <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow_compressed.png" alt="arrow icon" /></AssessmentButton>
         </TextContainer>
         <DetailsContainer>
             <Description>

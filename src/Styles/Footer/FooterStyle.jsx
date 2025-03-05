@@ -133,8 +133,8 @@ export const ArrowIcon = styled.img`
   right: 5px;
   top: 50%;
   transform: translateY(-50%);
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   transition: transform 0.2s;
 
@@ -313,8 +313,8 @@ export const HeartIcon = styled.img`
   position: relative;
   top: 20px;
   left: 25px;
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 90px;
   transition: transform 0.2s ease;
 
   &:hover {

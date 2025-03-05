@@ -173,9 +173,9 @@ export const AssessmentButton = styled(Link)`
 
 
 export const ArrowIcon = styled.img`
-    margin-left: 8px;
-    width: 55px;
-    height: 55px; 
+    margin-left: 14px;
+    width: 35px;
+    height: 35px; 
     transition: transform 0.2s ease;
     cursor: pointer;
 
