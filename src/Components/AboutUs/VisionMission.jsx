@@ -21,7 +21,7 @@ const VisionMission = () => {
             <CardIconContainer>
               <CardHeading>Our Vision</CardHeading>
               <LazyLoad height={300} offset={100} >
-              <CardIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/vision.svg" alt="Lightbulb Icon" />
+              <CardIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/vision_compressed.png" alt="Lightbulb Icon" />
               </LazyLoad>
             </CardIconContainer>
             <CardDescription>
@@ -32,7 +32,7 @@ const VisionMission = () => {
             <CardIconContainer>
               <CardHeading>Our Mission</CardHeading>
               <LazyLoad height={300} offset={100} >
-              <CardIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/mission.svg" alt="Target Icon" />
+              <CardIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/mission_compressed.png" alt="Target Icon" />
               </LazyLoad>
             </CardIconContainer>
             <CardDescription>

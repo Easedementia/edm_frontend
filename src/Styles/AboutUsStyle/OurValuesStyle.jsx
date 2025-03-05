@@ -57,10 +57,10 @@ export const ValuesContent = styled.div`
 `;
 
 export const ValuesIcon = styled.img`
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   margin-bottom: 0.1rem;
-  margin-top: -20px;
+  margin-top: 10px;
 
 
   @media (max-width: 768px) {

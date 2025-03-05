@@ -105,11 +105,10 @@ export const CardIconContainer = styled.div`
 `;
 
 export const CardIcon = styled.img`
-  width: 120px;
-  height: 120px;
+  width: 65px;
+  height: 65px;
   margin-bottom: 1px;
-  margin-left: 0;
-  margin-top: -30px;
+  margin-top: -25px;
 
 
   @media (max-width: 768px) {

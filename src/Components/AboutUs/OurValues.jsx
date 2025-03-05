@@ -8,31 +8,31 @@ import LazyLoad from 'react-lazyload'
 
 const valuesData = [
     {
-        icon: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/compassion.svg",
+        icon: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/compassion_compressed.png",
         heading: 'Compassion',
         description: 'At Easedementia, empathy is our guiding principle, ensuring dignity and respect for all our clients.'
     },
 
     {
-        icon: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/progress.svg",
+        icon: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/progress_compressed.png",
         heading: 'Innovation',
         description: 'We provide extensive care by employing the best innovative practices to ensure the highest quality of support for our clients.'
     },
 
     {
-        icon: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/accountability.svg",
+        icon: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/accountability_compressed.png",
         heading: 'Accountability',
         description: 'Our team delivers compassionate, reliable care, treating every individual as cherished.'
     },
 
     {
-        icon: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/integrity.svg",
+        icon: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/integrity_compressed.png",
         heading:'Integrity',
         description: 'We prioritize honesty and transparency, always acting in the best interests of our clients.'
     },
 
     {
-        icon: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/accountability.svg",
+        icon: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/accountability_compressed.png",
         heading: 'Empathy',
         description: 'We strive to ensure that every client feels heard and valued by offering genuine companionship along the way.'
     },
