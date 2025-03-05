@@ -6,7 +6,8 @@ export const BannerContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px;
+    padding: 10px;
+    margin-top: 60px;
     background-color: #f9fafb;
 
 
@@ -97,8 +98,10 @@ export const Subtitle = styled.p`
 export const ContactButton = styled(Link)`
     display: flex; 
     align-items: center;
-    justify-content: center;
-    padding: 12px 58px;
+    justify-content: space-between;
+    position: relative;
+    gap: 2px;
+    padding: 12px 8px;
     background-color: #5517A8;
     color: white;
     border: none;
@@ -108,7 +111,7 @@ export const ContactButton = styled(Link)`
     text-decoration: none;
     transition: background-color 0.3s ease;
     height: 40px; 
-    width: 170px; 
+    width: 150px; 
     margin: 15px 0; 
     align-self: center; 
     white-space: nowrap;
@@ -136,8 +139,11 @@ export const ContactButton = styled(Link)`
 
 
 export const ArrowIcon = styled.img`
-    width: 75px;
-    height: 75px; 
+    margin-left: 105px;
+    width: 35px;
+    height: 35px; 
+    flex-shrink: 0; 
+    position: absolute;
     transition: transform 0.2s ease;
     cursor: pointer;
 
@@ -176,7 +182,7 @@ export const ImageContainer = styled.div`
 
 
 export const BannerImage = styled.img`
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     margin: 0 auto;
     display: block;
