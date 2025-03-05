@@ -136,9 +136,11 @@ export const Button = styled.button`
     cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 40px;
-    width: 170px;
+    width: 140px;
+    gap: 2px;
+
 
     &:hover{
         background-color: ${(props) => (props.disabled ? '#cccccc' : '#5b00d0')};
@@ -146,25 +148,27 @@ export const Button = styled.button`
 
 
     @media (max-width: 768px) {
-    width: 150px;
+    width: 130px;
     padding: 8px 18px;
     font-size: 12px;
   }
 
   @media (max-width: 480px) {
-    width: 130px;
+    width: 110px;
     padding: 8px 15px;
     font-size: 10px;
-  }
+    height: 30px;
 
-    
+  }    
 `;
 
 
 export const ArrowIcon = styled.img`
-    margin-right: 0;
+    margin-left: 75px;
     width: 56px;
     height: 56px; 
+    flex-shrink: 0;
+    position: absolute;
     transition: transform 0.2s ease;
     cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
     opacity: ${(props) => (props.disabled ? 0.5 : 1)};
@@ -182,6 +186,7 @@ export const ArrowIcon = styled.img`
   @media (max-width: 480px) {
     width: 40px;
     height: 40px;
+    margin-left: 60px;
   }
 `;
 
