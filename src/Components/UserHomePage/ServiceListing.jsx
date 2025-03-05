@@ -60,7 +60,7 @@ const ServiceListing = () => {
                     <ServiceLink href={service.link}>
                     Explore More
                     <LazyLoad>
-                    <img src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg" alt="Arrow Icon" />
+                    <img style={{width:'18px', height:'18px', marginLeft:'10px'}} src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow_compressed.png" alt="Arrow Icon" />
                     </LazyLoad>
                     </ServiceLink>
                 </ServiceCard>

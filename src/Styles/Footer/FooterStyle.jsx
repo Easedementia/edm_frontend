@@ -314,7 +314,7 @@ export const HeartIcon = styled.img`
   top: 20px;
   left: 25px;
   width: 130px;
-  height: 90px;
+  height: 75px;
   transition: transform 0.2s ease;
 
   &:hover {
