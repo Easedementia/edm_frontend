@@ -88,7 +88,7 @@ const selfAssessmentQuestions = [
       id: 9, 
       type: "multiple-choice", 
       question: "Can you count how many apples are in the picture?", 
-      image: "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/appletree.svg",
+      image: "https://d2mzeyyrjif26w.cloudfront.net/assets/self-assessment/appletree_compressed.png",
       options: [
         { label: "12" },
         { label: "19" },
