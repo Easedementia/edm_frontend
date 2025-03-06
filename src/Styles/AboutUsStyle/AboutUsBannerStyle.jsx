@@ -124,23 +124,24 @@ export const ImageContainer = styled.div`
 
 
 export const StyledImage = styled.img`
-    width: 100%;
+    width: 70%;
     height: auto;
     margin-bottom: 60px;
-    margin-left: 30px;
+    margin-left: 120px;
 
 
     @media (max-width: 768px) {
         margin-left: 0;
         margin-bottom: 30px;
-        width: 100%;
+        width: 70%;
+        margin-left: 60px;
     }
 
 
     @media (max-width: 480px) {
-        margin-left: 0;
+        margin-left: 50px;
         margin-bottom: 20px;
-        width: 100%;
+        width: 70%;
     }
 `;
 
