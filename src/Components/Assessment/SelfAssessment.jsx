@@ -285,65 +285,22 @@ const SelfAssessment = () => {
 
 
 
-  // const saveAssessmentDetails = async () => {
-  //   if (!user || !user.user) {
-  //     console.error("User details are missing");
-  //     return;
-  //   }
-
-  //   const assessmentData = {
-  //     fullname: user.user.user.fullname,
-  //     email: user.user.user.email,
-  //     mobile: user.user.user.mobile,
-  //     user_id: user.user.user.id,
-  //     date: new Date().toISOString(), 
-  //     score: score,
-  //   };
-  //   console.log("assessment data:", assessmentData)
-  
-  //   try {
-  //     const response = await fetch(`${baseURL}/save-assessment/`, {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(assessmentData),
-  //     });
-  
-  //     const data = await response.json();
-  //     if (response.ok) {
-  //       console.log("Assessment saved:", data.message);
-  //     } else {
-  //       console.error("Error saving assessment:", data.error);
-  //     }
-  //   } catch (error) {
-  //     console.error("Network error:", error);
-  //   }
-  // };
-
-
-
-
   const saveAssessmentDetails = async () => {
     if (!user || !user.user) {
       console.error("User details are missing");
       return;
     }
 
-    const userData = user.user.user;  // Extract user data
-    console.log("userData:", userData)
-
     const assessmentData = {
-      fullname: userData.fullname || userData.name || "Unknown",
-      email: userData.email,
-      mobile: userData.mobile !== "None" ? userData.mobile : "Not Provided",
-      user_id: userData.id,
+      fullname: user.user.user.fullname,
+      email: user.user.user.email,
+      mobile: user.user.user.mobile,
+      user_id: user.user.user.id,
       date: new Date().toISOString(), 
       score: score,
     };
-    
-    console.log("Assessment Data:", assessmentData);
-
+    console.log("assessment data:", assessmentData)
+  
     try {
       const response = await fetch(`${baseURL}/save-assessment/`, {
         method: "POST",
@@ -352,7 +309,7 @@ const SelfAssessment = () => {
         },
         body: JSON.stringify(assessmentData),
       });
-
+  
       const data = await response.json();
       if (response.ok) {
         console.log("Assessment saved:", data.message);
@@ -362,7 +319,50 @@ const SelfAssessment = () => {
     } catch (error) {
       console.error("Network error:", error);
     }
-};
+  };
+
+
+
+
+//   const saveAssessmentDetails = async () => {
+//     if (!user || !user.user) {
+//       console.error("User details are missing");
+//       return;
+//     }
+
+//     const userData = user.user.user;  // Extract user data
+//     console.log("userData:", userData)
+
+//     const assessmentData = {
+//       fullname: userData.fullname || userData.name || "Unknown",
+//       email: userData.email,
+//       mobile: userData.mobile !== "None" ? userData.mobile : "Not Provided",
+//       user_id: userData.id,
+//       date: new Date().toISOString(), 
+//       score: score,
+//     };
+    
+//     console.log("Assessment Data:", assessmentData);
+
+//     try {
+//       const response = await fetch(`${baseURL}/save-assessment/`, {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(assessmentData),
+//       });
+
+//       const data = await response.json();
+//       if (response.ok) {
+//         console.log("Assessment saved:", data.message);
+//       } else {
+//         console.error("Error saving assessment:", data.error);
+//       }
+//     } catch (error) {
+//       console.error("Network error:", error);
+//     }
+// };
 
   
   
