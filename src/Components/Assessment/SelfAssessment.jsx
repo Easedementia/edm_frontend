@@ -341,7 +341,7 @@ const SelfAssessment = () => {
       score: score,
     };
     
-    // console.log("Assessment Data:", assessmentData);
+    console.log("Assessment Data:", assessmentData);
 
     try {
       const response = await fetch(`${baseURL}/save-assessment/`, {
@@ -354,7 +354,7 @@ const SelfAssessment = () => {
 
       const data = await response.json();
       if (response.ok) {
-        // console.log("Assessment saved:", data.message);
+        console.log("Assessment saved:", data.message);
       } else {
         console.error("Error saving assessment:", data.error);
       }
@@ -375,7 +375,7 @@ const SelfAssessment = () => {
       } else {
         // If the user is not logged in, store score and navigate to login
         if (!user || !user.isAuthenticated) {
-          // console.log("Pending score:", score)
+          console.log("Pending score:", score)
           localStorage.setItem("pendingScore", score);
           navigate("/login");
           
