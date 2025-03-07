@@ -128,12 +128,12 @@ const selfAssessmentQuestions = [
 
 const SelfAssessment = () => {
     const user = useSelector((state) => state.user);
-    console.log("::USER::", user)
+    // console.log("::USER::", user)
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [answers, setAnswers] = useState({});
     const [score, setScore] = useState(0);
     const [isAssessmentComplete, setIsAssessmentComplete] = useState(false);
-    console.log("SCORE:", score);
+    // console.log("SCORE:", score);
     const [selectedOption, setSelectedOption] = useState(null);
     const navigate = useNavigate();
 
@@ -191,10 +191,10 @@ const SelfAssessment = () => {
           const isCorrect = correctItems.every(item => userAnswer.includes(item)) && userAnswer.length === correctItems.length;
           
           if (isCorrect) {
-            console.log("correct answer:", userAnswer)
+            // console.log("correct answer:", userAnswer)
             setScore((prevScore) => prevScore + 1);
           } else{
-            console.log("Wrong answer:", userAnswer);
+            // console.log("Wrong answer:", userAnswer);
           }
         }
       }
@@ -211,10 +211,10 @@ const SelfAssessment = () => {
                           userSequence.every((num, idx) => num === correctSequence[idx]);
       
         if (isCorrect) {
-          console.log("Correct answer", isCorrect);
+          // console.log("Correct answer", isCorrect);
           setScore((prevScore) => prevScore + 1);
         } else {
-          console.log("Wrong answer", userSequence);
+          // console.log("Wrong answer", userSequence);
         }
       }
       
@@ -230,10 +230,10 @@ const SelfAssessment = () => {
                           userAnswers.every((ans, index) => ans === correctAnswers[index]);
       
         if (isCorrect) {
-          console.log("Correct", userAnswers);
+          // console.log("Correct", userAnswers);
           setScore((prevScore) => prevScore + 1);
         } else{
-          console.log("Wrong", userAnswers);
+          // console.log("Wrong", userAnswers);
         }
       }
 
@@ -243,10 +243,10 @@ const SelfAssessment = () => {
       if ([5, 7, 8, 9, 11].includes(currentQuestion.id)) {
         const selectedAnswer = answers[currentQuestionIndex];  
         if (selectedAnswer === currentQuestion.correctAnswer) {
-            console.log("Correct", selectedAnswer);
+            // console.log("Correct", selectedAnswer);
             setScore((prevScore) => prevScore + 1);  
         } else {
-            console.log("Wrong answer", selectedAnswer);
+            // console.log("Wrong answer", selectedAnswer);
         }
       }
       
@@ -256,10 +256,10 @@ const SelfAssessment = () => {
       if (currentQuestion.id === 10) {
         const selectedAnswer = answers[currentQuestionIndex];
         if (selectedAnswer === currentQuestion.correctAnswer) {
-          console.log("Correct");
+          // console.log("Correct");
           setScore((prevScore) => prevScore + 1); // Increment the score if correct
         } else {
-          console.log("Wrong answer", selectedAnswer);
+          // console.log("Wrong answer", selectedAnswer);
         }
       }      
     };
@@ -285,28 +285,41 @@ const SelfAssessment = () => {
 
 
 
-  // useEffect(() => {
-  //   if (score > 0 && user) {  
-  //     const assessmentDetails = {
-  //       fullname: user.fullname, 
-  //       email: user.email,
-  //       mobile: user.mobile, 
-  //       user_id: user.id, 
-  //       date: new Date().toISOString(), 
-  //       score: score, 
-  //     };
-  //     console.log("assessment details:", assessmentDetails)
-  
-  //     // Send to backend
-  //     axios.post(`${baseURL}/save-assessment/`, assessmentDetails, { withCredentials: true })
-  //       .then(response => {
-  //         console.log("Assessment saved successfully:", response.data);
-  //       })
-  //       .catch(error => {
-  //         console.error("Error saving assessment:", error);
-  //       });
+  // const saveAssessmentDetails = async () => {
+  //   if (!user || !user.user) {
+  //     console.error("User details are missing");
+  //     return;
   //   }
-  // }, [score, user]);  // Run effect when score or user changes
+
+  //   const assessmentData = {
+  //     fullname: user.user.user.fullname,
+  //     email: user.user.user.email,
+  //     mobile: user.user.user.mobile,
+  //     user_id: user.user.user.id,
+  //     date: new Date().toISOString(), 
+  //     score: score,
+  //   };
+  //   console.log("assessment data:", assessmentData)
+  
+  //   try {
+  //     const response = await fetch(`${baseURL}/save-assessment/`, {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(assessmentData),
+  //     });
+  
+  //     const data = await response.json();
+  //     if (response.ok) {
+  //       console.log("Assessment saved:", data.message);
+  //     } else {
+  //       console.error("Error saving assessment:", data.error);
+  //     }
+  //   } catch (error) {
+  //     console.error("Network error:", error);
+  //   }
+  // };
 
 
 
@@ -317,16 +330,19 @@ const SelfAssessment = () => {
       return;
     }
 
+    const userData = user.user.user;  // Extract user data
+
     const assessmentData = {
-      fullname: user.user.user.fullname,
-      email: user.user.user.email,
-      mobile: user.user.user.mobile,
-      user_id: user.user.user.id,
+      fullname: userData.fullname || userData.name || "Unknown",
+      email: userData.email,
+      mobile: userData.mobile !== "None" ? userData.mobile : "Not Provided",
+      user_id: userData.id,
       date: new Date().toISOString(), 
       score: score,
     };
-    console.log("assessment data:", assessmentData)
-  
+    
+    // console.log("Assessment Data:", assessmentData);
+
     try {
       const response = await fetch(`${baseURL}/save-assessment/`, {
         method: "POST",
@@ -335,23 +351,21 @@ const SelfAssessment = () => {
         },
         body: JSON.stringify(assessmentData),
       });
-  
+
       const data = await response.json();
       if (response.ok) {
-        console.log("Assessment saved:", data.message);
+        // console.log("Assessment saved:", data.message);
       } else {
         console.error("Error saving assessment:", data.error);
       }
     } catch (error) {
       console.error("Network error:", error);
     }
-  };
-  
-  
-  
-    
+};
 
-
+  
+  
+  
 
   const handleNext = async () => {
     if (answers[currentQuestionIndex] !== undefined || selfAssessmentQuestions[currentQuestionIndex].type === "instruction") {
@@ -361,7 +375,7 @@ const SelfAssessment = () => {
       } else {
         // If the user is not logged in, store score and navigate to login
         if (!user || !user.isAuthenticated) {
-          console.log("Pending score:", score)
+          // console.log("Pending score:", score)
           localStorage.setItem("pendingScore", score);
           navigate("/login");
           
@@ -416,7 +430,7 @@ const SelfAssessment = () => {
             )}
 
             <ButtonContainer>
-              <NavigationButton style={{marginLeft:'125px'}} onClick={() => window.location.reload()}>
+              <NavigationButton style={{marginLeft:'170px'}} onClick={() => window.location.reload()}>
                 Retake Assessment
               </NavigationButton>
             </ButtonContainer>
@@ -452,7 +466,7 @@ const SelfAssessment = () => {
                     updatedAnswers[index] = e.target.value;
                     setAnswers({ ...answers, [currentQuestionIndex]: updatedAnswers });
                   }}
-                  style={{ width: "50px", margin: "5px", textAlign: "center" }}
+                  style={{ width: "70px", height:'40px', margin: "5px", textAlign: "center", border: "2px solid #5517A8", borderRadius:'5px', backgroundColor: "#ffffff", outline: "none" }}
                 />
               )
             )}
@@ -490,6 +504,7 @@ const SelfAssessment = () => {
                 alt={option.label}
                 isSelected={selectedOption === option.label}
                 onClick={() => handleOptionSelect(option.label)}
+                style={{width:'130px'}}
               />
             ))}
           </OptionsContainer>
@@ -527,7 +542,7 @@ const SelfAssessment = () => {
               <img 
                 src={currentQuestion.image} 
                 alt="Count the apples" 
-                style={{ width: "200px", height: "auto" }} 
+                style={{ width: "200px", height: "auto", marginTop:'55px' }} 
               />
             </div>
             <div style={{ display: "flex", justifyContent: "center", gap: "15px", marginTop: "10px" }}>
@@ -558,7 +573,7 @@ const SelfAssessment = () => {
               <img 
                 src={currentQuestion.puzzleImage} 
                 alt="Dog puzzle" 
-                style={{ width: "450px", height: "auto", border: "2px solid #ccc", borderRadius: "10px" }} 
+                style={{ width: "450px", height: "auto", border: "2px solid #ccc", borderRadius: "10px", marginLeft:'50px' }} 
               />
             </div>
             <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
@@ -568,8 +583,8 @@ const SelfAssessment = () => {
                     src={option.image} 
                     alt={option.label} 
                     style={{
-                      width: "110px",
-                      height: "100px",
+                      width: "200px",
+                      height: "150px",
                       objectFit: "cover",
                       cursor: "pointer",
                       border: selectedOption === option.label ? "3px solid #5517A8" : "1px solid #ccc",

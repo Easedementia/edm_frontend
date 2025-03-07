@@ -174,9 +174,19 @@ export const UserLoginPage = () => {
                         }));
                         
 
+                        // Check if a pending assessment score is stored
+                        const pendingScore = localStorage.getItem("pendingScore");
+                        if (pendingScore) {
+                            // Navigate to self-assessment page with the pending score
+                            navigator('/assessment/self-assessment', { state: { pendingScore: Number(pendingScore) }, replace: true });
+                        } else {
+                            // Default redirection if no pending score exists
+                            navigator('/');
+                        }
+
+
                         // Redirect to the desired page after successful login
                         toast.success('Login Successful');
-                        navigator('/');
                     })
                     .catch((error) => {
                         if (error.response && error.response.status === 401) {
@@ -195,7 +205,7 @@ export const UserLoginPage = () => {
                                 />
 
                     </div>
-                        </GoogleOAuthProvider>     
+                        </GoogleOAuthProvider> 
         </LeftSide>
         
         <RightSide>

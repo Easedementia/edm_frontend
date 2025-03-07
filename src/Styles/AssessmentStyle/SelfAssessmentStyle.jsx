@@ -92,6 +92,7 @@ export const StyledImageInput = styled.div`
     height: 100px;
     object-fit: cover;
     border-radius: 8px;
+    margin-left: 30px;
 
     @media (max-width: 768px) {
       width: 80px;
