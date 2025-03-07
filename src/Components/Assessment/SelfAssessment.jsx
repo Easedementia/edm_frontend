@@ -128,12 +128,12 @@ const selfAssessmentQuestions = [
 
 const SelfAssessment = () => {
     const user = useSelector((state) => state.user);
-    console.log("::USER::", user)
+    // console.log("::USER::", user)
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [answers, setAnswers] = useState({});
     const [score, setScore] = useState(0);
     const [isAssessmentComplete, setIsAssessmentComplete] = useState(false);
-    console.log("SCORE:", score);
+    // console.log("SCORE:", score);
     const [selectedOption, setSelectedOption] = useState(null);
     const navigate = useNavigate();
 
@@ -191,10 +191,10 @@ const SelfAssessment = () => {
           const isCorrect = correctItems.every(item => userAnswer.includes(item)) && userAnswer.length === correctItems.length;
           
           if (isCorrect) {
-            console.log("correct answer:", userAnswer)
+            // console.log("correct answer:", userAnswer)
             setScore((prevScore) => prevScore + 1);
           } else{
-            console.log("Wrong answer:", userAnswer);
+            // console.log("Wrong answer:", userAnswer);
           }
         }
       }
@@ -211,10 +211,10 @@ const SelfAssessment = () => {
                           userSequence.every((num, idx) => num === correctSequence[idx]);
       
         if (isCorrect) {
-          console.log("Correct answer", isCorrect);
+          // console.log("Correct answer", isCorrect);
           setScore((prevScore) => prevScore + 1);
         } else {
-          console.log("Wrong answer", userSequence);
+          // console.log("Wrong answer", userSequence);
         }
       }
       
@@ -230,10 +230,10 @@ const SelfAssessment = () => {
                           userAnswers.every((ans, index) => ans === correctAnswers[index]);
       
         if (isCorrect) {
-          console.log("Correct", userAnswers);
+          // console.log("Correct", userAnswers);
           setScore((prevScore) => prevScore + 1);
         } else{
-          console.log("Wrong", userAnswers);
+          // console.log("Wrong", userAnswers);
         }
       }
 
@@ -243,10 +243,10 @@ const SelfAssessment = () => {
       if ([5, 7, 8, 9, 11].includes(currentQuestion.id)) {
         const selectedAnswer = answers[currentQuestionIndex];  
         if (selectedAnswer === currentQuestion.correctAnswer) {
-            console.log("Correct", selectedAnswer);
+            // console.log("Correct", selectedAnswer);
             setScore((prevScore) => prevScore + 1);  
         } else {
-            console.log("Wrong answer", selectedAnswer);
+            // console.log("Wrong answer", selectedAnswer);
         }
       }
       
@@ -256,10 +256,10 @@ const SelfAssessment = () => {
       if (currentQuestion.id === 10) {
         const selectedAnswer = answers[currentQuestionIndex];
         if (selectedAnswer === currentQuestion.correctAnswer) {
-          console.log("Correct");
+          // console.log("Correct");
           setScore((prevScore) => prevScore + 1); // Increment the score if correct
         } else {
-          console.log("Wrong answer", selectedAnswer);
+          // console.log("Wrong answer", selectedAnswer);
         }
       }      
     };
@@ -285,64 +285,22 @@ const SelfAssessment = () => {
 
 
 
-  // const saveAssessmentDetails = async () => {
-  //   if (!user || !user.user) {
-  //     console.error("User details are missing");
-  //     return;
-  //   }
-
-  //   const assessmentData = {
-  //     fullname: user.user.user.fullname,
-  //     email: user.user.user.email,
-  //     mobile: user.user.user.mobile,
-  //     user_id: user.user.user.id,
-  //     date: new Date().toISOString(), 
-  //     score: score,
-  //   };
-  //   console.log("assessment data:", assessmentData)
-  
-  //   try {
-  //     const response = await fetch(`${baseURL}/save-assessment/`, {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(assessmentData),
-  //     });
-  
-  //     const data = await response.json();
-  //     if (response.ok) {
-  //       console.log("Assessment saved:", data.message);
-  //     } else {
-  //       console.error("Error saving assessment:", data.error);
-  //     }
-  //   } catch (error) {
-  //     console.error("Network error:", error);
-  //   }
-  // };
-
-
-
-
   const saveAssessmentDetails = async () => {
     if (!user || !user.user) {
       console.error("User details are missing");
       return;
     }
 
-    const userData = user.user.user;  // Extract user data
-
     const assessmentData = {
-      fullname: userData.fullname || userData.name || "Unknown",
-      email: userData.email,
-      mobile: userData.mobile !== "None" ? userData.mobile : "Not Provided",
-      user_id: userData.id,
+      fullname: user.user.user.fullname,
+      email: user.user.user.email,
+      mobile: user.user.user.mobile,
+      user_id: user.user.user.id,
       date: new Date().toISOString(), 
       score: score,
     };
-    
-    console.log("Assessment Data:", assessmentData);
-
+    console.log("assessment data:", assessmentData)
+  
     try {
       const response = await fetch(`${baseURL}/save-assessment/`, {
         method: "POST",
@@ -351,7 +309,7 @@ const SelfAssessment = () => {
         },
         body: JSON.stringify(assessmentData),
       });
-
+  
       const data = await response.json();
       if (response.ok) {
         console.log("Assessment saved:", data.message);
@@ -361,7 +319,50 @@ const SelfAssessment = () => {
     } catch (error) {
       console.error("Network error:", error);
     }
-};
+  };
+
+
+
+
+//   const saveAssessmentDetails = async () => {
+//     if (!user || !user.user) {
+//       console.error("User details are missing");
+//       return;
+//     }
+
+//     const userData = user.user.user;  // Extract user data
+//     console.log("userData:", userData)
+
+//     const assessmentData = {
+//       fullname: userData.fullname || userData.name || "Unknown",
+//       email: userData.email,
+//       mobile: userData.mobile !== "None" ? userData.mobile : "Not Provided",
+//       user_id: userData.id,
+//       date: new Date().toISOString(), 
+//       score: score,
+//     };
+    
+//     console.log("Assessment Data:", assessmentData);
+
+//     try {
+//       const response = await fetch(`${baseURL}/save-assessment/`, {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(assessmentData),
+//       });
+
+//       const data = await response.json();
+//       if (response.ok) {
+//         console.log("Assessment saved:", data.message);
+//       } else {
+//         console.error("Error saving assessment:", data.error);
+//       }
+//     } catch (error) {
+//       console.error("Network error:", error);
+//     }
+// };
 
   
   
