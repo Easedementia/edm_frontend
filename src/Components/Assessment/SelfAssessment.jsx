@@ -331,6 +331,7 @@ const SelfAssessment = () => {
     }
 
     const userData = user.user.user;  // Extract user data
+    console.log("userData:", userData)
 
     const assessmentData = {
       fullname: userData.fullname || userData.name || "Unknown",
