@@ -23,7 +23,7 @@ import EditProfileModal from "./EditProfileModal"
 
 const UserProfile = () => {
   const [userDetails, setUserDetails] = useState({});
-  console.log("User Details:", userDetails);
+  // console.log("User Details:", userDetails);
   const [avatarPreview, setAvatarPreview] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -31,7 +31,7 @@ const UserProfile = () => {
   const dispatch = useDispatch();
 
   const userID = useSelector((state) => state.user.user.user.id);
-  console.log("UserID:", userID);
+  // console.log("UserID:", userID);
 
   useEffect(() => {
     const fetchUserDetails = async () => {
@@ -93,7 +93,7 @@ const UserProfile = () => {
       });
 
         if (response.status === 200) {
-            console.log("Profile picture uploaded successfully");
+            // console.log("Profile picture uploaded successfully");
             toast.success("Profile picture uploaded successfully")
             // Handle success, such as updating UI
         }
