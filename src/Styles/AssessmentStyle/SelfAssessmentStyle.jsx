@@ -132,8 +132,8 @@ export const ImageOption = styled.img`
   }
 
   @media (max-width: 480px) {
-    width: 90px;
-    height: 85px;
+    width: 50px;
+    height: 50px;
   }
 `;
 
