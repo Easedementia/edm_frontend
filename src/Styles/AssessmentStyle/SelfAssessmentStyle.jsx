@@ -1,27 +1,31 @@
 import styled from "styled-components";
 
 export const AssessmentContainer = styled.div`
-  max-width: 600px;
+  max-width: 60%;
   margin: 105px auto;
   padding: 20px;
   background: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  overflow-x: hidden;
 
 
   @media (max-width: 1024px) {
-    max-width: 550px;
+    max-width: 85%;
+    overflow-x: hidden;
   }
 
   @media (max-width: 768px) {
     max-width: 95%;
     padding: 15px;
+    overflow-x: hidden;
   }
 
   @media (max-width: 480px) {
     max-width: 95%;
     padding: 10px;
+    overflow-x: hidden;
   }
 `;
 
