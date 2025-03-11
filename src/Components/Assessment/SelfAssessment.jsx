@@ -496,7 +496,7 @@ const SelfAssessment = () => {
         )}
 
         {/* Multiple Choice Questions */}
-        {(currentQuestion.id === 5 || currentQuestion.id === 7 || currentQuestion.id === 11) && (
+        {(currentQuestion.id === 5 || currentQuestion.id === 11) && (
           <OptionsContainer>
             {currentQuestion.options.map((option, index) => (
               <ImageOption
@@ -505,11 +505,34 @@ const SelfAssessment = () => {
                 alt={option.label}
                 isSelected={selectedOption === option.label}
                 onClick={() => handleOptionSelect(option.label)}
-                style={{width:'130px'}}
+                style={{
+                  width: window.innerWidth <= 480 ? '100px' : '130px',
+                  height: window.innerWidth <= 480 ? '55px' : 'auto'
+                }}
               />
             ))}
           </OptionsContainer>
         )}
+
+
+        {/* Multiple Choice Questions */}
+        {(currentQuestion.id === 7) && (
+          <OptionsContainer>
+            {currentQuestion.options.map((option, index) => (
+              <ImageOption
+                key={index}
+                src={option.image}
+                alt={option.label}
+                isSelected={selectedOption === option.label}
+                onClick={() => handleOptionSelect(option.label)}
+                style={{
+                  width: '130px'
+                }}
+              />
+            ))}
+          </OptionsContainer>
+        )}
+
 
         {/* Number Counting Question */}
         {currentQuestion.id === 8 && (
@@ -574,7 +597,13 @@ const SelfAssessment = () => {
               <img 
                 src={currentQuestion.puzzleImage} 
                 alt="Dog puzzle" 
-                style={{ width: "450px", height: "auto", border: "2px solid #ccc", borderRadius: "10px", marginLeft:'50px' }} 
+                style={{ 
+                  width: window.innerWidth <= 480 ? "300px" : "450px", 
+                  height: "auto", 
+                  border: "2px solid #ccc", 
+                  borderRadius: "10px", 
+                  marginLeft: window.innerWidth <= 480 ? "20px" : "100px" 
+                }}  
               />
             </div>
             <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
@@ -584,8 +613,9 @@ const SelfAssessment = () => {
                     src={option.image} 
                     alt={option.label} 
                     style={{
-                      width: "200px",
-                      height: "150px",
+                      width: "100%",  // Make it take full width of the parent container
+                      maxWidth: "200px", // Limit max width
+                      height: "150px", 
                       objectFit: "cover",
                       cursor: "pointer",
                       border: selectedOption === option.label ? "3px solid #5517A8" : "1px solid #ccc",

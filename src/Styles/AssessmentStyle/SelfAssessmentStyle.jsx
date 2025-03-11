@@ -132,7 +132,8 @@ export const ImageOption = styled.img`
   }
 
   @media (max-width: 480px) {
-    height: 40px;
+    width: 90px;
+    height: 85px;
   }
 `;
 
