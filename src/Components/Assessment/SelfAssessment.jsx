@@ -602,7 +602,7 @@ const SelfAssessment = () => {
                   height: "auto", 
                   border: "2px solid #ccc", 
                   borderRadius: "10px", 
-                  marginLeft: window.innerWidth <= 480 ? "20px" : "100px" 
+                  marginLeft: window.innerWidth <= 480 ? "20px" : "80px" 
                 }}  
               />
             </div>

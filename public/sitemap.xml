@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.easedementia.com/</loc>
+  <lastmod>2025-03-11T11:50:28+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+</url>
+
+
+<url>
+    <loc>https://www.easedementia.com/signup</loc>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.easedementia.com/verify-otp</loc>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.easedementia.com/login</loc>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.easedementia.com/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.easedementia.com/services</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.easedementia.com/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.easedementia.com/doctor-consulting</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.easedementia.com/doctor-consulting/booking-confirmation</loc>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.easedementia.com/success</loc>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.easedementia.com/user-profile</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.easedementia.com/user-profile/appointments-history</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.easedementia.com/user-profile/assessment-history</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.easedementia.com/assessment</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.easedementia.com/assessment/self-assessment</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.easedementia.com/terms-conditions</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.easedementia.com/privacy-policy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.easedementia.com/careers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+
+</urlset>
