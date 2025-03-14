@@ -13,7 +13,8 @@ import 'primeflex/primeflex.css';
 import { ChakraProvider } from '@chakra-ui/react' 
 import GlobalStyles from './Styles/GlobalStyles.jsx'
 import './index.css'
-import App from './App.jsx'                  
+import App from './App.jsx'   
+import { HelmetProvider } from "react-helmet-async";               
 
         
 
@@ -21,13 +22,15 @@ import App from './App.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ChakraProvider>
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={PersistStore} >
-          <GlobalStyles/>
-          <App />
-        </PersistGate>
-      </Provider>
-    </ChakraProvider>
+    <HelmetProvider>
+      <ChakraProvider>
+        <Provider store={store}>
+          <PersistGate loading={null} persistor={PersistStore} >
+            <GlobalStyles/>
+            <App />
+          </PersistGate>
+        </Provider>
+      </ChakraProvider>
+    </HelmetProvider>
   </React.StrictMode>,
 )
