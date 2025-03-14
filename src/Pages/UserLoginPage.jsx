@@ -13,6 +13,7 @@ import Cookies from 'js-cookie';
 import { Link } from 'react-router-dom';
 // import arrow from '../assets/images/arrow.svg'
 import UserNavbar from '../Components/Navbar/UserNavbar';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -121,6 +122,32 @@ export const UserLoginPage = () => {
 
   return (
     <>
+    <Helmet>
+        <title>Login | Access Your Ease Dementia Account</title>
+        <meta name="description" content="Log in to your Ease Dementia account to access personalized dementia care solutions. Secure sign-in for caregivers and individuals seeking healthcare support."/>
+        <meta name="keywords" content="Ease Dementia login, dementia care account, caregiver portal, sign in, healthcare support, dementia solutions"/>
+        <meta name="author" content="Ease Dementia Technologies Pvt Ltd"/>
+        <meta name="robots" content="index, follow"/>
+
+        
+        <meta property="og:title" content="Login | Access Your Ease Dementia Account"/>
+        <meta property="og:description" content="Sign in to Ease Dementia and access personalized dementia care resources, caregiver assistance, and innovative healthcare solutions."/>
+        <meta property="og:image" content="https://d2mzeyyrjif26w.cloudfront.net/assets/images/user_icon_compressed.png"/>
+        <meta property="og:url" content="https://easedementia.com/login"/>
+        <meta property="og:type" content="website"/>
+
+        
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content="Login | Access Your Ease Dementia Account"/>
+        <meta name="twitter:description" content="Securely log in to Ease Dementia to access dementia care support, caregiver tools, and healthcare assistance."/>
+        <meta name="twitter:image" content="https://d2mzeyyrjif26w.cloudfront.net/assets/images/user_icon_compressed.png"/>
+        <meta name="twitter:url" content="https://easedementia.com/login"/>
+
+        
+        <link rel="canonical" href="https://easedementia.com/login"/>
+        <link rel="icon" href="https://d2mzeyyrjif26w.cloudfront.net/assets/images/favicon.png" type="image/png" />
+
+    </Helmet>
     <UserNavbar/>
     <PageWrapper>
         <LeftSide>

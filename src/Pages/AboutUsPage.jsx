@@ -38,6 +38,7 @@ const AboutUsPage = () => {
     <meta name="twitter:image" content="https://d2mzeyyrjif26w.cloudfront.net/assets/images/aboutusbanner_compressed.png"/>
 
     <link rel="icon" type="image/png" href="https://d2mzeyyrjif26w.cloudfront.net/assets/images/favicon.png"></link>
+    <link rel="canonical" href="https://easedementia.com/about"/>
 
     </Helmet>
     <GlobalStyle/>

@@ -5,6 +5,7 @@ import { useState } from "react";
 import Footer from "../Footer/Footer";
 import email from '../../assets/images/email.svg'
 import phone1 from '../../assets/images/phone1.svg'
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -20,14 +21,34 @@ const Careers = () => {
       title: "Intervention Specialist",
       qualifications: ["MSW/MSc. Psychology", "Communication skills"],
     },
-    {
-      title: "VR Developer",
-      qualifications: ["Strong Unity/Unreal experience", "C# or C++ proficiency"],
-    },
   ];
 
   return (
     <>
+    <Helmet>
+      <title>Join Our Team | Careers at Ease Dementia</title>
+      <meta name="description" content="Explore career opportunities at Ease Dementia. Join us in redefining dementia care. Apply now for roles like Intervention Specialist."/>
+      <meta name="keywords" content="Ease Dementia careers, dementia specialist jobs, psychology jobs, intervention specialist, elderly care careers, mental health jobs"/>
+      <meta name="author" content="Ease Dementia Technologies Pvt Ltd"/>
+      <meta name="robots" content="index, follow"/>
+
+      <link rel="icon" href="https://d2mzeyyrjif26w.cloudfront.net/assets/images/favicon.png" type="image/png" />
+      <meta property="og:title" content="Join Our Team | Careers at Ease Dementia"/>
+      <meta property="og:description" content="Explore career opportunities at Ease Dementia. Join us in redefining dementia care. Apply now for roles like Intervention Specialist."/>
+      <meta property="og:image" content="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg"/>
+      <meta property="og:url" content="https://easedementia.com/careers"/>
+      <meta property="og:type" content="website"/>
+
+      <link rel="icon" href="https://d2mzeyyrjif26w.cloudfront.net/assets/images/favicon.png" type="image/png" />
+      <meta name="twitter:card" content="summary_large_image"/>
+      <meta name="twitter:title" content="Join Our Team | Careers at Ease Dementia"/>
+      <meta name="twitter:description" content="Looking for a meaningful career in dementia care? Ease Dementia is hiring! Check out our job openings and apply today."/>
+      <meta name="twitter:image" content="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow.svg"/>
+      <meta name="twitter:url" content="https://easedementia.com/careers"/>
+
+      <link rel="icon" href="https://d2mzeyyrjif26w.cloudfront.net/assets/images/favicon.png" type="image/png" />
+      <link rel="canonical" href="https://easedementia.com/careers"/>
+    </Helmet>
     <UserNavbar/>
     <CareersContainer>
       <LeftSection>

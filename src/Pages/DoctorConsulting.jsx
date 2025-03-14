@@ -7,6 +7,7 @@ import UserNavbar from "../Components/Navbar/UserNavbar"
 import GlobalStyle from "../Styles/GlobalStyles"
 import CallButton from "../Components/CallUs/CallButton"
 import WhatsappButton from "../Components/WhatsappChat/WhatsappButton"
+import { Helmet } from "react-helmet-async";
 
 
 const DoctorConsulting = () => {
@@ -19,6 +20,31 @@ const DoctorConsulting = () => {
 
   return (
     <>
+    <Helmet>
+    <title>Doctor Consulting | Ease Dementia - Expert Dementia Care</title>
+    <meta name="description" content="Consult experienced doctors specializing in dementia care at Ease Dementia. Get professional guidance and support for dementia-related concerns."/>
+    <meta name="keywords" content="doctor consultation, dementia specialists, dementia care doctors, online doctor consultation, dementia expert, dementia treatment, geriatric counseling"/>
+    <meta name="author" content="Ease Dementia Technologies Pvt Ltd"/>
+    <meta name="robots" content="index, follow"/>
+
+    
+    <meta property="og:title" content="Doctor Consulting | Ease Dementia - Expert Dementia Care"/>
+    <meta property="og:description" content="Consult experienced doctors specializing in dementia care at Ease Dementia. Get professional guidance and support for dementia-related concerns."/>
+    <meta property="og:image" content="https://d2mzeyyrjif26w.cloudfront.net/assets/images/doctorconsultingbanner.svg"/>
+    <meta property="og:url" content="https://easedementia.com/doctor-consulting"/>
+    <meta property="og:type" content="website"/>
+
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Doctor Consulting | Ease Dementia - Expert Dementia Care"/>
+    <meta name="twitter:description" content="Need expert dementia care? Consult our experienced doctors for guidance and treatment."/>
+    <meta name="twitter:image" content="https://d2mzeyyrjif26w.cloudfront.net/assets/images/doctorconsultingbanner.svg"/>
+    <meta name="twitter:url" content="https://easedementia.com/doctor-consulting"/>
+
+    
+    <link rel="canonical" href="https://easedementia.com/doctor-consulting"/>
+    <link rel="icon" href="https://d2mzeyyrjif26w.cloudfront.net/assets/images/favicon.png" type="image/png" />
+    </Helmet>
     <GlobalStyle/>
     <UserNavbar/>
     <ConsultingBanner ScrollToDoctorsList={ScrollToDoctorsList} />

@@ -7,6 +7,7 @@ import { useState } from 'react'
 // import arrow from '../assets/images/arrow.svg'
 import UserNavbar from '../Components/Navbar/UserNavbar'
 import { toast } from 'react-toastify'
+import { Helmet } from 'react-helmet-async'
 
 const UserSignupPage = () => {
   const navigator = useNavigate();
@@ -128,6 +129,31 @@ const UserSignupPage = () => {
 
   return (
     <>
+    <Helmet>
+      <title>Sign Up | Join Ease Dementia for Personalized Care</title>
+      <meta name="description" content="Create a new account with Ease Dementia and access personalized dementia care solutions. Sign up today for innovative healthcare support."/>
+      <meta name="keywords" content="Sign up, Ease Dementia register, dementia care account, healthcare login, caregiver support, dementia solutions"/>
+      <meta name="author" content="Ease Dementia Technologies Pvt Ltd"/>
+      <meta name="robots" content="index, follow"/>
+
+      
+      <meta property="og:title" content="Sign Up | Join Ease Dementia for Personalized Care"/>
+      <meta property="og:description" content="Join Ease Dementia today for access to personalized dementia care and support. Sign up now for innovative healthcare solutions."/>
+      <meta property="og:image" content="https://d2mzeyyrjif26w.cloudfront.net/assets/images/user_icon_compressed.png"/>
+      <meta property="og:url" content="https://easedementia.com/signup"/>
+      <meta property="og:type" content="website"/>
+
+      
+      <meta name="twitter:card" content="summary_large_image"/>
+      <meta name="twitter:title" content="Sign Up | Join Ease Dementia for Personalized Care"/>
+      <meta name="twitter:description" content="Create a new account with Ease Dementia and gain access to dementia care resources, caregiver support, and healthcare solutions."/>
+      <meta name="twitter:image" content="https://d2mzeyyrjif26w.cloudfront.net/assets/images/user_icon_compressed.png"/>
+      <meta name="twitter:url" content="https://easedementia.com/signup"/>
+
+      
+      <link rel="canonical" href="https://easedementia.com/signup"/>
+      <link rel="icon" href="https://d2mzeyyrjif26w.cloudfront.net/assets/images/favicon.png" type="image/png" />
+    </Helmet>
     <UserNavbar/>
     <Container>
         <LeftSide>
