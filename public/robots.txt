@@ -1,6 +1,15 @@
 User-agent: *
-Disallow: /admin
 Allow: /
-Noindex: /admin-dashboard
+Disallow: /admin
+Disallow: /admin
+Disallow: /admin-dashboard
+Disallow: /admin-dashboard/user-list
+Disallow: /admin-dashboard/admin-services
+Disallow: /admin-dashboard/doctor-consulting
+Disallow: /admin-dashboard/add-doctor
+Disallow: /admin-dashboard/edit-doctor
+Disallow: /admin-dashboard/add-timeslot
+Disallow: /admin-dashboard/appointment-details
+Disallow: /admin-dashboard/assessment-details
 
 Sitemap: https://easedementia.com/sitemap.xml
