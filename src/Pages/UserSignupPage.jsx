@@ -165,14 +165,14 @@ const UserSignupPage = () => {
         <Description>Join us today to access personalized care and innovative solutions designed to support your journey toward better well-being!</Description>
         <KnowMoreButton>
             Know More
-            <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow_compressed.png" alt="Arrow Icon" />
+            <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/arrow_compressed-min.png" alt="Arrow Icon" />
         </KnowMoreButton>
         </LeftSide>
         <RightSide>
         <FormWrapper>
             <FormTitle>
             Sign Up
-            <Icon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/user_icon_compressed.png" alt="User Icon" />
+            <Icon src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/user_icon_compressed-min.png" alt="User Icon" />
             </FormTitle>
             <Form>
             <Label htmlFor="fullName">FULL NAME</Label>

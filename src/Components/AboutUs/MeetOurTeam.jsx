@@ -16,7 +16,7 @@ import LazyLoad from 'react-lazyload'
 
 const teamMembers = [
     {
-        image: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/jolly.png",
+        image: "https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/jolly-min.png",
         name: 'P J Jolly',
         role: 'CEO, Co Founder'
     },

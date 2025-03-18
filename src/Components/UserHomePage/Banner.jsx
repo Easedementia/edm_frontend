@@ -15,12 +15,12 @@ const Banner = () => {
         <Subtitle>A new journey in dementia care, offering a unique blend of innovative and empathetic approaches tailored to support our elderly loved ones.</Subtitle>
         <ContactButton to='/contact'>
             Contact Us
-            <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow_compressed.png" alt="arrow icon" />
+            <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/arrow_compressed-min.png" alt="arrow icon" />
         </ContactButton> 
       </TextContainer>
       <ImageContainer>
         <LazyLoad height={300} offset={100}>
-        <BannerImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/brain_compressed.png" alt='banner-image' />
+        <BannerImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/brain_compressed_finalised.png" alt='banner-image' />
         </LazyLoad>
       </ImageContainer>
     </BannerContainer>

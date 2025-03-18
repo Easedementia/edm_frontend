@@ -39,6 +39,7 @@ const UserHomePage = () => {
         {/* Favicon */}
         <link rel="icon" href="https://d2mzeyyrjif26w.cloudfront.net/assets/images/favicon.png" type="image/png" />
 
+        <link rel="canonical" href="https://easedementia.com/"/>
       </Helmet>
     <GlobalStyle/>
     <UserNavbar/>

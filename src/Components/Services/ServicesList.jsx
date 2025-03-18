@@ -45,7 +45,7 @@ const ServicesList = () => {
                 <ServiceDescription>{service.description}</ServiceDescription>
                 <BookButton>
                   Explore More
-                  <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow_compressed.png" alt="arrow icon" />
+                  <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/arrow_compressed-min.png" alt="arrow icon" />
                 </BookButton>
               </ServiceContent>
               <LazyLoad height={300} offset={100}>
@@ -64,7 +64,7 @@ const ServicesList = () => {
                 <ServiceDescription>{service.description}</ServiceDescription>
                 <BookButton>
                   Explore More
-                  <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow_compressed.png" alt="arrow icon" />
+                  <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/arrow_compressed-min.png" alt="arrow icon" />
                 </BookButton>
               </ServiceContent>
               <StyledImage src={getFullImageUrl(service.image)} alt='Service Image' />

@@ -139,7 +139,7 @@ const ContactUsBanner = () => {
 
                 <a href={`tel:${phoneNumber}`} style={{ textDecoration: 'none' }}>
                     <Button>
-                        Call Now <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow_compressed.png" alt="arrow-icon" />
+                        Call Now <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/arrow_compressed-min.png" alt="arrow-icon" />
                     </Button>
                 </a>
             </InfoSection>

@@ -13,7 +13,7 @@ const WeAreOnto = () => {
         <CardContainer>
             <Card>
                 <LazyLoad height={300} offset={100}>
-                <CardImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/memorycafe.png" alt="Memory Cafe" />
+                <CardImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/memorycafe-min.png" alt="Memory Cafe" />
                 </LazyLoad>
                 <CardTitle>Active Ageing Center</CardTitle>
                 <CardDescription>
@@ -21,13 +21,13 @@ const WeAreOnto = () => {
                 </CardDescription>
                 <CardButton>
                     Explore More
-                    <img style={{width:'24px', height:'24px', marginLeft:'10px'}} src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow_compressed.png" alt="Arrow Icon" />
+                    <img style={{width:'24px', height:'24px', marginLeft:'10px'}} src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/arrow_compressed-min.png" alt="Arrow Icon" />
                 </CardButton>  
             </Card>
 
             <Card>
                 <LazyLoad height={300} offset={100}>
-                <CardImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/dementiaclinic.png" alt="Day Care Center" />
+                <CardImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/dementiaclinic-min.png" alt="Day Care Center" />
                 </LazyLoad>
                 <CardTitle>Dementia Clinic</CardTitle>
                 <CardDescription>
@@ -35,7 +35,7 @@ const WeAreOnto = () => {
                 </CardDescription>
                 <CardButton>
                     Explore More
-                    <img style={{width:'24px', height:'24px', marginLeft:'10px'}} src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow_compressed.png" alt="Arrow Icon" />
+                    <img style={{width:'24px', height:'24px', marginLeft:'10px'}} src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/arrow_compressed-min.png" alt="Arrow Icon" />
                 </CardButton>                                                                                       
             </Card>
         </CardContainer>

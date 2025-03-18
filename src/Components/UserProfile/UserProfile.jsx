@@ -115,7 +115,7 @@ const UserProfile = () => {
               src={avatarPreview || `${baseURL}/media/default-avatar.png`} // Fallback to a default avatar if no image is selected
               alt="User Avatar"
             />
-            <EditIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/edit_icon_compressed.png" alt="Edit Icon" />
+            <EditIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/edit_icon_compressed-min.png" alt="Edit Icon" />
           </AvatarWrapper>
           <input
             type="file"
@@ -138,20 +138,20 @@ const UserProfile = () => {
           />
           <ButtonsContainer>
             <Button onClick={() => handleNavigate('/user-profile/assessment-history')}>
-              Assessment History <img style={{width:'32px', height:'32px'}} src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow_compressed.png" alt="Arrow Icon" />
+              Assessment History <img style={{width:'32px', height:'32px'}} src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/arrow_compressed-min.png" alt="Arrow Icon" />
             </Button>
             <Button onClick={() => handleNavigate('/user-profile/appointments-history')}>
-              Appointment History <img style={{width:'32px', height:'32px'}} src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow_compressed.png" alt="Arrow Icon" />
+              Appointment History <img style={{width:'32px', height:'32px'}} src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/arrow_compressed-min.png" alt="Arrow Icon" />
             </Button>
             <Button onClick={handleLogout}>
-              Log Out <img style={{width:'32px', height:'32px'}} src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow_compressed.png" alt="Arrow Icon" />
+              Log Out <img style={{width:'32px', height:'32px'}} src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/arrow_compressed-min.png" alt="Arrow Icon" />
             </Button>
           </ButtonsContainer>
 
         </ProfileDetails>
 
         <SummaryContainer>
-          <SummaryImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/user_profile_right_side_compressed.png" alt="Profile Summary" />
+          <SummaryImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/user_profile_right_side_compressed-min.png" alt="Profile Summary" />
         </SummaryContainer>
       </ProfileContainer>
       <CallButton/>

@@ -17,28 +17,28 @@ import LazyLoad from 'react-lazyload';
 const ServiceListing = () => {
     const services = [
         {
-            icon: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/screening1_compressed.png",
+            icon: "https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/screening1_compressed-min.png",
             title: "Early Screening",
             description: "This is a comprehensive assessment process which includes self assessment and an informant interview that allow assessors to explore the possibility of early early dementia.",
             link: "/services"
         },
 
         {
-            icon: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/teleconsulting1_compressed.png",
+            icon: "https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/teleconsulting1_compressed-min.png",
             title: "Tele Consultation",
             description: "At the indication of potential dementia, we offer consultations with experienced physicians to ensure concerns are promptly identified and addressed with appropriate measures.",
             link: "/services"
         },
 
         {
-            icon: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/intervention1_compressed.png",
+            icon: "https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/intervention1_compressed-min.png",
             title: "Intervention",
             description: "Our intervention specialists provide personalized, home-based support for clients with dementia focussing on a holistic approach to enhance quality of life for clients and their families.",
             link: "/services"
         },
 
         {
-            icon: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/caregiver1_compressed.png",
+            icon: "https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/caregiver1_compressed-min.png",
             title: "Caregiver Support",
             description: "Caring for someone with dementia can be overwhelming, Our program offers sessions led by experienced healthcare professionals for caregivers of elderly individuals with dementia.",
             link: "/services"

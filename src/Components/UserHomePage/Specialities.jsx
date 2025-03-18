@@ -19,7 +19,7 @@ const Specialities = () => {
           <HighlightedText>#1</HighlightedText>
           <SubTitle>Kerala's first health and mental wellness support service dedicated to dementia care and comprehensive caregiver assistance.</SubTitle>
           <LazyLoad height={300} offset={100}>
-          <SpecialityImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/brain_compressed.png" alt="Doctor and Patient" />
+          <SpecialityImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/brain_compressed_finalised.png" alt="Doctor and Patient" />
           </LazyLoad>
         </SpecialityCard>
 
@@ -36,7 +36,7 @@ const Specialities = () => {
         <SpecialityCard area="card4">
           <HighlightedText>#1</HighlightedText>
           <LazyLoad height={300} offset={100}>
-          <SpecialityImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/vr_compressed.png" alt="VR Headset" />
+          <SpecialityImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/vr_compressed-min.png" alt="VR Headset" />
           </LazyLoad>
           <SubTitle>India’s first Virtual Reality supported Dementia Care.</SubTitle>
         </SpecialityCard>
@@ -45,13 +45,13 @@ const Specialities = () => {
         <HighlightedText>#1</HighlightedText>
           <SubTitle>Best Healthcare Startup Award 2023 - IMA Hospex</SubTitle>
           <LazyLoad height={300} offset={100}>
-          <SpecialityImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/hospex_compressed.png" alt="Heart Icon" />
+          <SpecialityImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/hospex_compressed-min.png" alt="Heart Icon" />
           </LazyLoad>
         </SpecialityCard>
 
         <SpecialityCard area="card6">
           <LazyLoad height={300} offset={100}>
-          <SpecialityImage style={{marginTop:'100px'}} src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/forbes_compressed.png" alt="Award Trophy" />
+          <SpecialityImage style={{marginTop:'100px'}} src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/forbes_compressed-min.png" alt="Award Trophy" />
           </LazyLoad>
           <SubTitle style={{marginTop:'10px'}} >We’re recognized as one of the Select 200 companies with Global Business Potential
           by</SubTitle>
@@ -66,7 +66,7 @@ const Specialities = () => {
         <SpecialityCard area="card8">
           <SubTitle>Range of Geriatricians, Neurologists, Psychologists...</SubTitle>
           <LazyLoad height={300} offset={100}>
-          <SpecialityImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/care_compressed.png" alt='care' />
+          <SpecialityImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/care_compressed-min.png" alt='care' />
           </LazyLoad>
         </SpecialityCard>
 

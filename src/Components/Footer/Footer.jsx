@@ -47,7 +47,7 @@ const Footer = () => {
                         value={email}
                         onChange={handleEmailChange}
                     />
-                    <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow_compressed.png" alt="Submit" onClick={handleSubscribe} />
+                    <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/arrow_compressed-min.png" alt="Submit" onClick={handleSubscribe} />
                     
                     </InputWrapper>
                     <SocialMediaIconsContainer>
@@ -93,7 +93,7 @@ const Footer = () => {
                 <LinkItem as={Link} to='/contact#faq'>FAQ</LinkItem>
                 <LinkItem as={Link} to='/contact'>Contact Us</LinkItem>
                 <LinkItem as={Link} to='/careers'>Careers</LinkItem>
-                <HeartIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/footerelement1_compressed.png" alt="Heart Icon" />
+                <HeartIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/footerelement1_compressed-min.png" alt="Heart Icon" />
             </LinksContainer>
         </RightContainer>
         </TopSection>

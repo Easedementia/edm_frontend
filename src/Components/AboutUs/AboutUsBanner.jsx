@@ -18,7 +18,7 @@ const AboutUsBanner = () => {
         </HeadingContainer>
         <ImageContainer>
           <LazyLoad height={300} offset={100}>
-          <StyledImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/aboutusbanner_compressed.png" alt='Puzzle Hands' />
+          <StyledImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/aboutusbanner_compressed-min.png" alt='Puzzle Hands' />
           </LazyLoad>
         </ImageContainer>
     </AboutUsContainer>

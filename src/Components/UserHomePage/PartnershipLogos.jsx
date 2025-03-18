@@ -20,7 +20,7 @@ const PartnershipLogos = () => {
   return (
     <PartnershipLogosWrapper>
         <LogosContainer>
-            <LogoImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/partnership_logos_new.png" alt='Medical Trust Hospital' />
+            <LogoImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/partnership_logos_new-min.png" alt='Partnership logos' />
             {/* <LogoImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/iimcalicutnew.svg" alt='IIM Kozhikode' />
             <LogoImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/marsleevanew.svg" alt='Mar Sleeva' />
             <LogoImage src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/inestnew.svg" alt='Dr Moopens INEST' />

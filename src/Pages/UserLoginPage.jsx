@@ -161,7 +161,7 @@ export const UserLoginPage = () => {
                 </Description>
 
                 <Button>
-                    Know More <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/arrow_compressed.png" alt="Arrow Icon" />
+                    Know More <ArrowIcon src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/arrow_compressed-min.png" alt="Arrow Icon" />
                 </Button>
             </InfoSection>
                 <GoogleOAuthProvider clientId="983196844931-f4h8h0ckn48vrmn01adl89k0csqmrrv1.apps.googleusercontent.com">
@@ -238,7 +238,7 @@ export const UserLoginPage = () => {
         <RightSide>
             <FormWrapper>
                 <FormTitle>
-                    Login <Icon src="https://d2mzeyyrjif26w.cloudfront.net/assets/images/user_icon_compressed.png" alt='User-Icon' />
+                    Login <Icon src="https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/user_icon_compressed-min.png" alt='User-Icon' />
                 </FormTitle>
                 <Form>
                     <Label htmlFor='email' >Email Id</Label>
