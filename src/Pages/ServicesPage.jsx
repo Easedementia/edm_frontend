@@ -15,7 +15,7 @@ const ServicesPage = () => {
     <Helmet>
       <title>Our Services | Easedementia - Compassionate Dementia Care</title>
       <meta name="description" content="Explore our comprehensive dementia care services, including early screening, teleconsultation, intervention, caregiver support and active aging. Enhance quality of life with Easedementia."/>
-      <meta name="keywords" content="Dementia Care, Cognitive Health, Early Screening, Tele Consultation, Caregiver Support, Dementia Intervention, Active Aging"/>
+      <meta name="keywords" content="Dementia Care, Cognitive Health, Early Screening, Tele Consultation, Caregiver Support, Dementia Intervention, Active Aging, Easedementia, dementia care, dementia support, elderly care, active aging, senior care, memory care, caregiver support, Alzheimer's care, Elder Care, Dementia care, dementia and hallucinations, early signs of dementia in women, lewy body dementia, vascular dementia, early signs of dementia, signs of dementia, types of dementia, alzheimer's vs dementia, dementia age, dementia activities, about dementia disease, about dementia disease Alzheimer’s support, Caregiver assistance, Memory loss treatment, Active Aging, Home based interventions, Dementia Care in Kochi, Dementia Care in Ernakulam, Dementia Care in Thrissur, Dementia Care in Kottayam, Dementia Care in Kozhikode, Dementia, Parkinson's"/>
       <meta name="author" content="Easedementia Technologies Pvt Ltd"/>
       <meta name="robots" content="index, follow"/>
 

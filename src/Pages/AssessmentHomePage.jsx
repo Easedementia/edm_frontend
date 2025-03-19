@@ -23,7 +23,7 @@ const AssessmentHomePage = () => {
       <Helmet>
         <title>Online Dementia Assessment | Self & First-Person Cognitive Tests</title>
         <meta name="description" content="Evaluate cognitive health with our online dementia assessments. Take a self-assessment or an informant interview to assess dementia-related changes."/>
-        <meta name="keywords" content="dementia assessment, online dementia test, self-assessment for dementia, cognitive health test, informant interview, dementia screening, dementia test"/>
+        <meta name="keywords" content="dementia assessment, online dementia test, self-assessment for dementia, cognitive health test, informant interview, dementia screening, dementia test, Easedementia, dementia care, dementia support, elderly care, active aging, senior care, memory care, caregiver support, Alzheimer's care, Elder Care, Dementia care, dementia and hallucinations, early signs of dementia in women, lewy body dementia, vascular dementia, early signs of dementia, signs of dementia, types of dementia, alzheimer's vs dementia, dementia age, dementia activities, about dementia disease, about dementia disease Alzheimer’s support, Caregiver assistance, Memory loss treatment, Active Aging, Home based interventions, Dementia Care in Kochi, Dementia Care in Ernakulam, Dementia Care in Thrissur, Dementia Care in Kottayam, Dementia Care in Kozhikode, Dementia, Parkinson's"/>
         <meta name="author" content="Ease Dementia Technologies Pvt Ltd"/>
         <meta name="robots" content="index, follow"/>
 

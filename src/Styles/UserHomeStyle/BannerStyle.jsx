@@ -1,18 +1,18 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-
 export const BannerContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
-    margin-top: 60px;
+    padding: 0 80px;
+    margin-top: 0;
     background-color: #f9fafb;
-
+    min-height: calc(100vh - 80px);
 
     @media (max-width: 1024px) {
         padding: 40px;
+        min-height: auto;
     }
 
     @media (max-width: 768px) {
@@ -27,15 +27,15 @@ export const BannerContainer = styled.div`
     }
 `
 
-
 export const TextContainer = styled.div`
-    max-width: 50%;
-
+    max-width: 45%;
+    padding-right: 40px;
 
     @media (max-width: 768px) {
         max-width: 100%;
         text-align: center;
         margin-bottom: 20px;
+        padding-right: 0;
     }
 
     @media (max-width: 480px) {
@@ -43,166 +43,136 @@ export const TextContainer = styled.div`
     }
 `
 
-
 export const Title = styled.h1`
     font-family: 'Poppins', sans-serif;
-    font-size: 48px;
+    font-size: 56px;
     font-weight: 700;
-    color: #000;
-    padding-top: 30px;
+    color: #1A1A1A;
+    line-height: 1.2;
+    margin-bottom: 24px;
     text-align: left;
 
+    @media (max-width: 1200px) {
+        font-size: 48px;
+    }
 
     @media (max-width: 768px) {
         font-size: 36px;
         text-align: center;
-        padding-top: 20px;
+        br {
+            display: none;
+        }
     }
 
     @media (max-width: 480px) {
         font-size: 28px;
-        padding-top: 15px;
         text-align: center;
     }
 `
 
-
 export const Subtitle = styled.p`
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    color: #2f2e2e;
-    margin-top: 20px;
-    line-height: 1.5;
+    font-size: 18px;
+    color: #4A4A4A;
+    margin: 24px 0;
+    line-height: 1.6;
     text-align: left;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    max-width: 90%;
 
     @media (max-width: 768px) {
-        font-size: 14px;
+        font-size: 16px;
         text-align: center;
-        margin-top: 15px;
-        width: 90%;
+        margin: 20px auto;
+        max-width: 100%;
     }
 
     @media (max-width: 480px) {
-        font-size: 12px;
-        width: 90%;
-        text-align: center;
-        word-wrap: break-word;
-        margin-bottom: 30px;
+        font-size: 14px;
     }
 `;
 
-
-
 export const ContactButton = styled(Link)`
-    display: flex; 
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    position: relative;
-    gap: 2px;
-    padding: 12px 8px;
+    padding: 12px 24px;
     background-color: #5517A8;
     color: white;
     border: none;
     border-radius: 50px;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
+    font-weight: 500;
     text-decoration: none;
-    transition: background-color 0.3s ease;
-    height: 40px; 
-    width: 150px; 
-    margin: 15px 0; 
-    align-self: center; 
-    white-space: nowrap;
+    transition: all 0.3s ease;
+    margin-top: 16px;
+    position: relative;
+    width: fit-content;
 
     &:hover {
         background-color: #6d22d1;
-        color: #fff;
+        transform: translateY(-2px);
     }
 
     @media (max-width: 768px) {
+        margin: 20px auto;
         font-size: 14px;
-        padding: 10px 8px;
-        height: 35px;
-        margin: 10px auto; 
-        width: 120px; 
-    }
-
-    @media (max-width: 480px) {
-        font-size: 14px;
-        padding: 8px 12px;
-        height: 35px;
-        margin: 10px auto; 
+        padding: 10px 20px;
     }
 `;
-
-
 
 export const ArrowIcon = styled.img`
-    margin-left: 105px;
-    width: 35px;
-    height: 35px; 
-    flex-shrink: 0; 
-    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-left: 12px;
     transition: transform 0.2s ease;
-    cursor: pointer;
 
-    &:hover {
-        transform: scale(1.2); 
+    ${ContactButton}:hover & {
+        transform: translateX(4px);
     }
-
 
     @media (max-width: 768px) {
-        width: 28px;
-        height: 28px;
-        flex-shrink: 0; 
-        position: absolute;
-        margin-left: 80px;
-    }
-
-    @media (max-width: 480px) {
-        width: 24px;
-        height: 24px;
-        flex-shrink: 0; 
-        position: absolute;
-        margin-left: 80px;
+        width: 16px;
+        height: 16px;
     }
 `;
 
-
-
-
 export const ImageContainer = styled.div`
-    max-width: 50%;
-
+    max-width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media (max-width: 768px) {
         max-width: 100%;
-        text-align: center;
-    }
-
-    @media (max-width: 480px) {
-        max-width: 100%;
+        margin-top: 40px;
     }
 `
 
-
 export const BannerImage = styled.img`
-    max-width: 80%;
+    width: 100%;
+    max-width: 600px;
     height: auto;
-    margin: 0 auto;
-    display: block;
+    object-fit: contain;
+    animation: float 6s ease-in-out infinite;
 
+    @keyframes float {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
 
     @media (max-width: 768px) {
-        width: 70%;
-        margin: 20px auto;
+        width: 80%;
     }
 
     @media (max-width: 480px) {
-        width: 80%;
-        margin: 20px auto;
+        width: 90%;
     }
 `;
 
