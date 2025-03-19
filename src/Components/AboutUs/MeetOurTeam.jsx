@@ -16,25 +16,25 @@ import LazyLoad from 'react-lazyload'
 
 const teamMembers = [
     {
-        image: "https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/jolly-min.png",
+        image: "https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/jolly.png",
         name: 'P J Jolly',
         role: 'CEO, Co Founder'
     },
 
     {
-        image: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/amrutha1.png",
+        image: "https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/amrutha1.png",
         name: 'Amrutha P Varghese',
         role: 'Co Founder'
     },
 
     {
-        image: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/snijo1.png",
+        image: "https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/snijo1.png",
         name: 'Snijo P J',
         role: 'Co Founder'
     },
 
     {
-        image: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/jaison1.png",
+        image: "https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/jaison1_new.jpg",
         name: 'Jaison Joseph',
         role: 'Advisory Board'
     },
@@ -46,7 +46,7 @@ const teamMembers = [
     },
 
     {
-        image: "https://d2mzeyyrjif26w.cloudfront.net/assets/images/jino1.png",
+        image: "https://d2mzeyyrjif26w.cloudfront.net/assets/compressed-images/jino1_new.jpg",
         name: 'Dr. Jino Joy',
         role: 'Advisory Board'
     },
