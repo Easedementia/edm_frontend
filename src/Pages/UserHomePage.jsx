@@ -23,7 +23,7 @@ const UserHomePage = () => {
         <meta name="keywords" content="Dementia care, Alzheimer’s support, Caregiver assistance, Memory loss treatment, Active Aging, Home based interventions, Dementia Care in Kochi, Dementia Care in Ernakulam, Dementia Care in Thrissur, Dementia Care in Kottayam, Dementia Care in Kozhikode, Dementia, Parkinson's" />
         <meta name="author" content="Easedementia Technologies Pvt Ltd" />
 
-        {/* Open Graph Meta Tags (for social media sharing) */}
+        
         <meta property="og:title" content="Easedementia - Global Dementia Support & Assistance" />
         <meta property="og:description" content="Easedementia provides innovative solutions and compassionate support for individuals with dementia and their caregivers. Join us in enhancing the well-being and quality of life for those affected worldwide." />
         <meta property="og:image" content="https://d2mzeyyrjif26w.cloudfront.net/assets/images/favicon.png" />
