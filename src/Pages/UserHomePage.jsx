@@ -20,7 +20,7 @@ const UserHomePage = () => {
     <Helmet>
         <title>Easedementia - Global Dementia Care & Assistance</title>
         <meta name="description" content="Easedementia provides global dementia care and comprehensive caregiver assistance. Join us to improve the quality of life for dementia patients and their families." />
-        <meta name="keywords" content="Dementia care, Alzheimer’s support, Caregiver assistance, Memory loss treatment, Active Aging, Home based interventions, Kochi, Ernakulam, Thrissur, Kottayam, Kozhikode, Dementia, Parkinson's" />
+        <meta name="keywords" content="Dementia care, Alzheimer’s support, Caregiver assistance, Memory loss treatment, Active Aging, Home based interventions, Dementia Care in Kochi, Dementia Care in Ernakulam, Dementia Care in Thrissur, Dementia Care in Kottayam, Dementia Care in Kozhikode, Dementia, Parkinson's" />
         <meta name="author" content="Easedementia Technologies Pvt Ltd" />
 
         {/* Open Graph Meta Tags (for social media sharing) */}
